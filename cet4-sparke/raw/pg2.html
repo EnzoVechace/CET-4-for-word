@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>大学英语4级词汇周计划-图书资源详情页</title>
+    <link rel="stylesheet" href="http://down.sparke.cn/css/A.common.css.pagespeed.cf.6_vIlrjst7.css">
+    <link rel="stylesheet" href="http://down.sparke.cn/css/A.index.css.pagespeed.cf.2KfAWpWkIb.css">
+    <link rel="stylesheet" type="text/css" href="http://down.sparke.cn/share/css/A.share.css.pagespeed.cf.UK7UrVdOmD.css"/>
+</head>
+
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='http://down.sparke.cn/books/e84d54f228564907b456ccb3bc32f095?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="http://down.sparke.cn/books/e84d54f228564907b456ccb3bc32f095?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+
+<script type="text/html" id="exceptIndexNav">
+    <div class="susNavContent marginauto width1200 psr exceptadjustZindex">
+        <div class="logo fl"><a href="/"></a></div>
+        <div class="lookFor fl">
+            <span>找资源</span>
+            <div class="left_classificationNav psa left_suspenClassifyNav">
+                <ul class="psr">
+                    <%for(var i=0;i<directoryList.length;i++){%>
+                    <li class="<%=i==0?'active':''%>">
+                        <div class="left_mainclassNavItem">
+                            <dl class="left_mainclassNav">
+                                <dt><a><%=directoryList[i].name%></a></dt>
+                                <dd>
+                                    <%for(var j=0;j<directoryList[i].children.length;j++){%>
+                                    <a><%=directoryList[i].children[j].name%></a>
+                                    <%}%>
+                                </dd>
+                            </dl>
+                            <div class="rightSubNav needFloat psa">
+                                <%for(var j=0;j<directoryList[i].children.length;j++){%>
+                                <dl>
+                                    <dt><a><%=directoryList[i].children[j].name%></a></dt>
+                                    <dd>
+                                        <%for(var k=0;k<directoryList[i].children[j].children.length;k++){%>
+                                            <a href="/search/1/1?content=<%=directoryList[i].children[j].children[k].id%>&here=1" target="_blank"><%=directoryList[i].children[j].children[k].name%></a>
+                                        <%}%>
+                                    </dd>
+                                </dl>
+                                <%}%>
+                            </div>
+                        </div>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+        <div class="sparkPro fl psr">
+            <span>星火产品</span>
+            <ul class="proBox psa tac">
+                <%for(var z=0;z<productList.length;z++){%>
+                <li><a href="<%=productList[z].value%>" pro-id="<%=productList[z].id%>"><%=productList[z].label%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="searchBox fl psr oh">
+            <input type="text" class="mod-search__input" placeholder="请输入图书代码、书名或相关关键词">
+            <input type="button" value="搜资源" class="SearchBtn psa seacherListHtml">
+        </div>
+        <div class="fr loginBox">
+            <div class="">
+                <%if(!userInfo.id){%>
+                <a href="javascript:;" class="loginbtn2 loginGo" type="L"><span>登录</span></a><span>/</span><a href="javascript:;" class="registerBtn3 registerGo"><span>注册</span></a>
+                <%}else{%>
+                <!--登录后-->
+                <span class="nc"><%=userInfo.username%></span>
+                <%}%>
+            </div>
+            <b class="userImg psr"><img src="<%=userInfo.headerImg==undefined?'':userInfo.headerImg%>" alt=""><%if(userInfo.id){%><i class="perInfoInto psa tac"><a
+                    href="/users/info">个人中心</a><a href="javascript:;" class="loginout">退出</a></i><span style="height: 30px;width: 42px;position: relative;top: -11px"></span><%}%></b>
+        </div>
+    </div>
+
+</script><div id="topSuspensionNav"></div>
+<div class="marginauto width1200 psr">
+    <div class="crumbsNav"><b>您的位置：</b><a href="/" class="indexurl">首页&gt;</a><i>&nbsp;大学英语4级词汇周计划-图书资源详情</i></div>
+    <div class="detailModular">
+        <dl class="oh">
+            <dt class="fl sourceImg"><script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://down.sparke.cn/books/e84d54f228564907b456ccb3bc32f095','c_ob8udwyE',true,false,'IqcRTWuxBik');</script><img src="http://spark-resource.sparke.cn/65b4ef3980e54fc2ad23f247db281371.jpg" alt="" data-pagespeed-url-hash="1187892055" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></dt>
+            <dd class="fl oh sourceInfor">
+                <div class="reTit"><i class="wto">大学英语4级词汇周计划</i></div>
+
+                <div class="oh">
+                    <a href="javascript:;" class="downloadbtn tac downloadThisSource"><input type="hidden" name="大学英语4级词汇周计划" value="http://spark-resource.sparke.cn/o_1cjq5n7h161e11gpu6k1s5c7t01c.rar?attname=%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD4%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%91%A8%E8%AE%A1%E5%88%92.rar" source-id="553947470eb84737b7f555ac8c0d34f6"><span>点击下载</span></a>
+                    <a href="javascript:;" class="shareLink tac ml20"><span>分享</span></a>
+                    <b class="category"><span>词汇</span><span>周计划</span></b>
+                </div>
+                <div class="loginINto">下载前请先<a href="javascript:;" class="sloginBtn loginGo">登录</a>,如果没有账号，请先<a href="javascript:;" class="reRegister registerGo">注册</a></div>
+                <ul class="thisDetailInfor">
+                    <li><i>发布人：</i><span>星火官方</span></li>
+                    
+                    <li><i>资源大小：</i><span>153.42MB</span></li>
+                    <li><i>上传时间：</i><span>2018-08-01</span></li>
+                    <li><i>资源格式：</i><span>rar/zip</span></li>
+                    <li><i>下载次数：</i><span>1,390次</span></li>
+                    <li><i>图书代码：</i><span>18CDZJJ</span></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="brief_introduction mt30">
+        <div class="briefTitle"><span>内容简介</span></div>
+        <div class="conIntro">
+            <p>收词全面：本书收录了《大学英语课程教学要求》中的词汇以及《普通高中英语课程标准》中的重点词汇。</p>
+
+<p>每周学习计划，分解学习任务，并提供多种方法，巧记单词。</p>
+
+<p>&nbsp;</p>
+
+        </div>
+        <div class="briefTitle"><span>资源列表</span></div>
+        <div class="sp_sourceList">
+            <div class="sp_item allZipFile">
+                <a class="fileCss rar">【全套打包下载】大学英语4级词汇周计划</a>
+                <a href="javascript:;" class="previewBtn"></a>
+                <i class="volume">153.42MB</i>
+                <i class="clickNum">1,390人下载</i>
+                <a href="javascript:;" class="downOpBtn downloadThisSource"><input type="hidden" value="http://spark-resource.sparke.cn/o_1cjq5n7h161e11gpu6k1s5c7t01c.rar?attname=%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD4%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%91%A8%E8%AE%A1%E5%88%92.rar" name="大学英语4级词汇周计划" source-id="553947470eb84737b7f555ac8c0d34f6"></a>
+            </div>
+            
+            
+            
+            
+
+                <div class="searchNOresource searchNOresourcesse hide"></div>
+
+        </div>
+    </div>
+    <div class="recommendList mt30">
+        <div class="briefTitle"><span>下载过该资源的人还下载过</span></div>
+        <div class="recommendContent">
+                <a href="/books/887ecb4a473a468b868d11141dca22bd" class="wto" target="_blank">高考英语词汇周计划</a>
+                <a href="/books/edd2f63727e9496ea2bc4ed33209993e" class="wto" target="_blank">高考英语词汇周计划</a>
+                <a href="/books/682af44ae6614eeabc5903404015e6da" class="wto" target="_blank">大学英语4级词汇周计划（高中版）</a>
+                <a href="/books/7cf3252008c242279e435def9bee1166" class="wto" target="_blank">大学英语4级词汇周计划（高中版）2017</a>
+                <a href="/books/061652858476433986031c608cf676f9" class="wto" target="_blank">大学英语4级词汇周计划（高中版）2017</a>
+                <a href="/books/cc3e85a6ad3d4d9caac2f270715be4d2" class="wto" target="_blank">高考英语词汇周计划`2017</a>
+                <a href="/books/07a5fec1f5e4419aaffab92660986fa7" class="wto" target="_blank">高中英语词汇默写听写本</a>
+                <a href="/books/a55551d4af874b5087eadad5247d03fe" class="wto" target="_blank">一定要背的高考2300核心词汇</a>
+                <a href="/books/b2a2d9f08ec24de4a16c08b279bec627" class="wto" target="_blank">高考3500词</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="friendLink">
+        <dl class="oh marginauto width1200">
+            <dt class="fl">友情链接</dt>
+			<dd>
+				<a href="https://xinghuots.tmall.com">星火图书天猫旗舰店</a>
+				<a href="https://quanyitong.tmall.com">全易通图书天猫旗舰店</a>
+			</dd>
+            
+        </dl>
+    </div>
+    <div class="record_number">Copyright © 2013 All Rights Reserved 山东星火国际传媒集团有限公司  京ICP证070017号 - 京ICP备08105196号
+        <p style="padding-top: 10px;"><script>var cnzz_protocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271657779'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s13.cnzz.com/z_stat.php%3Fid%3D1271657779%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+    </div>
+
+</div>
+<script src="http://down.sparke.cn/js/jquery.min.js.pagespeed.jm.29OAZzvhfX.js"></script>
+<script src="http://down.sparke.cn/js/jquery.cookie.js.pagespeed.jm.2B1PshnKfs.js"></script>
+<script src="http://down.sparke.cn/js/template-native.js.pagespeed.jm.KLZFPypfJA.js"></script>
+<script src="http://down.sparke.cn/js/layer/layer.js.pagespeed.jm.KO06jt43PP.js"></script>
+<script src="http://down.sparke.cn/js/templateNav.js.pagespeed.jm.L-JETZyycC.js"></script>
+<script src="http://down.sparke.cn/js/spark.js.pagespeed.jm.3330ABYYgv.js"></script>
+<script src="http://down.sparke.cn/js/download.js.pagespeed.jm.65zBM6bLwx.js"></script>
+<script src="http://down.sparke.cn/share/js/share.js.pagespeed.jm.YIjFyWIiE9.js" defer></script>
+<script>$(function(){if($('.sp_sourceList').children().length==1){$('.sp_sourceList').children().show();}var here=getUrlParam('here');if(here==1){var page=getUrlParam('page');var sLIst=getUrlParam('list');var bookId=getUrlParam('id');var aHtml="<a href='/search/"+here+'/'+page+"?content="+bookId+"&here="+here+"'"+">学科导航搜索&gt;</a>";$('.indexurl').after(aHtml)}$('.shareLink ').shareConfig({Shade:true,Event:'click',Content:'Share',Title:'我要分享'});$('.leixing a').click(function(){$(this).parent().next().slideToggle();if($(this).hasClass('cur')){$(this).removeClass('cur');}else{$(this).addClass('cur');}});$('.previewBtn').click(function(){if(!isLogin){if($('div').hasClass('sparklayer')){if($('.sparklayer').attr('style').indexOf('block')!=-1){return;}$('.sparklayer').remove();$('.windowBg').remove();}var loginHtml="";loginHtml+='<div class="windowBg"></div>';loginHtml+='<div class="sparklayer"><div class="innerlayer psr marginauto"><a href="javascript:;" class="psa closeWinBtn"></a>';loginHtml+='<iframe id="loginAndRegister" src="'+weburl+'/login.html?to=login" frameborder="0" width="420" height="500" scrolling="no"></iframe>';loginHtml+='</div>';$('body').append(loginHtml);$('.closeWinBtn').click(function(){$('.sparklayer').hide();$('.windowBg').hide();});$('.windowBg').fadeIn();$('.sparklayer').fadeIn();return;}var _inHtml='',url=$(this).parent().find('input').val(),filetype=$(this).attr('filetype');if(filetype=='4'){if(url.indexOf('.gif')!=-1||url.indexOf('.jpg')!=-1||url.indexOf('.ipeg')!=-1||url.indexOf('.png')!=-1){_inHtml='<div style="width: 100%;height: 100%;overflow-y: auto;text-align: center;">'+'<img style="max-width: 100%;" src="'+url+'">'+'</div>';}else{_inHtml='<div style="text-align: center;font-size: 42px;line-height: 300%;color: #fff;">'+'该资源暂时不支持在线预览！<br />请您下载后浏览'+'</div>';}}else if(filetype=='2'){var thisLrc=$('.attachmentLIst input').val();thisLrc=thisLrc?thisLrc:null;if(thisLrc){$.ajax({url:thisLrc,type:'get',async:false,success:function(data,textStatus,jqXHR){thisLrc=data;},error:function(xhr,textStatus){console.log('获取歌词失败！');}});}var musicList=[{}];musicList[0].title='';musicList[0].singer='';musicList[0].cover='';musicList[0].src=url;musicList[0].lyric=thisLrc;localStorage.musicList=JSON.stringify(musicList);_inHtml='<div style="width: 100%;height: 100%;position: relative;">'+'<iframe id="mp3frame" src="'+weburl+'/js/smusic-master/index.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>'+'</div>';}else if(filetype=='3'){localStorage.poster='';localStorage.sourcesrc=url;_inHtml='<div style="width: 100%;height: 100%;position: relative;">'+'<iframe id="mp4frame" src="'+weburl+'/js/jQuery-video/index.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>'+'</div>';}else if(filetype=='1'){if(url.indexOf('.doc')!=-1||url.indexOf('.xls')!=-1||url.indexOf('.ppt')!=-1){_inHtml='<div style="width: 100%;height: 100%;position: relative;">'+'<iframe id="officeframe" src="https://view.officeapps.live.com/op/view.aspx?src='+url+'" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>'+'</div>';}else if(url.indexOf('.pdf')!=-1){localStorage.pdfurl=url;_inHtml='<div style="width: 100%;height: 100%;position: relative;">'+'<iframe id="pdfframe" src="'+weburl+'/js/PDFObject-master/index.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>'+'</div>';}else if(url.indexOf('.txt')!=-1){var $txt='';$.ajax({url:url,type:'get',async:false,success:function(data,textStatus,jqXHR){$txt=data;},error:function(xhr,textStatus){console.log('获取文件失败！');}});_inHtml='<div style="padding: 10px 20px;overflow-y: auto;color: #333;">'+$txt+'</div>';}else{_inHtml='<div style="text-align: center;font-size: 42px;line-height: 300%;color: #fff;">'+'该资源暂时不支持在线预览！<br />请您下载后浏览'+'</div>';}}_inHtml='<div style="width: 100%;height: 100%;overflow: hidden;background-color: #D5D5D5;">'+_inHtml+'</div>';layer.open({type:1,title:'资源预览',area:['1000px','600px'],content:_inHtml});});});</script>
+</body>
+</html>
+

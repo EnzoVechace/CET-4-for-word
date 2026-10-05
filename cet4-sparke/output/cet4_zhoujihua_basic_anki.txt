@@ -1,0 +1,1526 @@
+#separator:tab
+#html:false
+#columns:Word	Translation
+a/an	art.(非特指的)一(个)
+able	a.能够……的
+about	prep.①关于②到处 ad.①大约,差不多②到处
+above	prep./ad.①在……上方②多于,大于③高于
+abroad	ad.到国外,在国外
+absent	a.[æbˈsent]v. a.①缺席的②心不在焉的 vt.缺席
+accident	n.事故
+ache	vi./n.疼痛
+across	prep./ad.穿过,越过
+actor	n.(男)演员
+actual	a.实际的
+add	vt.①添加,增加②把……加起来③补充说vi.增添
+address	n.地址,住址 vt.①写(收件人)姓名和地址②设法解决
+admire	vt.钦佩,赞赏,羡慕
+admit	vt.①承认,供认②准许进入 vi.承认
+adult	n.成年人
+advantage	n.①优点②优势
+advice	n.劝告,忠告,建议
+advise	vt.①劝告②通知
+affair	n.①事务②事情
+afford	vt.①买得起②提供
+afraid	a.①害怕的②担心的
+after	prep.①在……以后②在……后面
+afternoon	n.下午
+afterward	ad.以后
+again	ad.再一次,又一次
+against	prep.①逆着②不赞成③倚靠④和……比赛
+age	n.①年龄②时代,时期
+ago	ad.以前
+agriculture	n.农业,农学
+ahead	ad.①在前面②提前,预先③占优势,领先
+aim	n.①目标②瞄准vt.把……瞄准
+airline	n.航空公司
+alarm	n.①惊恐②警报器③警报
+alike	a.同样的 ad.相似地
+alive	a.①活着的②存在的③有活力的
+all	a.一切的,所有的ad.完全地 pron.全部
+allow	vt.①允许,准许②承认
+almost	ad.几乎,差不多
+alone	a.①单独的②仅,只③独一无二的 ad.①单独地②仅仅,只
+along	ad.①向前地②一道,一起 prep.沿着,循着
+aloud	ad.出声地,大声地
+already	ad.已经
+also	ad.也,而且,还
+although	conj.虽然,尽管
+altogether	ad.①完全②总而言之③总共
+always	ad.一直,总是
+am	v.是
+among(st)	prep.在……之中
+and	conj.①和②那么③然后④而且
+angry	a.发怒的,生气的
+animal	n.动物,牲畜
+another	pron.再一个,另一个
+answer	n.①答复②答案 v.①回答②解答
+ant	n.蚂蚁
+anxious	a.①焦虑的②渴望的,急切的
+any	pron.①无论哪个②一些,一点
+anybody	pron.任何人
+anyhow	ad.①无论如何②不论用何种方法
+anything	pron.无论什么东西
+anyway	ad.①不管怎么说②不论以何种方式
+anywhere	ad.在任何地方
+apology	n.道歉,谢罪
+apple	n.苹果
+April	n.四月
+area	n.①面积②地区③领域
+argue	v.争论,争吵,争辩
+arm	n.①臂②臂状物③(pl.)武器 vt.①以武器装备②提供
+army	n.(the~)(一国的)陆军
+around	ad.①在周围②到处③大约 prep.①在各处②在附近
+arrive	vi.①到达②(时间等)来临
+article	n.①物品,物件②文章,论文③冠词
+ash	n.①灰烬②骨灰
+ask	v.①问,询问②请求,要求
+asleep	a.睡着的
+at	prep.①在……里,在……上,在……旁②向,朝
+athlete	n.运动员
+attain	vt.①达到②获得
+attention	n.①注意②护理
+audience	n.观众
+August	n.八月
+aunt	n.姨,姑,婶,伯母,舅母
+autumn	n.秋,秋季
+awake	v.①(使)醒来②唤起 a.醒着的
+away	ad.离开,不在
+awful	a.①极坏的②可怕的③非常的
+baby	n.①婴儿②雏鸟③宝贝儿
+background	n.背景
+backward	a./ad.向后(的),落后(的)
+bad	a.①坏的,不利的②差的
+badly	ad.①坏②非常
+badminton	n.羽毛球(运动)
+bag	n.①袋②手提包
+baggage	n.行李
+balance	n.①平衡②秤vt.使平衡
+balcony	n.①阳台②(电影院等的)楼座
+ball	n.球,球状物
+ballet	n.①芭蕾舞②芭蕾舞剧③芭蕾舞团
+balloon	n.气球
+bamboo	n.竹子
+banana	n.香蕉
+bank	n.①银行②河岸
+barbecue	n.①烤架②烧烤野餐 v.烧烤
+barber	n.理发师
+bark	vi.吠叫 n.①吠声②树皮
+baseball	n.棒球(运动)
+basin	n.①盆②盆地③流域
+basis	n.(pl.bases)基础
+basket	n.篮子
+basketball	n.篮球(运动)
+bath	n.①沐浴②浴缸
+bathe	vt.给……洗澡vi.①洗澡②游泳
+bathroom	n.①浴室②厕所
+bay	n.①湾②分隔间
+be	v.①是,就是②有,存在
+beach	n.海滩,沙滩
+bean	n.豆
+bear	n.熊 vt.忍受
+beard	n.胡须
+beast	n.①野兽②凶残的人
+beat	vt.①连续击打②战胜vi.(心脏等)跳动
+beauty	n.①美,美丽②美人
+because	conj.因为
+become	link.v.变成,成为
+bed	n.①床②河床
+bee	n.蜜蜂
+beef	n.牛肉
+beer	n.啤酒
+begin	v.开始
+behind	prep.①在……的后面②落后于③支持ad.①在后面②留在原处
+belief	n.①信心②信念③信仰
+believe	v.①相信②认为
+bell	n.钟声,铃声
+belly	n.肚子,腹,胃
+belong	vi.属于,是……的成员
+below	prep.在……以下ad.向下面,以下,在下方
+belt	n.①腰带②地带
+bench	n.长凳,长椅
+bend	vi.俯身 v.(使)弯曲 n.弯曲(处)
+beside	prep.在……旁边
+besides	prep.除……之外(还) ad.而且,此外(还)
+better	a./ad.更好(的)
+between	prep.在……之间
+beyond	prep.超出ad.在另一边,在更远处
+bible	n.(theB-)圣经
+bicycle	n.自行车vi.骑自行车
+big	a.大的
+bill	n.①账单②法案③钞票④节目单
+billion	num.十亿
+biology	n.生物学
+bird	n.鸟,禽
+birth	n.①出生②起源③出身
+birthday	n.生日
+biscuit	n.饼干
+bit	n.①一点儿②小片
+bite	v./n.咬,叮 n.咬或叮的伤口
+black	n.黑色 a.①黑色的②黑种人的
+blackboard	n.黑板
+blame	vt.责备,归咎于n.(过错等的)责任
+bleed	vi.(bled;bled)流血
+bless	vt.祝福
+blind	a.①瞎的②视而不见的③盲目的 vt.使失明
+block	n.①大厦②街区③大块④障碍,堵塞(物)vt.①阻塞②阻止
+blood	n.血,血液
+blouse	n.女衬衫
+boat	n.船,小船
+body	n.①身体,躯体②躯干③(sing.)主体④尸体
+boil	vi.①沸腾②动怒
+bomb	n.炸弹 vt.轰炸
+bone	n.骨,骨骼
+border	n.边界
+born	a.天生的 v.出生
+borrow	vt.借,借入
+boss	n.老板,上司
+both	a./pron.两者(都)
+bother	vt.①打扰,麻烦②使不安
+bottle	n.瓶 vt.把……装进瓶中
+bottom	n.①底,底部②尽头③臀部
+bow	n.①弓②蝴蝶结 [baʊ]vt.①低头②压弯vi./n.鞠躬
+box	n.箱,盒 vt.①把……装箱(或盒)②(用拳或手掌)打,击 vi.拳击
+boxing	n.拳击(运动)
+boy	n.①男孩②儿子
+brain	n.①脑②脑力
+brake	n.车闸
+brave	a.勇敢的,无畏的
+bread	n.面包
+breakfast	n.早餐 vi.吃早餐
+breast	n.胸脯,乳房
+breath	n.呼吸的空气
+breathe	v.呼吸 vt.呼出
+brick	n.①砖②积木vt.用砖砌
+bride	n.新娘
+bridegroom	n.新郎
+bridge	n.①桥②桥梁③桥牌
+brief	a.①短暂的②简短的 vt.向……介绍 n.概要
+bright	a.①明亮的②欢快的③鲜艳的
+bring	vt.①带来②提供③导致
+brother	n.①兄弟②伙伴
+brown	a./n.棕色(的),褐色(的)
+brush	n.刷子,毛笔,画笔vt.刷,掸,拂
+build	vt.①建造②建立
+burden	n.重担,负担 vt.①加重压于……②负重
+burn	vi.燃烧 vt.①使燃烧②烧掉③烧伤
+burst	vt.使爆裂
+bury	vt.①埋葬②掩埋③掩盖
+bus	n.公交车
+business	n.①商业,生意②公司,商店③公事④职责
+businessman	n.(男)企业家
+busy	a.①忙碌的②熙熙攘攘的③正被占用的
+but	conj.①但是,然而②而,相反 prep.除……以外 ad.只,仅仅
+butter	n.黄油
+butterfly	n.蝴蝶
+button	n.①纽扣②按钮
+buy	vt.①买,购买②收买,贿赂 vi.购买
+cab	n.出租汽车
+cabbage	n.卷心菜,洋白菜
+cafe	n.咖啡馆
+cafeteria	n.自助餐厅
+cage	n.笼子
+cake	n.饼,糕,蛋糕
+calm	a.镇静的,平静的
+camel	n.骆驼
+camera	n.相机,摄像机
+can	modalv.①能够②可以③可能,会 n.金属罐
+cancel	vt.①取消②收回
+cancer	n.癌
+candle	n.蜡烛
+candy	n.(美)糖果
+cap	n.帽子,便帽
+care	vi.关心vt.①对……介意②喜欢n.①照顾②小心③忧虑
+carrot	n.胡萝卜
+carry	vt.①携带②运送
+cash	n.现款,现金vt.兑现
+castle	n.城堡
+cat	n.①猫②猫科动物
+catch	vt.①抓住②偶然(或突然)撞见
+cater	vi.①迎合②承办酒席
+cattle	n.(pl.)牛
+cause	n.①原因②事业vt.引起
+cave	n.山洞,洞穴
+celebrate	v.庆祝,庆贺
+cell	n.①细胞②小牢房
+cellphone	n.移动电话
+cent	n.分,分币
+centigrade	a./n.摄氏度(的)
+century	n.世纪,百年
+certain	a.①某一,某种②肯定的,无疑的
+chain	n.①链子②一连串③连锁店
+chair	n.①椅子②(the~)主席 vt.主持(会议等)
+chairman	n.主席
+chalk	n.粉笔
+chance	n.①可能性②机会,机遇③冒险④偶然,碰巧
+chapter	n.章,回,篇
+cheap	a.便宜的,廉价的
+cheat	vt.欺骗,骗取vi.作弊 n.骗子
+check	n.①检查,核对②支票,账单 v.检查,审查
+cheek	n.面颊,脸蛋
+cheer	vt.使振奋,使高兴
+cheese	n.奶酪,干酪
+chemistry	n.化学
+chess	n.国际象棋
+chest	n.①箱子②柜子③胸部,胸腔
+chew	v./n.咀嚼
+chicken	n.①鸡②鸡肉
+chief	a.主要的,首要的n.首领
+child	n.①小孩,儿童②子女,孩子
+chimney	n.烟囱,烟道
+china	n.瓷,瓷器
+chocolate	n.①巧克力②巧克力糖
+choice	n.选择,选择权
+choose	vt.①选择②决定
+chopstick	n.(常pl.)筷子
+Christ	n.基督,救世主
+church	n.①教堂②礼拜
+cigar	n.雪茄烟
+cigarette	n.香烟,卷烟
+cinema	n.①电影院②电影业
+city	n.城市
+civil	a.①公民的,平民的②民事的
+civilian	a./n.平民(的),百姓(的)
+classmate	n.同学
+classroom	n.教室
+clean	a.①清洁的②清白的 vt.把……弄干净
+clerk	n.职员
+clever	a.①聪明的②灵巧的
+climate	n.气候
+climb	v./n.①攀登,爬②上升
+clinic	n.诊所
+clone	n./v.克隆
+cloth	n.①织物②桌布,抹布
+clothes	n.衣服,服装
+cloud	n.①云,云朵②阴影,忧郁 vt.①使模糊,使阴暗②遮盖,笼罩
+club	n.①俱乐部②棍棒③(高尔夫)球杆 vt.棒打
+coach	n.①教练②长途公共汽车 vt.训练,指导,辅导
+coal	n.①煤②煤块
+coat	n.①上衣,外套②动物皮毛
+coffee	n.咖啡
+coin	n.硬币,金属货币
+cold	a.冷的,寒冷的n.①冷,寒冷②伤风,感冒
+collar	n.衣领,领子
+college	n.大学,学院
+colo(u)r	n.颜色,色彩
+comb	n.①梳子②(公鸡的)鸡冠
+comedy	n.①喜剧②滑稽,幽默
+comfort	n.①舒适②安慰
+compare	vt.①比较②把……比作 vi.相比,比得上
+complete	a.①十足的②完整的 vt.①完成②使完整
+concert	n.音乐会,演奏会
+connect	vt.①使连接②联系,结合③接通 vi.连接
+control	vt./n.控制,支配
+cook	vt.烹调,煮,烧n.厨师
+cookie	n.曲奇饼
+cool	a.①凉的②冷静的③冷淡的 v.①(使)变凉②(使)冷静下来
+copy	n.①副本②一本,一册 vt.①抄写②模仿,抄袭
+corn	n.(小麦等)谷物
+corner	n.角(落)vt.将……逼入困境
+correct	a.①正确的②合适的,恰当的 vt.①改正,纠正②批改
+cotton	n.①棉,棉花②棉织物
+cough	vi./n.咳,咳嗽
+could	modalv.①[can的过去式]②可以,能,可能
+countryside	n.(the~)农村,乡下
+couple	n.①一对,一双②几个人,几个事物③夫妻,情侣
+courage	n.勇气,胆量
+courtyard	n.庭院
+cousin	n.堂(或表)兄弟,堂(或表)姐妹
+cow	n.奶牛,母牛 vt.恐吓,威胁
+crazy	a.①发疯的②着迷的
+cream	n.奶油,乳脂
+creature	n.①生物,动物②人
+credit	n.①赊购,赊欠②借款,贷款,信用③荣誉④学分
+crime	n.①犯罪活动②罪,罪行
+crop	n.作物,庄稼
+cross	v.①穿过,越过②(使)交叉,(使)相交 n.十字架
+crowd	n.人群 vt.挤满
+cry	vi./n.①哭②叫喊
+cube	n.立方
+cup	n.①杯子②奖杯③杯状物
+cupboard	n.橱柜
+cure	vt.①治愈②解决
+curtain	n.窗帘,门帘
+customer	n.顾客,主顾
+customs	n.海关
+cut	vt.①切,割②修剪,剪短
+dad	n.爸爸
+daily	a.每日的,日常的 ad.每日,天天 n.日报
+dam	n.坝,堤 vt.(在河上)筑堤
+damage	vt./n.毁坏,损害
+dance	n.舞,舞蹈v.①跳舞②跳动
+dare	vt.①敢,敢做②向……挑战 n.(常sing.)激将,挑战
+dark	a.暗的,黑暗的
+darling	n.①亲爱的②心爱的人 a.可爱的
+dash	vi.猛冲 vt.猛掷n.①猛冲②破折号
+daughter	n.女儿
+day	n.①一天②白昼,白天③(常pl.)时期,时代
+deaf	a.①聋的②不愿听的,装聋的
+deal	n.①交易,协议②(常sing.)待遇
+dear	a.①亲爱的②昂贵的
+death	n.①死,灭亡②破灭
+debt	n.债务
+December	n.十二月
+deed	n.①行为②(常pl.)契约,证书
+deep	a.①深的②(声音)深沉的③深刻的 ad.深深地
+deer	n.鹿
+degree	n.①度,度数②程度③学位
+delicious	a.美味的,芬芳的
+dentist	n.牙科医生
+depth	n.①深(度)②深切
+desert	n.[dIˈzɜːt]v. n.沙漠vt.离弃 vi.开小差
+design	vt./n.设计,构想
+desk	n.书桌,办公桌
+destroy	vt.①破坏②消灭
+diamond	n.①钻石,金刚石②菱形
+diary	n.日记簿,日记
+die	vi.①死,死亡②消失
+diet	n.①日常饮食②规定饮食
+difficult	a.困难的,难懂的
+dig	v.挖,掘
+dinner	n.①正餐,主餐②宴会
+dip	vi./n.落下,下降vt.①浸,蘸②使下降,使下沉
+disaster	n.①灾难②彻底的失败
+discuss	vt.①讨论②谈论,论述
+disease	n.①病,疾病②弊端
+dish	n.①碟,盘②菜肴,一盘菜
+dislike	vt./n.不喜欢,厌恶
+distance	n.①距离②远方③冷淡
+district	n.地区,行政区
+doctor	n.①医生②(常D-)博士 vt.篡改,伪造
+dog	n.狗
+doll	n.玩偶,玩具娃娃
+dollar	n.美元
+dolphin	n.海豚
+donkey	n.驴
+door	n.①门②出入口
+dove	n.①鸽子②温和派人士
+downstairs	ad.在楼下,往楼下 n.楼下
+downtown	ad.在市中心 a.商业区的
+dragon	n.龙
+dream	vi.做梦,梦想 vt.梦见 n.梦想
+dress	n.①连衣裙②衣服v.穿衣
+drill	n.①钻头②操练v.①钻(孔)②操练
+drink	vt.饮,喝 n.饮料,酒
+drug	n.①药物②毒品
+drum	n.①鼓②大桶③滚筒
+drunk	a.①(酒)醉的②陶醉的
+duck	n.①鸭②鸭肉
+due	a.①到期的②应给的
+dull	a.①乏味的②不明亮的③低沉的
+dusk	n.薄暮,黄昏
+duty	n.①责任②关税
+each	a.每 pron.每个
+eagle	n.鹰
+ear	n.耳,耳朵
+early	a.①早期的②提早的ad.①在早期②提前,提早
+earn	vt.①赚得②获得
+earth	n.①地球②陆地,地面③土,泥
+earthquake	n.地震
+east	n.东,东方,东部ad.向东
+eat	v.①吃②吃饭
+ecology	n.生态,生态学
+edge	n.边,边缘
+educate	vt.教育
+effort	n.①努力②成就
+egg	n.①蛋,鸡蛋②卵
+eggplant	n.茄子
+eight	num.八
+eighteen	num.十八
+eighth	ord.第八 n.八分之一
+eighty	num.八十
+either	a.(两者之中)任一的 ad.也不pron.(两者中)任何一个
+electricity	n.电
+elephant	n.象
+eleven	num.十一
+email/e-mail	n.电子邮件
+empty	a.①空的②空闲的③空虚的 vt.①清空②倾倒
+end	n.①最后部分②结局v.结束
+enemy	n.①敌人②敌军
+energy	n.①活力②能量
+engine	n.①发动机②机车
+engineer	n.工程师 vt.①策划②设计
+enjoy	vt.享受,喜爱
+enough	ad.①足够(地)②相当
+enter	v.进来,进入vt.加入
+envelope	n.①信封②外裹物
+even	ad.甚至,即使a.①平的②均匀的
+evening	n.傍晚,晚上
+event	n.①事件②运动项目
+every	a.①每一(个)②每……一次的
+everybody	pron.每人,大家
+everyday	a.每天的
+everyone	pron.每人,人人
+everything	pron.一切,所有事
+everywhere	ad.到处,无论何处
+exact	a.精确的
+examine	vt.①(仔细)检查②对……进行考查③考核
+excite	vt.①使激动,使兴奋②引起,激起
+excuse	v.[Ikˈskjuːs]n. vt.①原谅②使免除③为……辩解n.借口
+exercise	n.①锻炼,运动②练习,体操 v.锻炼
+exist	vi.①存在②出现③维持生存
+exit	n.出口,通道v./n.退出
+experience	n.①经验②经历③感受 vt.经历
+explain	v.说明,解释
+extra	a.额外的,另外的
+eye	n.①眼睛②视力③眼力④监督
+eyesight	n.视力
+fail	vi.①失败②不及格③失灵 vt.①使失望②没有通过(考试)
+fall	vi.①落下②跌倒③下降④变成⑤降临 n.瀑布
+false	a.①不真实的②假的③不真诚的
+familiar	a.熟悉的,通晓的
+family	n.①家,家庭(成员)②家族
+fan	n.①狂热爱好者②风扇
+far	ad.①远②很大程度上 a.远的,遥远的
+farm	n.农场,农舍v.务农
+farther	ad./a.更远(的)
+fast	a.快的 ad.①迅速地②牢固地
+fat	a.①肥胖的②丰厚的n.脂肪
+father	n.①父亲②祖先
+fault	n.①缺陷,故障②错误 vt.找出缺点
+favo(u)r	n.①偏爱②赞同③恩惠 vt.①偏爱②有利于
+fax	n.①传真②传真机 vt.传真
+fear	vt./n.害怕,恐惧
+feather	n.羽毛,翎毛
+February	n.二月
+fee	n.专业服务费,报酬
+feel	vi.感觉,觉得 vt.触,摸 n.手感,感觉
+fellow	n.①男人,小伙子②同事③(学术团体的)会员
+fence	n.栅栏,围栏,篱笆
+festival	n.①节②节日
+fetch	vt.(去)拿来,(去)请来
+fever	n.发烧
+few	a./pron.很少,有些
+fiber/-bre	n.纤维(素)
+field	n.①田地②领域③实地④运动场
+fifteen	num.十五
+fifth	ord.第五 n.五分之一
+fifty	num.五十
+fight	v./n.①战斗②竞赛
+figure	n.①数字②人物③(pl.)算术 vt.①计算②认为
+film	n.①影片②胶片③薄层 vt.拍摄电影
+find	vt.①发现②发觉
+fine	a.①健康的②美好的③纤细的④精制的⑤晴朗的n.罚金,罚款 vt.处……以罚金
+finish	v.完成,结束n.末尾
+fire	n.①火②火灾③炉火④射击 vt.①射出(子弹等)②解雇 vi.开火
+fireman	n.消防队员
+fireplace	n.壁炉
+firework	n.①烟火②(pl.)烟火表演
+firm	a.①坚固的②稳固的③坚定的④(货币等)坚挺的v.(使)变得坚固 n.商行,公司
+first	ord.第一 a.①第一的②首要的 ad.①首先②第一次
+fish	n.①鱼②鱼肉vi.钓鱼
+fist	n.拳,拳头
+fit	vt.①使适合②合……的身③安装 vi.①符合,适应②合身 a.①适合的②健康的
+five	num.五
+fix	vt.①修理②使固定,安装③安排,确定④整理,收拾
+flag	n.旗,旗帜
+flat	a.①平坦的②扁平的ad.平直地 n.一套房间,公寓
+flavo(u)r	n.①味道②特色 vt.给……调味
+flesh	n.①(人或动物的)肉②果肉
+float	v.(使)浮动
+flood	v.淹没 n.①洪水②大量
+floor	n.①地面,地板②楼层
+flour	n.面粉
+flower	n.花,花朵vi.①开花②成熟,繁荣
+fly	vi.①飞行②飘扬vt.①空运②放(风筝等)n.苍蝇
+fog	n.雾
+fold	v.折叠,叠平
+follow	v.①跟随②遵循,听从③理解
+fond	a.①喜爱的②深情的
+food	n.食物,食品
+fool	n.蠢人,傻子 vt.欺骗
+football	n.足球(运动)
+for	prep.为,为了 conj.因为,由于
+foreign	a.①外国的②涉外的
+forest	n.森林,林区
+forever	ad.①永远②长久地
+forget	v.忘记,遗忘
+forgive	vt.原谅,宽恕
+fork	n.①餐叉②叉状物
+forty	num.四十
+fountain	n.人工喷泉
+four	num.四
+fourteen	num.十四
+fox	n.①狐狸②狡猾的人
+free	a.①自由的②免费的③空闲的 ad.①免费地②自由地 vt.使自由,解放
+freeze	v.(使)冻结,结冰 n.①冻结②冰冻期
+fresh	a.①新的②新鲜的③清新的④精神饱满的⑤淡的
+Friday	n.星期五
+friend	n.朋友,友人
+frog	n.蛙,青蛙
+from	prep.从……来
+frost	n.①霜冻②霜v.(使)结霜
+fry	vt.油煎,油炸,油炒
+fuel	n.燃料 vt.给……提供燃料
+fun	a.有趣的 n.①有趣的事,乐趣②嬉戏,玩笑
+function	n.①功能②典礼③函数 vi.起作用
+funeral	n.葬礼,丧礼
+fur	n.①软毛②毛皮
+future	n.①将来②前途
+garage	n.①车库②汽车修理场
+garden	n.①(美)花园,菜园②(pl.)公园
+gas	n.①气体②煤气③(美)汽油④毒气
+gate	n.①大门②入口
+general	a.①一般的②总的,普遍的③笼统的n.将军
+gentle	a.①和蔼的②轻柔的③不陡的
+gentleman	n.①绅士②先生
+geography	n.地理学
+get	vt.①获得②收到③使得④(去)拿来⑤理解⑥感染
+ghost	n.鬼魂,幽灵
+gift	n.①礼物②天赋
+girl	n.①女孩②女儿
+give	v.①给予②供给③交给
+glad	a.①高兴的②乐意的
+glass	n.①玻璃(器皿)②玻璃杯③(-es)眼镜
+glove	n.(有指)手套
+glue	n.胶,胶水 vt.胶合,粘贴
+goal	n.①目标②得分③球门
+goat	n.山羊
+god	n.①(G-)上帝②神③被崇拜的偶像
+gold	n.①金②黄金制品③金色
+golf	n.高尔夫球运动
+good	a.①好的②充分的③擅长的④好心的⑤有益的n.①善②好处
+goodbye	int.再见,再会
+goodness	int.天哪n.善良,美德,好意
+goods	n.(pl.)商品
+goose	n.(pl.geese)鹅
+gradual	a.①逐渐的,逐步的②(坡)缓的
+graduate	v.[ˈrædʒuət]a./n. v.(使)毕业 a.研究生的n.①毕业生②大学毕业生
+grain	n.①谷物②谷粒,颗粒③少量,微量
+gram(me)	(abbr.g/gm)n.克
+grammar	n.语法
+grandchild	n.(外)孙子,(外)孙女
+grandparent	n.(外)祖父,(外)祖母
+grape	n.葡萄
+graph	n.图表
+grass	n.①草②草坪,牧场
+great	a.①大的②伟大的
+greet	vt.①问候,招呼②对……做出反应
+grocer	n.①食品杂货商②(-s)杂货店
+ground	n.①地②(pl.)场地③范围④理由
+group	n.①组,群②团体③集团 v.①把……分组②(使)聚集
+grow	vi.①生长②变得③增长 vt.种植
+guard	n.①警卫员②警戒vt.守卫 vi.防止
+guess	v./n.猜(测),推测
+guest	n.①客人②旅客③嘉宾
+guitar	n.吉他
+gun	n.枪,炮
+gym	n.体育馆,健身房
+hair	n.头发,毛发
+half	n.一半
+hall	n.①门厅②礼堂
+ham	n.火腿
+hamburger	n.汉堡包
+hammer	n.锤,榔头v.锤击,敲打
+handsome	a.①英俊的②好看的③相当大的
+hang	v.①(hung,hung)悬挂,吊②(hanged,hanged)绞死
+happen	vi.①发生②碰巧
+happy	a.①快乐的②满意的
+hardly	ad.①几乎不②仅仅
+harm	vt./n.伤害,损害,危害
+harvest	n./vt.收获
+hat	n.帽子
+hate	vt.憎恨 n.厌恶
+have	aux.v.[与过去分词连用构成完成时] vt.①有②进行③享受
+he	pron.他
+head	n.①头②领导vt.主管 vi.朝……行进
+headache	n.①头痛②令人头痛的人(或事物)
+headmaster	n.校长
+health	n.①健康(状况)②卫生
+hear	vt.①听见②听说③审理 vi.听说
+heart	n.①心②内心③中心④心形物⑤核心
+heat	n.①热②温度③激动v.加热
+heavy	a.①重的②大量的③严重的④繁重的⑤沉重的
+heel	n.①脚后跟,踵②(鞋、袜等的)后跟
+height	n.①高度②高③高地④最佳点
+hello	int.喂 n.问候,招呼
+help	vt.①帮助②有助于vi.①帮助②救命 n.①帮助,援助②帮手,佣人
+hen	n.①母鸡②雌禽
+her	pron.她 a.她的
+here	ad.①在这里,向这里,到这里②这时③在这一点上
+hero	n.①英雄②男主角
+hers	pron.她的
+herself	pron.①她自己②她亲自
+hi	int.嗨,喂
+hide	vt.①躲藏②隐瞒 vi.躲藏 n.隐藏处
+high	a.①高的②高级的③高尚的④高兴的⑤(时间等)正盛的 ad.高
+highway	n.公路,交通要道
+hill	n.小山,山丘
+him	pron.他
+himself	pron.①他自己②他亲自
+his	a.他的
+hit	v.①打②碰撞 n.一击
+hobby	n.业余爱好
+hole	n.①洞,孔眼②漏洞,缺陷
+holiday	n.①假期②假日,节日
+home	n.①家②家乡③原产地 a.①家庭的②家乡的ad.①回家②在本国
+homeland	n.祖国
+homework	n.家庭作业
+honest	a.①诚实的②坦诚的
+hope	v./n.希望,期望
+hospital	n.医院
+host	n.①主人,东道主②节目主持人③(of)许多
+hot	a.①热的②辣的③棘手的,争议大的④激烈的⑤热衷的⑥热门的
+hotdog	n.热狗
+hotel	n.旅馆,宾馆
+hour	n.①小时②时间
+housewife	n.家庭主妇
+housework	n.家务活
+how	ad.①怎么②多么
+however	ad.①然而②无论如何
+hug	v./n.拥抱
+hundred	num.一百
+hunger	n.①饿②渴望 vi.渴望
+hunt	v./n.①打猎②搜寻
+hurry	vi.匆忙 vt.催促n.急忙
+hurt	vt.①使受伤②伤……的感情 vi.痛 n.伤害
+husband	n.丈夫
+I	pron.我
+ice	n.①冰②(sing.)溜冰场
+ice-cream	n.冰激凌
+if	conj.①如果②是否③即使④无论何时
+ill	a.①有病的②不好的 ad.恶劣地
+important	a.①重要的②权威的
+impossible	a.不可能的
+inch	n.①英寸②少量③短距离 v.(使)缓慢移动
+indeed	ad.①真正地,当然②确实,实在
+indoor	a.(在)室内的
+injure	vt.伤害,损害
+ink	n.墨水,油墨
+inn	n.小旅馆,客栈,小酒馆
+inside	prep.①在……里,在……内②少于 ad.在里面
+instead	ad.①替代②反而,却
+interest	n.①兴趣②利息③利益 vt.使感兴趣
+international	a.国际的
+Internet	n.(the~)(国际)互联网
+interview	vt./n.①采访②面谈
+into	prep.①进入②成为③朝
+invent	vt.①发明②捏造
+invite	vt.①邀请②要求
+iron	n.①铁②熨斗vt.(用熨斗)熨平
+it	pron.它
+its	a.它的
+itself	pron.①它自己②自身
+jacket	n.短上衣,夹克衫
+jam	n.①果酱②拥挤③卡住 v.①挤进②(使)卡住
+January	n.一月
+jar	n.①罐子②广口瓶
+jaw	n.下巴
+jazz	n.爵士乐
+jeans	n.(pl.)牛仔裤
+jeep	n.吉普车
+job	n.①职业,职位②(一件)工作③(常sing.)职责
+jog	v./n.①慢跑②(偶然)轻碰
+join	v.①参加②连接
+joke	n.①笑话,玩笑②(sing.)荒唐可笑的人(或事物)vi.说笑话
+journey	n.(长途)旅行vi.旅行
+joy	n.①欢欣②乐事
+judge	n.①法官②裁判员③鉴定人 v.①断定②裁决③审判
+juice	n.果汁,菜汁
+July	n.七月
+jump	v.①跳跃②越过③猛涨 n.①跳②猛涨
+June	n.六月
+keep	vt.①使保持②阻止③履行④保存
+key	n.①钥匙②关键③键④答案 a.主要的 vt.(用键盘)键入
+kick	v./n.踢
+kid	n.小孩 v.①戏弄②欺骗
+kill	vt.①杀死②扼杀③使痛苦④消磨 n.杀死
+kilogram(me)	n.千克,公斤
+kind	n.种类
+kindergarten	n.幼儿园
+king	n.君主,国王
+kingdom	n.①王国②领域,界
+kiss	v./n.吻
+kitchen	n.厨房
+kite	n.①风筝②鸢
+knee	n.膝,膝盖
+knife	n.刀 vt.用刀伤害
+knock	v./n.①敲,打②碰撞
+labo(u)r	n.①(体力)劳动②劳工 vi.①努力做②费力地前行
+lack	v./n.缺乏,不足
+ladder	n.①梯子②(常sing.)阶梯
+lady	n.女士
+lake	n.湖,湖泊
+lamb	n.①羔羊②羔羊肉
+lamp	n.灯
+language	n.语言
+lap	n.①(常sing.)大腿部②一圈③一段 v.①拍打②舔,舔食
+last	a.①最后的②最近的③最终的 ad.①最后②最新v.①持续②支撑
+late	a.①迟的②晚期的③近深夜的④[作定语](人)已故的 ad.迟,晚
+lately	ad.最近,不久前
+latter	a.后者的n.后者
+laugh	vi.笑 n.①笑②(sing.)笑料
+lawyer	n.律师
+lazy	a.①懒惰的②无精打采的
+leaf	n.①叶,叶子②(书刊的)张,页
+league	n.①同盟,联盟②联赛
+learn	vi.①学②获悉vt.①学会②得知
+least	a.最小的 ad.最少
+leather	n.①皮革②(pl.)皮衣
+leave	vi.离去 vt.①离开②留下③听任
+lecture	v./n.①(做)演讲,讲课②教训,训斥
+left	a.左边的 ad.在左边n.左边
+leg	n.腿,腿部
+lemon	n.①柠檬②柠檬饮料③浅黄色
+lend	vt.①把……借给②提供
+less	a./ad.更少的(地),更小的(地)
+lesson	n.①功课,课②一课时,一节课③教训,经验
+let	vt.①允许,让②假设③出租
+level	n.①程度②水平
+library	n.①图书馆②资料室
+license/-nce	n.许可证,执照 vt.许可
+lie	vi.(lay,lain)①躺②平放vi./n.(lied,lied)说谎,撒谎
+life	n.①生命②一生③生活④生物
+like	v.①喜欢②想要,希望 conj.好像,仿佛 a.相像的
+lily	n.百合花
+link	v./n.连接,联系
+lion	n.狮子
+lip	n.①嘴唇②(容器的)边,边沿
+list	n.目录 vt.把……列表
+listen	vi.①听②听信
+litter	n.①废弃物,垃圾②一窝幼崽③杂乱的东西
+little	a.①小的②年幼的③短的④少量的 ad.①不多②少量 pron.很少
+live	v.[laIv]a. vi.①居住②活③(回忆等)留存 a.①活的②现场直播的
+lively	a.精力充沛的
+livingroom	n.起居室,客厅
+loaf	n.一条(面包)
+local	a.当地的,本地的
+lock	n.①锁②车锁v.①(被)锁上②卡住
+lonely	a.①孤独的②荒凉的
+long	a.①长的②长时间的ad.长久 vi.渴望
+look	v./n.看 n.①脸色②容貌
+lorry	n.运货汽车,卡车
+lose	v.①遗失②损失③降低④输
+lot	pron.大量,很多 n.①全部②组③(sing.)命运④一块地
+loud	a.①响亮的②吵闹的ad.响亮地
+luck	n.①好运②机遇,运气
+luggage	n.行李
+lunch	n.午餐,午饭
+lung	n.肺
+mad	a.①疯的②生气的③狂热的④愚蠢的
+magazine	n.①杂志②弹药库
+magic	n.①魔法②魔力③魔术
+mail	n.①邮政(系统)②邮件 vt.邮寄
+major	a.较大的n.①少校②专业③专业学生 vi.主修
+make	vt.①做,制造②做出③使④获得⑤总计⑥成为⑦到达
+male	a./n.男性(的)
+mall	n.购物中心,商场
+man	n.①男人②人③人类
+many	a.许多的pron.许多
+map	n.地图 vt.在地图上标示出
+march	v./n.①行军,前进②游行示威
+market	n.市场
+marry	vt.①和……结婚②为……操办婚礼 vi.结婚
+mask	n.①面具②伪装③面膜 vt.掩饰
+mat	n.席子,垫子
+match	n.①比赛②(sing.)对手③相配的人(或事物)④火柴 vt.和……相配 vi.相配,相适合
+material	n.①材料,原料②素材,资料
+math	n.(美)数学
+matter	n.①事情②(pl.)事态③物质④(the~)麻烦事 vi.要紧
+may	modalv.①可能②可以③祝
+maybe	ad.或许,大概
+me	pron.我
+meal	n.一顿饭
+mean	vt.①表示……的意思②意欲,打算③意指 a.①吝啬的②卑鄙的③平均的 n.平均值
+means	n.①方法②金钱
+meanwhile	ad.①与此同时②在此期间
+meat	n.肉
+medal	n.奖牌,奖章,勋章
+medical	a.医学的,医疗的
+Medicare	n.(由美国政府设立的)老年人医疗保健制度
+medicine	n.①药②医学
+meet	vt.①遇见②(迎)接③和……见面④满足
+meeting	n.会议
+melon	n.瓜,甜瓜
+member	n.成员,会员
+memory	n.①记忆(力)②回忆③存储器,内存
+mend	vt.①修理②缝补
+mention	vt./n.提到
+menu	n.菜单
+merchant	n.商人
+merry	a.愉快的,高兴的
+message	n.①信息②要旨,寓意
+metal	n.金属
+method	n.①方法②秩序
+midnight	n.午夜
+might	modalv.①[may的过去式]②(表示可能性)可能 n.强大力量
+mild	a.①温和的②轻微的
+mile	n.英里
+milk	n.牛奶
+million	num.一百万
+mine	pron.我的 n.矿v.开矿
+minute	n.[maIˈnjuːt]a. n.①分②(sing.)一会儿③(sing.)时刻④(pl.)会议记录 a.微小的
+mirror	n.镜子vt.①反映②反射
+miss	n.(M-)小姐vt.①未击中②未见到③怀念
+missing	a.①缺掉的②(人)失踪的
+mistake	vt.误解n.错误
+Mister	n.先生
+mistress	n.①情妇②主妇
+mix	vt.使混合vi.①相混合②交往
+mom	n.妈妈
+moment	n.①片刻②机会
+Monday	n.星期一
+money	n.钱,钱币
+monitor	v.①监视②监听 n.监控器
+monkey	n.①猴子②捣蛋鬼
+month	n.月,月份
+mop	n.拖把 vt.拖,擦
+morning	n.早晨,上午
+mother	n.母亲
+mouse	n.①(pl.mice)老鼠②(pl.mice/mouses)鼠标
+mouth	n.①嘴,口②需要供养的人
+movie	n.电影
+much	(more,most)ad.非常 a./pron.许多(的)
+mud	n.泥,泥浆
+murder	vt./n.谋杀,凶杀
+museum	n.博物馆
+music	n.音乐,乐曲
+must	modalv.①必须②一定
+my	a.我的
+myself	pron.①我自己②我亲自
+nail	n.①钉子②指甲
+narrow	a.①狭窄的②勉强的 v.(使)变窄
+nation	n.①国家②民族
+nature	n.①自然界②天性
+near	a.近的 ad.近 prep.接近
+nearby	a.附近的ad.在附近
+neat	a.①(爱)整洁的②简洁的③纯的
+neck	n.①颈,脖子②(衣服的)领口
+necklace	n.项链
+need	vt.①需要②缺少modalv.需要
+needle	n.针,针状物
+neither	pron.(两者之中)无一个 conj./ad.也不a.两者皆非的
+nephew	n.侄子,外甥
+nest	n.巢,窝 vi.筑巢
+net	n.网,网状物 vt.净得,净赚 a.净的,纯的
+never	ad.从不,绝不
+news	n.新闻,消息
+newspaper	n.报纸
+next	a.①紧接在后的②下一个的 ad.①接下去②居后
+nice	a.令人愉快的
+niece	n.侄女,外甥女
+night	n.夜,夜晚
+nine	num.九
+nineteen	num.十九
+ninety	num.九十
+ninth	ord.第九 n.九分之一
+no	ad.不 a.①没有的②不许的
+noble	a.①高尚的②高贵的 n.贵族
+nobody	pron.没有人 n.无足轻重的人
+nod	vt./n.点头
+noise	n.①声音②喧哗声
+none	pron.没有一个,没有一点儿 ad.一点都不
+noodle	n.(常pl.)面条
+noon	n.中午,正午
+nor	conj./ad.也不,也没有
+north	n.北,北方,北部
+northeast	n.东北方
+northwest	n.西北方
+nose	n.①鼻子②鼻状物
+not	ad.不,没,不是
+note	n.①便条②记录③注解 vt.①注意②记录
+notebook	n.①笔记本②笔记本电脑
+nothing	pron.没有什么n.无关紧要的事物
+novel	a.新颖的 n.(长篇)小说
+November	n.十一月
+now	ad.①现在②这时候③现在就,马上
+nowadays	ad.现今
+nowhere	ad.无处
+nurse	n.护士 vt.护理
+nut	n.①坚果②螺母,螺帽
+ocean	n.洋,海洋
+o'clock	ad.(表示整点)……点钟
+October	n.十月
+of	prep.①属于,关于②由……组成
+officer	n.①军官,警官②官员
+official	n.官员 a.①公务的②官方的
+often	ad.经常,通常
+oil	n.①油②油画vt.给……加润滑油
+OK/okay	int.对
+Olympic	a.奥林匹克运动会的 n.(-s)奥林匹克运动会
+on	prep.①在……上②向,对③靠近④关于
+once	ad.①一次②曾经conj.一旦
+one	num.一 pron.一人,一个
+oneself	pron.①自己②亲自
+only	ad.①只②不料a.①唯一的②最好的,最适当的conj.可是
+onto	prep.朝,朝向
+open	a.①开着的②营业的③直率的④未决定的v.①开②开始
+opera	n.①歌剧②歌剧团,歌剧院
+opinion	n.意见,看法
+or	conj.①或者②即③否则
+orange	n.①橙子②橙汁③橙色
+ordinary	a.①普通的②平庸的
+other	a.①其他的②另一的 pron.另一个人(或事物)
+oughtto	modalv.应该,应当
+ounce	n.盎司
+our	a.我们的
+ours	pron.我们的
+ourselves	pron.我们自己
+outdoor	a.户外的
+outgoing	a.①即将卸任的②外向的③外出的
+outing	n.①远足②参赛
+outside	prep.①在……的外面②(~of)除……以外 ad.在外面 n.外面
+ox	n.(pl.oxen)牛
+page	n.①页②(计算机)页面③历史篇章
+pain	n.①疼痛②痛苦 vt.使疼痛
+paint	n.油漆 v.在……上刷油漆
+pair	n.①一双②俩vt.使成对
+palace	n.宫,宫殿
+panda	n.熊猫
+paper	n.①纸②报纸③(pl.)文件④文章
+paragraph	n.段落
+pardon	int.抱歉,请再说一遍 n.宽恕
+parent	n.父(母)亲
+park	n.公园 v.停(车)
+partner	n.①配偶,搭档②合伙人 vt.做搭档,配对
+party	n.①党派,政党②社交聚会③队,群
+passage	n.①通道②(文章等的)一段
+passenger	n.乘客,旅客
+past	a.以前的n.(the~)过去
+path	n.①小路②路线③行动计划
+patient	a.能忍耐的,有耐心的 n.病人
+pause	vi./n.暂停,中止
+pea	n.豌豆,豌豆粒
+peace	n.①和平②平静③和睦
+peach	n.桃,桃子
+pear	n.梨
+peasant	n.农民,佃农
+pen	n.①笔,钢笔②栏,圈,棚
+pencil	n.铅笔
+penny	n.便士
+people	n.①人们,大家②民族
+pepper	n.胡椒粉vt.在……上撒胡椒粉
+per	prep.每,每一
+percent	n.百分之一
+perhaps	ad.或许,大概,可能
+period	n.①(一段)时间②阶段③学时,课④句号
+person	n.人
+pet	n.①宠物②宠儿vt.抚摸
+photo	n.照片
+piano	n.钢琴
+pick	v.①挑选,选择②采,摘③摘掉,剔除
+picnic	n.野餐(食物) vi.野餐
+picture	n.①画,图画②相片③(常sing.)描绘vt.①设想②描述
+pie	n.馅饼
+pig	n.猪
+pill	n.药丸,药片[△tablet药片]
+pillow	n.枕头
+pilot	n.①飞行员②领航员 vt.①驾驶(飞机等)②引导③试验 a.试验性的
+pink	a.粉红色的 n.粉红色
+pioneer	n.①先驱②开拓者,拓荒者 vt.当开拓者
+pipe	n.管子,管道
+pity	n./vt.同情,怜悯
+plain	a.①坦率的②朴素的 n.平原
+plan	n.①计划,打算②(详细)规划③设计图 v.计划
+planet	n.①行星②(sing.)地球
+plastic	n.塑料(制品)
+plate	n.①盘子②金属板条
+play	v.①玩耍②演奏③扮演
+playground	n.游乐场,操场
+please	int.请 vt.使满意vi.愿意,喜欢
+plus	prep.①加②和,也 n.加号,正号
+pocket	n.①衣袋②(常sing.)钱,财力
+poet	n.诗人
+pole	n.①柱,杆②地极
+police	n.警察
+policy	n.①政策,方针②保险单
+polite	a.①有礼貌的②应酬的
+politics	n.政治
+pollute	vt.弄脏,污染
+pond	n.池塘
+pool	n.①泳池②水坑③(液体等的)一摊④共同的资源
+poor	a.①贫困的②可怜的③低劣的④不擅长的
+pop	n.①流行音乐②砰的一声
+population	n.人口
+pork	n.猪肉
+post	n.①邮政,邮件②职位,岗位③(支)柱,桩 vt.①投寄②张贴
+pot	n.罐,壶,锅
+potato	n.土豆
+pound	n.①磅②英镑
+pour	v.①倾倒②倾泻
+powder	n.①粉末②扑面粉
+practical	a.①实际的②切实可行的③明智的
+practise/-ice	v.①练习②从事
+praise	vt./n.赞扬,称赞
+prepare	v.准备,预备
+pretty	ad.相当,很a.①漂亮的②优美的③俊俏的
+price	n.①价格②代价
+pride	n.①自豪(感)②自尊(心)③骄傲
+prize	n.①奖赏②值得追求的东西
+problem	n.①问题,难题②逻辑题
+province	n.①省②(sing.)范围
+pull	v.拉,拖 vt.①拔②拖动,牵引 n.①拉,拖②(sing.)拉力,牵引力
+pupil	n.①学生,(尤指)小学生②瞳孔
+pure	a.①纯的②纯理论的③完全的
+purple	a./n.紫色(的)
+purse	n.①钱包②(sing.)资金
+push	v./n.推,按
+put	vt.①放②表达③提出④记下
+puzzle	n.①谜,智力游戏②(常sing.)不解之谜 vt.迷惑
+quality	n.①质量,品质②品德,品性③特性
+quantity	n.数量
+quarter	n.①四分之一②季,季度③一刻钟
+queen	n.女王,王后
+queue	n.队 vi.排队
+quick	a.①快的②灵敏的ad.快地
+quiet	a.①轻声的②安静的③温和的 n.安静 v.(使)安静
+quite	ad.①相当②的确③完全
+rabbit	n.兔
+race	n.①赛跑,速度竞赛②(sing.)竞争③人种 v.(参加)比赛
+railway	n.铁路
+rain	n.雨 vi.下雨
+rainbow	n.虹,彩虹
+raincoat	n.雨衣
+rapid	a.快的,迅速的
+rat	n.①老鼠②讨厌的人
+rather	ad.相当,颇
+reach	vt.①抵达②伸出手,够到
+read	v.①读②朗读③读懂
+reason	n.①原因②道理,情理
+recent	a.最近的
+record	n.[rIˈkɔːd]v. n.①记录②唱片③纪录 vt.记录
+red	a.红色的 n.红色
+refrigerator	n.冰箱
+regard	vt.①把……看作②注视 n.①注意②尊敬③(pl.)致意
+regret	v./n.懊悔,遗憾,抱歉
+relax	v.放松,(使)松弛
+remain	vi.①仍然是②逗留,停留③剩余
+remember	vt.①记得②纪念
+rent	v.①租借②出租n.租金
+repair	n.修理vt.①修理②弥补
+report	vt.①报告②报道
+research	v./n.研究,调查
+rest	n.①休息②停止③剩余部分 v.休息
+restaurant	n.餐馆,饭店
+result	n.①结果②(常pl.)成绩 vi.(因……)发生
+return	vi.①返回②恢复vt.归还
+rice	n.①水稻②米饭
+ride	v.骑 n.(骑马、骑车或乘车的)旅行
+ring	vt.①给……打电话②按(铃) vi.①(铃、钟等)鸣,响②按铃 n.戒指
+ripe	a.(水果或庄稼)成熟的
+river	n.河,江
+road	n.路,道路
+robot	n.机器人
+rock	n.①岩石,石块②摇滚乐 vt.①使摇动②使震惊
+rocket	n.火箭 vi.迅速上升,猛涨
+role	n.①作用,职责②角色
+roof	n.屋顶,顶部
+room	n.①房间②空间③可能性
+root	n.①根(部)②(常sing.)根源
+rope	n.绳
+rose	n.玫瑰(花),蔷薇(花)
+row	n.①(一)排,(一)行②(常sing.)划船(时间) v.划(船) vi./n.争吵
+rubber	n.①橡胶(制品)②橡皮
+rubbish	n.①垃圾②废话
+ruin	vt.①毁灭②使破产n.①毁灭,毁坏②破产③(pl.)废墟
+rule	n.①规则②(常sing.)习惯③统治 v.①统治②裁决
+run	vi.①跑②行驶③运转 vt.①使移动②经营
+rush	vi.急速行进,猛冲
+sad	a.①悲哀的②十分糟糕的
+safe	a.①安全的②牢靠的③谨慎的 n.保险箱
+sail	vi.航行 vt.①驾驶(船只)②在……上航行 n.帆
+salad	n.色拉,凉拌菜
+sale	n.①卖,出售②廉价出售
+salesman	n.售货员
+salt	n.盐
+sand	n.①沙②沙滩
+sandwich	n.三明治vt.夹入
+satellite	n.①卫星②人造卫星
+Saturday	n.星期六
+sausage	n.香肠,腊肠
+save	vt.①救助②储蓄③节省④保存 vi.储蓄prep.除……之外
+say	vt.①说②说明③表明
+scholar	n.①学者②奖学金获得者
+school	n.①学校②上学③学派
+science	n.①科学②学科
+scissors	n.(pl.)剪刀
+score	n.①得分②(pl.)大量③二十个④划痕 vt.①得(分)②给……评分③刻痕于
+screen	n.①屏幕②屏风,帘,纱窗 vt.①掩蔽②放映(电影)③审查
+sea	n.海,海洋
+search	v./n.搜索,寻找,探查
+season	n.季节
+seat	n.座位 vt.使坐下
+secret	a.秘密的n.①秘密②秘诀
+secretary	n.①秘书②部长,大臣
+see	v.①看,看见②观看③领会,理解
+seed	n.①种子②(常pl.)萌芽
+seek	v.①寻找,追求②征求(意见)③试图
+seem	link.v.好像,似乎
+seldom	ad.很少,不常
+self	n.①本来面目②个性
+sell	v.卖,推销
+send	vt.①送,寄②派遣,打发③发送(信号等),发射
+sentence	n.①句子②判决 vt.宣判
+separate	v.[ˈsepərət]a. vt.①使分离②划分③区分a.①分离的②不同的
+September	n.九月
+serious	a.①严重的②重要的③认真的④严肃的
+seven	num.七
+seventeen	num.十七
+seventy	num.七十
+several	pron.几个,若干,数个
+sew	v.缝(纫)
+sex	n.性(别)
+shake	v./n.①摇动②颤抖
+shall	modalv.①将要,将会②(表示提出或征求意见)③(表示决心、命令或指示)必须,应该
+shame	n.①羞耻②(sing.)让人遗憾的事
+shape	n.①形状②状况 vt.形成
+share	vt.①分享②分配vi.分享,分担 n.①一份②股票
+sharp	a.①锋利的②轮廓分明的③敏锐的④急剧的ad.(时刻)整,准
+shave	vt.剃,刮,削vi./n.修面,刮脸
+she	pron.她
+sheep	n.绵羊
+sheet	n.①被单②薄板③(一)片,(一)张
+shelf	n.架子
+shine	vi.①照耀②干得出色
+ship	n.船(舶) vt.用船运
+shirt	n.衬衫
+shoe	n.鞋
+shoot	v.①射击②射门,投篮③拍摄
+shop	n.①商店②车间
+short	a.①短的②缺乏的ad.简短地
+shortly	ad.立刻,不久
+shot	n.①开枪②射门,投篮③弹丸④铅球⑤尝试⑥镜头
+should	modalv.①[shall的过去式]②应当③万一④本应
+shoulder	n.肩(部)vt.肩负
+shout	v./n.呼喊,呼叫
+show	v.①表明②显示③带,引
+shower	n.①淋浴(器)②阵雨 vi.①洗淋浴②下阵雨
+shut	v.关,闭
+shy	a.①害羞的②胆怯的
+sick	a.①有病的②恶心的③腻烦的④心烦意乱的
+sigh	n.叹息(声) vi.叹息
+silent	a.①寂静的②沉默寡言的③无声的
+silk	n.丝绸
+silver	n.①银②银器③银币④银色
+since	conj.①自……以来②因为 prep.自……以来ad.后来
+sing	v.①唱(歌),演唱②(鸟)鸣
+sink	v.①下沉②降低③陷入,衰退 n.水槽
+sir	n.①先生②(S-)爵士
+sister	n.姐,妹
+six	num.六
+sixteen	num.十六
+sixty	num.六十
+size	n.①大小,尺寸②尺码
+skate	vi.溜冰,滑冰n.冰鞋
+ski	vi.滑雪 n.滑雪板
+skin	n.①皮(肤)②兽皮,毛皮③外壳
+sky	n.天(空)
+skyscraper	n.摩天大楼
+slave	n.奴隶,苦工vi.苦干,拼命干
+sleep	v./n.睡(觉)
+sleeve	n.袖子
+slow	a.①慢的②迟钝的
+small	a.①小的②年幼的③不重要的
+smart	a.①漂亮的,潇洒的②聪明的
+smartphone	n.智能手机
+smile	n./v.微笑
+smog	n.烟雾
+smoke	n.①烟②(常sing.)吸烟 vi.①冒烟②抽烟vt.①抽(烟)②熏制
+snake	n.蛇 v.蜿蜒,弯弯曲曲行进
+snow	n.雪 vi.下雪
+so	ad.①那么②这样,那样③如此④同样 conj.①因而②为了
+soap	n.肥皂
+soccer	n.足球
+sock	n.短袜
+sofa	n.(长)沙发
+soft	a.①柔软的②(声音)轻柔的③柔和的④温和的
+software	n.软件
+soil	n.泥土 vt.弄脏
+soldier	n.士兵,军人
+solid	a.①固体的②实心的③结实的④可靠的
+somebody	pron.①某人②重要人物
+somehow	ad.①以某种方式②不知怎么地
+someone	pron.①某人②重要人物
+something	pron.某事,某物 n.(sing.)重要的事物
+sometime	ad.在(过去或将来的)某个时候
+sometimes	ad.有时,间或
+somewhere	ad.①在某处②大约
+son	n.①儿子②孩子
+song	n.①歌②(鸟等)鸣声
+soon	ad.①不久②很快,马上
+sorry	a.①对不起的②遗憾的③可怜的
+soul	n.①灵魂②心灵
+sound	n.声音 vt.使发出声音 a.明智的
+soup	n.汤
+sour	a.①酸的②馊的v.(使)变酸
+south	n.南,南方,南部
+southeast	n.东南方
+southwest	n.西南方
+sow	v.播(种)
+space	n.①空地②空间③太空
+spaceship	n.宇宙飞船
+spare	a.①备用的②多余的③不用的 vt.①省出②饶恕③使免遭④节约
+speak	v.①说(出)②会讲(某种语言)
+speech	n.①说话,讲话,演说②言语,言论③说话方式
+speed	vi.①迅速前进,急行②(违章)超速行驶 n.速度
+spell	v.①拼写②意味着n.①咒语②一段时间
+spokesman	n.发言人
+spoon	n.匙,调羹vt.用匙舀
+sport	n.体育运动
+sportsman	n.运动员
+square	a.①正方形的②平方的 n.①正方形②广场③平方
+stage	n.①阶段②舞台vt.①上演②举办
+stair	n.①(pl.)楼梯②(楼梯的)梯级
+stamp	n.①邮票②印③跺脚 v.跺脚 vt.在……上盖印
+standard	n.标准,规格
+star	n.①(恒)星②星形(物)③明星
+stare	vi./n.盯,凝视
+state	n.①状态②(S-)国家,政府③(S-)州 vt.陈述
+stay	vi.①逗留②保持③停留 vt.保持 n.逗留
+steal	v.偷盗
+steel	n.钢
+step	n.①步,脚步②步骤③台阶 vi.①跨步②踩
+stocking	n.(pl.)长筒袜
+stomach	n.胃,腹部
+stone	n.①石头②宝石③果核
+stop	vt.①停止②塞住,堵塞③阻止
+store	n.①商店②贮存vt.贮藏
+storm	n.暴风雨,暴风雪
+story	n.①故事②情况③(新闻)报道④谎言
+stove	n.炉子,火炉
+straight	a.①直的②直率的 ad.①直接地②立即③坦率地
+strange	a.①奇怪的②陌生的
+street	n.街道
+strong	a.①强壮的②有权势的
+student	n.①学生②研究者
+study	v.①学习②研究n.①学习②研究③书房
+stupid	a.①愚蠢的②讨厌的
+such	a.①这样的②那么的ad.那么 pron.这样的人(或事物)
+sudden	a.突然的,忽然的
+sugar	n.糖
+suitcase	n.(旅行用)小提箱
+summer	n.夏,夏季
+Sunday	n.星期日
+sunshine	n.日光,日照
+supermarket	n.超市
+supper	n.晚餐,夜宵
+support	vt.①支持②支撑
+suppose	vt.①料想②假定③期望
+surprise	n.①惊奇②令人惊奇的事物 vt.①使诧异②突然袭击
+sweet	a.①甜的②和蔼的③芳香的 n.①甜食②亲爱的
+swim	vi.①游泳②浸泡,充溢着 n.游泳
+sword	n.剑,刀
+system	n.①系统②制度③身体
+table	n.①桌子②表格
+tablet	n.①药片②碑,牌,匾
+tail	n.①尾巴②后部vt.跟踪
+tailor	n.裁缝 vt.专门制作
+talk	v.讲 n.①谈话②演讲
+tall	a.①高的②有……高的
+tap	vt.①轻敲②利用③搭线窃听 vi.轻叩 n.①塞子②轻击③电话窃听
+tape	n.①录音带②胶带
+task	n.任务,工作
+taste	n.①滋味②味觉③鉴赏力④兴趣⑤体验,尝试 v.①尝到……的味道②品尝③体验
+tax	n.税(款)vt.对……征税
+taxi	n.出租汽车
+tea	n.①茶叶②茶,茶水
+teach	vt.①教②教导vi.讲课
+team	n.队,组 vt.使合作
+tear	n.[teə(r)]v. n.眼泪vt.①撕碎②拉掉 vi.①撕②飞跑
+teenager	n.(13~19岁的)青少年
+telephone	n.电话(机)v.打电话
+television	n.①电视机②电视节目
+tell	vt.①讲②吩咐③判断④显露⑤辨别 vi.认出
+temperature	n.①温度②体温
+ten	num.十
+tennis	n.网球
+tense	a.①拉紧的②紧张的 v.(使)拉紧 n.(动词的)时态[△voice语态]
+tent	n.帐篷
+text	n.①正文,文本②课本③演讲稿,剧本④文章 v.发短信
+textbook	n.课本
+than	conj.比
+thank	vt.感谢int./n.(-s)谢谢
+that	pron.那,那个
+the	art.这,那
+theater/-tre	n.①戏院,剧场②戏剧
+theft	n.偷,盗窃罪
+their	a.他(她、它)们的
+theirs	pron.他(她、它)们的(所有物)
+them	pron.他(她、它)们
+themselves	pron.①他(她、它)们自己②他(她、它)们亲自
+then	ad.①当时,在那时②然后,接着③那么,因此④还有,再者
+these	pron.这些
+they	pron.①他(她、它)们②(泛指)人们
+thick	a.①厚的②笨的③稠的④(说话)不清楚的⑤密的
+thief	n.(pl.thieves)贼,小偷
+thin	a.①薄的②瘦的③稀薄的
+thing	n.①事件②物
+think	vt.①认为②想③想要 vi.想 n.思考
+third	ord.第三 n.三分之一
+thirteen	num.十三
+thirty	num.三十
+this	pron./a.①这,这个②现在 ad.这样
+those	pron.那些
+though	conj.尽管,虽然 ad.可是,不过,然而
+thousand	num.一千
+three	num.三
+throat	n.咽喉,嗓子
+through	prep.①穿过②自始至终③凭借
+throw	vt.①投,扔,抛②猛推③使摔倒 n.①投②投掷的距离
+thunder	n.①雷,雷声②轰隆声
+Thursday	n.星期四
+ticket	n.①票②奖券③(交通违章)罚款单④候选人名单
+tidy	a.①整洁的②爱整洁的 vt.使整洁
+tie	vt.①拴,扎,捆②把……打结③连接④束缚⑤打成平局n.①领带②绳子③(常pl.)纽带④束缚⑤平局
+tiger	n.虎,老虎
+till	prep./conj.直到
+tin	n.①锡②罐,罐头
+tiny	a.极小的,微小的
+tire	v.(使)疲劳
+tobacco	n.烟草,烟叶
+today	ad.①在今天②当今 n.①今天②现在
+toe	n.①脚趾②(袜、鞋等的)足尖部
+together	ad.①一起,共同②一致
+toilet	n.①厕所②抽水马桶
+tomato	n.西红柿
+tomorrow	n.①明天,明日②未来 ad.在明天
+ton	n.①吨②(pl.)大量,许多
+tongue	n.①舌头②语言
+tonight	n.今晚 ad.在今夜
+too	ad.①也②太③很
+tool	n.①工具②方法,手段
+tooth	n.①牙齿②齿状部分
+top	n.①顶②表面
+topic	n.题目,话题
+total	a.①总的②完全的n.总数 vt.①总计②计算……的总和
+touch	vt.①触摸,碰②触动③接触 n.①(常sing.)触摸②触觉
+tour	n./v.旅行,旅游
+toward(s)	prep.①向,朝②趋向,接近③对于,关于④将近
+towel	n.毛巾,抹布
+tower	n.塔,塔楼vi.①高于②胜过,远远超过
+town	n.①镇②(the~)(某一市镇的)居民③商业区
+toy	n.玩具
+tractor	n.拖拉机
+tradition	n.传统
+traffic	n.路上行驶的车辆,交通
+train	n.①火车,列车②队列③(常sing.)一系列相关的事情
+travel	n./v.旅行
+treasure	n.①金银财宝②(常pl.)珍品 vt.珍爱
+treat	vt.①对待②把……看作③治疗④款待 n.①乐事②款待
+tree	n.树,树木
+trick	n.①诡计②引起错觉的事物③戏法④(常sing.)诀窍
+trip	n.旅行 v.绊
+trousers	n.(pl.)裤子
+truck	n.卡车
+true	a.①如实的②真正的③忠诚的④精确的
+trust	n.①信任②委托v.①信任②相信
+truth	n.①(the~)事实,真相②真实性③真理
+try	vt.①试图②试验③审讯 vi.努力 n.努力,尝试
+tube	n.①管,管状物②软管③电视
+Tuesday	n.星期二
+turkey	n.火鸡
+turn	v.①(使)转动②转身③改变方向④朝着⑤(使)变成
+twelve	num.十二
+twenty	num.二十
+twice	ad.①两次,两遍②两倍
+twin	n.孪生儿之一,双胞胎之一
+two	num.二
+type	n.①类型②典型③文字 v.打字
+typewriter	n.打字机
+tyre	(alsotire)n.轮胎
+ugly	a.①丑的②可怕的
+umbrella	n.伞
+uncertain	a.不确定的
+uncle	n.伯父,叔父,舅父,姑父,姨父
+unit	n.①(工作)单位②(计量或计数用的)单位③单元
+university	n.大学
+unless	conj.除非,若不
+until	prep./conj.直到……时
+upon	prep.①在……上②即将来临
+upstairs	ad.在楼上 a.楼上的 n.(sing.)楼上
+upward	a.向上的ad.(-s)向上
+us	pron.我们
+used	a.习惯于……的 [juːzd]a.用过的,旧的 vi.惯常
+usual	a.通常的,惯常的
+valley	n.山谷,溪谷
+vast	a.①广阔的②巨大的,庞大的
+vegetable	n.①蔬菜②植物人
+very	ad.①很,非常②正是 a.①正是的②完全的
+village	n.①村庄②(the~)全体村民
+vinegar	n.醋
+violin	n.小提琴
+vocabulary	n.①词汇(量)②词(汇)表
+voice	n.①说话声②发言权③(sing.)语态
+volleyball	n.排球(运动)
+vote	n.①选票②投票③表决结果 vi.投票
+wage	n.工资,报酬vt.开始,进行
+waist	n.腰
+wait	vi.等候 n.等待的时间
+wake	vi.醒来 vt.①唤醒②唤起
+walk	vi./n.步行,散步
+wall	n.墙,壁 vt.筑墙
+wallet	n.①钱包②塑料夹
+war	n.①战争②斗争
+warm	a.①温暖的②热情的③(色调)暖的 v.(使)温暖
+warn	vt.警告,告诫
+wash	v.①洗②冲
+waste	n.①浪费②废料vt.浪费 a.①废弃的②荒芜的
+watch	vt.①观看②看守vi.小心 n.①看管②手表
+wave	v./n.挥动
+we	pron.①我们,咱们②人们
+weak	a.①虚弱的②(能力等)弱的③微弱的
+wealth	n.①财富②(sing.)丰富③富有
+wear	vt.穿着,戴着
+weather	n.天气,气象
+Wednesday	n.星期三
+weed	n.杂草 v.(为……)除草
+week	n.星期,周
+weekday	n.工作日,周一到周五
+weekend	n.周末
+weep	v./n.(为……)哭泣
+weigh	link.v.有……重vt.①称……的重量②认真考虑
+welcome	vt./int./n.欢迎
+west	n.西,西方
+wet	a.①湿的,潮的②多雨的
+whale	n.鲸
+wheat	n.小麦
+wheel	n.轮,车轮
+when	conj.①在……时,当……时②然后,可是
+whether	conj.①是否②不管
+which	pron.哪一个,哪一些
+while	conj.①当……的时候②然而③虽然
+white	a.①白色的②白种人的 n.①白色②蛋清
+whom	pron.谁
+whose	pron.①谁的②那个(人)的,那些(人)的
+why	ad.①为什么②……的理由 int.哎呀
+wide	a.①宽阔的②广泛的 ad.充分地
+wife	n.(pl.wives)妻子,夫人
+wind	n.[waInd]v. n.①风②气息,呼吸 vt.①绕,缠②(给……)上发条
+window	n.窗户
+wine	n.葡萄酒
+wing	n.翼,翅膀
+winter	n.冬,冬季
+wipe	vt./n.擦,抹,揩
+wish	vt.①希望②但愿③祝 n.①希望②(pl.)祝愿
+with	prep.①和……在一起②具有③用④关于⑤随着
+within	prep.在……里面ad.在里面
+without	prep.无
+wolf	n.(pl.wolves)狼
+woman	n.(pl.women)妇女,成年女子
+wonder	vt.①想知道②(对……)感到惊讶 n.①惊奇②奇迹
+wood	n.①木材②(pl.)树林
+wool	n.①羊毛②毛线,毛织品
+world	n.①(the~)世界②(sing.)世间③界
+worldwide	a./ad.世界范围(的)
+worm	n.虫,蠕虫
+worry	v./n.担心
+worse	a.更坏的 ad.更坏地
+worst	a./ad.最坏(的)
+worth	prep./a.值……钱的 n.价值
+would	modalv.①[will的过去式]②老是③也许④请
+wound	n.创伤,伤口 vt.伤害
+write	vt.①写②写作,作曲③写信(给)
+wrong	a.①不正确的②不道德的
+year	n.年,年份
+yellow	a.黄色的 n.黄色
+yes	ad.是,对
+yesterday	ad.在昨天n.昨天
+yet	ad.①还②现在③迄今为止④更 conj.然而,但是
+you	pron.①你(们)②任何人
+your	a.你(们)的
+yours	pron.你(们)的
+yourself	pron.你(们)自己
+youth	n.①青春②青年时期③青年男子④(pl.)青年
+zero	num.零 n.零点,零度
+zone	n.地区,区域
+zoo	n.动物园

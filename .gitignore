@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# 词计划 · 四级词汇周计划 —— 不纳入版本控制的东西
+# ---------------------------------------------------------------------------
+
+# 工具链与运行时：体积巨大，且都能由 tools/ 下的脚本重新下载
+android-sdk/
+
+# 无头 Edge 调试用的用户配置目录（几百 MB）
+.edgeprof/
+**/.edgeprof/
+
+# 星火官方资源包里的音频与压缩包：版权材料，且合计约 330 MB。
+# 词表用到的只是 sparke_pack/lrc_utf8/*.lrc（11 个小文本文件，已入库）。
+cet4-sparke/sparke_pack/ex/
+cet4-sparke/sparke_pack/ex2/
+cet4-sparke/sparke_pack/*.rar
+
+# 可重新下载 / 重新生成的构建缓存
+cet4-trainer/build/webview2/
+cet4-trainer/build/webview2.nupkg
+cet4-trainer/build/webview2-info.json
+cet4-trainer/build/MicrosoftEdgeWebview2Setup.exe
+cet4-trainer/build/apk/
+cet4-trainer/build/collins.json
+cet4-trainer/build/collins_sample.json
+
+# 安卓签名密钥：绝对不要公开，别人拿到就能签出「同一个 App」的升级包
+cet4-trainer/android/keystore/
+*.jks
+*.keystore
+
+# dist/ 是纯构建产物：三端成品改挂在 GitHub Releases 上，不进 git 历史
+# （唯一保留的是随包分发的那份使用说明）
+cet4-trainer/dist/*
+!cet4-trainer/dist/使用说明.txt
+cet4-sparke/tmp/
+cet4-sparke/output_v1_大纲近似/
+cet4-trainer/tools/_*.mjs
+cet4-sparke/tools/_*.mjs
+**/*.log
+
+# 常规
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini

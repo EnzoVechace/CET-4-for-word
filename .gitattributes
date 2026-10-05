@@ -1,0 +1,31 @@
+# 让 git 自己判断文本/二进制；文本一律以 LF 入库、以 LF 检出，避免跨平台行尾漂移
+* text=auto eol=lf
+
+# 明确的二进制类型（不要做行尾转换，也不要尝试 diff）
+*.exe   binary
+*.apk   binary
+*.idsig binary
+*.jks   binary
+*.nupkg binary
+*.ico   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.mp3   binary
+*.rar   binary
+*.zip   binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+
+# Windows 批处理脚本保持 CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# 让 GitHub 不要把这些当代码语言统计
+*.lrc    text
+*.json   text
+*.md     text
+*.csv    text

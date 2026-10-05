@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>搜索列表页</title>
+    <link rel="stylesheet" href="http://down.sparke.cn/css/A.common.css.pagespeed.cf.6_vIlrjst7.css">
+    <link rel="stylesheet" href="http://down.sparke.cn/css/A.index.css.pagespeed.cf.2KfAWpWkIb.css">
+    <link rel="stylesheet" href="http://down.sparke.cn/css/A.pager.css.pagespeed.cf.X_1YQ5wKGJ.css">
+</head>
+
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='http://down.sparke.cn/search/1/1?content=%E5%91%A8%E8%AE%A1%E5%88%92&amp;here=1&amp;PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="http://down.sparke.cn/search/1/1?content=%E5%91%A8%E8%AE%A1%E5%88%92&amp;here=1&amp;PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<script type="text/html" id="exceptIndexNav">
+    <div class="susNavContent marginauto width1200 psr exceptadjustZindex">
+        <div class="logo fl"><a href="/"></a></div>
+        <div class="lookFor fl">
+            <span>找资源</span>
+            <div class="left_classificationNav psa left_suspenClassifyNav">
+                <ul class="psr">
+                    <%for(var i=0;i<directoryList.length;i++){%>
+                    <li class="<%=i==0?'active':''%>">
+                        <div class="left_mainclassNavItem">
+                            <dl class="left_mainclassNav">
+                                <dt><a><%=directoryList[i].name%></a></dt>
+                                <dd>
+                                    <%for(var j=0;j<directoryList[i].children.length;j++){%>
+                                    <a><%=directoryList[i].children[j].name%></a>
+                                    <%}%>
+                                </dd>
+                            </dl>
+                            <div class="rightSubNav needFloat psa">
+                                <%for(var j=0;j<directoryList[i].children.length;j++){%>
+                                <dl>
+                                    <dt><a><%=directoryList[i].children[j].name%></a></dt>
+                                    <dd>
+                                        <%for(var k=0;k<directoryList[i].children[j].children.length;k++){%>
+                                            <a href="/search/1/1?content=<%=directoryList[i].children[j].children[k].id%>&here=1" target="_blank"><%=directoryList[i].children[j].children[k].name%></a>
+                                        <%}%>
+                                    </dd>
+                                </dl>
+                                <%}%>
+                            </div>
+                        </div>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+        <div class="sparkPro fl psr">
+            <span>星火产品</span>
+            <ul class="proBox psa tac">
+                <%for(var z=0;z<productList.length;z++){%>
+                <li><a href="<%=productList[z].value%>" pro-id="<%=productList[z].id%>"><%=productList[z].label%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="searchBox fl psr oh">
+            <input type="text" class="mod-search__input" placeholder="请输入图书代码、书名或相关关键词">
+            <input type="button" value="搜资源" class="SearchBtn psa seacherListHtml">
+        </div>
+        <div class="fr loginBox">
+            <div class="">
+                <%if(!userInfo.id){%>
+                <a href="javascript:;" class="loginbtn2 loginGo" type="L"><span>登录</span></a><span>/</span><a href="javascript:;" class="registerBtn3 registerGo"><span>注册</span></a>
+                <%}else{%>
+                <!--登录后-->
+                <span class="nc"><%=userInfo.username%></span>
+                <%}%>
+            </div>
+            <b class="userImg psr"><img src="<%=userInfo.headerImg==undefined?'':userInfo.headerImg%>" alt=""><%if(userInfo.id){%><i class="perInfoInto psa tac"><a
+                    href="/users/info">个人中心</a><a href="javascript:;" class="loginout">退出</a></i><span style="height: 30px;width: 42px;position: relative;top: -11px"></span><%}%></b>
+        </div>
+    </div>
+
+</script><div id="topSuspensionNav"></div>
+
+<div class="marginauto width1200 psr">
+    <div class="crumbsNav"><b>您的位置：</b><a href="/">首页&gt;</a><i>&nbsp;搜索结果</i></div>
+    <div id="startFloor"></div>
+    <div class="searchResultList">
+        <div class="searchNOresource"></div>
+    </div>
+    <div id="pager" class="pager clearfix">
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="friendLink">
+        <dl class="oh marginauto width1200">
+            <dt class="fl">友情链接</dt>
+			<dd>
+				<a href="https://xinghuots.tmall.com">星火图书天猫旗舰店</a>
+				<a href="https://quanyitong.tmall.com">全易通图书天猫旗舰店</a>
+			</dd>
+            
+        </dl>
+    </div>
+    <div class="record_number">Copyright © 2013 All Rights Reserved 山东星火国际传媒集团有限公司  京ICP证070017号 - 京ICP备08105196号
+        <p style="padding-top: 10px;"><script>var cnzz_protocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271657779'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s13.cnzz.com/z_stat.php%3Fid%3D1271657779%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+    </div>
+
+</div>
+<script src="http://down.sparke.cn/js/jquery.min.js.pagespeed.jm.29OAZzvhfX.js"></script>
+<script src="http://down.sparke.cn/js/jquery.cookie.js.pagespeed.jm.2B1PshnKfs.js"></script>
+<script src="http://down.sparke.cn/js/jquery.lazyload.min.js.pagespeed.jm.HSOvpKpIZD.js"></script>
+<script src="http://down.sparke.cn/js/template-native.js.pagespeed.jm.KLZFPypfJA.js"></script>
+<script src="http://down.sparke.cn/js/templateNav.js.pagespeed.jm.L-JETZyycC.js"></script>
+<script src="http://down.sparke.cn/js/spark.js.pagespeed.jm.3330ABYYgv.js"></script>
+    <script>$("img.lazy").lazyload({effect:"fadeIn",threshold:200});</script>
+</body>
+</html>

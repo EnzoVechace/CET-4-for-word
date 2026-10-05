@@ -1,0 +1,27 @@
+{
+  "id": "wordplan-cet4",
+  "name": "词计划 · 四级词汇周计划训练台",
+  "short_name": "词计划",
+  "description": "星火《四级词汇周计划》配套背单词训练台。单词与顺序和书上完全一致，3700 个词条离线可用。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f4f5fa",
+  "theme_color": "#4f46e5",
+  "categories": ["education", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "开始背单词", "short_name": "练习", "url": "./index.html#practice" },
+    { "name": "学习统计", "short_name": "统计", "url": "./index.html#stats" },
+    { "name": "设置", "short_name": "设置", "url": "./index.html#settings" }
+  ]
+}

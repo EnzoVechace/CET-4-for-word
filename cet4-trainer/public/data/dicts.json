@@ -1,0 +1,93 @@
+{
+ "generatedAt": "2026-10-05T05:54:12.590Z",
+ "dicts": [
+  {
+   "id": "full",
+   "name": "全书",
+   "sub": "核心 + 认知",
+   "count": 2177,
+   "compose": [
+    "week1",
+    "week2",
+    "week3",
+    "week4",
+    "week5",
+    "week6",
+    "week7",
+    "cognitive"
+   ]
+  },
+  {
+   "id": "week1",
+   "name": "Week 1",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week1.json",
+   "week": 1
+  },
+  {
+   "id": "week2",
+   "name": "Week 2",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week2.json",
+   "week": 2
+  },
+  {
+   "id": "week3",
+   "name": "Week 3",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week3.json",
+   "week": 3
+  },
+  {
+   "id": "week4",
+   "name": "Week 4",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week4.json",
+   "week": 4
+  },
+  {
+   "id": "week5",
+   "name": "Week 5",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week5.json",
+   "week": 5
+  },
+  {
+   "id": "week6",
+   "name": "Week 6",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week6.json",
+   "week": 6
+  },
+  {
+   "id": "week7",
+   "name": "Week 7",
+   "sub": "核心词汇",
+   "count": 250,
+   "file": "week7.json",
+   "week": 7
+  },
+  {
+   "id": "cognitive",
+   "name": "认知词汇",
+   "sub": "附录一",
+   "count": 427,
+   "file": "cognitive.json",
+   "appendix": true
+  },
+  {
+   "id": "basic",
+   "name": "基础词汇",
+   "sub": "附录二",
+   "count": 1523,
+   "file": "basic.json",
+   "appendix": true
+  }
+ ]
+}

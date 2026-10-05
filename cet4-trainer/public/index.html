@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="星火《四级词汇周计划》配套背单词训练台" />
+    <title>词计划 · 四级词汇周计划训练台</title>
+    <meta name="theme-color" content="#4f46e5" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="词计划" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' font-weight='700' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" title="打开词库与设置" aria-label="菜单">☰</button>
+        <div class="brand">
+          <span class="brand-mark">W</span>
+          <span class="brand-text">
+            <strong>词计划</strong>
+            <em>四级词汇周计划</em>
+          </span>
+        </div>
+        <nav class="nav" id="nav">
+          <button data-route="practice" class="active">练习</button>
+          <button data-route="stats">统计</button>
+          <button data-route="settings">设置</button>
+        </nav>
+        <div class="topbar-right">
+          <div class="today" id="todayChip" title="今日学习 / 待复习"></div>
+          <button class="icon-btn" id="themeBtn" title="切换日夜模式"></button>
+        </div>
+      </header>
+      <div class="body">
+        <aside class="sidebar" id="sidebar"></aside>
+        <main class="stage" id="stage"></main>
+      </div>
+      <div class="backdrop" id="backdrop"></div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <template id="tpl-done">
+      <div class="done-panel">
+        <div class="done-icon">🎉</div>
+        <h2>这一轮完成了</h2>
+        <div class="done-grid" id="doneGrid"></div>
+        <div class="done-actions">
+          <button class="btn primary" data-act="again">再来一轮</button>
+          <button class="btn" data-act="review-wrong">练错词</button>
+          <button class="btn ghost" data-act="stats">看统计</button>
+        </div>
+      </div>
+    </template>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

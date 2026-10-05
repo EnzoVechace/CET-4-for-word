@@ -1,0 +1,7627 @@
+[
+ {
+  "word": "a/an",
+  "phon": "强eI,弱ə;强æn,弱ən",
+  "def": "art.(非特指的)一(个)"
+ },
+ {
+  "word": "able",
+  "phon": "ˈeIbl",
+  "def": "a.能够……的"
+ },
+ {
+  "word": "about",
+  "phon": "əˈbaʊt",
+  "def": "prep.①关于②到处 ad.①大约,差不多②到处"
+ },
+ {
+  "word": "above",
+  "phon": "əˈbʌv",
+  "def": "prep./ad.①在……上方②多于,大于③高于"
+ },
+ {
+  "word": "abroad",
+  "phon": "əˈbrɔːd",
+  "def": "ad.到国外,在国外"
+ },
+ {
+  "word": "absent",
+  "phon": "ˈæbsənt",
+  "def": "a.[æbˈsent]v. a.①缺席的②心不在焉的 vt.缺席"
+ },
+ {
+  "word": "accident",
+  "phon": "ˈæksIdənt",
+  "def": "n.事故"
+ },
+ {
+  "word": "ache",
+  "phon": "eIk",
+  "def": "vi./n.疼痛"
+ },
+ {
+  "word": "across",
+  "phon": "əˈkrɒs",
+  "def": "prep./ad.穿过,越过"
+ },
+ {
+  "word": "actor",
+  "phon": "ˈæktə(r)",
+  "def": "n.(男)演员"
+ },
+ {
+  "word": "actual",
+  "phon": "ˈæktʃuəl",
+  "def": "a.实际的"
+ },
+ {
+  "word": "add",
+  "phon": "æd",
+  "def": "vt.①添加,增加②把……加起来③补充说vi.增添"
+ },
+ {
+  "word": "address",
+  "phon": "əˈdres",
+  "def": "n.地址,住址 vt.①写(收件人)姓名和地址②设法解决"
+ },
+ {
+  "word": "admire",
+  "phon": "ədˈmaIə(r)",
+  "def": "vt.钦佩,赞赏,羡慕"
+ },
+ {
+  "word": "admit",
+  "phon": "ədˈmIt",
+  "def": "vt.①承认,供认②准许进入 vi.承认"
+ },
+ {
+  "word": "adult",
+  "phon": "ˈædʌlt,əˈdʌlt",
+  "def": "n.成年人"
+ },
+ {
+  "word": "advantage",
+  "phon": "ədˈv?ːntIdʒ",
+  "def": "n.①优点②优势"
+ },
+ {
+  "word": "advice",
+  "phon": "ədˈvaIs",
+  "def": "n.劝告,忠告,建议"
+ },
+ {
+  "word": "advise",
+  "phon": "ədˈvaIz",
+  "def": "vt.①劝告②通知"
+ },
+ {
+  "word": "affair",
+  "phon": "əˈfeə(r)",
+  "def": "n.①事务②事情"
+ },
+ {
+  "word": "afford",
+  "phon": "əˈfɔːd",
+  "def": "vt.①买得起②提供"
+ },
+ {
+  "word": "afraid",
+  "phon": "əˈfreId",
+  "def": "a.①害怕的②担心的"
+ },
+ {
+  "word": "after",
+  "phon": "ˈ?ːftə(r)",
+  "def": "prep.①在……以后②在……后面"
+ },
+ {
+  "word": "afternoon",
+  "phon": "ˌ?ːftəˈnuːn",
+  "def": "n.下午"
+ },
+ {
+  "word": "afterward",
+  "phon": "ˈ?ːftəwəd",
+  "def": "ad.以后"
+ },
+ {
+  "word": "again",
+  "phon": "əˈ?en,əˈ?eIn",
+  "def": "ad.再一次,又一次"
+ },
+ {
+  "word": "against",
+  "phon": "əˈ?enst,əˈ?eInst",
+  "def": "prep.①逆着②不赞成③倚靠④和……比赛"
+ },
+ {
+  "word": "age",
+  "phon": "eIdʒ",
+  "def": "n.①年龄②时代,时期"
+ },
+ {
+  "word": "ago",
+  "phon": "əˈ?əʊ",
+  "def": "ad.以前"
+ },
+ {
+  "word": "agriculture",
+  "phon": "ˈæ?rIkʌltʃə(r)",
+  "def": "n.农业,农学"
+ },
+ {
+  "word": "ahead",
+  "phon": "əˈhed",
+  "def": "ad.①在前面②提前,预先③占优势,领先"
+ },
+ {
+  "word": "aim",
+  "phon": "eIm",
+  "def": "n.①目标②瞄准vt.把……瞄准"
+ },
+ {
+  "word": "airline",
+  "phon": "ˈeəlaIn",
+  "def": "n.航空公司"
+ },
+ {
+  "word": "alarm",
+  "phon": "əˈl?ːm",
+  "def": "n.①惊恐②警报器③警报"
+ },
+ {
+  "word": "alike",
+  "phon": "əˈlaIk",
+  "def": "a.同样的 ad.相似地"
+ },
+ {
+  "word": "alive",
+  "phon": "əˈlaIv",
+  "def": "a.①活着的②存在的③有活力的"
+ },
+ {
+  "word": "all",
+  "phon": "ɔːl",
+  "def": "a.一切的,所有的ad.完全地 pron.全部"
+ },
+ {
+  "word": "allow",
+  "phon": "əˈlaʊ",
+  "def": "vt.①允许,准许②承认"
+ },
+ {
+  "word": "almost",
+  "phon": "ˈɔːlməʊst",
+  "def": "ad.几乎,差不多"
+ },
+ {
+  "word": "alone",
+  "phon": "əˈləʊn",
+  "def": "a.①单独的②仅,只③独一无二的 ad.①单独地②仅仅,只"
+ },
+ {
+  "word": "along",
+  "phon": "əˈlɒ?",
+  "def": "ad.①向前地②一道,一起 prep.沿着,循着"
+ },
+ {
+  "word": "aloud",
+  "phon": "əˈlaʊd",
+  "def": "ad.出声地,大声地"
+ },
+ {
+  "word": "already",
+  "phon": "ɔːlˈredi",
+  "def": "ad.已经"
+ },
+ {
+  "word": "also",
+  "phon": "ˈɔːlsəʊ",
+  "def": "ad.也,而且,还"
+ },
+ {
+  "word": "although",
+  "phon": "ɔːlˈðəʊ",
+  "def": "conj.虽然,尽管"
+ },
+ {
+  "word": "altogether",
+  "phon": "ˌɔːltəˈ?eðə(r)",
+  "def": "ad.①完全②总而言之③总共"
+ },
+ {
+  "word": "always",
+  "phon": "ˈɔːlweIz",
+  "def": "ad.一直,总是"
+ },
+ {
+  "word": "am",
+  "phon": "强æm,弱əm",
+  "def": "v.是"
+ },
+ {
+  "word": "among(st)",
+  "phon": "əˈmʌ?(st)",
+  "def": "prep.在……之中"
+ },
+ {
+  "word": "and",
+  "phon": "强ænd,弱ənd",
+  "def": "conj.①和②那么③然后④而且"
+ },
+ {
+  "word": "angry",
+  "phon": "ˈæ??ri",
+  "def": "a.发怒的,生气的"
+ },
+ {
+  "word": "animal",
+  "phon": "ˈænIml",
+  "def": "n.动物,牲畜"
+ },
+ {
+  "word": "another",
+  "phon": "əˈnʌðə(r)",
+  "def": "pron.再一个,另一个"
+ },
+ {
+  "word": "answer",
+  "phon": "ˈ?ːnsə(r)",
+  "def": "n.①答复②答案 v.①回答②解答"
+ },
+ {
+  "word": "ant",
+  "phon": "ænt",
+  "def": "n.蚂蚁"
+ },
+ {
+  "word": "anxious",
+  "phon": "ˈæ?kʃəs",
+  "def": "a.①焦虑的②渴望的,急切的"
+ },
+ {
+  "word": "any",
+  "phon": "ˈeni",
+  "def": "pron.①无论哪个②一些,一点"
+ },
+ {
+  "word": "anybody",
+  "phon": "ˈenibɒdi",
+  "def": "pron.任何人"
+ },
+ {
+  "word": "anyhow",
+  "phon": "ˈenihaʊ",
+  "def": "ad.①无论如何②不论用何种方法"
+ },
+ {
+  "word": "anything",
+  "phon": "ˈeni?I?",
+  "def": "pron.无论什么东西"
+ },
+ {
+  "word": "anyway",
+  "phon": "ˈeniweI",
+  "def": "ad.①不管怎么说②不论以何种方式"
+ },
+ {
+  "word": "anywhere",
+  "phon": "ˈeniweə(r)",
+  "def": "ad.在任何地方"
+ },
+ {
+  "word": "apology",
+  "phon": "əˈpɒlədʒi",
+  "def": "n.道歉,谢罪"
+ },
+ {
+  "word": "apple",
+  "phon": "ˈæpl",
+  "def": "n.苹果"
+ },
+ {
+  "word": "April",
+  "phon": "ˈeIprəl",
+  "def": "n.四月"
+ },
+ {
+  "word": "area",
+  "phon": "ˈeəriə",
+  "def": "n.①面积②地区③领域"
+ },
+ {
+  "word": "argue",
+  "phon": "ˈ?ː?juː",
+  "def": "v.争论,争吵,争辩"
+ },
+ {
+  "word": "arm",
+  "phon": "?ːm",
+  "def": "n.①臂②臂状物③(pl.)武器 vt.①以武器装备②提供"
+ },
+ {
+  "word": "army",
+  "phon": "ˈ?ːmi",
+  "def": "n.(the~)(一国的)陆军"
+ },
+ {
+  "word": "around",
+  "phon": "əˈraʊnd",
+  "def": "ad.①在周围②到处③大约 prep.①在各处②在附近"
+ },
+ {
+  "word": "arrive",
+  "phon": "əˈraIv",
+  "def": "vi.①到达②(时间等)来临"
+ },
+ {
+  "word": "article",
+  "phon": "ˈ?ːtIkl",
+  "def": "n.①物品,物件②文章,论文③冠词"
+ },
+ {
+  "word": "ash",
+  "phon": "æʃ",
+  "def": "n.①灰烬②骨灰"
+ },
+ {
+  "word": "ask",
+  "phon": "?ːsk",
+  "def": "v.①问,询问②请求,要求"
+ },
+ {
+  "word": "asleep",
+  "phon": "əˈsliːp",
+  "def": "a.睡着的"
+ },
+ {
+  "word": "at",
+  "phon": "强æt,弱ət",
+  "def": "prep.①在……里,在……上,在……旁②向,朝"
+ },
+ {
+  "word": "athlete",
+  "phon": "ˈæ?liːt",
+  "def": "n.运动员"
+ },
+ {
+  "word": "attain",
+  "phon": "əˈteIn",
+  "def": "vt.①达到②获得"
+ },
+ {
+  "word": "attention",
+  "phon": "əˈtenʃn",
+  "def": "n.①注意②护理"
+ },
+ {
+  "word": "audience",
+  "phon": "ˈɔːdiəns",
+  "def": "n.观众"
+ },
+ {
+  "word": "August",
+  "phon": "ˈɔː?əst",
+  "def": "n.八月"
+ },
+ {
+  "word": "aunt",
+  "phon": "?ːnt",
+  "def": "n.姨,姑,婶,伯母,舅母"
+ },
+ {
+  "word": "autumn",
+  "phon": "ˈɔːtəm",
+  "def": "n.秋,秋季"
+ },
+ {
+  "word": "awake",
+  "phon": "əˈweIk",
+  "def": "v.①(使)醒来②唤起 a.醒着的"
+ },
+ {
+  "word": "away",
+  "phon": "əˈweI",
+  "def": "ad.离开,不在"
+ },
+ {
+  "word": "awful",
+  "phon": "ˈɔːfl",
+  "def": "a.①极坏的②可怕的③非常的"
+ },
+ {
+  "word": "baby",
+  "phon": "ˈbeIbi",
+  "def": "n.①婴儿②雏鸟③宝贝儿"
+ },
+ {
+  "word": "background",
+  "phon": "ˈbæk?raʊnd",
+  "def": "n.背景"
+ },
+ {
+  "word": "backward",
+  "phon": "ˈbækwəd",
+  "def": "a./ad.向后(的),落后(的)"
+ },
+ {
+  "word": "bad",
+  "phon": "bæd",
+  "def": "a.①坏的,不利的②差的"
+ },
+ {
+  "word": "badly",
+  "phon": "ˈbædli",
+  "def": "ad.①坏②非常"
+ },
+ {
+  "word": "badminton",
+  "phon": "ˈbædmIntən",
+  "def": "n.羽毛球(运动)"
+ },
+ {
+  "word": "bag",
+  "phon": "bæ?",
+  "def": "n.①袋②手提包"
+ },
+ {
+  "word": "baggage",
+  "phon": "ˈbæ?Idʒ",
+  "def": "n.行李"
+ },
+ {
+  "word": "balance",
+  "phon": "ˈbæləns",
+  "def": "n.①平衡②秤vt.使平衡"
+ },
+ {
+  "word": "balcony",
+  "phon": "ˈbælkəni",
+  "def": "n.①阳台②(电影院等的)楼座"
+ },
+ {
+  "word": "ball",
+  "phon": "bɔːl",
+  "def": "n.球,球状物"
+ },
+ {
+  "word": "ballet",
+  "phon": "ˈbæleI",
+  "def": "n.①芭蕾舞②芭蕾舞剧③芭蕾舞团"
+ },
+ {
+  "word": "balloon",
+  "phon": "bəˈluːn",
+  "def": "n.气球"
+ },
+ {
+  "word": "bamboo",
+  "phon": "ˌbæmˈbuː",
+  "def": "n.竹子"
+ },
+ {
+  "word": "banana",
+  "phon": "bəˈn?ːnə",
+  "def": "n.香蕉"
+ },
+ {
+  "word": "bank",
+  "phon": "bæ?k",
+  "def": "n.①银行②河岸"
+ },
+ {
+  "word": "barbecue",
+  "phon": "ˈb?ːbIkjuː",
+  "def": "n.①烤架②烧烤野餐 v.烧烤"
+ },
+ {
+  "word": "barber",
+  "phon": "ˈb?ːbə(r)",
+  "def": "n.理发师"
+ },
+ {
+  "word": "bark",
+  "phon": "b?ːk",
+  "def": "vi.吠叫 n.①吠声②树皮"
+ },
+ {
+  "word": "baseball",
+  "phon": "ˈbeIsbɔːl",
+  "def": "n.棒球(运动)"
+ },
+ {
+  "word": "basin",
+  "phon": "ˈbeIsn",
+  "def": "n.①盆②盆地③流域"
+ },
+ {
+  "word": "basis",
+  "phon": "ˈbeIsIs",
+  "def": "n.(pl.bases)基础"
+ },
+ {
+  "word": "basket",
+  "phon": "ˈb?ːskIt",
+  "def": "n.篮子"
+ },
+ {
+  "word": "basketball",
+  "phon": "ˈb?ːskItbɔːl",
+  "def": "n.篮球(运动)"
+ },
+ {
+  "word": "bath",
+  "phon": "b?ː?",
+  "def": "n.①沐浴②浴缸"
+ },
+ {
+  "word": "bathe",
+  "phon": "beIð",
+  "def": "vt.给……洗澡vi.①洗澡②游泳"
+ },
+ {
+  "word": "bathroom",
+  "phon": "ˈb?ː?ruːm,ˈb?ː?rʊm",
+  "def": "n.①浴室②厕所"
+ },
+ {
+  "word": "bay",
+  "phon": "beI",
+  "def": "n.①湾②分隔间"
+ },
+ {
+  "word": "be",
+  "phon": "强biː,弱bi",
+  "def": "v.①是,就是②有,存在"
+ },
+ {
+  "word": "beach",
+  "phon": "biːtʃ",
+  "def": "n.海滩,沙滩"
+ },
+ {
+  "word": "bean",
+  "phon": "biːn",
+  "def": "n.豆"
+ },
+ {
+  "word": "bear",
+  "phon": "beə(r)",
+  "def": "n.熊 vt.忍受"
+ },
+ {
+  "word": "beard",
+  "phon": "bIəd",
+  "def": "n.胡须"
+ },
+ {
+  "word": "beast",
+  "phon": "biːst",
+  "def": "n.①野兽②凶残的人"
+ },
+ {
+  "word": "beat",
+  "phon": "biːt",
+  "def": "vt.①连续击打②战胜vi.(心脏等)跳动"
+ },
+ {
+  "word": "beauty",
+  "phon": "ˈbjuːti",
+  "def": "n.①美,美丽②美人"
+ },
+ {
+  "word": "because",
+  "phon": "bIˈkɒz",
+  "def": "conj.因为"
+ },
+ {
+  "word": "become",
+  "phon": "bIˈkʌm",
+  "def": "link.v.变成,成为"
+ },
+ {
+  "word": "bed",
+  "phon": "bed",
+  "def": "n.①床②河床"
+ },
+ {
+  "word": "bee",
+  "phon": "biː",
+  "def": "n.蜜蜂"
+ },
+ {
+  "word": "beef",
+  "phon": "biːf",
+  "def": "n.牛肉"
+ },
+ {
+  "word": "beer",
+  "phon": "bIə(r)",
+  "def": "n.啤酒"
+ },
+ {
+  "word": "begin",
+  "phon": "bIˈ?In",
+  "def": "v.开始"
+ },
+ {
+  "word": "behind",
+  "phon": "bIˈhaInd",
+  "def": "prep.①在……的后面②落后于③支持ad.①在后面②留在原处"
+ },
+ {
+  "word": "belief",
+  "phon": "bIˈliːf",
+  "def": "n.①信心②信念③信仰"
+ },
+ {
+  "word": "believe",
+  "phon": "bIˈliːv",
+  "def": "v.①相信②认为"
+ },
+ {
+  "word": "bell",
+  "phon": "bel",
+  "def": "n.钟声,铃声"
+ },
+ {
+  "word": "belly",
+  "phon": "ˈbeli",
+  "def": "n.肚子,腹,胃"
+ },
+ {
+  "word": "belong",
+  "phon": "bIˈlɒ?",
+  "def": "vi.属于,是……的成员"
+ },
+ {
+  "word": "below",
+  "phon": "bIˈləʊ",
+  "def": "prep.在……以下ad.向下面,以下,在下方"
+ },
+ {
+  "word": "belt",
+  "phon": "belt",
+  "def": "n.①腰带②地带"
+ },
+ {
+  "word": "bench",
+  "phon": "bentʃ",
+  "def": "n.长凳,长椅"
+ },
+ {
+  "word": "bend",
+  "phon": "bend",
+  "def": "vi.俯身 v.(使)弯曲 n.弯曲(处)"
+ },
+ {
+  "word": "beside",
+  "phon": "bIˈsaId",
+  "def": "prep.在……旁边"
+ },
+ {
+  "word": "besides",
+  "phon": "bIˈsaIdz",
+  "def": "prep.除……之外(还) ad.而且,此外(还)"
+ },
+ {
+  "word": "better",
+  "phon": "ˈbetə(r)",
+  "def": "a./ad.更好(的)"
+ },
+ {
+  "word": "between",
+  "phon": "bIˈtwiːn",
+  "def": "prep.在……之间"
+ },
+ {
+  "word": "beyond",
+  "phon": "bIˈjɒnd",
+  "def": "prep.超出ad.在另一边,在更远处"
+ },
+ {
+  "word": "bible",
+  "phon": "ˈbaIbl",
+  "def": "n.(theB-)圣经"
+ },
+ {
+  "word": "bicycle",
+  "phon": "ˈbaIsIkl",
+  "def": "n.自行车vi.骑自行车"
+ },
+ {
+  "word": "big",
+  "phon": "bI?",
+  "def": "a.大的"
+ },
+ {
+  "word": "bill",
+  "phon": "bIl",
+  "def": "n.①账单②法案③钞票④节目单"
+ },
+ {
+  "word": "billion",
+  "phon": "ˈbIljən",
+  "def": "num.十亿"
+ },
+ {
+  "word": "biology",
+  "phon": "baIˈɒlədʒi",
+  "def": "n.生物学"
+ },
+ {
+  "word": "bird",
+  "phon": "bɜːd",
+  "def": "n.鸟,禽"
+ },
+ {
+  "word": "birth",
+  "phon": "bɜː?",
+  "def": "n.①出生②起源③出身"
+ },
+ {
+  "word": "birthday",
+  "phon": "ˈbɜː?deI",
+  "def": "n.生日"
+ },
+ {
+  "word": "biscuit",
+  "phon": "ˈbIskIt",
+  "def": "n.饼干"
+ },
+ {
+  "word": "bit",
+  "phon": "bIt",
+  "def": "n.①一点儿②小片"
+ },
+ {
+  "word": "bite",
+  "phon": "baIt",
+  "def": "v./n.咬,叮 n.咬或叮的伤口"
+ },
+ {
+  "word": "black",
+  "phon": "blæk",
+  "def": "n.黑色 a.①黑色的②黑种人的"
+ },
+ {
+  "word": "blackboard",
+  "phon": "ˈblækbɔːd",
+  "def": "n.黑板"
+ },
+ {
+  "word": "blame",
+  "phon": "bleIm",
+  "def": "vt.责备,归咎于n.(过错等的)责任"
+ },
+ {
+  "word": "bleed",
+  "phon": "bliːd",
+  "def": "vi.(bled;bled)流血"
+ },
+ {
+  "word": "bless",
+  "phon": "bles",
+  "def": "vt.祝福"
+ },
+ {
+  "word": "blind",
+  "phon": "blaInd",
+  "def": "a.①瞎的②视而不见的③盲目的 vt.使失明"
+ },
+ {
+  "word": "block",
+  "phon": "blɒk",
+  "def": "n.①大厦②街区③大块④障碍,堵塞(物)vt.①阻塞②阻止"
+ },
+ {
+  "word": "blood",
+  "phon": "blʌd",
+  "def": "n.血,血液"
+ },
+ {
+  "word": "blouse",
+  "phon": "blaʊz",
+  "def": "n.女衬衫"
+ },
+ {
+  "word": "boat",
+  "phon": "bəʊt",
+  "def": "n.船,小船"
+ },
+ {
+  "word": "body",
+  "phon": "ˈbɒdi",
+  "def": "n.①身体,躯体②躯干③(sing.)主体④尸体"
+ },
+ {
+  "word": "boil",
+  "phon": "bɔIl",
+  "def": "vi.①沸腾②动怒"
+ },
+ {
+  "word": "bomb",
+  "phon": "bɒm",
+  "def": "n.炸弹 vt.轰炸"
+ },
+ {
+  "word": "bone",
+  "phon": "bəʊn",
+  "def": "n.骨,骨骼"
+ },
+ {
+  "word": "border",
+  "phon": "ˈbɔːdə(r)",
+  "def": "n.边界"
+ },
+ {
+  "word": "born",
+  "phon": "bɔːn",
+  "def": "a.天生的 v.出生"
+ },
+ {
+  "word": "borrow",
+  "phon": "ˈbɒrəʊ",
+  "def": "vt.借,借入"
+ },
+ {
+  "word": "boss",
+  "phon": "bɒs",
+  "def": "n.老板,上司"
+ },
+ {
+  "word": "both",
+  "phon": "bəʊ?",
+  "def": "a./pron.两者(都)"
+ },
+ {
+  "word": "bother",
+  "phon": "ˈbɒðə(r)",
+  "def": "vt.①打扰,麻烦②使不安"
+ },
+ {
+  "word": "bottle",
+  "phon": "ˈbɒtl",
+  "def": "n.瓶 vt.把……装进瓶中"
+ },
+ {
+  "word": "bottom",
+  "phon": "ˈbɒtəm",
+  "def": "n.①底,底部②尽头③臀部"
+ },
+ {
+  "word": "bow",
+  "phon": "bəʊ",
+  "def": "n.①弓②蝴蝶结 [baʊ]vt.①低头②压弯vi./n.鞠躬"
+ },
+ {
+  "word": "box",
+  "phon": "bɒks",
+  "def": "n.箱,盒 vt.①把……装箱(或盒)②(用拳或手掌)打,击 vi.拳击"
+ },
+ {
+  "word": "boxing",
+  "phon": "ˈbɒksI?",
+  "def": "n.拳击(运动)"
+ },
+ {
+  "word": "boy",
+  "phon": "bɔI",
+  "def": "n.①男孩②儿子"
+ },
+ {
+  "word": "brain",
+  "phon": "breIn",
+  "def": "n.①脑②脑力"
+ },
+ {
+  "word": "brake",
+  "phon": "breIk",
+  "def": "n.车闸"
+ },
+ {
+  "word": "brave",
+  "phon": "breIv",
+  "def": "a.勇敢的,无畏的"
+ },
+ {
+  "word": "bread",
+  "phon": "bred",
+  "def": "n.面包"
+ },
+ {
+  "word": "breakfast",
+  "phon": "ˈbrekfəst",
+  "def": "n.早餐 vi.吃早餐"
+ },
+ {
+  "word": "breast",
+  "phon": "brest",
+  "def": "n.胸脯,乳房"
+ },
+ {
+  "word": "breath",
+  "phon": "bre?",
+  "def": "n.呼吸的空气"
+ },
+ {
+  "word": "breathe",
+  "phon": "briːð",
+  "def": "v.呼吸 vt.呼出"
+ },
+ {
+  "word": "brick",
+  "phon": "brIk",
+  "def": "n.①砖②积木vt.用砖砌"
+ },
+ {
+  "word": "bride",
+  "phon": "braId",
+  "def": "n.新娘"
+ },
+ {
+  "word": "bridegroom",
+  "phon": "ˈbraId?ruːm",
+  "def": "n.新郎"
+ },
+ {
+  "word": "bridge",
+  "phon": "brIdʒ",
+  "def": "n.①桥②桥梁③桥牌"
+ },
+ {
+  "word": "brief",
+  "phon": "briːf",
+  "def": "a.①短暂的②简短的 vt.向……介绍 n.概要"
+ },
+ {
+  "word": "bright",
+  "phon": "braIt",
+  "def": "a.①明亮的②欢快的③鲜艳的"
+ },
+ {
+  "word": "bring",
+  "phon": "brI?",
+  "def": "vt.①带来②提供③导致"
+ },
+ {
+  "word": "brother",
+  "phon": "ˈbrʌðə(r)",
+  "def": "n.①兄弟②伙伴"
+ },
+ {
+  "word": "brown",
+  "phon": "braʊn",
+  "def": "a./n.棕色(的),褐色(的)"
+ },
+ {
+  "word": "brush",
+  "phon": "brʌʃ",
+  "def": "n.刷子,毛笔,画笔vt.刷,掸,拂"
+ },
+ {
+  "word": "build",
+  "phon": "bIld",
+  "def": "vt.①建造②建立"
+ },
+ {
+  "word": "burden",
+  "phon": "ˈbɜːdn",
+  "def": "n.重担,负担 vt.①加重压于……②负重"
+ },
+ {
+  "word": "burn",
+  "phon": "bɜːn",
+  "def": "vi.燃烧 vt.①使燃烧②烧掉③烧伤"
+ },
+ {
+  "word": "burst",
+  "phon": "bɜːst",
+  "def": "vt.使爆裂"
+ },
+ {
+  "word": "bury",
+  "phon": "ˈberi",
+  "def": "vt.①埋葬②掩埋③掩盖"
+ },
+ {
+  "word": "bus",
+  "phon": "bʌs",
+  "def": "n.公交车"
+ },
+ {
+  "word": "business",
+  "phon": "ˈbIznəs",
+  "def": "n.①商业,生意②公司,商店③公事④职责"
+ },
+ {
+  "word": "businessman",
+  "phon": "ˈbIznəmæn,ˈbIznəsmən",
+  "def": "n.(男)企业家"
+ },
+ {
+  "word": "busy",
+  "phon": "ˈbIzi",
+  "def": "a.①忙碌的②熙熙攘攘的③正被占用的"
+ },
+ {
+  "word": "but",
+  "phon": "强bʌt,弱bət",
+  "def": "conj.①但是,然而②而,相反 prep.除……以外 ad.只,仅仅"
+ },
+ {
+  "word": "butter",
+  "phon": "ˈbʌtə(r)",
+  "def": "n.黄油"
+ },
+ {
+  "word": "butterfly",
+  "phon": "ˈbʌtəflaI",
+  "def": "n.蝴蝶"
+ },
+ {
+  "word": "button",
+  "phon": "ˈbʌtn",
+  "def": "n.①纽扣②按钮"
+ },
+ {
+  "word": "buy",
+  "phon": "baI",
+  "def": "vt.①买,购买②收买,贿赂 vi.购买"
+ },
+ {
+  "word": "cab",
+  "phon": "kæb",
+  "def": "n.出租汽车"
+ },
+ {
+  "word": "cabbage",
+  "phon": "ˈkæbIdʒ",
+  "def": "n.卷心菜,洋白菜"
+ },
+ {
+  "word": "cafe",
+  "phon": "ˈkæfeI",
+  "def": "n.咖啡馆"
+ },
+ {
+  "word": "cafeteria",
+  "phon": "ˌkæfəˈtIəriə",
+  "def": "n.自助餐厅"
+ },
+ {
+  "word": "cage",
+  "phon": "keIdʒ",
+  "def": "n.笼子"
+ },
+ {
+  "word": "cake",
+  "phon": "keIk",
+  "def": "n.饼,糕,蛋糕"
+ },
+ {
+  "word": "calm",
+  "phon": "k?ːm",
+  "def": "a.镇静的,平静的"
+ },
+ {
+  "word": "camel",
+  "phon": "ˈkæml",
+  "def": "n.骆驼"
+ },
+ {
+  "word": "camera",
+  "phon": "ˈkæmərə",
+  "def": "n.相机,摄像机"
+ },
+ {
+  "word": "can",
+  "phon": "kæn",
+  "def": "modalv.①能够②可以③可能,会 n.金属罐"
+ },
+ {
+  "word": "cancel",
+  "phon": "ˈkænsl",
+  "def": "vt.①取消②收回"
+ },
+ {
+  "word": "cancer",
+  "phon": "ˈkænsə(r)",
+  "def": "n.癌"
+ },
+ {
+  "word": "candle",
+  "phon": "ˈkændl",
+  "def": "n.蜡烛"
+ },
+ {
+  "word": "candy",
+  "phon": "ˈkændi",
+  "def": "n.(美)糖果"
+ },
+ {
+  "word": "cap",
+  "phon": "kæp",
+  "def": "n.帽子,便帽"
+ },
+ {
+  "word": "care",
+  "phon": "keə(r)",
+  "def": "vi.关心vt.①对……介意②喜欢n.①照顾②小心③忧虑"
+ },
+ {
+  "word": "carrot",
+  "phon": "ˈkærət",
+  "def": "n.胡萝卜"
+ },
+ {
+  "word": "carry",
+  "phon": "ˈkæri",
+  "def": "vt.①携带②运送"
+ },
+ {
+  "word": "cash",
+  "phon": "kæʃ",
+  "def": "n.现款,现金vt.兑现"
+ },
+ {
+  "word": "castle",
+  "phon": "ˈk?ːsl",
+  "def": "n.城堡"
+ },
+ {
+  "word": "cat",
+  "phon": "kæt",
+  "def": "n.①猫②猫科动物"
+ },
+ {
+  "word": "catch",
+  "phon": "kætʃ",
+  "def": "vt.①抓住②偶然(或突然)撞见"
+ },
+ {
+  "word": "cater",
+  "phon": "ˈkeItə(r)",
+  "def": "vi.①迎合②承办酒席"
+ },
+ {
+  "word": "cattle",
+  "phon": "ˈkætl",
+  "def": "n.(pl.)牛"
+ },
+ {
+  "word": "cause",
+  "phon": "kɔːz",
+  "def": "n.①原因②事业vt.引起"
+ },
+ {
+  "word": "cave",
+  "phon": "keIv",
+  "def": "n.山洞,洞穴"
+ },
+ {
+  "word": "celebrate",
+  "phon": "ˈselIbreIt",
+  "def": "v.庆祝,庆贺"
+ },
+ {
+  "word": "cell",
+  "phon": "sel",
+  "def": "n.①细胞②小牢房"
+ },
+ {
+  "word": "cellphone",
+  "phon": "ˈselfəʊn",
+  "def": "n.移动电话"
+ },
+ {
+  "word": "cent",
+  "phon": "sent",
+  "def": "n.分,分币"
+ },
+ {
+  "word": "centigrade",
+  "phon": "ˈsentI?reId",
+  "def": "a./n.摄氏度(的)"
+ },
+ {
+  "word": "century",
+  "phon": "ˈsentʃəri",
+  "def": "n.世纪,百年"
+ },
+ {
+  "word": "certain",
+  "phon": "ˈsɜːtn",
+  "def": "a.①某一,某种②肯定的,无疑的"
+ },
+ {
+  "word": "chain",
+  "phon": "tʃeIn",
+  "def": "n.①链子②一连串③连锁店"
+ },
+ {
+  "word": "chair",
+  "phon": "tʃeə(r)",
+  "def": "n.①椅子②(the~)主席 vt.主持(会议等)"
+ },
+ {
+  "word": "chairman",
+  "phon": "ˈtʃeəmən",
+  "def": "n.主席"
+ },
+ {
+  "word": "chalk",
+  "phon": "tʃɔːk",
+  "def": "n.粉笔"
+ },
+ {
+  "word": "chance",
+  "phon": "tʃ?ːns",
+  "def": "n.①可能性②机会,机遇③冒险④偶然,碰巧"
+ },
+ {
+  "word": "chapter",
+  "phon": "ˈtʃæptə(r)",
+  "def": "n.章,回,篇"
+ },
+ {
+  "word": "cheap",
+  "phon": "tʃiːp",
+  "def": "a.便宜的,廉价的"
+ },
+ {
+  "word": "cheat",
+  "phon": "tʃiːt",
+  "def": "vt.欺骗,骗取vi.作弊 n.骗子"
+ },
+ {
+  "word": "check",
+  "phon": "tʃek",
+  "def": "n.①检查,核对②支票,账单 v.检查,审查"
+ },
+ {
+  "word": "cheek",
+  "phon": "tʃiːk",
+  "def": "n.面颊,脸蛋"
+ },
+ {
+  "word": "cheer",
+  "phon": "tʃIə(r)",
+  "def": "vt.使振奋,使高兴"
+ },
+ {
+  "word": "cheese",
+  "phon": "tʃiːz",
+  "def": "n.奶酪,干酪"
+ },
+ {
+  "word": "chemistry",
+  "phon": "ˈkemIstri",
+  "def": "n.化学"
+ },
+ {
+  "word": "chess",
+  "phon": "tʃes",
+  "def": "n.国际象棋"
+ },
+ {
+  "word": "chest",
+  "phon": "tʃest",
+  "def": "n.①箱子②柜子③胸部,胸腔"
+ },
+ {
+  "word": "chew",
+  "phon": "tʃuː",
+  "def": "v./n.咀嚼"
+ },
+ {
+  "word": "chicken",
+  "phon": "ˈtʃIkIn",
+  "def": "n.①鸡②鸡肉"
+ },
+ {
+  "word": "chief",
+  "phon": "tʃiːf",
+  "def": "a.主要的,首要的n.首领"
+ },
+ {
+  "word": "child",
+  "phon": "tʃaIld",
+  "def": "n.①小孩,儿童②子女,孩子"
+ },
+ {
+  "word": "chimney",
+  "phon": "ˈtʃImni",
+  "def": "n.烟囱,烟道"
+ },
+ {
+  "word": "china",
+  "phon": "ˈtʃaInə",
+  "def": "n.瓷,瓷器"
+ },
+ {
+  "word": "chocolate",
+  "phon": "ˈtʃɒklət",
+  "def": "n.①巧克力②巧克力糖"
+ },
+ {
+  "word": "choice",
+  "phon": "tʃɔIs",
+  "def": "n.选择,选择权"
+ },
+ {
+  "word": "choose",
+  "phon": "tʃuːz",
+  "def": "vt.①选择②决定"
+ },
+ {
+  "word": "chopstick",
+  "phon": "ˈtʃɒpstIk",
+  "def": "n.(常pl.)筷子"
+ },
+ {
+  "word": "Christ",
+  "phon": "kraIst",
+  "def": "n.基督,救世主"
+ },
+ {
+  "word": "church",
+  "phon": "tʃɜːtʃ",
+  "def": "n.①教堂②礼拜"
+ },
+ {
+  "word": "cigar",
+  "phon": "sIˈ??ː(r)",
+  "def": "n.雪茄烟"
+ },
+ {
+  "word": "cigarette",
+  "phon": "ˌsI?əˈret",
+  "def": "n.香烟,卷烟"
+ },
+ {
+  "word": "cinema",
+  "phon": "ˈsInəmə",
+  "def": "n.①电影院②电影业"
+ },
+ {
+  "word": "city",
+  "phon": "ˈsIti",
+  "def": "n.城市"
+ },
+ {
+  "word": "civil",
+  "phon": "ˈsIvl",
+  "def": "a.①公民的,平民的②民事的"
+ },
+ {
+  "word": "civilian",
+  "phon": "səˈvIliən",
+  "def": "a./n.平民(的),百姓(的)"
+ },
+ {
+  "word": "classmate",
+  "phon": "ˈkl?ːsmeIt",
+  "def": "n.同学"
+ },
+ {
+  "word": "classroom",
+  "phon": "ˈkl?ːsruːm,ˈkl?ːsrʊm",
+  "def": "n.教室"
+ },
+ {
+  "word": "clean",
+  "phon": "kliːn",
+  "def": "a.①清洁的②清白的 vt.把……弄干净"
+ },
+ {
+  "word": "clerk",
+  "phon": "kl?ːk",
+  "def": "n.职员"
+ },
+ {
+  "word": "clever",
+  "phon": "ˈklevə(r)",
+  "def": "a.①聪明的②灵巧的"
+ },
+ {
+  "word": "climate",
+  "phon": "ˈklaImət",
+  "def": "n.气候"
+ },
+ {
+  "word": "climb",
+  "phon": "klaIm",
+  "def": "v./n.①攀登,爬②上升"
+ },
+ {
+  "word": "clinic",
+  "phon": "ˈklInIk",
+  "def": "n.诊所"
+ },
+ {
+  "word": "clone",
+  "phon": "kləʊn",
+  "def": "n./v.克隆"
+ },
+ {
+  "word": "cloth",
+  "phon": "klɒ?",
+  "def": "n.①织物②桌布,抹布"
+ },
+ {
+  "word": "clothes",
+  "phon": "kləʊðz",
+  "def": "n.衣服,服装"
+ },
+ {
+  "word": "cloud",
+  "phon": "klaʊd",
+  "def": "n.①云,云朵②阴影,忧郁 vt.①使模糊,使阴暗②遮盖,笼罩"
+ },
+ {
+  "word": "club",
+  "phon": "klʌb",
+  "def": "n.①俱乐部②棍棒③(高尔夫)球杆 vt.棒打"
+ },
+ {
+  "word": "coach",
+  "phon": "kəʊtʃ",
+  "def": "n.①教练②长途公共汽车 vt.训练,指导,辅导"
+ },
+ {
+  "word": "coal",
+  "phon": "kəʊl",
+  "def": "n.①煤②煤块"
+ },
+ {
+  "word": "coat",
+  "phon": "kəʊt",
+  "def": "n.①上衣,外套②动物皮毛"
+ },
+ {
+  "word": "coffee",
+  "phon": "ˈkɒfi",
+  "def": "n.咖啡"
+ },
+ {
+  "word": "coin",
+  "phon": "kɔIn",
+  "def": "n.硬币,金属货币"
+ },
+ {
+  "word": "cold",
+  "phon": "kəʊld",
+  "def": "a.冷的,寒冷的n.①冷,寒冷②伤风,感冒"
+ },
+ {
+  "word": "collar",
+  "phon": "ˈkɒlə(r)",
+  "def": "n.衣领,领子"
+ },
+ {
+  "word": "college",
+  "phon": "ˈkɒlIdʒ",
+  "def": "n.大学,学院"
+ },
+ {
+  "word": "colo(u)r",
+  "phon": "ˈkʌlə(r)",
+  "def": "n.颜色,色彩"
+ },
+ {
+  "word": "comb",
+  "phon": "kəʊm",
+  "def": "n.①梳子②(公鸡的)鸡冠"
+ },
+ {
+  "word": "comedy",
+  "phon": "ˈkɒmədi",
+  "def": "n.①喜剧②滑稽,幽默"
+ },
+ {
+  "word": "comfort",
+  "phon": "ˈkʌmfət",
+  "def": "n.①舒适②安慰"
+ },
+ {
+  "word": "compare",
+  "phon": "kəmˈpeə(r)",
+  "def": "vt.①比较②把……比作 vi.相比,比得上"
+ },
+ {
+  "word": "complete",
+  "phon": "kəmˈpliːt",
+  "def": "a.①十足的②完整的 vt.①完成②使完整"
+ },
+ {
+  "word": "concert",
+  "phon": "ˈkɒnsət",
+  "def": "n.音乐会,演奏会"
+ },
+ {
+  "word": "connect",
+  "phon": "kəˈnekt",
+  "def": "vt.①使连接②联系,结合③接通 vi.连接"
+ },
+ {
+  "word": "control",
+  "phon": "kənˈtrəʊl",
+  "def": "vt./n.控制,支配"
+ },
+ {
+  "word": "cook",
+  "phon": "kʊk",
+  "def": "vt.烹调,煮,烧n.厨师"
+ },
+ {
+  "word": "cookie",
+  "phon": "ˈkʊki",
+  "def": "n.曲奇饼"
+ },
+ {
+  "word": "cool",
+  "phon": "kuːl",
+  "def": "a.①凉的②冷静的③冷淡的 v.①(使)变凉②(使)冷静下来"
+ },
+ {
+  "word": "copy",
+  "phon": "ˈkɒpi",
+  "def": "n.①副本②一本,一册 vt.①抄写②模仿,抄袭"
+ },
+ {
+  "word": "corn",
+  "phon": "kɔːn",
+  "def": "n.(小麦等)谷物"
+ },
+ {
+  "word": "corner",
+  "phon": "ˈkɔːnə(r)",
+  "def": "n.角(落)vt.将……逼入困境"
+ },
+ {
+  "word": "correct",
+  "phon": "kəˈrekt",
+  "def": "a.①正确的②合适的,恰当的 vt.①改正,纠正②批改"
+ },
+ {
+  "word": "cotton",
+  "phon": "ˈkɒtn",
+  "def": "n.①棉,棉花②棉织物"
+ },
+ {
+  "word": "cough",
+  "phon": "kɒf",
+  "def": "vi./n.咳,咳嗽"
+ },
+ {
+  "word": "could",
+  "phon": "强kʊd,弱kəd",
+  "def": "modalv.①[can的过去式]②可以,能,可能"
+ },
+ {
+  "word": "countryside",
+  "phon": "ˈkʌntrisaId",
+  "def": "n.(the~)农村,乡下"
+ },
+ {
+  "word": "couple",
+  "phon": "ˈkʌpl",
+  "def": "n.①一对,一双②几个人,几个事物③夫妻,情侣"
+ },
+ {
+  "word": "courage",
+  "phon": "ˈkʌrIdʒ",
+  "def": "n.勇气,胆量"
+ },
+ {
+  "word": "courtyard",
+  "phon": "ˈkɔːtj?ːd",
+  "def": "n.庭院"
+ },
+ {
+  "word": "cousin",
+  "phon": "ˈkʌzn",
+  "def": "n.堂(或表)兄弟,堂(或表)姐妹"
+ },
+ {
+  "word": "cow",
+  "phon": "kaʊ",
+  "def": "n.奶牛,母牛 vt.恐吓,威胁"
+ },
+ {
+  "word": "crazy",
+  "phon": "ˈkreIzi",
+  "def": "a.①发疯的②着迷的"
+ },
+ {
+  "word": "cream",
+  "phon": "kriːm",
+  "def": "n.奶油,乳脂"
+ },
+ {
+  "word": "creature",
+  "phon": "ˈkriːtʃə(r)",
+  "def": "n.①生物,动物②人"
+ },
+ {
+  "word": "credit",
+  "phon": "ˈkredIt",
+  "def": "n.①赊购,赊欠②借款,贷款,信用③荣誉④学分"
+ },
+ {
+  "word": "crime",
+  "phon": "kraIm",
+  "def": "n.①犯罪活动②罪,罪行"
+ },
+ {
+  "word": "crop",
+  "phon": "krɒp",
+  "def": "n.作物,庄稼"
+ },
+ {
+  "word": "cross",
+  "phon": "krɒs",
+  "def": "v.①穿过,越过②(使)交叉,(使)相交 n.十字架"
+ },
+ {
+  "word": "crowd",
+  "phon": "kraʊd",
+  "def": "n.人群 vt.挤满"
+ },
+ {
+  "word": "cry",
+  "phon": "kraI",
+  "def": "vi./n.①哭②叫喊"
+ },
+ {
+  "word": "cube",
+  "phon": "kjuːb",
+  "def": "n.立方"
+ },
+ {
+  "word": "cup",
+  "phon": "kʌp",
+  "def": "n.①杯子②奖杯③杯状物"
+ },
+ {
+  "word": "cupboard",
+  "phon": "ˈkʌbəd",
+  "def": "n.橱柜"
+ },
+ {
+  "word": "cure",
+  "phon": "kjʊə(r)",
+  "def": "vt.①治愈②解决"
+ },
+ {
+  "word": "curtain",
+  "phon": "ˈkɜːtn",
+  "def": "n.窗帘,门帘"
+ },
+ {
+  "word": "customer",
+  "phon": "ˈkʌstəmə(r)",
+  "def": "n.顾客,主顾"
+ },
+ {
+  "word": "customs",
+  "phon": "ˈkʌstəmz",
+  "def": "n.海关"
+ },
+ {
+  "word": "cut",
+  "phon": "kʌt",
+  "def": "vt.①切,割②修剪,剪短"
+ },
+ {
+  "word": "dad",
+  "phon": "dæd",
+  "def": "n.爸爸"
+ },
+ {
+  "word": "daily",
+  "phon": "ˈdeIli",
+  "def": "a.每日的,日常的 ad.每日,天天 n.日报"
+ },
+ {
+  "word": "dam",
+  "phon": "dæm",
+  "def": "n.坝,堤 vt.(在河上)筑堤"
+ },
+ {
+  "word": "damage",
+  "phon": "ˈdæmIdʒ",
+  "def": "vt./n.毁坏,损害"
+ },
+ {
+  "word": "dance",
+  "phon": "d?ːns",
+  "def": "n.舞,舞蹈v.①跳舞②跳动"
+ },
+ {
+  "word": "dare",
+  "phon": "deə(r)",
+  "def": "vt.①敢,敢做②向……挑战 n.(常sing.)激将,挑战"
+ },
+ {
+  "word": "dark",
+  "phon": "d?ːk",
+  "def": "a.暗的,黑暗的"
+ },
+ {
+  "word": "darling",
+  "phon": "ˈd?ːlI?",
+  "def": "n.①亲爱的②心爱的人 a.可爱的"
+ },
+ {
+  "word": "dash",
+  "phon": "dæʃ",
+  "def": "vi.猛冲 vt.猛掷n.①猛冲②破折号"
+ },
+ {
+  "word": "daughter",
+  "phon": "ˈdɔːtə(r)",
+  "def": "n.女儿"
+ },
+ {
+  "word": "day",
+  "phon": "deI",
+  "def": "n.①一天②白昼,白天③(常pl.)时期,时代"
+ },
+ {
+  "word": "deaf",
+  "phon": "def",
+  "def": "a.①聋的②不愿听的,装聋的"
+ },
+ {
+  "word": "deal",
+  "phon": "diːl",
+  "def": "n.①交易,协议②(常sing.)待遇"
+ },
+ {
+  "word": "dear",
+  "phon": "dIə(r)",
+  "def": "a.①亲爱的②昂贵的"
+ },
+ {
+  "word": "death",
+  "phon": "de?",
+  "def": "n.①死,灭亡②破灭"
+ },
+ {
+  "word": "debt",
+  "phon": "det",
+  "def": "n.债务"
+ },
+ {
+  "word": "December",
+  "phon": "dIˈsembə(r)",
+  "def": "n.十二月"
+ },
+ {
+  "word": "deed",
+  "phon": "diːd",
+  "def": "n.①行为②(常pl.)契约,证书"
+ },
+ {
+  "word": "deep",
+  "phon": "diːp",
+  "def": "a.①深的②(声音)深沉的③深刻的 ad.深深地"
+ },
+ {
+  "word": "deer",
+  "phon": "dIə(r)",
+  "def": "n.鹿"
+ },
+ {
+  "word": "degree",
+  "phon": "dIˈ?riː",
+  "def": "n.①度,度数②程度③学位"
+ },
+ {
+  "word": "delicious",
+  "phon": "dIˈlIʃəs",
+  "def": "a.美味的,芬芳的"
+ },
+ {
+  "word": "dentist",
+  "phon": "ˈdentIst",
+  "def": "n.牙科医生"
+ },
+ {
+  "word": "depth",
+  "phon": "dep?",
+  "def": "n.①深(度)②深切"
+ },
+ {
+  "word": "desert",
+  "phon": "ˈdezət",
+  "def": "n.[dIˈzɜːt]v. n.沙漠vt.离弃 vi.开小差"
+ },
+ {
+  "word": "design",
+  "phon": "dIˈzaIn",
+  "def": "vt./n.设计,构想"
+ },
+ {
+  "word": "desk",
+  "phon": "desk",
+  "def": "n.书桌,办公桌"
+ },
+ {
+  "word": "destroy",
+  "phon": "dIˈstrɔI",
+  "def": "vt.①破坏②消灭"
+ },
+ {
+  "word": "diamond",
+  "phon": "ˈdaIəmənd",
+  "def": "n.①钻石,金刚石②菱形"
+ },
+ {
+  "word": "diary",
+  "phon": "ˈdaIəri",
+  "def": "n.日记簿,日记"
+ },
+ {
+  "word": "die",
+  "phon": "daI",
+  "def": "vi.①死,死亡②消失"
+ },
+ {
+  "word": "diet",
+  "phon": "ˈdaIət",
+  "def": "n.①日常饮食②规定饮食"
+ },
+ {
+  "word": "difficult",
+  "phon": "ˈdIfIkəlt",
+  "def": "a.困难的,难懂的"
+ },
+ {
+  "word": "dig",
+  "phon": "dI?",
+  "def": "v.挖,掘"
+ },
+ {
+  "word": "dinner",
+  "phon": "ˈdInə(r)",
+  "def": "n.①正餐,主餐②宴会"
+ },
+ {
+  "word": "dip",
+  "phon": "dIp",
+  "def": "vi./n.落下,下降vt.①浸,蘸②使下降,使下沉"
+ },
+ {
+  "word": "disaster",
+  "phon": "dIˈz?ːstə(r)",
+  "def": "n.①灾难②彻底的失败"
+ },
+ {
+  "word": "discuss",
+  "phon": "dIˈskʌs",
+  "def": "vt.①讨论②谈论,论述"
+ },
+ {
+  "word": "disease",
+  "phon": "dIˈziːz",
+  "def": "n.①病,疾病②弊端"
+ },
+ {
+  "word": "dish",
+  "phon": "dIʃ",
+  "def": "n.①碟,盘②菜肴,一盘菜"
+ },
+ {
+  "word": "dislike",
+  "phon": "dIsˈlaIk",
+  "def": "vt./n.不喜欢,厌恶"
+ },
+ {
+  "word": "distance",
+  "phon": "ˈdIstəns",
+  "def": "n.①距离②远方③冷淡"
+ },
+ {
+  "word": "district",
+  "phon": "ˈdIstrIkt",
+  "def": "n.地区,行政区"
+ },
+ {
+  "word": "doctor",
+  "phon": "ˈdɒktə(r)",
+  "def": "n.①医生②(常D-)博士 vt.篡改,伪造"
+ },
+ {
+  "word": "dog",
+  "phon": "dɒ?",
+  "def": "n.狗"
+ },
+ {
+  "word": "doll",
+  "phon": "dɒl",
+  "def": "n.玩偶,玩具娃娃"
+ },
+ {
+  "word": "dollar",
+  "phon": "ˈdɒlə(r)",
+  "def": "n.美元"
+ },
+ {
+  "word": "dolphin",
+  "phon": "ˈdɒlfIn",
+  "def": "n.海豚"
+ },
+ {
+  "word": "donkey",
+  "phon": "ˈdɒ?ki",
+  "def": "n.驴"
+ },
+ {
+  "word": "door",
+  "phon": "dɔː(r)",
+  "def": "n.①门②出入口"
+ },
+ {
+  "word": "dove",
+  "phon": "dʌv",
+  "def": "n.①鸽子②温和派人士"
+ },
+ {
+  "word": "downstairs",
+  "phon": "ˌdaʊnˈsteəz",
+  "def": "ad.在楼下,往楼下 n.楼下"
+ },
+ {
+  "word": "downtown",
+  "phon": "ˌdaʊnˈtaʊn",
+  "def": "ad.在市中心 a.商业区的"
+ },
+ {
+  "word": "dragon",
+  "phon": "ˈdræ?ən",
+  "def": "n.龙"
+ },
+ {
+  "word": "dream",
+  "phon": "driːm",
+  "def": "vi.做梦,梦想 vt.梦见 n.梦想"
+ },
+ {
+  "word": "dress",
+  "phon": "dres",
+  "def": "n.①连衣裙②衣服v.穿衣"
+ },
+ {
+  "word": "drill",
+  "phon": "drIl",
+  "def": "n.①钻头②操练v.①钻(孔)②操练"
+ },
+ {
+  "word": "drink",
+  "phon": "drI?k",
+  "def": "vt.饮,喝 n.饮料,酒"
+ },
+ {
+  "word": "drug",
+  "phon": "drʌ?",
+  "def": "n.①药物②毒品"
+ },
+ {
+  "word": "drum",
+  "phon": "drʌm",
+  "def": "n.①鼓②大桶③滚筒"
+ },
+ {
+  "word": "drunk",
+  "phon": "drʌ?k",
+  "def": "a.①(酒)醉的②陶醉的"
+ },
+ {
+  "word": "duck",
+  "phon": "dʌk",
+  "def": "n.①鸭②鸭肉"
+ },
+ {
+  "word": "due",
+  "phon": "djuː",
+  "def": "a.①到期的②应给的"
+ },
+ {
+  "word": "dull",
+  "phon": "dʌl",
+  "def": "a.①乏味的②不明亮的③低沉的"
+ },
+ {
+  "word": "dusk",
+  "phon": "dʌsk",
+  "def": "n.薄暮,黄昏"
+ },
+ {
+  "word": "duty",
+  "phon": "ˈdjuːti",
+  "def": "n.①责任②关税"
+ },
+ {
+  "word": "each",
+  "phon": "iːtʃ",
+  "def": "a.每 pron.每个"
+ },
+ {
+  "word": "eagle",
+  "phon": "ˈiː?l",
+  "def": "n.鹰"
+ },
+ {
+  "word": "ear",
+  "phon": "Iə(r)",
+  "def": "n.耳,耳朵"
+ },
+ {
+  "word": "early",
+  "phon": "ˈɜːli",
+  "def": "a.①早期的②提早的ad.①在早期②提前,提早"
+ },
+ {
+  "word": "earn",
+  "phon": "ɜːn",
+  "def": "vt.①赚得②获得"
+ },
+ {
+  "word": "earth",
+  "phon": "ɜː?",
+  "def": "n.①地球②陆地,地面③土,泥"
+ },
+ {
+  "word": "earthquake",
+  "phon": "ˈɜː?kweIk",
+  "def": "n.地震"
+ },
+ {
+  "word": "east",
+  "phon": "iːst",
+  "def": "n.东,东方,东部ad.向东"
+ },
+ {
+  "word": "eat",
+  "phon": "iːt",
+  "def": "v.①吃②吃饭"
+ },
+ {
+  "word": "ecology",
+  "phon": "iˈkɒlədʒi",
+  "def": "n.生态,生态学"
+ },
+ {
+  "word": "edge",
+  "phon": "edʒ",
+  "def": "n.边,边缘"
+ },
+ {
+  "word": "educate",
+  "phon": "ˈedʒukeIt",
+  "def": "vt.教育"
+ },
+ {
+  "word": "effort",
+  "phon": "ˈefət",
+  "def": "n.①努力②成就"
+ },
+ {
+  "word": "egg",
+  "phon": "e?",
+  "def": "n.①蛋,鸡蛋②卵"
+ },
+ {
+  "word": "eggplant",
+  "phon": "ˈe?pl?ːnt",
+  "def": "n.茄子"
+ },
+ {
+  "word": "eight",
+  "phon": "eIt",
+  "def": "num.八"
+ },
+ {
+  "word": "eighteen",
+  "phon": "ˌeIˈtiːn",
+  "def": "num.十八"
+ },
+ {
+  "word": "eighth",
+  "phon": "eIt?",
+  "def": "ord.第八 n.八分之一"
+ },
+ {
+  "word": "eighty",
+  "phon": "ˈeIti",
+  "def": "num.八十"
+ },
+ {
+  "word": "either",
+  "phon": "ˈaIðə(r),ˈiːðə(r)",
+  "def": "a.(两者之中)任一的 ad.也不pron.(两者中)任何一个"
+ },
+ {
+  "word": "electricity",
+  "phon": "IˌlekˈtrIsəti",
+  "def": "n.电"
+ },
+ {
+  "word": "elephant",
+  "phon": "ˈelIfənt",
+  "def": "n.象"
+ },
+ {
+  "word": "eleven",
+  "phon": "Iˈlevn",
+  "def": "num.十一"
+ },
+ {
+  "word": "email/e-mail",
+  "phon": "ˈiːmeIl",
+  "def": "n.电子邮件"
+ },
+ {
+  "word": "empty",
+  "phon": "ˈempti",
+  "def": "a.①空的②空闲的③空虚的 vt.①清空②倾倒"
+ },
+ {
+  "word": "end",
+  "phon": "end",
+  "def": "n.①最后部分②结局v.结束"
+ },
+ {
+  "word": "enemy",
+  "phon": "ˈenəmi",
+  "def": "n.①敌人②敌军"
+ },
+ {
+  "word": "energy",
+  "phon": "ˈenədʒi",
+  "def": "n.①活力②能量"
+ },
+ {
+  "word": "engine",
+  "phon": "ˈendʒIn",
+  "def": "n.①发动机②机车"
+ },
+ {
+  "word": "engineer",
+  "phon": "ˌendʒIˈnIə(r)",
+  "def": "n.工程师 vt.①策划②设计"
+ },
+ {
+  "word": "enjoy",
+  "phon": "InˈdʒɔI",
+  "def": "vt.享受,喜爱"
+ },
+ {
+  "word": "enough",
+  "phon": "Iˈnʌf",
+  "def": "ad.①足够(地)②相当"
+ },
+ {
+  "word": "enter",
+  "phon": "ˈentə(r)",
+  "def": "v.进来,进入vt.加入"
+ },
+ {
+  "word": "envelope",
+  "phon": "ˈenvələʊp",
+  "def": "n.①信封②外裹物"
+ },
+ {
+  "word": "even",
+  "phon": "ˈiːvn",
+  "def": "ad.甚至,即使a.①平的②均匀的"
+ },
+ {
+  "word": "evening",
+  "phon": "ˈiːvnI?",
+  "def": "n.傍晚,晚上"
+ },
+ {
+  "word": "event",
+  "phon": "Iˈvent",
+  "def": "n.①事件②运动项目"
+ },
+ {
+  "word": "every",
+  "phon": "ˈevri",
+  "def": "a.①每一(个)②每……一次的"
+ },
+ {
+  "word": "everybody",
+  "phon": "ˈevribɒdi",
+  "def": "pron.每人,大家"
+ },
+ {
+  "word": "everyday",
+  "phon": "ˈevrideI",
+  "def": "a.每天的"
+ },
+ {
+  "word": "everyone",
+  "phon": "ˈevriwʌn",
+  "def": "pron.每人,人人"
+ },
+ {
+  "word": "everything",
+  "phon": "ˈevri?I?",
+  "def": "pron.一切,所有事"
+ },
+ {
+  "word": "everywhere",
+  "phon": "ˈevriweə(r)",
+  "def": "ad.到处,无论何处"
+ },
+ {
+  "word": "exact",
+  "phon": "I?ˈzækt",
+  "def": "a.精确的"
+ },
+ {
+  "word": "examine",
+  "phon": "I?ˈzæmIn",
+  "def": "vt.①(仔细)检查②对……进行考查③考核"
+ },
+ {
+  "word": "excite",
+  "phon": "IkˈsaIt",
+  "def": "vt.①使激动,使兴奋②引起,激起"
+ },
+ {
+  "word": "excuse",
+  "phon": "Ikˈskjuːz",
+  "def": "v.[Ikˈskjuːs]n. vt.①原谅②使免除③为……辩解n.借口"
+ },
+ {
+  "word": "exercise",
+  "phon": "ˈeksəsaIz",
+  "def": "n.①锻炼,运动②练习,体操 v.锻炼"
+ },
+ {
+  "word": "exist",
+  "phon": "I?ˈzIst",
+  "def": "vi.①存在②出现③维持生存"
+ },
+ {
+  "word": "exit",
+  "phon": "ˈeksIt,ˈe?zIt",
+  "def": "n.出口,通道v./n.退出"
+ },
+ {
+  "word": "experience",
+  "phon": "IkˈspIəriəns",
+  "def": "n.①经验②经历③感受 vt.经历"
+ },
+ {
+  "word": "explain",
+  "phon": "IkˈspleIn",
+  "def": "v.说明,解释"
+ },
+ {
+  "word": "extra",
+  "phon": "ˈekstrə",
+  "def": "a.额外的,另外的"
+ },
+ {
+  "word": "eye",
+  "phon": "aI",
+  "def": "n.①眼睛②视力③眼力④监督"
+ },
+ {
+  "word": "eyesight",
+  "phon": "ˈaIsaIt",
+  "def": "n.视力"
+ },
+ {
+  "word": "fail",
+  "phon": "feIl",
+  "def": "vi.①失败②不及格③失灵 vt.①使失望②没有通过(考试)"
+ },
+ {
+  "word": "fall",
+  "phon": "fɔːl",
+  "def": "vi.①落下②跌倒③下降④变成⑤降临 n.瀑布"
+ },
+ {
+  "word": "false",
+  "phon": "fɔːls",
+  "def": "a.①不真实的②假的③不真诚的"
+ },
+ {
+  "word": "familiar",
+  "phon": "fəˈmIliə(r)",
+  "def": "a.熟悉的,通晓的"
+ },
+ {
+  "word": "family",
+  "phon": "ˈfæməli",
+  "def": "n.①家,家庭(成员)②家族"
+ },
+ {
+  "word": "fan",
+  "phon": "fæn",
+  "def": "n.①狂热爱好者②风扇"
+ },
+ {
+  "word": "far",
+  "phon": "f?ː(r)",
+  "def": "ad.①远②很大程度上 a.远的,遥远的"
+ },
+ {
+  "word": "farm",
+  "phon": "f?ːm",
+  "def": "n.农场,农舍v.务农"
+ },
+ {
+  "word": "farther",
+  "phon": "ˈf?ːðə(r)",
+  "def": "ad./a.更远(的)"
+ },
+ {
+  "word": "fast",
+  "phon": "f?ːst",
+  "def": "a.快的 ad.①迅速地②牢固地"
+ },
+ {
+  "word": "fat",
+  "phon": "fæt",
+  "def": "a.①肥胖的②丰厚的n.脂肪"
+ },
+ {
+  "word": "father",
+  "phon": "ˈf?ːðə(r)",
+  "def": "n.①父亲②祖先"
+ },
+ {
+  "word": "fault",
+  "phon": "fɔːlt",
+  "def": "n.①缺陷,故障②错误 vt.找出缺点"
+ },
+ {
+  "word": "favo(u)r",
+  "phon": "ˈfeIvə(r)",
+  "def": "n.①偏爱②赞同③恩惠 vt.①偏爱②有利于"
+ },
+ {
+  "word": "fax",
+  "phon": "fæks",
+  "def": "n.①传真②传真机 vt.传真"
+ },
+ {
+  "word": "fear",
+  "phon": "fIə(r)",
+  "def": "vt./n.害怕,恐惧"
+ },
+ {
+  "word": "feather",
+  "phon": "ˈfeðə(r)",
+  "def": "n.羽毛,翎毛"
+ },
+ {
+  "word": "February",
+  "phon": "ˈfebruəri",
+  "def": "n.二月"
+ },
+ {
+  "word": "fee",
+  "phon": "fiː",
+  "def": "n.专业服务费,报酬"
+ },
+ {
+  "word": "feel",
+  "phon": "fiːl",
+  "def": "vi.感觉,觉得 vt.触,摸 n.手感,感觉"
+ },
+ {
+  "word": "fellow",
+  "phon": "ˈfeləʊ",
+  "def": "n.①男人,小伙子②同事③(学术团体的)会员"
+ },
+ {
+  "word": "fence",
+  "phon": "fens",
+  "def": "n.栅栏,围栏,篱笆"
+ },
+ {
+  "word": "festival",
+  "phon": "ˈfestIvl",
+  "def": "n.①节②节日"
+ },
+ {
+  "word": "fetch",
+  "phon": "fetʃ",
+  "def": "vt.(去)拿来,(去)请来"
+ },
+ {
+  "word": "fever",
+  "phon": "ˈfiːvə(r)",
+  "def": "n.发烧"
+ },
+ {
+  "word": "few",
+  "phon": "fjuː",
+  "def": "a./pron.很少,有些"
+ },
+ {
+  "word": "fiber/-bre",
+  "phon": "ˈfaIbə(r)",
+  "def": "n.纤维(素)"
+ },
+ {
+  "word": "field",
+  "phon": "fiːld",
+  "def": "n.①田地②领域③实地④运动场"
+ },
+ {
+  "word": "fifteen",
+  "phon": "ˌfIfˈtiːn",
+  "def": "num.十五"
+ },
+ {
+  "word": "fifth",
+  "phon": "fIf?",
+  "def": "ord.第五 n.五分之一"
+ },
+ {
+  "word": "fifty",
+  "phon": "ˈfIfti",
+  "def": "num.五十"
+ },
+ {
+  "word": "fight",
+  "phon": "faIt",
+  "def": "v./n.①战斗②竞赛"
+ },
+ {
+  "word": "figure",
+  "phon": "ˈfI?ə(r)",
+  "def": "n.①数字②人物③(pl.)算术 vt.①计算②认为"
+ },
+ {
+  "word": "film",
+  "phon": "fIlm",
+  "def": "n.①影片②胶片③薄层 vt.拍摄电影"
+ },
+ {
+  "word": "find",
+  "phon": "faInd",
+  "def": "vt.①发现②发觉"
+ },
+ {
+  "word": "fine",
+  "phon": "faIn",
+  "def": "a.①健康的②美好的③纤细的④精制的⑤晴朗的n.罚金,罚款 vt.处……以罚金"
+ },
+ {
+  "word": "finish",
+  "phon": "ˈfInIʃ",
+  "def": "v.完成,结束n.末尾"
+ },
+ {
+  "word": "fire",
+  "phon": "ˈfaIə(r)",
+  "def": "n.①火②火灾③炉火④射击 vt.①射出(子弹等)②解雇 vi.开火"
+ },
+ {
+  "word": "fireman",
+  "phon": "ˈfaIəmən",
+  "def": "n.消防队员"
+ },
+ {
+  "word": "fireplace",
+  "phon": "ˈfaIəpleIs",
+  "def": "n.壁炉"
+ },
+ {
+  "word": "firework",
+  "phon": "ˈfaIəwɜːk",
+  "def": "n.①烟火②(pl.)烟火表演"
+ },
+ {
+  "word": "firm",
+  "phon": "fɜːm",
+  "def": "a.①坚固的②稳固的③坚定的④(货币等)坚挺的v.(使)变得坚固 n.商行,公司"
+ },
+ {
+  "word": "first",
+  "phon": "fɜːst",
+  "def": "ord.第一 a.①第一的②首要的 ad.①首先②第一次"
+ },
+ {
+  "word": "fish",
+  "phon": "fIʃ",
+  "def": "n.①鱼②鱼肉vi.钓鱼"
+ },
+ {
+  "word": "fist",
+  "phon": "fIst",
+  "def": "n.拳,拳头"
+ },
+ {
+  "word": "fit",
+  "phon": "fIt",
+  "def": "vt.①使适合②合……的身③安装 vi.①符合,适应②合身 a.①适合的②健康的"
+ },
+ {
+  "word": "five",
+  "phon": "faIv",
+  "def": "num.五"
+ },
+ {
+  "word": "fix",
+  "phon": "fIks",
+  "def": "vt.①修理②使固定,安装③安排,确定④整理,收拾"
+ },
+ {
+  "word": "flag",
+  "phon": "flæ?",
+  "def": "n.旗,旗帜"
+ },
+ {
+  "word": "flat",
+  "phon": "flæt",
+  "def": "a.①平坦的②扁平的ad.平直地 n.一套房间,公寓"
+ },
+ {
+  "word": "flavo(u)r",
+  "phon": "ˈfleIvə(r)",
+  "def": "n.①味道②特色 vt.给……调味"
+ },
+ {
+  "word": "flesh",
+  "phon": "fleʃ",
+  "def": "n.①(人或动物的)肉②果肉"
+ },
+ {
+  "word": "float",
+  "phon": "fləʊt",
+  "def": "v.(使)浮动"
+ },
+ {
+  "word": "flood",
+  "phon": "flʌd",
+  "def": "v.淹没 n.①洪水②大量"
+ },
+ {
+  "word": "floor",
+  "phon": "flɔː(r)",
+  "def": "n.①地面,地板②楼层"
+ },
+ {
+  "word": "flour",
+  "phon": "ˈflaʊə(r)",
+  "def": "n.面粉"
+ },
+ {
+  "word": "flower",
+  "phon": "ˈflaʊə(r)",
+  "def": "n.花,花朵vi.①开花②成熟,繁荣"
+ },
+ {
+  "word": "fly",
+  "phon": "flaI",
+  "def": "vi.①飞行②飘扬vt.①空运②放(风筝等)n.苍蝇"
+ },
+ {
+  "word": "fog",
+  "phon": "fɒ?",
+  "def": "n.雾"
+ },
+ {
+  "word": "fold",
+  "phon": "fəʊld",
+  "def": "v.折叠,叠平"
+ },
+ {
+  "word": "follow",
+  "phon": "ˈfɒləʊ",
+  "def": "v.①跟随②遵循,听从③理解"
+ },
+ {
+  "word": "fond",
+  "phon": "fɒnd",
+  "def": "a.①喜爱的②深情的"
+ },
+ {
+  "word": "food",
+  "phon": "fuːd",
+  "def": "n.食物,食品"
+ },
+ {
+  "word": "fool",
+  "phon": "fuːl",
+  "def": "n.蠢人,傻子 vt.欺骗"
+ },
+ {
+  "word": "football",
+  "phon": "ˈfʊtbɔːl",
+  "def": "n.足球(运动)"
+ },
+ {
+  "word": "for",
+  "phon": "强fɔː(r),弱fə(r)",
+  "def": "prep.为,为了 conj.因为,由于"
+ },
+ {
+  "word": "foreign",
+  "phon": "ˈfɒrIn",
+  "def": "a.①外国的②涉外的"
+ },
+ {
+  "word": "forest",
+  "phon": "ˈfɒrIst",
+  "def": "n.森林,林区"
+ },
+ {
+  "word": "forever",
+  "phon": "fərˈevə(r)",
+  "def": "ad.①永远②长久地"
+ },
+ {
+  "word": "forget",
+  "phon": "fəˈ?et",
+  "def": "v.忘记,遗忘"
+ },
+ {
+  "word": "forgive",
+  "phon": "fəˈ?Iv",
+  "def": "vt.原谅,宽恕"
+ },
+ {
+  "word": "fork",
+  "phon": "fɔːk",
+  "def": "n.①餐叉②叉状物"
+ },
+ {
+  "word": "forty",
+  "phon": "ˈfɔːti",
+  "def": "num.四十"
+ },
+ {
+  "word": "fountain",
+  "phon": "ˈfaʊntən",
+  "def": "n.人工喷泉"
+ },
+ {
+  "word": "four",
+  "phon": "fɔː(r)",
+  "def": "num.四"
+ },
+ {
+  "word": "fourteen",
+  "phon": "ˌfɔːˈtiːn",
+  "def": "num.十四"
+ },
+ {
+  "word": "fox",
+  "phon": "fɒks",
+  "def": "n.①狐狸②狡猾的人"
+ },
+ {
+  "word": "free",
+  "phon": "friː",
+  "def": "a.①自由的②免费的③空闲的 ad.①免费地②自由地 vt.使自由,解放"
+ },
+ {
+  "word": "freeze",
+  "phon": "friːz",
+  "def": "v.(使)冻结,结冰 n.①冻结②冰冻期"
+ },
+ {
+  "word": "fresh",
+  "phon": "freʃ",
+  "def": "a.①新的②新鲜的③清新的④精神饱满的⑤淡的"
+ },
+ {
+  "word": "Friday",
+  "phon": "ˈfraIdeI",
+  "def": "n.星期五"
+ },
+ {
+  "word": "friend",
+  "phon": "frend",
+  "def": "n.朋友,友人"
+ },
+ {
+  "word": "frog",
+  "phon": "frɒ?",
+  "def": "n.蛙,青蛙"
+ },
+ {
+  "word": "from",
+  "phon": "强frɒm,弱frəm",
+  "def": "prep.从……来"
+ },
+ {
+  "word": "frost",
+  "phon": "frɒst",
+  "def": "n.①霜冻②霜v.(使)结霜"
+ },
+ {
+  "word": "fry",
+  "phon": "fraI",
+  "def": "vt.油煎,油炸,油炒"
+ },
+ {
+  "word": "fuel",
+  "phon": "ˈfjuːəl",
+  "def": "n.燃料 vt.给……提供燃料"
+ },
+ {
+  "word": "fun",
+  "phon": "fʌn",
+  "def": "a.有趣的 n.①有趣的事,乐趣②嬉戏,玩笑"
+ },
+ {
+  "word": "function",
+  "phon": "ˈfʌ?kʃn",
+  "def": "n.①功能②典礼③函数 vi.起作用"
+ },
+ {
+  "word": "funeral",
+  "phon": "ˈfjuːnərəl",
+  "def": "n.葬礼,丧礼"
+ },
+ {
+  "word": "fur",
+  "phon": "fɜː(r)",
+  "def": "n.①软毛②毛皮"
+ },
+ {
+  "word": "future",
+  "phon": "ˈfjuːtʃə(r)",
+  "def": "n.①将来②前途"
+ },
+ {
+  "word": "garage",
+  "phon": "ˈ?ær?ːʒ",
+  "def": "n.①车库②汽车修理场"
+ },
+ {
+  "word": "garden",
+  "phon": "ˈ??ːdn",
+  "def": "n.①(美)花园,菜园②(pl.)公园"
+ },
+ {
+  "word": "gas",
+  "phon": "?æs",
+  "def": "n.①气体②煤气③(美)汽油④毒气"
+ },
+ {
+  "word": "gate",
+  "phon": "?eIt",
+  "def": "n.①大门②入口"
+ },
+ {
+  "word": "general",
+  "phon": "ˈdʒenrəl",
+  "def": "a.①一般的②总的,普遍的③笼统的n.将军"
+ },
+ {
+  "word": "gentle",
+  "phon": "ˈdʒentl",
+  "def": "a.①和蔼的②轻柔的③不陡的"
+ },
+ {
+  "word": "gentleman",
+  "phon": "ˈdʒentlmən",
+  "def": "n.①绅士②先生"
+ },
+ {
+  "word": "geography",
+  "phon": "dʒiˈɒ?rəfi",
+  "def": "n.地理学"
+ },
+ {
+  "word": "get",
+  "phon": "?et",
+  "def": "vt.①获得②收到③使得④(去)拿来⑤理解⑥感染"
+ },
+ {
+  "word": "ghost",
+  "phon": "?əʊst",
+  "def": "n.鬼魂,幽灵"
+ },
+ {
+  "word": "gift",
+  "phon": "?Ift",
+  "def": "n.①礼物②天赋"
+ },
+ {
+  "word": "girl",
+  "phon": "?ɜːl",
+  "def": "n.①女孩②女儿"
+ },
+ {
+  "word": "give",
+  "phon": "?Iv",
+  "def": "v.①给予②供给③交给"
+ },
+ {
+  "word": "glad",
+  "phon": "?læd",
+  "def": "a.①高兴的②乐意的"
+ },
+ {
+  "word": "glass",
+  "phon": "?l?ːs",
+  "def": "n.①玻璃(器皿)②玻璃杯③(-es)眼镜"
+ },
+ {
+  "word": "glove",
+  "phon": "?lʌv",
+  "def": "n.(有指)手套"
+ },
+ {
+  "word": "glue",
+  "phon": "?luː",
+  "def": "n.胶,胶水 vt.胶合,粘贴"
+ },
+ {
+  "word": "goal",
+  "phon": "?əʊl",
+  "def": "n.①目标②得分③球门"
+ },
+ {
+  "word": "goat",
+  "phon": "?əʊt",
+  "def": "n.山羊"
+ },
+ {
+  "word": "god",
+  "phon": "?ɒd",
+  "def": "n.①(G-)上帝②神③被崇拜的偶像"
+ },
+ {
+  "word": "gold",
+  "phon": "?əʊld",
+  "def": "n.①金②黄金制品③金色"
+ },
+ {
+  "word": "golf",
+  "phon": "?ɒlf",
+  "def": "n.高尔夫球运动"
+ },
+ {
+  "word": "good",
+  "phon": "?ʊd",
+  "def": "a.①好的②充分的③擅长的④好心的⑤有益的n.①善②好处"
+ },
+ {
+  "word": "goodbye",
+  "phon": "?ʊdˈbaI",
+  "def": "int.再见,再会"
+ },
+ {
+  "word": "goodness",
+  "phon": "ˈ?ʊdnəs",
+  "def": "int.天哪n.善良,美德,好意"
+ },
+ {
+  "word": "goods",
+  "phon": "?ʊdz",
+  "def": "n.(pl.)商品"
+ },
+ {
+  "word": "goose",
+  "phon": "?uːs",
+  "def": "n.(pl.geese)鹅"
+ },
+ {
+  "word": "gradual",
+  "phon": "ˈ?rædʒuəl",
+  "def": "a.①逐渐的,逐步的②(坡)缓的"
+ },
+ {
+  "word": "graduate",
+  "phon": "ˈ?rædʒueIt",
+  "def": "v.[ˈrædʒuət]a./n. v.(使)毕业 a.研究生的n.①毕业生②大学毕业生"
+ },
+ {
+  "word": "grain",
+  "phon": "?reIn",
+  "def": "n.①谷物②谷粒,颗粒③少量,微量"
+ },
+ {
+  "word": "gram(me)",
+  "phon": "?ræm",
+  "def": "(abbr.g/gm)n.克"
+ },
+ {
+  "word": "grammar",
+  "phon": "ˈ?ræmə(r)",
+  "def": "n.语法"
+ },
+ {
+  "word": "grandchild",
+  "phon": "ˈ?ræntʃaIld",
+  "def": "n.(外)孙子,(外)孙女"
+ },
+ {
+  "word": "grandparent",
+  "phon": "ˈ?rænpeərənt",
+  "def": "n.(外)祖父,(外)祖母"
+ },
+ {
+  "word": "grape",
+  "phon": "?reIp",
+  "def": "n.葡萄"
+ },
+ {
+  "word": "graph",
+  "phon": "?r?ːf",
+  "def": "n.图表"
+ },
+ {
+  "word": "grass",
+  "phon": "?r?ːs",
+  "def": "n.①草②草坪,牧场"
+ },
+ {
+  "word": "great",
+  "phon": "?reIt",
+  "def": "a.①大的②伟大的"
+ },
+ {
+  "word": "greet",
+  "phon": "?riːt",
+  "def": "vt.①问候,招呼②对……做出反应"
+ },
+ {
+  "word": "grocer",
+  "phon": "ˈ?rəʊsə(r)",
+  "def": "n.①食品杂货商②(-s)杂货店"
+ },
+ {
+  "word": "ground",
+  "phon": "?raʊnd",
+  "def": "n.①地②(pl.)场地③范围④理由"
+ },
+ {
+  "word": "group",
+  "phon": "?ruːp",
+  "def": "n.①组,群②团体③集团 v.①把……分组②(使)聚集"
+ },
+ {
+  "word": "grow",
+  "phon": "?rəʊ",
+  "def": "vi.①生长②变得③增长 vt.种植"
+ },
+ {
+  "word": "guard",
+  "phon": "??ːd",
+  "def": "n.①警卫员②警戒vt.守卫 vi.防止"
+ },
+ {
+  "word": "guess",
+  "phon": "?es",
+  "def": "v./n.猜(测),推测"
+ },
+ {
+  "word": "guest",
+  "phon": "?est",
+  "def": "n.①客人②旅客③嘉宾"
+ },
+ {
+  "word": "guitar",
+  "phon": "?Iˈt?ː(r)",
+  "def": "n.吉他"
+ },
+ {
+  "word": "gun",
+  "phon": "?ʌn",
+  "def": "n.枪,炮"
+ },
+ {
+  "word": "gym",
+  "phon": "dʒIm",
+  "def": "n.体育馆,健身房"
+ },
+ {
+  "word": "hair",
+  "phon": "heə(r)",
+  "def": "n.头发,毛发"
+ },
+ {
+  "word": "half",
+  "phon": "h?ːf",
+  "def": "n.一半"
+ },
+ {
+  "word": "hall",
+  "phon": "hɔːl",
+  "def": "n.①门厅②礼堂"
+ },
+ {
+  "word": "ham",
+  "phon": "hæm",
+  "def": "n.火腿"
+ },
+ {
+  "word": "hamburger",
+  "phon": "ˈhæmbɜː?ə(r)",
+  "def": "n.汉堡包"
+ },
+ {
+  "word": "hammer",
+  "phon": "ˈhæmə(r)",
+  "def": "n.锤,榔头v.锤击,敲打"
+ },
+ {
+  "word": "handsome",
+  "phon": "ˈhænsəm",
+  "def": "a.①英俊的②好看的③相当大的"
+ },
+ {
+  "word": "hang",
+  "phon": "hæ?",
+  "def": "v.①(hung,hung)悬挂,吊②(hanged,hanged)绞死"
+ },
+ {
+  "word": "happen",
+  "phon": "ˈhæpən",
+  "def": "vi.①发生②碰巧"
+ },
+ {
+  "word": "happy",
+  "phon": "ˈhæpi",
+  "def": "a.①快乐的②满意的"
+ },
+ {
+  "word": "hardly",
+  "phon": "ˈh?ːdli",
+  "def": "ad.①几乎不②仅仅"
+ },
+ {
+  "word": "harm",
+  "phon": "h?ːm",
+  "def": "vt./n.伤害,损害,危害"
+ },
+ {
+  "word": "harvest",
+  "phon": "ˈh?ːvIst",
+  "def": "n./vt.收获"
+ },
+ {
+  "word": "hat",
+  "phon": "hæt",
+  "def": "n.帽子"
+ },
+ {
+  "word": "hate",
+  "phon": "heIt",
+  "def": "vt.憎恨 n.厌恶"
+ },
+ {
+  "word": "have",
+  "phon": "强hæv;弱həv,əv",
+  "def": "aux.v.[与过去分词连用构成完成时] vt.①有②进行③享受"
+ },
+ {
+  "word": "he",
+  "phon": "hiː",
+  "def": "pron.他"
+ },
+ {
+  "word": "head",
+  "phon": "hed",
+  "def": "n.①头②领导vt.主管 vi.朝……行进"
+ },
+ {
+  "word": "headache",
+  "phon": "ˈhedeIk",
+  "def": "n.①头痛②令人头痛的人(或事物)"
+ },
+ {
+  "word": "headmaster",
+  "phon": "ˌhedˈm?ːstə(r)",
+  "def": "n.校长"
+ },
+ {
+  "word": "health",
+  "phon": "hel?",
+  "def": "n.①健康(状况)②卫生"
+ },
+ {
+  "word": "hear",
+  "phon": "hIə(r)",
+  "def": "vt.①听见②听说③审理 vi.听说"
+ },
+ {
+  "word": "heart",
+  "phon": "h?ːt",
+  "def": "n.①心②内心③中心④心形物⑤核心"
+ },
+ {
+  "word": "heat",
+  "phon": "hiːt",
+  "def": "n.①热②温度③激动v.加热"
+ },
+ {
+  "word": "heavy",
+  "phon": "ˈhevi",
+  "def": "a.①重的②大量的③严重的④繁重的⑤沉重的"
+ },
+ {
+  "word": "heel",
+  "phon": "hiːl",
+  "def": "n.①脚后跟,踵②(鞋、袜等的)后跟"
+ },
+ {
+  "word": "height",
+  "phon": "haIt",
+  "def": "n.①高度②高③高地④最佳点"
+ },
+ {
+  "word": "hello",
+  "phon": "həˈləʊ",
+  "def": "int.喂 n.问候,招呼"
+ },
+ {
+  "word": "help",
+  "phon": "help",
+  "def": "vt.①帮助②有助于vi.①帮助②救命 n.①帮助,援助②帮手,佣人"
+ },
+ {
+  "word": "hen",
+  "phon": "hen",
+  "def": "n.①母鸡②雌禽"
+ },
+ {
+  "word": "her",
+  "phon": "hɜː(r)",
+  "def": "pron.她 a.她的"
+ },
+ {
+  "word": "here",
+  "phon": "hIə(r)",
+  "def": "ad.①在这里,向这里,到这里②这时③在这一点上"
+ },
+ {
+  "word": "hero",
+  "phon": "ˈhIərəʊ",
+  "def": "n.①英雄②男主角"
+ },
+ {
+  "word": "hers",
+  "phon": "hɜːz",
+  "def": "pron.她的"
+ },
+ {
+  "word": "herself",
+  "phon": "强hɜːˈself,弱həˈself",
+  "def": "pron.①她自己②她亲自"
+ },
+ {
+  "word": "hi",
+  "phon": "haI",
+  "def": "int.嗨,喂"
+ },
+ {
+  "word": "hide",
+  "phon": "haId",
+  "def": "vt.①躲藏②隐瞒 vi.躲藏 n.隐藏处"
+ },
+ {
+  "word": "high",
+  "phon": "haI",
+  "def": "a.①高的②高级的③高尚的④高兴的⑤(时间等)正盛的 ad.高"
+ },
+ {
+  "word": "highway",
+  "phon": "ˈhaIweI",
+  "def": "n.公路,交通要道"
+ },
+ {
+  "word": "hill",
+  "phon": "hIl",
+  "def": "n.小山,山丘"
+ },
+ {
+  "word": "him",
+  "phon": "hIm",
+  "def": "pron.他"
+ },
+ {
+  "word": "himself",
+  "phon": "hImˈself",
+  "def": "pron.①他自己②他亲自"
+ },
+ {
+  "word": "his",
+  "phon": "hIz",
+  "def": "a.他的"
+ },
+ {
+  "word": "hit",
+  "phon": "hIt",
+  "def": "v.①打②碰撞 n.一击"
+ },
+ {
+  "word": "hobby",
+  "phon": "ˈhɒbi",
+  "def": "n.业余爱好"
+ },
+ {
+  "word": "hole",
+  "phon": "həʊl",
+  "def": "n.①洞,孔眼②漏洞,缺陷"
+ },
+ {
+  "word": "holiday",
+  "phon": "ˈhɒlədeI",
+  "def": "n.①假期②假日,节日"
+ },
+ {
+  "word": "home",
+  "phon": "həʊm",
+  "def": "n.①家②家乡③原产地 a.①家庭的②家乡的ad.①回家②在本国"
+ },
+ {
+  "word": "homeland",
+  "phon": "ˈhəʊmlænd",
+  "def": "n.祖国"
+ },
+ {
+  "word": "homework",
+  "phon": "ˈhəʊmwɜːk",
+  "def": "n.家庭作业"
+ },
+ {
+  "word": "honest",
+  "phon": "ˈɒnIst",
+  "def": "a.①诚实的②坦诚的"
+ },
+ {
+  "word": "hope",
+  "phon": "həʊp",
+  "def": "v./n.希望,期望"
+ },
+ {
+  "word": "hospital",
+  "phon": "ˈhɒspItl",
+  "def": "n.医院"
+ },
+ {
+  "word": "host",
+  "phon": "həʊst",
+  "def": "n.①主人,东道主②节目主持人③(of)许多"
+ },
+ {
+  "word": "hot",
+  "phon": "hɒt",
+  "def": "a.①热的②辣的③棘手的,争议大的④激烈的⑤热衷的⑥热门的"
+ },
+ {
+  "word": "hotdog",
+  "phon": "ˈhɒtdɒ?",
+  "def": "n.热狗"
+ },
+ {
+  "word": "hotel",
+  "phon": "həʊˈtel",
+  "def": "n.旅馆,宾馆"
+ },
+ {
+  "word": "hour",
+  "phon": "ˈaʊə(r)",
+  "def": "n.①小时②时间"
+ },
+ {
+  "word": "housewife",
+  "phon": "ˈhaʊswaIf",
+  "def": "n.家庭主妇"
+ },
+ {
+  "word": "housework",
+  "phon": "ˈhaʊswɜːk",
+  "def": "n.家务活"
+ },
+ {
+  "word": "how",
+  "phon": "haʊ",
+  "def": "ad.①怎么②多么"
+ },
+ {
+  "word": "however",
+  "phon": "haʊˈevə(r)",
+  "def": "ad.①然而②无论如何"
+ },
+ {
+  "word": "hug",
+  "phon": "hʌ?",
+  "def": "v./n.拥抱"
+ },
+ {
+  "word": "hundred",
+  "phon": "ˈhʌndrəd",
+  "def": "num.一百"
+ },
+ {
+  "word": "hunger",
+  "phon": "ˈhʌ??ə(r)",
+  "def": "n.①饿②渴望 vi.渴望"
+ },
+ {
+  "word": "hunt",
+  "phon": "hʌnt",
+  "def": "v./n.①打猎②搜寻"
+ },
+ {
+  "word": "hurry",
+  "phon": "ˈhʌri",
+  "def": "vi.匆忙 vt.催促n.急忙"
+ },
+ {
+  "word": "hurt",
+  "phon": "hɜːt",
+  "def": "vt.①使受伤②伤……的感情 vi.痛 n.伤害"
+ },
+ {
+  "word": "husband",
+  "phon": "ˈhʌzbənd",
+  "def": "n.丈夫"
+ },
+ {
+  "word": "I",
+  "phon": "aI",
+  "def": "pron.我"
+ },
+ {
+  "word": "ice",
+  "phon": "aIs",
+  "def": "n.①冰②(sing.)溜冰场"
+ },
+ {
+  "word": "ice-cream",
+  "phon": "ˌaIsˈkriːm",
+  "def": "n.冰激凌"
+ },
+ {
+  "word": "if",
+  "phon": "If",
+  "def": "conj.①如果②是否③即使④无论何时"
+ },
+ {
+  "word": "ill",
+  "phon": "Il",
+  "def": "a.①有病的②不好的 ad.恶劣地"
+ },
+ {
+  "word": "important",
+  "phon": "Imˈpɔːtnt",
+  "def": "a.①重要的②权威的"
+ },
+ {
+  "word": "impossible",
+  "phon": "Imˈpɒsəbl",
+  "def": "a.不可能的"
+ },
+ {
+  "word": "inch",
+  "phon": "Intʃ",
+  "def": "n.①英寸②少量③短距离 v.(使)缓慢移动"
+ },
+ {
+  "word": "indeed",
+  "phon": "Inˈdiːd",
+  "def": "ad.①真正地,当然②确实,实在"
+ },
+ {
+  "word": "indoor",
+  "phon": "ˈIndɔː(r)",
+  "def": "a.(在)室内的"
+ },
+ {
+  "word": "injure",
+  "phon": "ˈIndʒə(r)",
+  "def": "vt.伤害,损害"
+ },
+ {
+  "word": "ink",
+  "phon": "I?k",
+  "def": "n.墨水,油墨"
+ },
+ {
+  "word": "inn",
+  "phon": "In",
+  "def": "n.小旅馆,客栈,小酒馆"
+ },
+ {
+  "word": "inside",
+  "phon": "ˌInˈsaId",
+  "def": "prep.①在……里,在……内②少于 ad.在里面"
+ },
+ {
+  "word": "instead",
+  "phon": "Inˈsted",
+  "def": "ad.①替代②反而,却"
+ },
+ {
+  "word": "interest",
+  "phon": "ˈIntrəst",
+  "def": "n.①兴趣②利息③利益 vt.使感兴趣"
+ },
+ {
+  "word": "international",
+  "phon": "ˌIntəˈnæʃnəl",
+  "def": "a.国际的"
+ },
+ {
+  "word": "Internet",
+  "phon": "ˈIntənet",
+  "def": "n.(the~)(国际)互联网"
+ },
+ {
+  "word": "interview",
+  "phon": "ˈIntəvjuː",
+  "def": "vt./n.①采访②面谈"
+ },
+ {
+  "word": "into",
+  "phon": "强ˈIntuː;弱ˈIntu,ˈIntə",
+  "def": "prep.①进入②成为③朝"
+ },
+ {
+  "word": "invent",
+  "phon": "Inˈvent",
+  "def": "vt.①发明②捏造"
+ },
+ {
+  "word": "invite",
+  "phon": "InˈvaIt",
+  "def": "vt.①邀请②要求"
+ },
+ {
+  "word": "iron",
+  "phon": "ˈaIən",
+  "def": "n.①铁②熨斗vt.(用熨斗)熨平"
+ },
+ {
+  "word": "it",
+  "phon": "It",
+  "def": "pron.它"
+ },
+ {
+  "word": "its",
+  "phon": "Its",
+  "def": "a.它的"
+ },
+ {
+  "word": "itself",
+  "phon": "Itˈself",
+  "def": "pron.①它自己②自身"
+ },
+ {
+  "word": "jacket",
+  "phon": "ˈdʒækIt",
+  "def": "n.短上衣,夹克衫"
+ },
+ {
+  "word": "jam",
+  "phon": "dʒæm",
+  "def": "n.①果酱②拥挤③卡住 v.①挤进②(使)卡住"
+ },
+ {
+  "word": "January",
+  "phon": "ˈdʒænjuəri",
+  "def": "n.一月"
+ },
+ {
+  "word": "jar",
+  "phon": "dʒ?ː(r)",
+  "def": "n.①罐子②广口瓶"
+ },
+ {
+  "word": "jaw",
+  "phon": "dʒɔː",
+  "def": "n.下巴"
+ },
+ {
+  "word": "jazz",
+  "phon": "dʒæz",
+  "def": "n.爵士乐"
+ },
+ {
+  "word": "jeans",
+  "phon": "dʒiːnz",
+  "def": "n.(pl.)牛仔裤"
+ },
+ {
+  "word": "jeep",
+  "phon": "dʒiːp",
+  "def": "n.吉普车"
+ },
+ {
+  "word": "job",
+  "phon": "dʒɒb",
+  "def": "n.①职业,职位②(一件)工作③(常sing.)职责"
+ },
+ {
+  "word": "jog",
+  "phon": "dʒɒ?",
+  "def": "v./n.①慢跑②(偶然)轻碰"
+ },
+ {
+  "word": "join",
+  "phon": "dʒɔIn",
+  "def": "v.①参加②连接"
+ },
+ {
+  "word": "joke",
+  "phon": "dʒəʊk",
+  "def": "n.①笑话,玩笑②(sing.)荒唐可笑的人(或事物)vi.说笑话"
+ },
+ {
+  "word": "journey",
+  "phon": "ˈdʒɜːni",
+  "def": "n.(长途)旅行vi.旅行"
+ },
+ {
+  "word": "joy",
+  "phon": "dʒɔI",
+  "def": "n.①欢欣②乐事"
+ },
+ {
+  "word": "judge",
+  "phon": "dʒʌdʒ",
+  "def": "n.①法官②裁判员③鉴定人 v.①断定②裁决③审判"
+ },
+ {
+  "word": "juice",
+  "phon": "dʒuːs",
+  "def": "n.果汁,菜汁"
+ },
+ {
+  "word": "July",
+  "phon": "dʒuˈlaI",
+  "def": "n.七月"
+ },
+ {
+  "word": "jump",
+  "phon": "dʒʌmp",
+  "def": "v.①跳跃②越过③猛涨 n.①跳②猛涨"
+ },
+ {
+  "word": "June",
+  "phon": "dʒuːn",
+  "def": "n.六月"
+ },
+ {
+  "word": "keep",
+  "phon": "kiːp",
+  "def": "vt.①使保持②阻止③履行④保存"
+ },
+ {
+  "word": "key",
+  "phon": "kiː",
+  "def": "n.①钥匙②关键③键④答案 a.主要的 vt.(用键盘)键入"
+ },
+ {
+  "word": "kick",
+  "phon": "kIk",
+  "def": "v./n.踢"
+ },
+ {
+  "word": "kid",
+  "phon": "kId",
+  "def": "n.小孩 v.①戏弄②欺骗"
+ },
+ {
+  "word": "kill",
+  "phon": "kIl",
+  "def": "vt.①杀死②扼杀③使痛苦④消磨 n.杀死"
+ },
+ {
+  "word": "kilogram(me)",
+  "phon": "ˈkIlə?ræm",
+  "def": "n.千克,公斤"
+ },
+ {
+  "word": "kind",
+  "phon": "kaInd",
+  "def": "n.种类"
+ },
+ {
+  "word": "kindergarten",
+  "phon": "ˈkIndə??ːtn",
+  "def": "n.幼儿园"
+ },
+ {
+  "word": "king",
+  "phon": "kI?",
+  "def": "n.君主,国王"
+ },
+ {
+  "word": "kingdom",
+  "phon": "ˈkI?dəm",
+  "def": "n.①王国②领域,界"
+ },
+ {
+  "word": "kiss",
+  "phon": "kIs",
+  "def": "v./n.吻"
+ },
+ {
+  "word": "kitchen",
+  "phon": "ˈkItʃIn",
+  "def": "n.厨房"
+ },
+ {
+  "word": "kite",
+  "phon": "kaIt",
+  "def": "n.①风筝②鸢"
+ },
+ {
+  "word": "knee",
+  "phon": "niː",
+  "def": "n.膝,膝盖"
+ },
+ {
+  "word": "knife",
+  "phon": "naIf",
+  "def": "n.刀 vt.用刀伤害"
+ },
+ {
+  "word": "knock",
+  "phon": "nɒk",
+  "def": "v./n.①敲,打②碰撞"
+ },
+ {
+  "word": "labo(u)r",
+  "phon": "ˈleIbə(r)",
+  "def": "n.①(体力)劳动②劳工 vi.①努力做②费力地前行"
+ },
+ {
+  "word": "lack",
+  "phon": "læk",
+  "def": "v./n.缺乏,不足"
+ },
+ {
+  "word": "ladder",
+  "phon": "ˈlædə(r)",
+  "def": "n.①梯子②(常sing.)阶梯"
+ },
+ {
+  "word": "lady",
+  "phon": "ˈleIdi",
+  "def": "n.女士"
+ },
+ {
+  "word": "lake",
+  "phon": "leIk",
+  "def": "n.湖,湖泊"
+ },
+ {
+  "word": "lamb",
+  "phon": "læm",
+  "def": "n.①羔羊②羔羊肉"
+ },
+ {
+  "word": "lamp",
+  "phon": "læmp",
+  "def": "n.灯"
+ },
+ {
+  "word": "language",
+  "phon": "ˈlæ??wIdʒ",
+  "def": "n.语言"
+ },
+ {
+  "word": "lap",
+  "phon": "læp",
+  "def": "n.①(常sing.)大腿部②一圈③一段 v.①拍打②舔,舔食"
+ },
+ {
+  "word": "last",
+  "phon": "l?ːst",
+  "def": "a.①最后的②最近的③最终的 ad.①最后②最新v.①持续②支撑"
+ },
+ {
+  "word": "late",
+  "phon": "leIt",
+  "def": "a.①迟的②晚期的③近深夜的④[作定语](人)已故的 ad.迟,晚"
+ },
+ {
+  "word": "lately",
+  "phon": "ˈleItli",
+  "def": "ad.最近,不久前"
+ },
+ {
+  "word": "latter",
+  "phon": "ˈlætə(r)",
+  "def": "a.后者的n.后者"
+ },
+ {
+  "word": "laugh",
+  "phon": "l?ːf",
+  "def": "vi.笑 n.①笑②(sing.)笑料"
+ },
+ {
+  "word": "lawyer",
+  "phon": "ˈlɔːjə(r)",
+  "def": "n.律师"
+ },
+ {
+  "word": "lazy",
+  "phon": "ˈleIzi",
+  "def": "a.①懒惰的②无精打采的"
+ },
+ {
+  "word": "leaf",
+  "phon": "liːf",
+  "def": "n.①叶,叶子②(书刊的)张,页"
+ },
+ {
+  "word": "league",
+  "phon": "liː?",
+  "def": "n.①同盟,联盟②联赛"
+ },
+ {
+  "word": "learn",
+  "phon": "lɜːn",
+  "def": "vi.①学②获悉vt.①学会②得知"
+ },
+ {
+  "word": "least",
+  "phon": "liːst",
+  "def": "a.最小的 ad.最少"
+ },
+ {
+  "word": "leather",
+  "phon": "ˈleðə(r)",
+  "def": "n.①皮革②(pl.)皮衣"
+ },
+ {
+  "word": "leave",
+  "phon": "liːv",
+  "def": "vi.离去 vt.①离开②留下③听任"
+ },
+ {
+  "word": "lecture",
+  "phon": "ˈlektʃə(r)",
+  "def": "v./n.①(做)演讲,讲课②教训,训斥"
+ },
+ {
+  "word": "left",
+  "phon": "left",
+  "def": "a.左边的 ad.在左边n.左边"
+ },
+ {
+  "word": "leg",
+  "phon": "le?",
+  "def": "n.腿,腿部"
+ },
+ {
+  "word": "lemon",
+  "phon": "ˈlemən",
+  "def": "n.①柠檬②柠檬饮料③浅黄色"
+ },
+ {
+  "word": "lend",
+  "phon": "lend",
+  "def": "vt.①把……借给②提供"
+ },
+ {
+  "word": "less",
+  "phon": "les",
+  "def": "a./ad.更少的(地),更小的(地)"
+ },
+ {
+  "word": "lesson",
+  "phon": "ˈlesn",
+  "def": "n.①功课,课②一课时,一节课③教训,经验"
+ },
+ {
+  "word": "let",
+  "phon": "let",
+  "def": "vt.①允许,让②假设③出租"
+ },
+ {
+  "word": "level",
+  "phon": "ˈlevl",
+  "def": "n.①程度②水平"
+ },
+ {
+  "word": "library",
+  "phon": "ˈlaIbrəri",
+  "def": "n.①图书馆②资料室"
+ },
+ {
+  "word": "license/-nce",
+  "phon": "ˈlaIsns",
+  "def": "n.许可证,执照 vt.许可"
+ },
+ {
+  "word": "lie",
+  "phon": "laI",
+  "def": "vi.(lay,lain)①躺②平放vi./n.(lied,lied)说谎,撒谎"
+ },
+ {
+  "word": "life",
+  "phon": "laIf",
+  "def": "n.①生命②一生③生活④生物"
+ },
+ {
+  "word": "like",
+  "phon": "laIk",
+  "def": "v.①喜欢②想要,希望 conj.好像,仿佛 a.相像的"
+ },
+ {
+  "word": "lily",
+  "phon": "ˈlIli",
+  "def": "n.百合花"
+ },
+ {
+  "word": "link",
+  "phon": "lI?k",
+  "def": "v./n.连接,联系"
+ },
+ {
+  "word": "lion",
+  "phon": "ˈlaIən",
+  "def": "n.狮子"
+ },
+ {
+  "word": "lip",
+  "phon": "lIp",
+  "def": "n.①嘴唇②(容器的)边,边沿"
+ },
+ {
+  "word": "list",
+  "phon": "lIst",
+  "def": "n.目录 vt.把……列表"
+ },
+ {
+  "word": "listen",
+  "phon": "ˈlIsn",
+  "def": "vi.①听②听信"
+ },
+ {
+  "word": "litter",
+  "phon": "ˈlItə(r)",
+  "def": "n.①废弃物,垃圾②一窝幼崽③杂乱的东西"
+ },
+ {
+  "word": "little",
+  "phon": "ˈlItl",
+  "def": "a.①小的②年幼的③短的④少量的 ad.①不多②少量 pron.很少"
+ },
+ {
+  "word": "live",
+  "phon": "lIv",
+  "def": "v.[laIv]a. vi.①居住②活③(回忆等)留存 a.①活的②现场直播的"
+ },
+ {
+  "word": "lively",
+  "phon": "ˈlaIvli",
+  "def": "a.精力充沛的"
+ },
+ {
+  "word": "livingroom",
+  "phon": "ˈlIvI?ruːm,ˈlIvI?rʊm",
+  "def": "n.起居室,客厅"
+ },
+ {
+  "word": "loaf",
+  "phon": "ləʊf",
+  "def": "n.一条(面包)"
+ },
+ {
+  "word": "local",
+  "phon": "ˈləʊkl",
+  "def": "a.当地的,本地的"
+ },
+ {
+  "word": "lock",
+  "phon": "lɒk",
+  "def": "n.①锁②车锁v.①(被)锁上②卡住"
+ },
+ {
+  "word": "lonely",
+  "phon": "ˈləʊnli",
+  "def": "a.①孤独的②荒凉的"
+ },
+ {
+  "word": "long",
+  "phon": "lɒ?",
+  "def": "a.①长的②长时间的ad.长久 vi.渴望"
+ },
+ {
+  "word": "look",
+  "phon": "lʊk",
+  "def": "v./n.看 n.①脸色②容貌"
+ },
+ {
+  "word": "lorry",
+  "phon": "ˈlɒri",
+  "def": "n.运货汽车,卡车"
+ },
+ {
+  "word": "lose",
+  "phon": "luːz",
+  "def": "v.①遗失②损失③降低④输"
+ },
+ {
+  "word": "lot",
+  "phon": "lɒt",
+  "def": "pron.大量,很多 n.①全部②组③(sing.)命运④一块地"
+ },
+ {
+  "word": "loud",
+  "phon": "laʊd",
+  "def": "a.①响亮的②吵闹的ad.响亮地"
+ },
+ {
+  "word": "luck",
+  "phon": "lʌk",
+  "def": "n.①好运②机遇,运气"
+ },
+ {
+  "word": "luggage",
+  "phon": "ˈlʌ?Idʒ",
+  "def": "n.行李"
+ },
+ {
+  "word": "lunch",
+  "phon": "lʌntʃ",
+  "def": "n.午餐,午饭"
+ },
+ {
+  "word": "lung",
+  "phon": "lʌ?",
+  "def": "n.肺"
+ },
+ {
+  "word": "mad",
+  "phon": "mæd",
+  "def": "a.①疯的②生气的③狂热的④愚蠢的"
+ },
+ {
+  "word": "magazine",
+  "phon": "ˌmæ?əˈziːn",
+  "def": "n.①杂志②弹药库"
+ },
+ {
+  "word": "magic",
+  "phon": "ˈmædʒIk",
+  "def": "n.①魔法②魔力③魔术"
+ },
+ {
+  "word": "mail",
+  "phon": "meIl",
+  "def": "n.①邮政(系统)②邮件 vt.邮寄"
+ },
+ {
+  "word": "major",
+  "phon": "ˈmeIdʒə(r)",
+  "def": "a.较大的n.①少校②专业③专业学生 vi.主修"
+ },
+ {
+  "word": "make",
+  "phon": "meIk",
+  "def": "vt.①做,制造②做出③使④获得⑤总计⑥成为⑦到达"
+ },
+ {
+  "word": "male",
+  "phon": "meIl",
+  "def": "a./n.男性(的)"
+ },
+ {
+  "word": "mall",
+  "phon": "mɔːl",
+  "def": "n.购物中心,商场"
+ },
+ {
+  "word": "man",
+  "phon": "mæn",
+  "def": "n.①男人②人③人类"
+ },
+ {
+  "word": "many",
+  "phon": "ˈmeni",
+  "def": "a.许多的pron.许多"
+ },
+ {
+  "word": "map",
+  "phon": "mæp",
+  "def": "n.地图 vt.在地图上标示出"
+ },
+ {
+  "word": "march",
+  "phon": "m?ːtʃ",
+  "def": "v./n.①行军,前进②游行示威"
+ },
+ {
+  "word": "March",
+  "phon": "m?ːtʃ",
+  "def": "n.三月"
+ },
+ {
+  "word": "market",
+  "phon": "ˈm?ːkIt",
+  "def": "n.市场"
+ },
+ {
+  "word": "marry",
+  "phon": "ˈmæri",
+  "def": "vt.①和……结婚②为……操办婚礼 vi.结婚"
+ },
+ {
+  "word": "mask",
+  "phon": "m?ːsk",
+  "def": "n.①面具②伪装③面膜 vt.掩饰"
+ },
+ {
+  "word": "mat",
+  "phon": "mæt",
+  "def": "n.席子,垫子"
+ },
+ {
+  "word": "match",
+  "phon": "mætʃ",
+  "def": "n.①比赛②(sing.)对手③相配的人(或事物)④火柴 vt.和……相配 vi.相配,相适合"
+ },
+ {
+  "word": "material",
+  "phon": "məˈtIəriəl",
+  "def": "n.①材料,原料②素材,资料"
+ },
+ {
+  "word": "math",
+  "phon": "mæ?",
+  "def": "n.(美)数学"
+ },
+ {
+  "word": "matter",
+  "phon": "ˈmætə(r)",
+  "def": "n.①事情②(pl.)事态③物质④(the~)麻烦事 vi.要紧"
+ },
+ {
+  "word": "may",
+  "phon": "meI",
+  "def": "modalv.①可能②可以③祝"
+ },
+ {
+  "word": "May",
+  "phon": "meI",
+  "def": "n.五月"
+ },
+ {
+  "word": "maybe",
+  "phon": "ˈmeIbi",
+  "def": "ad.或许,大概"
+ },
+ {
+  "word": "me",
+  "phon": "强miː,弱mi",
+  "def": "pron.我"
+ },
+ {
+  "word": "meal",
+  "phon": "miːl",
+  "def": "n.一顿饭"
+ },
+ {
+  "word": "mean",
+  "phon": "miːn",
+  "def": "vt.①表示……的意思②意欲,打算③意指 a.①吝啬的②卑鄙的③平均的 n.平均值"
+ },
+ {
+  "word": "means",
+  "phon": "miːnz",
+  "def": "n.①方法②金钱"
+ },
+ {
+  "word": "meanwhile",
+  "phon": "ˈmiːnwaIl",
+  "def": "ad.①与此同时②在此期间"
+ },
+ {
+  "word": "meat",
+  "phon": "miːt",
+  "def": "n.肉"
+ },
+ {
+  "word": "medal",
+  "phon": "ˈmedl",
+  "def": "n.奖牌,奖章,勋章"
+ },
+ {
+  "word": "medical",
+  "phon": "ˈmedIkl",
+  "def": "a.医学的,医疗的"
+ },
+ {
+  "word": "Medicare",
+  "phon": "ˈmedIkeə(r)",
+  "def": "n.(由美国政府设立的)老年人医疗保健制度"
+ },
+ {
+  "word": "medicine",
+  "phon": "ˈmedsn",
+  "def": "n.①药②医学"
+ },
+ {
+  "word": "meet",
+  "phon": "miːt",
+  "def": "vt.①遇见②(迎)接③和……见面④满足"
+ },
+ {
+  "word": "meeting",
+  "phon": "ˈmiːtI?",
+  "def": "n.会议"
+ },
+ {
+  "word": "melon",
+  "phon": "ˈmelən",
+  "def": "n.瓜,甜瓜"
+ },
+ {
+  "word": "member",
+  "phon": "ˈmembə(r)",
+  "def": "n.成员,会员"
+ },
+ {
+  "word": "memory",
+  "phon": "ˈmeməri",
+  "def": "n.①记忆(力)②回忆③存储器,内存"
+ },
+ {
+  "word": "mend",
+  "phon": "mend",
+  "def": "vt.①修理②缝补"
+ },
+ {
+  "word": "mention",
+  "phon": "ˈmenʃn",
+  "def": "vt./n.提到"
+ },
+ {
+  "word": "menu",
+  "phon": "ˈmenjuː",
+  "def": "n.菜单"
+ },
+ {
+  "word": "merchant",
+  "phon": "ˈmɜːtʃənt",
+  "def": "n.商人"
+ },
+ {
+  "word": "merry",
+  "phon": "ˈmeri",
+  "def": "a.愉快的,高兴的"
+ },
+ {
+  "word": "message",
+  "phon": "ˈmesIdʒ",
+  "def": "n.①信息②要旨,寓意"
+ },
+ {
+  "word": "metal",
+  "phon": "ˈmetl",
+  "def": "n.金属"
+ },
+ {
+  "word": "method",
+  "phon": "ˈme?əd",
+  "def": "n.①方法②秩序"
+ },
+ {
+  "word": "midnight",
+  "phon": "ˈmIdnaIt",
+  "def": "n.午夜"
+ },
+ {
+  "word": "might",
+  "phon": "maIt",
+  "def": "modalv.①[may的过去式]②(表示可能性)可能 n.强大力量"
+ },
+ {
+  "word": "mild",
+  "phon": "maIld",
+  "def": "a.①温和的②轻微的"
+ },
+ {
+  "word": "mile",
+  "phon": "maIl",
+  "def": "n.英里"
+ },
+ {
+  "word": "milk",
+  "phon": "mIlk",
+  "def": "n.牛奶"
+ },
+ {
+  "word": "million",
+  "phon": "ˈmIljən",
+  "def": "num.一百万"
+ },
+ {
+  "word": "mine",
+  "phon": "maIn",
+  "def": "pron.我的 n.矿v.开矿"
+ },
+ {
+  "word": "minute",
+  "phon": "ˈmInIt",
+  "def": "n.[maIˈnjuːt]a. n.①分②(sing.)一会儿③(sing.)时刻④(pl.)会议记录 a.微小的"
+ },
+ {
+  "word": "mirror",
+  "phon": "ˈmIrə(r)",
+  "def": "n.镜子vt.①反映②反射"
+ },
+ {
+  "word": "miss",
+  "phon": "mIs",
+  "def": "n.(M-)小姐vt.①未击中②未见到③怀念"
+ },
+ {
+  "word": "missing",
+  "phon": "ˈmIsI?",
+  "def": "a.①缺掉的②(人)失踪的"
+ },
+ {
+  "word": "mistake",
+  "phon": "mIˈsteIk",
+  "def": "vt.误解n.错误"
+ },
+ {
+  "word": "Mister",
+  "phon": "ˈmIstə(r)",
+  "def": "n.先生"
+ },
+ {
+  "word": "mistress",
+  "phon": "ˈmIstrəs",
+  "def": "n.①情妇②主妇"
+ },
+ {
+  "word": "mix",
+  "phon": "mIks",
+  "def": "vt.使混合vi.①相混合②交往"
+ },
+ {
+  "word": "mom",
+  "phon": "mɒm",
+  "def": "n.妈妈"
+ },
+ {
+  "word": "moment",
+  "phon": "ˈməʊmənt",
+  "def": "n.①片刻②机会"
+ },
+ {
+  "word": "Monday",
+  "phon": "ˈmʌndeI",
+  "def": "n.星期一"
+ },
+ {
+  "word": "money",
+  "phon": "ˈmʌni",
+  "def": "n.钱,钱币"
+ },
+ {
+  "word": "monitor",
+  "phon": "ˈmɒnItə(r)",
+  "def": "v.①监视②监听 n.监控器"
+ },
+ {
+  "word": "monkey",
+  "phon": "ˈmʌ?ki",
+  "def": "n.①猴子②捣蛋鬼"
+ },
+ {
+  "word": "month",
+  "phon": "mʌn?",
+  "def": "n.月,月份"
+ },
+ {
+  "word": "mop",
+  "phon": "mɒp",
+  "def": "n.拖把 vt.拖,擦"
+ },
+ {
+  "word": "morning",
+  "phon": "ˈmɔːnI?",
+  "def": "n.早晨,上午"
+ },
+ {
+  "word": "mother",
+  "phon": "ˈmʌðə(r)",
+  "def": "n.母亲"
+ },
+ {
+  "word": "mouse",
+  "phon": "maʊs",
+  "def": "n.①(pl.mice)老鼠②(pl.mice/mouses)鼠标"
+ },
+ {
+  "word": "mouth",
+  "phon": "maʊ?",
+  "def": "n.①嘴,口②需要供养的人"
+ },
+ {
+  "word": "movie",
+  "phon": "ˈmuːvi",
+  "def": "n.电影"
+ },
+ {
+  "word": "much",
+  "phon": "mʌtʃ",
+  "def": "(more,most)ad.非常 a./pron.许多(的)"
+ },
+ {
+  "word": "mud",
+  "phon": "mʌd",
+  "def": "n.泥,泥浆"
+ },
+ {
+  "word": "murder",
+  "phon": "ˈmɜːdə(r)",
+  "def": "vt./n.谋杀,凶杀"
+ },
+ {
+  "word": "museum",
+  "phon": "mjuˈziːəm",
+  "def": "n.博物馆"
+ },
+ {
+  "word": "music",
+  "phon": "ˈmjuːzIk",
+  "def": "n.音乐,乐曲"
+ },
+ {
+  "word": "must",
+  "phon": "mʌst",
+  "def": "modalv.①必须②一定"
+ },
+ {
+  "word": "my",
+  "phon": "maI",
+  "def": "a.我的"
+ },
+ {
+  "word": "myself",
+  "phon": "maIˈself",
+  "def": "pron.①我自己②我亲自"
+ },
+ {
+  "word": "nail",
+  "phon": "neIl",
+  "def": "n.①钉子②指甲"
+ },
+ {
+  "word": "narrow",
+  "phon": "ˈnærəʊ",
+  "def": "a.①狭窄的②勉强的 v.(使)变窄"
+ },
+ {
+  "word": "nation",
+  "phon": "ˈneIʃn",
+  "def": "n.①国家②民族"
+ },
+ {
+  "word": "nature",
+  "phon": "ˈneItʃə(r)",
+  "def": "n.①自然界②天性"
+ },
+ {
+  "word": "near",
+  "phon": "nIə(r)",
+  "def": "a.近的 ad.近 prep.接近"
+ },
+ {
+  "word": "nearby",
+  "phon": "ˌnIəˈbaI",
+  "def": "a.附近的ad.在附近"
+ },
+ {
+  "word": "neat",
+  "phon": "niːt",
+  "def": "a.①(爱)整洁的②简洁的③纯的"
+ },
+ {
+  "word": "neck",
+  "phon": "nek",
+  "def": "n.①颈,脖子②(衣服的)领口"
+ },
+ {
+  "word": "necklace",
+  "phon": "ˈnekləs",
+  "def": "n.项链"
+ },
+ {
+  "word": "need",
+  "phon": "niːd",
+  "def": "vt.①需要②缺少modalv.需要"
+ },
+ {
+  "word": "needle",
+  "phon": "ˈniːdl",
+  "def": "n.针,针状物"
+ },
+ {
+  "word": "neither",
+  "phon": "ˈnaIðə(r)",
+  "def": "pron.(两者之中)无一个 conj./ad.也不a.两者皆非的"
+ },
+ {
+  "word": "nephew",
+  "phon": "ˈnefjuː",
+  "def": "n.侄子,外甥"
+ },
+ {
+  "word": "nest",
+  "phon": "nest",
+  "def": "n.巢,窝 vi.筑巢"
+ },
+ {
+  "word": "net",
+  "phon": "net",
+  "def": "n.网,网状物 vt.净得,净赚 a.净的,纯的"
+ },
+ {
+  "word": "never",
+  "phon": "ˈnevə(r)",
+  "def": "ad.从不,绝不"
+ },
+ {
+  "word": "news",
+  "phon": "njuːz",
+  "def": "n.新闻,消息"
+ },
+ {
+  "word": "newspaper",
+  "phon": "ˈnjuːzpeIpə(r)",
+  "def": "n.报纸"
+ },
+ {
+  "word": "next",
+  "phon": "nekst",
+  "def": "a.①紧接在后的②下一个的 ad.①接下去②居后"
+ },
+ {
+  "word": "nice",
+  "phon": "naIs",
+  "def": "a.令人愉快的"
+ },
+ {
+  "word": "niece",
+  "phon": "niːs",
+  "def": "n.侄女,外甥女"
+ },
+ {
+  "word": "night",
+  "phon": "naIt",
+  "def": "n.夜,夜晚"
+ },
+ {
+  "word": "nine",
+  "phon": "naIn",
+  "def": "num.九"
+ },
+ {
+  "word": "nineteen",
+  "phon": "ˌnaInˈtiːn",
+  "def": "num.十九"
+ },
+ {
+  "word": "ninety",
+  "phon": "ˈnaInti",
+  "def": "num.九十"
+ },
+ {
+  "word": "ninth",
+  "phon": "naIn?",
+  "def": "ord.第九 n.九分之一"
+ },
+ {
+  "word": "no",
+  "phon": "nəʊ",
+  "def": "ad.不 a.①没有的②不许的"
+ },
+ {
+  "word": "noble",
+  "phon": "ˈnəʊbl",
+  "def": "a.①高尚的②高贵的 n.贵族"
+ },
+ {
+  "word": "nobody",
+  "phon": "ˈnəʊbədi",
+  "def": "pron.没有人 n.无足轻重的人"
+ },
+ {
+  "word": "nod",
+  "phon": "nɒd",
+  "def": "vt./n.点头"
+ },
+ {
+  "word": "noise",
+  "phon": "nɔIz",
+  "def": "n.①声音②喧哗声"
+ },
+ {
+  "word": "none",
+  "phon": "nʌn",
+  "def": "pron.没有一个,没有一点儿 ad.一点都不"
+ },
+ {
+  "word": "noodle",
+  "phon": "ˈnuːdl",
+  "def": "n.(常pl.)面条"
+ },
+ {
+  "word": "noon",
+  "phon": "nuːn",
+  "def": "n.中午,正午"
+ },
+ {
+  "word": "nor",
+  "phon": "nɔː(r)",
+  "def": "conj./ad.也不,也没有"
+ },
+ {
+  "word": "north",
+  "phon": "nɔː?",
+  "def": "n.北,北方,北部"
+ },
+ {
+  "word": "northeast",
+  "phon": "ˌnɔː?ˈiːst",
+  "def": "n.东北方"
+ },
+ {
+  "word": "northwest",
+  "phon": "ˌnɔː?ˈwest",
+  "def": "n.西北方"
+ },
+ {
+  "word": "nose",
+  "phon": "nəʊz",
+  "def": "n.①鼻子②鼻状物"
+ },
+ {
+  "word": "not",
+  "phon": "nɒt",
+  "def": "ad.不,没,不是"
+ },
+ {
+  "word": "note",
+  "phon": "nəʊt",
+  "def": "n.①便条②记录③注解 vt.①注意②记录"
+ },
+ {
+  "word": "notebook",
+  "phon": "ˈnəʊtbʊk",
+  "def": "n.①笔记本②笔记本电脑"
+ },
+ {
+  "word": "nothing",
+  "phon": "ˈnʌ?I?",
+  "def": "pron.没有什么n.无关紧要的事物"
+ },
+ {
+  "word": "novel",
+  "phon": "ˈnɒvl",
+  "def": "a.新颖的 n.(长篇)小说"
+ },
+ {
+  "word": "November",
+  "phon": "nəʊˈvembə(r)",
+  "def": "n.十一月"
+ },
+ {
+  "word": "now",
+  "phon": "naʊ",
+  "def": "ad.①现在②这时候③现在就,马上"
+ },
+ {
+  "word": "nowadays",
+  "phon": "ˈnaʊədeIz",
+  "def": "ad.现今"
+ },
+ {
+  "word": "nowhere",
+  "phon": "ˈnəʊweə(r)",
+  "def": "ad.无处"
+ },
+ {
+  "word": "nurse",
+  "phon": "nɜːs",
+  "def": "n.护士 vt.护理"
+ },
+ {
+  "word": "nut",
+  "phon": "nʌt",
+  "def": "n.①坚果②螺母,螺帽"
+ },
+ {
+  "word": "ocean",
+  "phon": "ˈəʊʃn",
+  "def": "n.洋,海洋"
+ },
+ {
+  "word": "o'clock",
+  "phon": "əˈklɒk",
+  "def": "ad.(表示整点)……点钟"
+ },
+ {
+  "word": "October",
+  "phon": "ɒkˈtəʊbə(r)",
+  "def": "n.十月"
+ },
+ {
+  "word": "of",
+  "phon": "强ɒv,弱əv",
+  "def": "prep.①属于,关于②由……组成"
+ },
+ {
+  "word": "officer",
+  "phon": "ˈɒfIsə(r)",
+  "def": "n.①军官,警官②官员"
+ },
+ {
+  "word": "official",
+  "phon": "əˈfIʃl",
+  "def": "n.官员 a.①公务的②官方的"
+ },
+ {
+  "word": "often",
+  "phon": "ˈɒfn,ˈɒftən",
+  "def": "ad.经常,通常"
+ },
+ {
+  "word": "oil",
+  "phon": "ɔIl",
+  "def": "n.①油②油画vt.给……加润滑油"
+ },
+ {
+  "word": "OK/okay",
+  "phon": "əʊˈkeI",
+  "def": "int.对"
+ },
+ {
+  "word": "Olympic",
+  "phon": "əˈlImpIk",
+  "def": "a.奥林匹克运动会的 n.(-s)奥林匹克运动会"
+ },
+ {
+  "word": "on",
+  "phon": "ɒn",
+  "def": "prep.①在……上②向,对③靠近④关于"
+ },
+ {
+  "word": "once",
+  "phon": "wʌns",
+  "def": "ad.①一次②曾经conj.一旦"
+ },
+ {
+  "word": "one",
+  "phon": "wʌn",
+  "def": "num.一 pron.一人,一个"
+ },
+ {
+  "word": "oneself",
+  "phon": "wʌnˈself",
+  "def": "pron.①自己②亲自"
+ },
+ {
+  "word": "only",
+  "phon": "ˈəʊnli",
+  "def": "ad.①只②不料a.①唯一的②最好的,最适当的conj.可是"
+ },
+ {
+  "word": "onto",
+  "phon": "ˈɒntə",
+  "def": "prep.朝,朝向"
+ },
+ {
+  "word": "open",
+  "phon": "ˈəʊpən",
+  "def": "a.①开着的②营业的③直率的④未决定的v.①开②开始"
+ },
+ {
+  "word": "opera",
+  "phon": "ˈɒprə",
+  "def": "n.①歌剧②歌剧团,歌剧院"
+ },
+ {
+  "word": "opinion",
+  "phon": "əˈpInjən",
+  "def": "n.意见,看法"
+ },
+ {
+  "word": "or",
+  "phon": "ɔː(r)",
+  "def": "conj.①或者②即③否则"
+ },
+ {
+  "word": "orange",
+  "phon": "ˈɒrIndʒ",
+  "def": "n.①橙子②橙汁③橙色"
+ },
+ {
+  "word": "ordinary",
+  "phon": "ˈɔːdnri",
+  "def": "a.①普通的②平庸的"
+ },
+ {
+  "word": "other",
+  "phon": "ˈʌðə(r)",
+  "def": "a.①其他的②另一的 pron.另一个人(或事物)"
+ },
+ {
+  "word": "oughtto",
+  "phon": "ˈɔːttə",
+  "def": "modalv.应该,应当"
+ },
+ {
+  "word": "ounce",
+  "phon": "aʊns",
+  "def": "n.盎司"
+ },
+ {
+  "word": "our",
+  "phon": "ˈaʊə(r)",
+  "def": "a.我们的"
+ },
+ {
+  "word": "ours",
+  "phon": "ˈaʊəz",
+  "def": "pron.我们的"
+ },
+ {
+  "word": "ourselves",
+  "phon": "ˌaʊəˈselvz",
+  "def": "pron.我们自己"
+ },
+ {
+  "word": "outdoor",
+  "phon": "ˈaʊtdɔː(r)",
+  "def": "a.户外的"
+ },
+ {
+  "word": "outgoing",
+  "phon": "ˈaʊt?əʊI?",
+  "def": "a.①即将卸任的②外向的③外出的"
+ },
+ {
+  "word": "outing",
+  "phon": "ˈaʊtI?",
+  "def": "n.①远足②参赛"
+ },
+ {
+  "word": "outside",
+  "phon": "ˌaʊtˈsaId",
+  "def": "prep.①在……的外面②(~of)除……以外 ad.在外面 n.外面"
+ },
+ {
+  "word": "ox",
+  "phon": "ɒks",
+  "def": "n.(pl.oxen)牛"
+ },
+ {
+  "word": "page",
+  "phon": "peIdʒ",
+  "def": "n.①页②(计算机)页面③历史篇章"
+ },
+ {
+  "word": "pain",
+  "phon": "peIn",
+  "def": "n.①疼痛②痛苦 vt.使疼痛"
+ },
+ {
+  "word": "paint",
+  "phon": "peInt",
+  "def": "n.油漆 v.在……上刷油漆"
+ },
+ {
+  "word": "pair",
+  "phon": "peə(r)",
+  "def": "n.①一双②俩vt.使成对"
+ },
+ {
+  "word": "palace",
+  "phon": "ˈpæləs",
+  "def": "n.宫,宫殿"
+ },
+ {
+  "word": "panda",
+  "phon": "ˈpændə",
+  "def": "n.熊猫"
+ },
+ {
+  "word": "paper",
+  "phon": "ˈpeIpə(r)",
+  "def": "n.①纸②报纸③(pl.)文件④文章"
+ },
+ {
+  "word": "paragraph",
+  "phon": "ˈpærə?r?ːf",
+  "def": "n.段落"
+ },
+ {
+  "word": "pardon",
+  "phon": "ˈp?ːdn",
+  "def": "int.抱歉,请再说一遍 n.宽恕"
+ },
+ {
+  "word": "parent",
+  "phon": "ˈpeərənt",
+  "def": "n.父(母)亲"
+ },
+ {
+  "word": "park",
+  "phon": "p?ːk",
+  "def": "n.公园 v.停(车)"
+ },
+ {
+  "word": "partner",
+  "phon": "ˈp?ːtnə(r)",
+  "def": "n.①配偶,搭档②合伙人 vt.做搭档,配对"
+ },
+ {
+  "word": "party",
+  "phon": "ˈp?ːti",
+  "def": "n.①党派,政党②社交聚会③队,群"
+ },
+ {
+  "word": "passage",
+  "phon": "ˈpæsIdʒ",
+  "def": "n.①通道②(文章等的)一段"
+ },
+ {
+  "word": "passenger",
+  "phon": "ˈpæsIndʒə(r)",
+  "def": "n.乘客,旅客"
+ },
+ {
+  "word": "past",
+  "phon": "p?ːst",
+  "def": "a.以前的n.(the~)过去"
+ },
+ {
+  "word": "path",
+  "phon": "p?ː?",
+  "def": "n.①小路②路线③行动计划"
+ },
+ {
+  "word": "patient",
+  "phon": "ˈpeIʃnt",
+  "def": "a.能忍耐的,有耐心的 n.病人"
+ },
+ {
+  "word": "pause",
+  "phon": "pɔːz",
+  "def": "vi./n.暂停,中止"
+ },
+ {
+  "word": "pea",
+  "phon": "piː",
+  "def": "n.豌豆,豌豆粒"
+ },
+ {
+  "word": "peace",
+  "phon": "piːs",
+  "def": "n.①和平②平静③和睦"
+ },
+ {
+  "word": "peach",
+  "phon": "piːtʃ",
+  "def": "n.桃,桃子"
+ },
+ {
+  "word": "pear",
+  "phon": "peə(r)",
+  "def": "n.梨"
+ },
+ {
+  "word": "peasant",
+  "phon": "ˈpeznt",
+  "def": "n.农民,佃农"
+ },
+ {
+  "word": "pen",
+  "phon": "pen",
+  "def": "n.①笔,钢笔②栏,圈,棚"
+ },
+ {
+  "word": "pencil",
+  "phon": "ˈpensl",
+  "def": "n.铅笔"
+ },
+ {
+  "word": "penny",
+  "phon": "ˈpeni",
+  "def": "n.便士"
+ },
+ {
+  "word": "people",
+  "phon": "ˈpiːpl",
+  "def": "n.①人们,大家②民族"
+ },
+ {
+  "word": "pepper",
+  "phon": "ˈpepə(r)",
+  "def": "n.胡椒粉vt.在……上撒胡椒粉"
+ },
+ {
+  "word": "per",
+  "phon": "强pɜː(r),弱pə(r)",
+  "def": "prep.每,每一"
+ },
+ {
+  "word": "percent",
+  "phon": "pəˈsent",
+  "def": "n.百分之一"
+ },
+ {
+  "word": "perhaps",
+  "phon": "pəˈhæps",
+  "def": "ad.或许,大概,可能"
+ },
+ {
+  "word": "period",
+  "phon": "ˈpIəriəd",
+  "def": "n.①(一段)时间②阶段③学时,课④句号"
+ },
+ {
+  "word": "person",
+  "phon": "ˈpɜːsn",
+  "def": "n.人"
+ },
+ {
+  "word": "pet",
+  "phon": "pet",
+  "def": "n.①宠物②宠儿vt.抚摸"
+ },
+ {
+  "word": "photo",
+  "phon": "ˈfəʊtəʊ",
+  "def": "n.照片"
+ },
+ {
+  "word": "piano",
+  "phon": "piˈænəʊ",
+  "def": "n.钢琴"
+ },
+ {
+  "word": "pick",
+  "phon": "pIk",
+  "def": "v.①挑选,选择②采,摘③摘掉,剔除"
+ },
+ {
+  "word": "picnic",
+  "phon": "ˈpIknIk",
+  "def": "n.野餐(食物) vi.野餐"
+ },
+ {
+  "word": "picture",
+  "phon": "ˈpIktʃə(r)",
+  "def": "n.①画,图画②相片③(常sing.)描绘vt.①设想②描述"
+ },
+ {
+  "word": "pie",
+  "phon": "paI",
+  "def": "n.馅饼"
+ },
+ {
+  "word": "pig",
+  "phon": "pI?",
+  "def": "n.猪"
+ },
+ {
+  "word": "pill",
+  "phon": "pIl",
+  "def": "n.药丸,药片[△tablet药片]"
+ },
+ {
+  "word": "pillow",
+  "phon": "ˈpIləʊ",
+  "def": "n.枕头"
+ },
+ {
+  "word": "pilot",
+  "phon": "ˈpaIlət",
+  "def": "n.①飞行员②领航员 vt.①驾驶(飞机等)②引导③试验 a.试验性的"
+ },
+ {
+  "word": "pink",
+  "phon": "pI?k",
+  "def": "a.粉红色的 n.粉红色"
+ },
+ {
+  "word": "pioneer",
+  "phon": "ˌpaIəˈnIə(r)",
+  "def": "n.①先驱②开拓者,拓荒者 vt.当开拓者"
+ },
+ {
+  "word": "pipe",
+  "phon": "paIp",
+  "def": "n.管子,管道"
+ },
+ {
+  "word": "pity",
+  "phon": "ˈpIti",
+  "def": "n./vt.同情,怜悯"
+ },
+ {
+  "word": "plain",
+  "phon": "pleIn",
+  "def": "a.①坦率的②朴素的 n.平原"
+ },
+ {
+  "word": "plan",
+  "phon": "plæn",
+  "def": "n.①计划,打算②(详细)规划③设计图 v.计划"
+ },
+ {
+  "word": "planet",
+  "phon": "ˈplænIt",
+  "def": "n.①行星②(sing.)地球"
+ },
+ {
+  "word": "plastic",
+  "phon": "ˈpl?ːstIk",
+  "def": "n.塑料(制品)"
+ },
+ {
+  "word": "plate",
+  "phon": "pleIt",
+  "def": "n.①盘子②金属板条"
+ },
+ {
+  "word": "play",
+  "phon": "pleI",
+  "def": "v.①玩耍②演奏③扮演"
+ },
+ {
+  "word": "playground",
+  "phon": "ˈpleI?raʊnd",
+  "def": "n.游乐场,操场"
+ },
+ {
+  "word": "please",
+  "phon": "pliːz",
+  "def": "int.请 vt.使满意vi.愿意,喜欢"
+ },
+ {
+  "word": "plus",
+  "phon": "plʌs",
+  "def": "prep.①加②和,也 n.加号,正号"
+ },
+ {
+  "word": "pocket",
+  "phon": "ˈpɒkIt",
+  "def": "n.①衣袋②(常sing.)钱,财力"
+ },
+ {
+  "word": "poet",
+  "phon": "ˈpəʊIt",
+  "def": "n.诗人"
+ },
+ {
+  "word": "pole",
+  "phon": "pəʊl",
+  "def": "n.①柱,杆②地极"
+ },
+ {
+  "word": "police",
+  "phon": "pəˈliːs",
+  "def": "n.警察"
+ },
+ {
+  "word": "policy",
+  "phon": "ˈpɒləsi",
+  "def": "n.①政策,方针②保险单"
+ },
+ {
+  "word": "polite",
+  "phon": "pəˈlaIt",
+  "def": "a.①有礼貌的②应酬的"
+ },
+ {
+  "word": "politics",
+  "phon": "ˈpɒlətIks",
+  "def": "n.政治"
+ },
+ {
+  "word": "pollute",
+  "phon": "pəˈluːt",
+  "def": "vt.弄脏,污染"
+ },
+ {
+  "word": "pond",
+  "phon": "pɒnd",
+  "def": "n.池塘"
+ },
+ {
+  "word": "pool",
+  "phon": "puːl",
+  "def": "n.①泳池②水坑③(液体等的)一摊④共同的资源"
+ },
+ {
+  "word": "poor",
+  "phon": "pɔː(r)",
+  "def": "a.①贫困的②可怜的③低劣的④不擅长的"
+ },
+ {
+  "word": "pop",
+  "phon": "pɒp",
+  "def": "n.①流行音乐②砰的一声"
+ },
+ {
+  "word": "population",
+  "phon": "ˌpɒpjuˈleIʃn",
+  "def": "n.人口"
+ },
+ {
+  "word": "pork",
+  "phon": "pɔːk",
+  "def": "n.猪肉"
+ },
+ {
+  "word": "post",
+  "phon": "pəʊst",
+  "def": "n.①邮政,邮件②职位,岗位③(支)柱,桩 vt.①投寄②张贴"
+ },
+ {
+  "word": "pot",
+  "phon": "pɒt",
+  "def": "n.罐,壶,锅"
+ },
+ {
+  "word": "potato",
+  "phon": "pəˈteItəʊ",
+  "def": "n.土豆"
+ },
+ {
+  "word": "pound",
+  "phon": "paʊnd",
+  "def": "n.①磅②英镑"
+ },
+ {
+  "word": "pour",
+  "phon": "pɔː(r)",
+  "def": "v.①倾倒②倾泻"
+ },
+ {
+  "word": "powder",
+  "phon": "ˈpaʊdə(r)",
+  "def": "n.①粉末②扑面粉"
+ },
+ {
+  "word": "practical",
+  "phon": "ˈpræktIkl",
+  "def": "a.①实际的②切实可行的③明智的"
+ },
+ {
+  "word": "practise/-ice",
+  "phon": "ˈpræktIs",
+  "def": "v.①练习②从事"
+ },
+ {
+  "word": "praise",
+  "phon": "preIz",
+  "def": "vt./n.赞扬,称赞"
+ },
+ {
+  "word": "prepare",
+  "phon": "prIˈpeə(r)",
+  "def": "v.准备,预备"
+ },
+ {
+  "word": "pretty",
+  "phon": "ˈprIti",
+  "def": "ad.相当,很a.①漂亮的②优美的③俊俏的"
+ },
+ {
+  "word": "price",
+  "phon": "praIs",
+  "def": "n.①价格②代价"
+ },
+ {
+  "word": "pride",
+  "phon": "praId",
+  "def": "n.①自豪(感)②自尊(心)③骄傲"
+ },
+ {
+  "word": "prize",
+  "phon": "praIz",
+  "def": "n.①奖赏②值得追求的东西"
+ },
+ {
+  "word": "problem",
+  "phon": "ˈprɒbləm",
+  "def": "n.①问题,难题②逻辑题"
+ },
+ {
+  "word": "province",
+  "phon": "ˈprɒvIns",
+  "def": "n.①省②(sing.)范围"
+ },
+ {
+  "word": "pull",
+  "phon": "pʊl",
+  "def": "v.拉,拖 vt.①拔②拖动,牵引 n.①拉,拖②(sing.)拉力,牵引力"
+ },
+ {
+  "word": "pupil",
+  "phon": "ˈpjuːpl",
+  "def": "n.①学生,(尤指)小学生②瞳孔"
+ },
+ {
+  "word": "pure",
+  "phon": "pjʊə(r)",
+  "def": "a.①纯的②纯理论的③完全的"
+ },
+ {
+  "word": "purple",
+  "phon": "ˈpɜːpl",
+  "def": "a./n.紫色(的)"
+ },
+ {
+  "word": "purse",
+  "phon": "pɜːs",
+  "def": "n.①钱包②(sing.)资金"
+ },
+ {
+  "word": "push",
+  "phon": "pʊʃ",
+  "def": "v./n.推,按"
+ },
+ {
+  "word": "put",
+  "phon": "pʊt",
+  "def": "vt.①放②表达③提出④记下"
+ },
+ {
+  "word": "puzzle",
+  "phon": "ˈpʌzl",
+  "def": "n.①谜,智力游戏②(常sing.)不解之谜 vt.迷惑"
+ },
+ {
+  "word": "quality",
+  "phon": "ˈkwɒləti",
+  "def": "n.①质量,品质②品德,品性③特性"
+ },
+ {
+  "word": "quantity",
+  "phon": "ˈkwɒntəti",
+  "def": "n.数量"
+ },
+ {
+  "word": "quarter",
+  "phon": "ˈkwɔːtə(r)",
+  "def": "n.①四分之一②季,季度③一刻钟"
+ },
+ {
+  "word": "queen",
+  "phon": "kwiːn",
+  "def": "n.女王,王后"
+ },
+ {
+  "word": "queue",
+  "phon": "kjuː",
+  "def": "n.队 vi.排队"
+ },
+ {
+  "word": "quick",
+  "phon": "kwIk",
+  "def": "a.①快的②灵敏的ad.快地"
+ },
+ {
+  "word": "quiet",
+  "phon": "ˈkwaIət",
+  "def": "a.①轻声的②安静的③温和的 n.安静 v.(使)安静"
+ },
+ {
+  "word": "quite",
+  "phon": "kwaIt",
+  "def": "ad.①相当②的确③完全"
+ },
+ {
+  "word": "rabbit",
+  "phon": "ˈræbIt",
+  "def": "n.兔"
+ },
+ {
+  "word": "race",
+  "phon": "reIs",
+  "def": "n.①赛跑,速度竞赛②(sing.)竞争③人种 v.(参加)比赛"
+ },
+ {
+  "word": "railway",
+  "phon": "ˈreIlweI",
+  "def": "n.铁路"
+ },
+ {
+  "word": "rain",
+  "phon": "reIn",
+  "def": "n.雨 vi.下雨"
+ },
+ {
+  "word": "rainbow",
+  "phon": "ˈreInbəʊ",
+  "def": "n.虹,彩虹"
+ },
+ {
+  "word": "raincoat",
+  "phon": "ˈreInkəʊt",
+  "def": "n.雨衣"
+ },
+ {
+  "word": "rapid",
+  "phon": "ˈræpId",
+  "def": "a.快的,迅速的"
+ },
+ {
+  "word": "rat",
+  "phon": "ræt",
+  "def": "n.①老鼠②讨厌的人"
+ },
+ {
+  "word": "rather",
+  "phon": "ˈr?ːðə(r)",
+  "def": "ad.相当,颇"
+ },
+ {
+  "word": "reach",
+  "phon": "riːtʃ",
+  "def": "vt.①抵达②伸出手,够到"
+ },
+ {
+  "word": "read",
+  "phon": "riːd",
+  "def": "v.①读②朗读③读懂"
+ },
+ {
+  "word": "reason",
+  "phon": "ˈriːzn",
+  "def": "n.①原因②道理,情理"
+ },
+ {
+  "word": "recent",
+  "phon": "ˈriːsnt",
+  "def": "a.最近的"
+ },
+ {
+  "word": "record",
+  "phon": "ˈrekɔːd",
+  "def": "n.[rIˈkɔːd]v. n.①记录②唱片③纪录 vt.记录"
+ },
+ {
+  "word": "red",
+  "phon": "red",
+  "def": "a.红色的 n.红色"
+ },
+ {
+  "word": "refrigerator",
+  "phon": "rIˈfrIdʒəreItə(r)",
+  "def": "n.冰箱"
+ },
+ {
+  "word": "regard",
+  "phon": "rIˈ??ːd",
+  "def": "vt.①把……看作②注视 n.①注意②尊敬③(pl.)致意"
+ },
+ {
+  "word": "regret",
+  "phon": "rIˈ?ret",
+  "def": "v./n.懊悔,遗憾,抱歉"
+ },
+ {
+  "word": "relax",
+  "phon": "rIˈlæks",
+  "def": "v.放松,(使)松弛"
+ },
+ {
+  "word": "remain",
+  "phon": "rIˈmeIn",
+  "def": "vi.①仍然是②逗留,停留③剩余"
+ },
+ {
+  "word": "remember",
+  "phon": "rIˈmembə(r)",
+  "def": "vt.①记得②纪念"
+ },
+ {
+  "word": "rent",
+  "phon": "rent",
+  "def": "v.①租借②出租n.租金"
+ },
+ {
+  "word": "repair",
+  "phon": "rIˈpeə(r)",
+  "def": "n.修理vt.①修理②弥补"
+ },
+ {
+  "word": "report",
+  "phon": "rIˈpɔːt",
+  "def": "vt.①报告②报道"
+ },
+ {
+  "word": "research",
+  "phon": "rIˈsɜːtʃ",
+  "def": "v./n.研究,调查"
+ },
+ {
+  "word": "rest",
+  "phon": "rest",
+  "def": "n.①休息②停止③剩余部分 v.休息"
+ },
+ {
+  "word": "restaurant",
+  "phon": "ˈrestrɒnt",
+  "def": "n.餐馆,饭店"
+ },
+ {
+  "word": "result",
+  "phon": "rIˈzʌlt",
+  "def": "n.①结果②(常pl.)成绩 vi.(因……)发生"
+ },
+ {
+  "word": "return",
+  "phon": "rIˈtɜːn",
+  "def": "vi.①返回②恢复vt.归还"
+ },
+ {
+  "word": "rice",
+  "phon": "raIs",
+  "def": "n.①水稻②米饭"
+ },
+ {
+  "word": "ride",
+  "phon": "raId",
+  "def": "v.骑 n.(骑马、骑车或乘车的)旅行"
+ },
+ {
+  "word": "ring",
+  "phon": "rI?",
+  "def": "vt.①给……打电话②按(铃) vi.①(铃、钟等)鸣,响②按铃 n.戒指"
+ },
+ {
+  "word": "ripe",
+  "phon": "raIp",
+  "def": "a.(水果或庄稼)成熟的"
+ },
+ {
+  "word": "river",
+  "phon": "ˈrIvə(r)",
+  "def": "n.河,江"
+ },
+ {
+  "word": "road",
+  "phon": "rəʊd",
+  "def": "n.路,道路"
+ },
+ {
+  "word": "robot",
+  "phon": "ˈrəʊbɒt",
+  "def": "n.机器人"
+ },
+ {
+  "word": "rock",
+  "phon": "rɒk",
+  "def": "n.①岩石,石块②摇滚乐 vt.①使摇动②使震惊"
+ },
+ {
+  "word": "rocket",
+  "phon": "ˈrɒkIt",
+  "def": "n.火箭 vi.迅速上升,猛涨"
+ },
+ {
+  "word": "role",
+  "phon": "rəʊl",
+  "def": "n.①作用,职责②角色"
+ },
+ {
+  "word": "roof",
+  "phon": "ruːf",
+  "def": "n.屋顶,顶部"
+ },
+ {
+  "word": "room",
+  "phon": "ruːm",
+  "def": "n.①房间②空间③可能性"
+ },
+ {
+  "word": "root",
+  "phon": "ruːt",
+  "def": "n.①根(部)②(常sing.)根源"
+ },
+ {
+  "word": "rope",
+  "phon": "rəʊp",
+  "def": "n.绳"
+ },
+ {
+  "word": "rose",
+  "phon": "rəʊz",
+  "def": "n.玫瑰(花),蔷薇(花)"
+ },
+ {
+  "word": "row",
+  "phon": "rəʊ",
+  "def": "n.①(一)排,(一)行②(常sing.)划船(时间) v.划(船) vi./n.争吵"
+ },
+ {
+  "word": "rubber",
+  "phon": "ˈrʌbə(r)",
+  "def": "n.①橡胶(制品)②橡皮"
+ },
+ {
+  "word": "rubbish",
+  "phon": "ˈrʌbIʃ",
+  "def": "n.①垃圾②废话"
+ },
+ {
+  "word": "ruin",
+  "phon": "ˈruːIn",
+  "def": "vt.①毁灭②使破产n.①毁灭,毁坏②破产③(pl.)废墟"
+ },
+ {
+  "word": "rule",
+  "phon": "ruːl",
+  "def": "n.①规则②(常sing.)习惯③统治 v.①统治②裁决"
+ },
+ {
+  "word": "run",
+  "phon": "rʌn",
+  "def": "vi.①跑②行驶③运转 vt.①使移动②经营"
+ },
+ {
+  "word": "rush",
+  "phon": "rʌʃ",
+  "def": "vi.急速行进,猛冲"
+ },
+ {
+  "word": "sad",
+  "phon": "sæd",
+  "def": "a.①悲哀的②十分糟糕的"
+ },
+ {
+  "word": "safe",
+  "phon": "seIf",
+  "def": "a.①安全的②牢靠的③谨慎的 n.保险箱"
+ },
+ {
+  "word": "sail",
+  "phon": "seIl",
+  "def": "vi.航行 vt.①驾驶(船只)②在……上航行 n.帆"
+ },
+ {
+  "word": "salad",
+  "phon": "ˈsæləd",
+  "def": "n.色拉,凉拌菜"
+ },
+ {
+  "word": "sale",
+  "phon": "seIl",
+  "def": "n.①卖,出售②廉价出售"
+ },
+ {
+  "word": "salesman",
+  "phon": "ˈseIlzmən",
+  "def": "n.售货员"
+ },
+ {
+  "word": "salt",
+  "phon": "sɔːlt",
+  "def": "n.盐"
+ },
+ {
+  "word": "sand",
+  "phon": "sænd",
+  "def": "n.①沙②沙滩"
+ },
+ {
+  "word": "sandwich",
+  "phon": "ˈsænwIdʒ",
+  "def": "n.三明治vt.夹入"
+ },
+ {
+  "word": "satellite",
+  "phon": "ˈsætəlaIt",
+  "def": "n.①卫星②人造卫星"
+ },
+ {
+  "word": "Saturday",
+  "phon": "ˈsætədeI",
+  "def": "n.星期六"
+ },
+ {
+  "word": "sausage",
+  "phon": "ˈsɒsIdʒ",
+  "def": "n.香肠,腊肠"
+ },
+ {
+  "word": "save",
+  "phon": "seIv",
+  "def": "vt.①救助②储蓄③节省④保存 vi.储蓄prep.除……之外"
+ },
+ {
+  "word": "say",
+  "phon": "seI",
+  "def": "vt.①说②说明③表明"
+ },
+ {
+  "word": "scholar",
+  "phon": "ˈskɒlə(r)",
+  "def": "n.①学者②奖学金获得者"
+ },
+ {
+  "word": "school",
+  "phon": "skuːl",
+  "def": "n.①学校②上学③学派"
+ },
+ {
+  "word": "science",
+  "phon": "ˈsaIəns",
+  "def": "n.①科学②学科"
+ },
+ {
+  "word": "scissors",
+  "phon": "ˈsIzəz",
+  "def": "n.(pl.)剪刀"
+ },
+ {
+  "word": "score",
+  "phon": "skɔː(r)",
+  "def": "n.①得分②(pl.)大量③二十个④划痕 vt.①得(分)②给……评分③刻痕于"
+ },
+ {
+  "word": "screen",
+  "phon": "skriːn",
+  "def": "n.①屏幕②屏风,帘,纱窗 vt.①掩蔽②放映(电影)③审查"
+ },
+ {
+  "word": "sea",
+  "phon": "siː",
+  "def": "n.海,海洋"
+ },
+ {
+  "word": "search",
+  "phon": "sɜːtʃ",
+  "def": "v./n.搜索,寻找,探查"
+ },
+ {
+  "word": "season",
+  "phon": "ˈsiːzn",
+  "def": "n.季节"
+ },
+ {
+  "word": "seat",
+  "phon": "siːt",
+  "def": "n.座位 vt.使坐下"
+ },
+ {
+  "word": "secret",
+  "phon": "ˈsiːkrIt",
+  "def": "a.秘密的n.①秘密②秘诀"
+ },
+ {
+  "word": "secretary",
+  "phon": "ˈsekrətri",
+  "def": "n.①秘书②部长,大臣"
+ },
+ {
+  "word": "see",
+  "phon": "siː",
+  "def": "v.①看,看见②观看③领会,理解"
+ },
+ {
+  "word": "seed",
+  "phon": "siːd",
+  "def": "n.①种子②(常pl.)萌芽"
+ },
+ {
+  "word": "seek",
+  "phon": "siːk",
+  "def": "v.①寻找,追求②征求(意见)③试图"
+ },
+ {
+  "word": "seem",
+  "phon": "siːm",
+  "def": "link.v.好像,似乎"
+ },
+ {
+  "word": "seldom",
+  "phon": "ˈseldəm",
+  "def": "ad.很少,不常"
+ },
+ {
+  "word": "self",
+  "phon": "self",
+  "def": "n.①本来面目②个性"
+ },
+ {
+  "word": "sell",
+  "phon": "sel",
+  "def": "v.卖,推销"
+ },
+ {
+  "word": "send",
+  "phon": "send",
+  "def": "vt.①送,寄②派遣,打发③发送(信号等),发射"
+ },
+ {
+  "word": "sentence",
+  "phon": "ˈsentəns",
+  "def": "n.①句子②判决 vt.宣判"
+ },
+ {
+  "word": "separate",
+  "phon": "ˈsepəreIt",
+  "def": "v.[ˈsepərət]a. vt.①使分离②划分③区分a.①分离的②不同的"
+ },
+ {
+  "word": "September",
+  "phon": "səpˈtembə(r)",
+  "def": "n.九月"
+ },
+ {
+  "word": "serious",
+  "phon": "ˈsIəriəs",
+  "def": "a.①严重的②重要的③认真的④严肃的"
+ },
+ {
+  "word": "seven",
+  "phon": "ˈsevn",
+  "def": "num.七"
+ },
+ {
+  "word": "seventeen",
+  "phon": "ˌsevnˈtiːn",
+  "def": "num.十七"
+ },
+ {
+  "word": "seventy",
+  "phon": "ˈsevnti",
+  "def": "num.七十"
+ },
+ {
+  "word": "several",
+  "phon": "ˈsevrəl",
+  "def": "pron.几个,若干,数个"
+ },
+ {
+  "word": "sew",
+  "phon": "səʊ",
+  "def": "v.缝(纫)"
+ },
+ {
+  "word": "sex",
+  "phon": "seks",
+  "def": "n.性(别)"
+ },
+ {
+  "word": "shake",
+  "phon": "ʃeIk",
+  "def": "v./n.①摇动②颤抖"
+ },
+ {
+  "word": "shall",
+  "phon": "强ʃæl,弱ʃəl",
+  "def": "modalv.①将要,将会②(表示提出或征求意见)③(表示决心、命令或指示)必须,应该"
+ },
+ {
+  "word": "shame",
+  "phon": "ʃeIm",
+  "def": "n.①羞耻②(sing.)让人遗憾的事"
+ },
+ {
+  "word": "shape",
+  "phon": "ʃeIp",
+  "def": "n.①形状②状况 vt.形成"
+ },
+ {
+  "word": "share",
+  "phon": "ʃeə(r)",
+  "def": "vt.①分享②分配vi.分享,分担 n.①一份②股票"
+ },
+ {
+  "word": "sharp",
+  "phon": "ʃ?ːp",
+  "def": "a.①锋利的②轮廓分明的③敏锐的④急剧的ad.(时刻)整,准"
+ },
+ {
+  "word": "shave",
+  "phon": "ʃeIv",
+  "def": "vt.剃,刮,削vi./n.修面,刮脸"
+ },
+ {
+  "word": "she",
+  "phon": "ʃiː",
+  "def": "pron.她"
+ },
+ {
+  "word": "sheep",
+  "phon": "ʃiːp",
+  "def": "n.绵羊"
+ },
+ {
+  "word": "sheet",
+  "phon": "ʃiːt",
+  "def": "n.①被单②薄板③(一)片,(一)张"
+ },
+ {
+  "word": "shelf",
+  "phon": "ʃelf",
+  "def": "n.架子"
+ },
+ {
+  "word": "shine",
+  "phon": "ʃaIn",
+  "def": "vi.①照耀②干得出色"
+ },
+ {
+  "word": "ship",
+  "phon": "ʃIp",
+  "def": "n.船(舶) vt.用船运"
+ },
+ {
+  "word": "shirt",
+  "phon": "ʃɜːt",
+  "def": "n.衬衫"
+ },
+ {
+  "word": "shoe",
+  "phon": "ʃuː",
+  "def": "n.鞋"
+ },
+ {
+  "word": "shoot",
+  "phon": "ʃuːt",
+  "def": "v.①射击②射门,投篮③拍摄"
+ },
+ {
+  "word": "shop",
+  "phon": "ʃɒp",
+  "def": "n.①商店②车间"
+ },
+ {
+  "word": "short",
+  "phon": "ʃɔːt",
+  "def": "a.①短的②缺乏的ad.简短地"
+ },
+ {
+  "word": "shortly",
+  "phon": "ˈʃɔːtli",
+  "def": "ad.立刻,不久"
+ },
+ {
+  "word": "shot",
+  "phon": "ʃɒt",
+  "def": "n.①开枪②射门,投篮③弹丸④铅球⑤尝试⑥镜头"
+ },
+ {
+  "word": "should",
+  "phon": "强ʃʊd,弱ʃəd",
+  "def": "modalv.①[shall的过去式]②应当③万一④本应"
+ },
+ {
+  "word": "shoulder",
+  "phon": "ˈʃəʊldə(r)",
+  "def": "n.肩(部)vt.肩负"
+ },
+ {
+  "word": "shout",
+  "phon": "ʃaʊt",
+  "def": "v./n.呼喊,呼叫"
+ },
+ {
+  "word": "show",
+  "phon": "ʃəʊ",
+  "def": "v.①表明②显示③带,引"
+ },
+ {
+  "word": "shower",
+  "phon": "ˈʃaʊə(r)",
+  "def": "n.①淋浴(器)②阵雨 vi.①洗淋浴②下阵雨"
+ },
+ {
+  "word": "shut",
+  "phon": "ʃʌt",
+  "def": "v.关,闭"
+ },
+ {
+  "word": "shy",
+  "phon": "ʃaI",
+  "def": "a.①害羞的②胆怯的"
+ },
+ {
+  "word": "sick",
+  "phon": "sIk",
+  "def": "a.①有病的②恶心的③腻烦的④心烦意乱的"
+ },
+ {
+  "word": "sigh",
+  "phon": "saI",
+  "def": "n.叹息(声) vi.叹息"
+ },
+ {
+  "word": "silent",
+  "phon": "ˈsaIlənt",
+  "def": "a.①寂静的②沉默寡言的③无声的"
+ },
+ {
+  "word": "silk",
+  "phon": "sIlk",
+  "def": "n.丝绸"
+ },
+ {
+  "word": "silver",
+  "phon": "ˈsIlvə(r)",
+  "def": "n.①银②银器③银币④银色"
+ },
+ {
+  "word": "since",
+  "phon": "sIns",
+  "def": "conj.①自……以来②因为 prep.自……以来ad.后来"
+ },
+ {
+  "word": "sing",
+  "phon": "sI?",
+  "def": "v.①唱(歌),演唱②(鸟)鸣"
+ },
+ {
+  "word": "sink",
+  "phon": "sI?k",
+  "def": "v.①下沉②降低③陷入,衰退 n.水槽"
+ },
+ {
+  "word": "sir",
+  "phon": "sɜː(r)",
+  "def": "n.①先生②(S-)爵士"
+ },
+ {
+  "word": "sister",
+  "phon": "ˈsIstə(r)",
+  "def": "n.姐,妹"
+ },
+ {
+  "word": "six",
+  "phon": "sIks",
+  "def": "num.六"
+ },
+ {
+  "word": "sixteen",
+  "phon": "ˌsIksˈtiːn",
+  "def": "num.十六"
+ },
+ {
+  "word": "sixty",
+  "phon": "ˈsIksti",
+  "def": "num.六十"
+ },
+ {
+  "word": "size",
+  "phon": "saIz",
+  "def": "n.①大小,尺寸②尺码"
+ },
+ {
+  "word": "skate",
+  "phon": "skeIt",
+  "def": "vi.溜冰,滑冰n.冰鞋"
+ },
+ {
+  "word": "ski",
+  "phon": "skiː",
+  "def": "vi.滑雪 n.滑雪板"
+ },
+ {
+  "word": "skin",
+  "phon": "skIn",
+  "def": "n.①皮(肤)②兽皮,毛皮③外壳"
+ },
+ {
+  "word": "sky",
+  "phon": "skaI",
+  "def": "n.天(空)"
+ },
+ {
+  "word": "skyscraper",
+  "phon": "ˈskaIskreIpə(r)",
+  "def": "n.摩天大楼"
+ },
+ {
+  "word": "slave",
+  "phon": "sleIv",
+  "def": "n.奴隶,苦工vi.苦干,拼命干"
+ },
+ {
+  "word": "sleep",
+  "phon": "sliːp",
+  "def": "v./n.睡(觉)"
+ },
+ {
+  "word": "sleeve",
+  "phon": "sliːv",
+  "def": "n.袖子"
+ },
+ {
+  "word": "slow",
+  "phon": "sləʊ",
+  "def": "a.①慢的②迟钝的"
+ },
+ {
+  "word": "small",
+  "phon": "smɔːl",
+  "def": "a.①小的②年幼的③不重要的"
+ },
+ {
+  "word": "smart",
+  "phon": "sm?ːt",
+  "def": "a.①漂亮的,潇洒的②聪明的"
+ },
+ {
+  "word": "smartphone",
+  "phon": "ˈsm?ːtfəʊn",
+  "def": "n.智能手机"
+ },
+ {
+  "word": "smile",
+  "phon": "smaIl",
+  "def": "n./v.微笑"
+ },
+ {
+  "word": "smog",
+  "phon": "smɒ?",
+  "def": "n.烟雾"
+ },
+ {
+  "word": "smoke",
+  "phon": "sməʊk",
+  "def": "n.①烟②(常sing.)吸烟 vi.①冒烟②抽烟vt.①抽(烟)②熏制"
+ },
+ {
+  "word": "snake",
+  "phon": "sneIk",
+  "def": "n.蛇 v.蜿蜒,弯弯曲曲行进"
+ },
+ {
+  "word": "snow",
+  "phon": "snəʊ",
+  "def": "n.雪 vi.下雪"
+ },
+ {
+  "word": "so",
+  "phon": "səʊ",
+  "def": "ad.①那么②这样,那样③如此④同样 conj.①因而②为了"
+ },
+ {
+  "word": "soap",
+  "phon": "səʊp",
+  "def": "n.肥皂"
+ },
+ {
+  "word": "soccer",
+  "phon": "ˈsɒkə(r)",
+  "def": "n.足球"
+ },
+ {
+  "word": "sock",
+  "phon": "sɒk",
+  "def": "n.短袜"
+ },
+ {
+  "word": "sofa",
+  "phon": "ˈsəʊfə",
+  "def": "n.(长)沙发"
+ },
+ {
+  "word": "soft",
+  "phon": "sɒft",
+  "def": "a.①柔软的②(声音)轻柔的③柔和的④温和的"
+ },
+ {
+  "word": "software",
+  "phon": "ˈsɒftweə(r)",
+  "def": "n.软件"
+ },
+ {
+  "word": "soil",
+  "phon": "sɔIl",
+  "def": "n.泥土 vt.弄脏"
+ },
+ {
+  "word": "soldier",
+  "phon": "ˈsəʊldʒə(r)",
+  "def": "n.士兵,军人"
+ },
+ {
+  "word": "solid",
+  "phon": "ˈsɒlId",
+  "def": "a.①固体的②实心的③结实的④可靠的"
+ },
+ {
+  "word": "somebody",
+  "phon": "ˈsʌmbədi",
+  "def": "pron.①某人②重要人物"
+ },
+ {
+  "word": "somehow",
+  "phon": "ˈsʌmhaʊ",
+  "def": "ad.①以某种方式②不知怎么地"
+ },
+ {
+  "word": "someone",
+  "phon": "ˈsʌmwʌn",
+  "def": "pron.①某人②重要人物"
+ },
+ {
+  "word": "something",
+  "phon": "ˈsʌm?I?",
+  "def": "pron.某事,某物 n.(sing.)重要的事物"
+ },
+ {
+  "word": "sometime",
+  "phon": "ˈsʌmtaIm",
+  "def": "ad.在(过去或将来的)某个时候"
+ },
+ {
+  "word": "sometimes",
+  "phon": "ˈsʌmtaImz",
+  "def": "ad.有时,间或"
+ },
+ {
+  "word": "somewhere",
+  "phon": "ˈsʌmweə(r)",
+  "def": "ad.①在某处②大约"
+ },
+ {
+  "word": "son",
+  "phon": "sʌn",
+  "def": "n.①儿子②孩子"
+ },
+ {
+  "word": "song",
+  "phon": "sɒ?",
+  "def": "n.①歌②(鸟等)鸣声"
+ },
+ {
+  "word": "soon",
+  "phon": "suːn",
+  "def": "ad.①不久②很快,马上"
+ },
+ {
+  "word": "sorry",
+  "phon": "ˈsɒri",
+  "def": "a.①对不起的②遗憾的③可怜的"
+ },
+ {
+  "word": "soul",
+  "phon": "səʊl",
+  "def": "n.①灵魂②心灵"
+ },
+ {
+  "word": "sound",
+  "phon": "saʊnd",
+  "def": "n.声音 vt.使发出声音 a.明智的"
+ },
+ {
+  "word": "soup",
+  "phon": "suːp",
+  "def": "n.汤"
+ },
+ {
+  "word": "sour",
+  "phon": "ˈsaʊə(r)",
+  "def": "a.①酸的②馊的v.(使)变酸"
+ },
+ {
+  "word": "south",
+  "phon": "saʊ?",
+  "def": "n.南,南方,南部"
+ },
+ {
+  "word": "southeast",
+  "phon": "ˌsaʊ?ˈiːst",
+  "def": "n.东南方"
+ },
+ {
+  "word": "southwest",
+  "phon": "ˌsaʊ?ˈwest",
+  "def": "n.西南方"
+ },
+ {
+  "word": "sow",
+  "phon": "səʊ",
+  "def": "v.播(种)"
+ },
+ {
+  "word": "space",
+  "phon": "speIs",
+  "def": "n.①空地②空间③太空"
+ },
+ {
+  "word": "spaceship",
+  "phon": "ˈspeIsʃIp",
+  "def": "n.宇宙飞船"
+ },
+ {
+  "word": "spare",
+  "phon": "speə(r)",
+  "def": "a.①备用的②多余的③不用的 vt.①省出②饶恕③使免遭④节约"
+ },
+ {
+  "word": "speak",
+  "phon": "spiːk",
+  "def": "v.①说(出)②会讲(某种语言)"
+ },
+ {
+  "word": "speech",
+  "phon": "spiːtʃ",
+  "def": "n.①说话,讲话,演说②言语,言论③说话方式"
+ },
+ {
+  "word": "speed",
+  "phon": "spiːd",
+  "def": "vi.①迅速前进,急行②(违章)超速行驶 n.速度"
+ },
+ {
+  "word": "spell",
+  "phon": "spel",
+  "def": "v.①拼写②意味着n.①咒语②一段时间"
+ },
+ {
+  "word": "spokesman",
+  "phon": "ˈspəʊksmən",
+  "def": "n.发言人"
+ },
+ {
+  "word": "spoon",
+  "phon": "spuːn",
+  "def": "n.匙,调羹vt.用匙舀"
+ },
+ {
+  "word": "sport",
+  "phon": "spɔːt",
+  "def": "n.体育运动"
+ },
+ {
+  "word": "sportsman",
+  "phon": "ˈspɔːtsmən",
+  "def": "n.运动员"
+ },
+ {
+  "word": "square",
+  "phon": "skweə(r)",
+  "def": "a.①正方形的②平方的 n.①正方形②广场③平方"
+ },
+ {
+  "word": "stage",
+  "phon": "steIdʒ",
+  "def": "n.①阶段②舞台vt.①上演②举办"
+ },
+ {
+  "word": "stair",
+  "phon": "steə(r)",
+  "def": "n.①(pl.)楼梯②(楼梯的)梯级"
+ },
+ {
+  "word": "stamp",
+  "phon": "stæmp",
+  "def": "n.①邮票②印③跺脚 v.跺脚 vt.在……上盖印"
+ },
+ {
+  "word": "standard",
+  "phon": "ˈstændəd",
+  "def": "n.标准,规格"
+ },
+ {
+  "word": "star",
+  "phon": "st?ː(r)",
+  "def": "n.①(恒)星②星形(物)③明星"
+ },
+ {
+  "word": "stare",
+  "phon": "steə(r)",
+  "def": "vi./n.盯,凝视"
+ },
+ {
+  "word": "state",
+  "phon": "steIt",
+  "def": "n.①状态②(S-)国家,政府③(S-)州 vt.陈述"
+ },
+ {
+  "word": "stay",
+  "phon": "steI",
+  "def": "vi.①逗留②保持③停留 vt.保持 n.逗留"
+ },
+ {
+  "word": "steal",
+  "phon": "stiːl",
+  "def": "v.偷盗"
+ },
+ {
+  "word": "steel",
+  "phon": "stiːl",
+  "def": "n.钢"
+ },
+ {
+  "word": "step",
+  "phon": "step",
+  "def": "n.①步,脚步②步骤③台阶 vi.①跨步②踩"
+ },
+ {
+  "word": "stocking",
+  "phon": "ˈstɒkI?",
+  "def": "n.(pl.)长筒袜"
+ },
+ {
+  "word": "stomach",
+  "phon": "ˈstʌmək",
+  "def": "n.胃,腹部"
+ },
+ {
+  "word": "stone",
+  "phon": "stəʊn",
+  "def": "n.①石头②宝石③果核"
+ },
+ {
+  "word": "stop",
+  "phon": "stɒp",
+  "def": "vt.①停止②塞住,堵塞③阻止"
+ },
+ {
+  "word": "store",
+  "phon": "stɔː(r)",
+  "def": "n.①商店②贮存vt.贮藏"
+ },
+ {
+  "word": "storm",
+  "phon": "stɔːm",
+  "def": "n.暴风雨,暴风雪"
+ },
+ {
+  "word": "story",
+  "phon": "ˈstɔːri",
+  "def": "n.①故事②情况③(新闻)报道④谎言"
+ },
+ {
+  "word": "stove",
+  "phon": "stəʊv",
+  "def": "n.炉子,火炉"
+ },
+ {
+  "word": "straight",
+  "phon": "streIt",
+  "def": "a.①直的②直率的 ad.①直接地②立即③坦率地"
+ },
+ {
+  "word": "strange",
+  "phon": "streIndʒ",
+  "def": "a.①奇怪的②陌生的"
+ },
+ {
+  "word": "street",
+  "phon": "striːt",
+  "def": "n.街道"
+ },
+ {
+  "word": "strong",
+  "phon": "strɒ?",
+  "def": "a.①强壮的②有权势的"
+ },
+ {
+  "word": "student",
+  "phon": "ˈstjuːdnt",
+  "def": "n.①学生②研究者"
+ },
+ {
+  "word": "study",
+  "phon": "ˈstʌdi",
+  "def": "v.①学习②研究n.①学习②研究③书房"
+ },
+ {
+  "word": "stupid",
+  "phon": "ˈstjuːpId",
+  "def": "a.①愚蠢的②讨厌的"
+ },
+ {
+  "word": "such",
+  "phon": "sʌtʃ",
+  "def": "a.①这样的②那么的ad.那么 pron.这样的人(或事物)"
+ },
+ {
+  "word": "sudden",
+  "phon": "ˈsʌdn",
+  "def": "a.突然的,忽然的"
+ },
+ {
+  "word": "sugar",
+  "phon": "ˈʃʊ?ə(r)",
+  "def": "n.糖"
+ },
+ {
+  "word": "suitcase",
+  "phon": "ˈsuːtkeIs,ˈsjuːtkeIs",
+  "def": "n.(旅行用)小提箱"
+ },
+ {
+  "word": "summer",
+  "phon": "ˈsʌmə(r)",
+  "def": "n.夏,夏季"
+ },
+ {
+  "word": "Sunday",
+  "phon": "ˈsʌndeI",
+  "def": "n.星期日"
+ },
+ {
+  "word": "sunshine",
+  "phon": "ˈsʌnʃaIn",
+  "def": "n.日光,日照"
+ },
+ {
+  "word": "supermarket",
+  "phon": "ˈsuːpəm?ːkIt,ˈsjuːpəm?ːkIt",
+  "def": "n.超市"
+ },
+ {
+  "word": "supper",
+  "phon": "ˈsʌpə(r)",
+  "def": "n.晚餐,夜宵"
+ },
+ {
+  "word": "support",
+  "phon": "səˈpɔːt",
+  "def": "vt.①支持②支撑"
+ },
+ {
+  "word": "suppose",
+  "phon": "səˈpəʊz",
+  "def": "vt.①料想②假定③期望"
+ },
+ {
+  "word": "surprise",
+  "phon": "səˈpraIz",
+  "def": "n.①惊奇②令人惊奇的事物 vt.①使诧异②突然袭击"
+ },
+ {
+  "word": "sweet",
+  "phon": "swiːt",
+  "def": "a.①甜的②和蔼的③芳香的 n.①甜食②亲爱的"
+ },
+ {
+  "word": "swim",
+  "phon": "swIm",
+  "def": "vi.①游泳②浸泡,充溢着 n.游泳"
+ },
+ {
+  "word": "sword",
+  "phon": "sɔːd",
+  "def": "n.剑,刀"
+ },
+ {
+  "word": "system",
+  "phon": "ˈsIstəm",
+  "def": "n.①系统②制度③身体"
+ },
+ {
+  "word": "table",
+  "phon": "ˈteIbl",
+  "def": "n.①桌子②表格"
+ },
+ {
+  "word": "tablet",
+  "phon": "ˈtæblət",
+  "def": "n.①药片②碑,牌,匾"
+ },
+ {
+  "word": "tail",
+  "phon": "teIl",
+  "def": "n.①尾巴②后部vt.跟踪"
+ },
+ {
+  "word": "tailor",
+  "phon": "ˈteIlə(r)",
+  "def": "n.裁缝 vt.专门制作"
+ },
+ {
+  "word": "talk",
+  "phon": "tɔːk",
+  "def": "v.讲 n.①谈话②演讲"
+ },
+ {
+  "word": "tall",
+  "phon": "tɔːl",
+  "def": "a.①高的②有……高的"
+ },
+ {
+  "word": "tap",
+  "phon": "tæp",
+  "def": "vt.①轻敲②利用③搭线窃听 vi.轻叩 n.①塞子②轻击③电话窃听"
+ },
+ {
+  "word": "tape",
+  "phon": "teIp",
+  "def": "n.①录音带②胶带"
+ },
+ {
+  "word": "task",
+  "phon": "t?ːsk",
+  "def": "n.任务,工作"
+ },
+ {
+  "word": "taste",
+  "phon": "teIst",
+  "def": "n.①滋味②味觉③鉴赏力④兴趣⑤体验,尝试 v.①尝到……的味道②品尝③体验"
+ },
+ {
+  "word": "tax",
+  "phon": "tæks",
+  "def": "n.税(款)vt.对……征税"
+ },
+ {
+  "word": "taxi",
+  "phon": "ˈtæksi",
+  "def": "n.出租汽车"
+ },
+ {
+  "word": "tea",
+  "phon": "tiː",
+  "def": "n.①茶叶②茶,茶水"
+ },
+ {
+  "word": "teach",
+  "phon": "tiːtʃ",
+  "def": "vt.①教②教导vi.讲课"
+ },
+ {
+  "word": "team",
+  "phon": "tiːm",
+  "def": "n.队,组 vt.使合作"
+ },
+ {
+  "word": "tear",
+  "phon": "tIə(r)",
+  "def": "n.[teə(r)]v. n.眼泪vt.①撕碎②拉掉 vi.①撕②飞跑"
+ },
+ {
+  "word": "teenager",
+  "phon": "ˈtiːneIdʒə(r)",
+  "def": "n.(13~19岁的)青少年"
+ },
+ {
+  "word": "telephone",
+  "phon": "ˈtelIfəʊn",
+  "def": "n.电话(机)v.打电话"
+ },
+ {
+  "word": "television",
+  "phon": "ˈtelIvIʒn",
+  "def": "n.①电视机②电视节目"
+ },
+ {
+  "word": "tell",
+  "phon": "tel",
+  "def": "vt.①讲②吩咐③判断④显露⑤辨别 vi.认出"
+ },
+ {
+  "word": "temperature",
+  "phon": "ˈtemprətʃə(r)",
+  "def": "n.①温度②体温"
+ },
+ {
+  "word": "ten",
+  "phon": "ten",
+  "def": "num.十"
+ },
+ {
+  "word": "tennis",
+  "phon": "ˈtenIs",
+  "def": "n.网球"
+ },
+ {
+  "word": "tense",
+  "phon": "tens",
+  "def": "a.①拉紧的②紧张的 v.(使)拉紧 n.(动词的)时态[△voice语态]"
+ },
+ {
+  "word": "tent",
+  "phon": "tent",
+  "def": "n.帐篷"
+ },
+ {
+  "word": "text",
+  "phon": "tekst",
+  "def": "n.①正文,文本②课本③演讲稿,剧本④文章 v.发短信"
+ },
+ {
+  "word": "textbook",
+  "phon": "ˈtekstbʊk",
+  "def": "n.课本"
+ },
+ {
+  "word": "than",
+  "phon": "强ðæn,弱ðən",
+  "def": "conj.比"
+ },
+ {
+  "word": "thank",
+  "phon": "?æ?k",
+  "def": "vt.感谢int./n.(-s)谢谢"
+ },
+ {
+  "word": "that",
+  "phon": "强ðæt,弱ðət",
+  "def": "pron.那,那个"
+ },
+ {
+  "word": "the",
+  "phon": "强ðiː;弱ðə,ði",
+  "def": "art.这,那"
+ },
+ {
+  "word": "theater/-tre",
+  "phon": "ˈ?Iətə(r)",
+  "def": "n.①戏院,剧场②戏剧"
+ },
+ {
+  "word": "theft",
+  "phon": "?eft",
+  "def": "n.偷,盗窃罪"
+ },
+ {
+  "word": "their",
+  "phon": "ðeə(r)",
+  "def": "a.他(她、它)们的"
+ },
+ {
+  "word": "theirs",
+  "phon": "ðeəz",
+  "def": "pron.他(她、它)们的(所有物)"
+ },
+ {
+  "word": "them",
+  "phon": "强ðem,弱ðəm",
+  "def": "pron.他(她、它)们"
+ },
+ {
+  "word": "themselves",
+  "phon": "ðəmˈselvz",
+  "def": "pron.①他(她、它)们自己②他(她、它)们亲自"
+ },
+ {
+  "word": "then",
+  "phon": "ðen",
+  "def": "ad.①当时,在那时②然后,接着③那么,因此④还有,再者"
+ },
+ {
+  "word": "these",
+  "phon": "ðiːz",
+  "def": "pron.这些"
+ },
+ {
+  "word": "they",
+  "phon": "ðeI",
+  "def": "pron.①他(她、它)们②(泛指)人们"
+ },
+ {
+  "word": "thick",
+  "phon": "?Ik",
+  "def": "a.①厚的②笨的③稠的④(说话)不清楚的⑤密的"
+ },
+ {
+  "word": "thief",
+  "phon": "?iːf",
+  "def": "n.(pl.thieves)贼,小偷"
+ },
+ {
+  "word": "thin",
+  "phon": "?In",
+  "def": "a.①薄的②瘦的③稀薄的"
+ },
+ {
+  "word": "thing",
+  "phon": "?I?",
+  "def": "n.①事件②物"
+ },
+ {
+  "word": "think",
+  "phon": "?I?k",
+  "def": "vt.①认为②想③想要 vi.想 n.思考"
+ },
+ {
+  "word": "third",
+  "phon": "?ɜːd",
+  "def": "ord.第三 n.三分之一"
+ },
+ {
+  "word": "thirteen",
+  "phon": "ˌ?ɜːˈtiːn",
+  "def": "num.十三"
+ },
+ {
+  "word": "thirty",
+  "phon": "ˈ?ɜːti",
+  "def": "num.三十"
+ },
+ {
+  "word": "this",
+  "phon": "ðIs",
+  "def": "pron./a.①这,这个②现在 ad.这样"
+ },
+ {
+  "word": "those",
+  "phon": "ðəʊz",
+  "def": "pron.那些"
+ },
+ {
+  "word": "though",
+  "phon": "ðəʊ",
+  "def": "conj.尽管,虽然 ad.可是,不过,然而"
+ },
+ {
+  "word": "thousand",
+  "phon": "ˈ?aʊznd",
+  "def": "num.一千"
+ },
+ {
+  "word": "three",
+  "phon": "?riː",
+  "def": "num.三"
+ },
+ {
+  "word": "throat",
+  "phon": "?rəʊt",
+  "def": "n.咽喉,嗓子"
+ },
+ {
+  "word": "through",
+  "phon": "?ruː",
+  "def": "prep.①穿过②自始至终③凭借"
+ },
+ {
+  "word": "throw",
+  "phon": "?rəʊ",
+  "def": "vt.①投,扔,抛②猛推③使摔倒 n.①投②投掷的距离"
+ },
+ {
+  "word": "thunder",
+  "phon": "ˈ?ʌndə(r)",
+  "def": "n.①雷,雷声②轰隆声"
+ },
+ {
+  "word": "Thursday",
+  "phon": "ˈ?ɜːzdeI",
+  "def": "n.星期四"
+ },
+ {
+  "word": "ticket",
+  "phon": "ˈtIkIt",
+  "def": "n.①票②奖券③(交通违章)罚款单④候选人名单"
+ },
+ {
+  "word": "tidy",
+  "phon": "ˈtaIdi",
+  "def": "a.①整洁的②爱整洁的 vt.使整洁"
+ },
+ {
+  "word": "tie",
+  "phon": "taI",
+  "def": "vt.①拴,扎,捆②把……打结③连接④束缚⑤打成平局n.①领带②绳子③(常pl.)纽带④束缚⑤平局"
+ },
+ {
+  "word": "tiger",
+  "phon": "ˈtaI?ə(r)",
+  "def": "n.虎,老虎"
+ },
+ {
+  "word": "till",
+  "phon": "tIl",
+  "def": "prep./conj.直到"
+ },
+ {
+  "word": "tin",
+  "phon": "tIn",
+  "def": "n.①锡②罐,罐头"
+ },
+ {
+  "word": "tiny",
+  "phon": "ˈtaIni",
+  "def": "a.极小的,微小的"
+ },
+ {
+  "word": "tire",
+  "phon": "ˈtaIə(r)",
+  "def": "v.(使)疲劳"
+ },
+ {
+  "word": "tobacco",
+  "phon": "təˈbækəʊ",
+  "def": "n.烟草,烟叶"
+ },
+ {
+  "word": "today",
+  "phon": "təˈdeI",
+  "def": "ad.①在今天②当今 n.①今天②现在"
+ },
+ {
+  "word": "toe",
+  "phon": "təʊ",
+  "def": "n.①脚趾②(袜、鞋等的)足尖部"
+ },
+ {
+  "word": "together",
+  "phon": "təˈ?eðə(r)",
+  "def": "ad.①一起,共同②一致"
+ },
+ {
+  "word": "toilet",
+  "phon": "ˈtɔIlət",
+  "def": "n.①厕所②抽水马桶"
+ },
+ {
+  "word": "tomato",
+  "phon": "təˈm?ːtəʊ",
+  "def": "n.西红柿"
+ },
+ {
+  "word": "tomorrow",
+  "phon": "təˈmɒrəʊ",
+  "def": "n.①明天,明日②未来 ad.在明天"
+ },
+ {
+  "word": "ton",
+  "phon": "tʌn",
+  "def": "n.①吨②(pl.)大量,许多"
+ },
+ {
+  "word": "tongue",
+  "phon": "tʌ?",
+  "def": "n.①舌头②语言"
+ },
+ {
+  "word": "tonight",
+  "phon": "təˈnaIt",
+  "def": "n.今晚 ad.在今夜"
+ },
+ {
+  "word": "too",
+  "phon": "tuː",
+  "def": "ad.①也②太③很"
+ },
+ {
+  "word": "tool",
+  "phon": "tuːl",
+  "def": "n.①工具②方法,手段"
+ },
+ {
+  "word": "tooth",
+  "phon": "tuː?",
+  "def": "n.①牙齿②齿状部分"
+ },
+ {
+  "word": "top",
+  "phon": "tɒp",
+  "def": "n.①顶②表面"
+ },
+ {
+  "word": "topic",
+  "phon": "ˈtɒpIk",
+  "def": "n.题目,话题"
+ },
+ {
+  "word": "total",
+  "phon": "ˈtəʊtl",
+  "def": "a.①总的②完全的n.总数 vt.①总计②计算……的总和"
+ },
+ {
+  "word": "touch",
+  "phon": "tʌtʃ",
+  "def": "vt.①触摸,碰②触动③接触 n.①(常sing.)触摸②触觉"
+ },
+ {
+  "word": "tour",
+  "phon": "tʊə(r)",
+  "def": "n./v.旅行,旅游"
+ },
+ {
+  "word": "toward(s)",
+  "phon": "təˈwɔːd(z)",
+  "def": "prep.①向,朝②趋向,接近③对于,关于④将近"
+ },
+ {
+  "word": "towel",
+  "phon": "ˈtaʊəl",
+  "def": "n.毛巾,抹布"
+ },
+ {
+  "word": "tower",
+  "phon": "ˈtaʊə(r)",
+  "def": "n.塔,塔楼vi.①高于②胜过,远远超过"
+ },
+ {
+  "word": "town",
+  "phon": "taʊn",
+  "def": "n.①镇②(the~)(某一市镇的)居民③商业区"
+ },
+ {
+  "word": "toy",
+  "phon": "tɔI",
+  "def": "n.玩具"
+ },
+ {
+  "word": "tractor",
+  "phon": "ˈtræktə(r)",
+  "def": "n.拖拉机"
+ },
+ {
+  "word": "tradition",
+  "phon": "trəˈdIʃn",
+  "def": "n.传统"
+ },
+ {
+  "word": "traffic",
+  "phon": "ˈtræfIk",
+  "def": "n.路上行驶的车辆,交通"
+ },
+ {
+  "word": "train",
+  "phon": "treIn",
+  "def": "n.①火车,列车②队列③(常sing.)一系列相关的事情"
+ },
+ {
+  "word": "travel",
+  "phon": "ˈtrævl",
+  "def": "n./v.旅行"
+ },
+ {
+  "word": "treasure",
+  "phon": "ˈtreʒə(r)",
+  "def": "n.①金银财宝②(常pl.)珍品 vt.珍爱"
+ },
+ {
+  "word": "treat",
+  "phon": "triːt",
+  "def": "vt.①对待②把……看作③治疗④款待 n.①乐事②款待"
+ },
+ {
+  "word": "tree",
+  "phon": "triː",
+  "def": "n.树,树木"
+ },
+ {
+  "word": "trick",
+  "phon": "trIk",
+  "def": "n.①诡计②引起错觉的事物③戏法④(常sing.)诀窍"
+ },
+ {
+  "word": "trip",
+  "phon": "trIp",
+  "def": "n.旅行 v.绊"
+ },
+ {
+  "word": "trousers",
+  "phon": "ˈtraʊzəz",
+  "def": "n.(pl.)裤子"
+ },
+ {
+  "word": "truck",
+  "phon": "trʌk",
+  "def": "n.卡车"
+ },
+ {
+  "word": "true",
+  "phon": "truː",
+  "def": "a.①如实的②真正的③忠诚的④精确的"
+ },
+ {
+  "word": "trust",
+  "phon": "trʌst",
+  "def": "n.①信任②委托v.①信任②相信"
+ },
+ {
+  "word": "truth",
+  "phon": "truː?",
+  "def": "n.①(the~)事实,真相②真实性③真理"
+ },
+ {
+  "word": "try",
+  "phon": "traI",
+  "def": "vt.①试图②试验③审讯 vi.努力 n.努力,尝试"
+ },
+ {
+  "word": "tube",
+  "phon": "tjuːb",
+  "def": "n.①管,管状物②软管③电视"
+ },
+ {
+  "word": "Tuesday",
+  "phon": "ˈtjuːzdeI",
+  "def": "n.星期二"
+ },
+ {
+  "word": "turkey",
+  "phon": "ˈtɜːki",
+  "def": "n.火鸡"
+ },
+ {
+  "word": "turn",
+  "phon": "tɜːn",
+  "def": "v.①(使)转动②转身③改变方向④朝着⑤(使)变成"
+ },
+ {
+  "word": "twelve",
+  "phon": "twelv",
+  "def": "num.十二"
+ },
+ {
+  "word": "twenty",
+  "phon": "ˈtwenti",
+  "def": "num.二十"
+ },
+ {
+  "word": "twice",
+  "phon": "twaIs",
+  "def": "ad.①两次,两遍②两倍"
+ },
+ {
+  "word": "twin",
+  "phon": "twIn",
+  "def": "n.孪生儿之一,双胞胎之一"
+ },
+ {
+  "word": "two",
+  "phon": "tuː",
+  "def": "num.二"
+ },
+ {
+  "word": "type",
+  "phon": "taIp",
+  "def": "n.①类型②典型③文字 v.打字"
+ },
+ {
+  "word": "typewriter",
+  "phon": "ˈtaIpraItə(r)",
+  "def": "n.打字机"
+ },
+ {
+  "word": "tyre",
+  "phon": "ˈtaIə(r)",
+  "def": "(alsotire)n.轮胎"
+ },
+ {
+  "word": "ugly",
+  "phon": "ˈʌ?li",
+  "def": "a.①丑的②可怕的"
+ },
+ {
+  "word": "umbrella",
+  "phon": "ʌmˈbrelə",
+  "def": "n.伞"
+ },
+ {
+  "word": "uncertain",
+  "phon": "ʌnˈsɜːtn",
+  "def": "a.不确定的"
+ },
+ {
+  "word": "uncle",
+  "phon": "ˈʌ?kl",
+  "def": "n.伯父,叔父,舅父,姑父,姨父"
+ },
+ {
+  "word": "unit",
+  "phon": "ˈjuːnIt",
+  "def": "n.①(工作)单位②(计量或计数用的)单位③单元"
+ },
+ {
+  "word": "university",
+  "phon": "ˌjuːnIˈvɜːsəti",
+  "def": "n.大学"
+ },
+ {
+  "word": "unless",
+  "phon": "ənˈles,ʌnˈles",
+  "def": "conj.除非,若不"
+ },
+ {
+  "word": "until",
+  "phon": "ənˈtIl,ʌnˈtIl",
+  "def": "prep./conj.直到……时"
+ },
+ {
+  "word": "upon",
+  "phon": "əˈpɒn",
+  "def": "prep.①在……上②即将来临"
+ },
+ {
+  "word": "upstairs",
+  "phon": "ˌʌpˈsteəz",
+  "def": "ad.在楼上 a.楼上的 n.(sing.)楼上"
+ },
+ {
+  "word": "upward",
+  "phon": "ˈʌpwəd",
+  "def": "a.向上的ad.(-s)向上"
+ },
+ {
+  "word": "us",
+  "phon": "强ʌs,弱əs",
+  "def": "pron.我们"
+ },
+ {
+  "word": "used",
+  "phon": "juːst",
+  "def": "a.习惯于……的 [juːzd]a.用过的,旧的 vi.惯常"
+ },
+ {
+  "word": "usual",
+  "phon": "ˈjuːʒuəl",
+  "def": "a.通常的,惯常的"
+ },
+ {
+  "word": "valley",
+  "phon": "ˈvæli",
+  "def": "n.山谷,溪谷"
+ },
+ {
+  "word": "vast",
+  "phon": "v?ːst",
+  "def": "a.①广阔的②巨大的,庞大的"
+ },
+ {
+  "word": "vegetable",
+  "phon": "ˈvedʒtəbl",
+  "def": "n.①蔬菜②植物人"
+ },
+ {
+  "word": "very",
+  "phon": "ˈveri",
+  "def": "ad.①很,非常②正是 a.①正是的②完全的"
+ },
+ {
+  "word": "village",
+  "phon": "ˈvIlIdʒ",
+  "def": "n.①村庄②(the~)全体村民"
+ },
+ {
+  "word": "vinegar",
+  "phon": "ˈvInI?ə(r)",
+  "def": "n.醋"
+ },
+ {
+  "word": "violin",
+  "phon": "ˌvaIəˈlIn",
+  "def": "n.小提琴"
+ },
+ {
+  "word": "vocabulary",
+  "phon": "vəˈkæbjələri",
+  "def": "n.①词汇(量)②词(汇)表"
+ },
+ {
+  "word": "voice",
+  "phon": "vɔIs",
+  "def": "n.①说话声②发言权③(sing.)语态"
+ },
+ {
+  "word": "volleyball",
+  "phon": "ˈvɒlibɔːl",
+  "def": "n.排球(运动)"
+ },
+ {
+  "word": "vote",
+  "phon": "vəʊt",
+  "def": "n.①选票②投票③表决结果 vi.投票"
+ },
+ {
+  "word": "wage",
+  "phon": "weIdʒ",
+  "def": "n.工资,报酬vt.开始,进行"
+ },
+ {
+  "word": "waist",
+  "phon": "weIst",
+  "def": "n.腰"
+ },
+ {
+  "word": "wait",
+  "phon": "weIt",
+  "def": "vi.等候 n.等待的时间"
+ },
+ {
+  "word": "wake",
+  "phon": "weIk",
+  "def": "vi.醒来 vt.①唤醒②唤起"
+ },
+ {
+  "word": "walk",
+  "phon": "wɔːk",
+  "def": "vi./n.步行,散步"
+ },
+ {
+  "word": "wall",
+  "phon": "wɔːl",
+  "def": "n.墙,壁 vt.筑墙"
+ },
+ {
+  "word": "wallet",
+  "phon": "ˈwɒlIt",
+  "def": "n.①钱包②塑料夹"
+ },
+ {
+  "word": "war",
+  "phon": "wɔː(r)",
+  "def": "n.①战争②斗争"
+ },
+ {
+  "word": "warm",
+  "phon": "wɔːm",
+  "def": "a.①温暖的②热情的③(色调)暖的 v.(使)温暖"
+ },
+ {
+  "word": "warn",
+  "phon": "wɔːn",
+  "def": "vt.警告,告诫"
+ },
+ {
+  "word": "wash",
+  "phon": "wɒʃ",
+  "def": "v.①洗②冲"
+ },
+ {
+  "word": "waste",
+  "phon": "weIst",
+  "def": "n.①浪费②废料vt.浪费 a.①废弃的②荒芜的"
+ },
+ {
+  "word": "watch",
+  "phon": "wɒtʃ",
+  "def": "vt.①观看②看守vi.小心 n.①看管②手表"
+ },
+ {
+  "word": "wave",
+  "phon": "weIv",
+  "def": "v./n.挥动"
+ },
+ {
+  "word": "we",
+  "phon": "强wiː,弱wi",
+  "def": "pron.①我们,咱们②人们"
+ },
+ {
+  "word": "weak",
+  "phon": "wiːk",
+  "def": "a.①虚弱的②(能力等)弱的③微弱的"
+ },
+ {
+  "word": "wealth",
+  "phon": "wel?",
+  "def": "n.①财富②(sing.)丰富③富有"
+ },
+ {
+  "word": "wear",
+  "phon": "weə(r)",
+  "def": "vt.穿着,戴着"
+ },
+ {
+  "word": "weather",
+  "phon": "ˈweðə(r)",
+  "def": "n.天气,气象"
+ },
+ {
+  "word": "Wednesday",
+  "phon": "ˈwenzdeI",
+  "def": "n.星期三"
+ },
+ {
+  "word": "weed",
+  "phon": "wiːd",
+  "def": "n.杂草 v.(为……)除草"
+ },
+ {
+  "word": "week",
+  "phon": "wiːk",
+  "def": "n.星期,周"
+ },
+ {
+  "word": "weekday",
+  "phon": "ˈwiːkdeI",
+  "def": "n.工作日,周一到周五"
+ },
+ {
+  "word": "weekend",
+  "phon": "ˌwiːkˈend,ˈwiːkend",
+  "def": "n.周末"
+ },
+ {
+  "word": "weep",
+  "phon": "wiːp",
+  "def": "v./n.(为……)哭泣"
+ },
+ {
+  "word": "weigh",
+  "phon": "weI",
+  "def": "link.v.有……重vt.①称……的重量②认真考虑"
+ },
+ {
+  "word": "welcome",
+  "phon": "ˈwelkəm",
+  "def": "vt./int./n.欢迎"
+ },
+ {
+  "word": "west",
+  "phon": "west",
+  "def": "n.西,西方"
+ },
+ {
+  "word": "wet",
+  "phon": "wet",
+  "def": "a.①湿的,潮的②多雨的"
+ },
+ {
+  "word": "whale",
+  "phon": "weIl",
+  "def": "n.鲸"
+ },
+ {
+  "word": "wheat",
+  "phon": "wiːt",
+  "def": "n.小麦"
+ },
+ {
+  "word": "wheel",
+  "phon": "wiːl",
+  "def": "n.轮,车轮"
+ },
+ {
+  "word": "when",
+  "phon": "wen",
+  "def": "conj.①在……时,当……时②然后,可是"
+ },
+ {
+  "word": "whether",
+  "phon": "ˈweðə(r)",
+  "def": "conj.①是否②不管"
+ },
+ {
+  "word": "which",
+  "phon": "wItʃ",
+  "def": "pron.哪一个,哪一些"
+ },
+ {
+  "word": "while",
+  "phon": "waIl",
+  "def": "conj.①当……的时候②然而③虽然"
+ },
+ {
+  "word": "white",
+  "phon": "waIt",
+  "def": "a.①白色的②白种人的 n.①白色②蛋清"
+ },
+ {
+  "word": "whom",
+  "phon": "huːm",
+  "def": "pron.谁"
+ },
+ {
+  "word": "whose",
+  "phon": "huːz",
+  "def": "pron.①谁的②那个(人)的,那些(人)的"
+ },
+ {
+  "word": "why",
+  "phon": "waI",
+  "def": "ad.①为什么②……的理由 int.哎呀"
+ },
+ {
+  "word": "wide",
+  "phon": "waId",
+  "def": "a.①宽阔的②广泛的 ad.充分地"
+ },
+ {
+  "word": "wife",
+  "phon": "waIf",
+  "def": "n.(pl.wives)妻子,夫人"
+ },
+ {
+  "word": "wind",
+  "phon": "wInd",
+  "def": "n.[waInd]v. n.①风②气息,呼吸 vt.①绕,缠②(给……)上发条"
+ },
+ {
+  "word": "window",
+  "phon": "ˈwIndəʊ",
+  "def": "n.窗户"
+ },
+ {
+  "word": "wine",
+  "phon": "waIn",
+  "def": "n.葡萄酒"
+ },
+ {
+  "word": "wing",
+  "phon": "wI?",
+  "def": "n.翼,翅膀"
+ },
+ {
+  "word": "winter",
+  "phon": "ˈwIntə(r)",
+  "def": "n.冬,冬季"
+ },
+ {
+  "word": "wipe",
+  "phon": "waIp",
+  "def": "vt./n.擦,抹,揩"
+ },
+ {
+  "word": "wish",
+  "phon": "wIʃ",
+  "def": "vt.①希望②但愿③祝 n.①希望②(pl.)祝愿"
+ },
+ {
+  "word": "with",
+  "phon": "wIð,wI?",
+  "def": "prep.①和……在一起②具有③用④关于⑤随着"
+ },
+ {
+  "word": "within",
+  "phon": "wIˈðIn",
+  "def": "prep.在……里面ad.在里面"
+ },
+ {
+  "word": "without",
+  "phon": "wIˈðaʊt",
+  "def": "prep.无"
+ },
+ {
+  "word": "wolf",
+  "phon": "wʊlf",
+  "def": "n.(pl.wolves)狼"
+ },
+ {
+  "word": "woman",
+  "phon": "ˈwʊmən",
+  "def": "n.(pl.women)妇女,成年女子"
+ },
+ {
+  "word": "wonder",
+  "phon": "ˈwʌndə(r)",
+  "def": "vt.①想知道②(对……)感到惊讶 n.①惊奇②奇迹"
+ },
+ {
+  "word": "wood",
+  "phon": "wʊd",
+  "def": "n.①木材②(pl.)树林"
+ },
+ {
+  "word": "wool",
+  "phon": "wʊl",
+  "def": "n.①羊毛②毛线,毛织品"
+ },
+ {
+  "word": "world",
+  "phon": "wɜːld",
+  "def": "n.①(the~)世界②(sing.)世间③界"
+ },
+ {
+  "word": "worldwide",
+  "phon": "ˈwɜːldwaId",
+  "def": "a./ad.世界范围(的)"
+ },
+ {
+  "word": "worm",
+  "phon": "wɜːm",
+  "def": "n.虫,蠕虫"
+ },
+ {
+  "word": "worry",
+  "phon": "ˈwʌri",
+  "def": "v./n.担心"
+ },
+ {
+  "word": "worse",
+  "phon": "wɜːs",
+  "def": "a.更坏的 ad.更坏地"
+ },
+ {
+  "word": "worst",
+  "phon": "wɜːst",
+  "def": "a./ad.最坏(的)"
+ },
+ {
+  "word": "worth",
+  "phon": "wɜː?",
+  "def": "prep./a.值……钱的 n.价值"
+ },
+ {
+  "word": "would",
+  "phon": "强wʊd,弱wəd",
+  "def": "modalv.①[will的过去式]②老是③也许④请"
+ },
+ {
+  "word": "wound",
+  "phon": "wuːnd",
+  "def": "n.创伤,伤口 vt.伤害"
+ },
+ {
+  "word": "write",
+  "phon": "raIt",
+  "def": "vt.①写②写作,作曲③写信(给)"
+ },
+ {
+  "word": "wrong",
+  "phon": "rɒ?",
+  "def": "a.①不正确的②不道德的"
+ },
+ {
+  "word": "year",
+  "phon": "jIə(r),jɜː(r)",
+  "def": "n.年,年份"
+ },
+ {
+  "word": "yellow",
+  "phon": "ˈjeləʊ",
+  "def": "a.黄色的 n.黄色"
+ },
+ {
+  "word": "yes",
+  "phon": "jes",
+  "def": "ad.是,对"
+ },
+ {
+  "word": "yesterday",
+  "phon": "ˈjestədeI",
+  "def": "ad.在昨天n.昨天"
+ },
+ {
+  "word": "yet",
+  "phon": "jet",
+  "def": "ad.①还②现在③迄今为止④更 conj.然而,但是"
+ },
+ {
+  "word": "you",
+  "phon": "强juː,弱ju",
+  "def": "pron.①你(们)②任何人"
+ },
+ {
+  "word": "your",
+  "phon": "jɔː(r)",
+  "def": "a.你(们)的"
+ },
+ {
+  "word": "yours",
+  "phon": "jɔːz",
+  "def": "pron.你(们)的"
+ },
+ {
+  "word": "yourself",
+  "phon": "jɔːˈself",
+  "def": "pron.你(们)自己"
+ },
+ {
+  "word": "youth",
+  "phon": "juː?",
+  "def": "n.①青春②青年时期③青年男子④(pl.)青年"
+ },
+ {
+  "word": "zero",
+  "phon": "ˈzIərəʊ",
+  "def": "num.零 n.零点,零度"
+ },
+ {
+  "word": "zone",
+  "phon": "zəʊn",
+  "def": "n.地区,区域"
+ },
+ {
+  "word": "zoo",
+  "phon": "zuː",
+  "def": "n.动物园"
+ }
+]
