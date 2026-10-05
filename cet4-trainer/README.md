@@ -209,13 +209,79 @@ node tools/get_webview2.mjs
 
 ---
 
+## 发音是怎么发出来的
+
+**应用自带发音，不依赖系统语音引擎。** 7400 个发音片段（3700 词 × 美音/英音）已经抓下来、
+用 Opus 压到 16 kbps 单声道（**合计 16.97 MB**），随 exe / apk 一起分发：
+
+```
+public/audio/manifest.json          { ext: ".ogg", codec: "opus", accents: ["us","uk"], count: 7394 }
+public/audio/us/<slug>.ogg          3697 个
+public/audio/uk/<slug>.ogg          3697 个
+```
+
+`js/speech.js` 按这个优先级选路（`isSupported()` 也会跟着变）：
+
+| 顺序 | 走哪条路 | 什么时候用得上 |
+| --- | --- | --- |
+| 0 | **打包好的音频文件**（`<audio>` 播 Opus） | exe / apk 里首选；**什么都不用装**。slug 由 `altForms(词)[0]` 算出来（`program(me)` → `programme`、`according to` → `according_to`），和抓取脚本 `tools/fetch_audio.mjs` 完全一致 |
+| 1 | Windows 宿主对象 `WordPlanTts`（宿主进程里的 SAPI5，跑在专用 STA 线程上） | exe 里万一某个词没抓到音频 |
+| 2 | Android 桥 `AndroidTTS` → 系统 TextToSpeech | apk 里同上 |
+| 3 | Web Speech（Edge/Chrome 自带） | 浏览器 / 单文件 HTML（`dist\词计划.html` **不带音频**，走这条） |
+
+单文件 HTML 故意不含音频（那样会胖 17 MB），双击打开时自动退回 Web Speech，
+所以想在浏览器里也有稳定发音，就用 exe / apk 或跑 `node server.mjs` 用带音频的目录版。
+
+**真机验证**（模拟器 `emulator-5554`，这台机器上**一个 TTS 引擎都没装**）：
+
+```js
+{ speechSupported: true, played: ["audio/us/focus.ogg"], engineReady: false }
+```
+
+—— 系统引擎是 `false`，点 🔊 照样播出了 `audio/us/focus.ogg`。这就是「不要引擎」那条要求的落地结果。
+
+### 还是没声音的话
+
+**先点「设置 → 发音 → 测试发音」。** 它会真的念一句，并把下面这些一次性写在下边：
+
+```
+外壳：Windows 壳（宿主对象 WordPlanTts）     ← 说明走的哪条路
+Web Speech 接口：存在
+原生语音引擎可用：true
+系统嗓子列表：count=3 | Microsoft Huihui Desktop / zh-CN enabled=True | Microsoft Zira Desktop / en-US enabled=True
+原生桥实念一句（test / 美音）：true / false
+浏览器语音数：3
+   · Microsoft Huihui - Chinese (Simplified, PRC) / zh-CN
+   …
+Web Speech 实念一句：念完了（start → end 都收到了） / 失败：xxx / 超时…
+```
+
+| 外壳 | 没声音时先查什么 |
+| --- | --- |
+| Windows exe / Android apk | 先确认音频文件在不在：exe 看 `%LOCALAPPDATA%\WordPlan\web\audio\`（或 exe 旁边 `WordPlan-data\web\audio\`），apk 看设置页自检里的「外壳」那行。文件在而没声音 = 系统静音 / 音量合成器把这个应用调没了 |
+| 浏览器 / PWA | Edge 一般自带 300 多个嗓子（含在线的 Natural 语音），出问题通常是没联网或系统静音 |
+| 单文件 HTML | 本来就没有打包音频，只能靠 Web Speech；想要稳定发音就用 exe / apk |
+
+> 老坑记一笔：**WebView2（exe 用的内核）和 Edge 浏览器虽然同源，但能用的语音不是一套。**
+> 实测同一台机器：Edge 能列出 325 个语音并正常朗读；WebView2 只列出 3 个本机中文语音，
+> 而且逐个试都是 `synthesis-failed`。这就是为什么 exe 里必须自带音频 + 备一条原生 SAPI 桥。
+>
+> 另一个老坑：安卓侧以前不管念什么都用 `Locale.US`——**中文释义也被丢给英文嗓子**。
+> 现在按口音选语言（`us` → `en-US`、`uk` → `en-GB`、`zh` → `zh-CN`），
+> 想要的变体没装时会退一步试同语系的另一个。
+
+---
+
 ## 已知限制
 
-- 选择模式只有「英译中」方向；听音模式依赖系统语音，音色随操作系统而定
+- 选择模式只有「英译中」方向；听音模式的音色就是打包音频里的声音，跟着口音走
 - 进度存在浏览器里，换浏览器或清缓存会丢（记得偶尔导出 JSON 备份）
 - 词库是静态文件，应用不做任何联网请求
-- **安卓没有原生 App**：这台机器上没有 Android SDK（`ANDROID_HOME` 为空、`%LOCALAPPDATA%\Android` 不存在），
-  编不出 APK。所以安卓走的是 PWA + 单文件离线网页两条路，功能一致，只是没有 Play 商店式的安装包。
+- **安卓版是自签名的**：`tools/build_apk.mjs` 用 `android/keystore/wordplan.jks` 签名（口令 `wordplan`），
+  没走 Play 商店，安装时需要允许「未知来源」。这个 keystore **不进仓库**（公开了等于谁都能签同一个包名的升级包）。
+- **exe / apk 自带发音，不依赖系统语音引擎**（7400 段 Opus，16.97 MB，随包分发）；
+  只有**单文件 HTML**和浏览器版退回 Web Speech，那时候才需要系统/浏览器装了英语语音。
+  另外音频只抓了「书上那 3700 个词」，自己往里加新词的话那个词就没有自带音频，会自动退回系统语音。
 - **Windows 版只编了 x64**：32 位 Windows 需要把 `tools/build_win.mjs` 里的 `/platform:x64` 改成 `x86`，
   并把 WebView2 的 loader 换成 `runtimes\win-x86\native\WebView2Loader.dll`。
 - Windows 版外壳用 .NET Framework 4.x 自带的 `csc.exe` 编译（这台机器上没有 Roslyn / .NET SDK），

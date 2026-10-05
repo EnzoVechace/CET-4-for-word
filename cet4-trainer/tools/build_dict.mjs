@@ -54,10 +54,16 @@ const collinsLookup = (name) => {
   return null
 }
 
+/** 词形校正表：只放「确定是源头抽取粘连」的，不要随手改书上的写法 */
+const WORD_FIXES = {
+  oughtto: 'ought to',
+}
+
 const row = (e, group, withHf = true) => {
-  const r = [e.name, e.trans, e.usphone || '', e.ukphone || '']
+  const name = WORD_FIXES[e.name] || e.name
+  const r = [name, e.trans, e.usphone || '', e.ukphone || '']
   if (group !== undefined) r.push(group)
-  const c = withHf ? collinsLookup(e.name) : null
+  const c = withHf ? collinsLookup(name) : null
   const hf = c ? pickHf(c.senses, e.trans) : []
   if (withHf) {
     if (hf.length) hfTotal += 1

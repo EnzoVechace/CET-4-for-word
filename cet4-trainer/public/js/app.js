@@ -2,11 +2,11 @@
 
 import * as store from './store.js';
 import { loadIndex, loadDeck } from './dict.js';
-import { initSpeech } from './speech.js';
+import { initSpeech, speechHint, speechReady } from './speech.js';
 import * as practice from './practice.js';
 import * as stats from './stats.js';
 import * as settings from './settings.js';
-import { esc, plainTrans } from './ui.js';
+import { esc, plainTrans, toast } from './ui.js';
 
 const VIEWS = { practice, stats, settings };
 
@@ -33,6 +33,12 @@ let expandedDeck = null;      // 当前展开的词库 id（手风琴：一次�
 /* ------------------------------------------------------------------ 启动 */
 
 initSpeech();
+
+/* 原生语音引擎发不出声（手机没装英文语音包 / Windows 没有可用嗓子）时提醒一次，
+   否则就是「明明设置了自动朗读却一声不响」，用户根本不知道卡在哪儿。 */
+window.addEventListener('wordplan:speech-failed', () => {
+  import('./ui.js').then((m) => m.toast(speechHint(), 7000)).catch(() => {});
+});
 
 /* 深浅色：默认跟随系统。手机（尤其 Android）常常自带「深色模式强制反色」，
    我们主动跟着系统走，页面自己就是深色，系统就不会再乱反一遍。
@@ -123,6 +129,8 @@ function registerSW() {
 
 (async function boot() {
   registerSW();
+  // 打包音频要先探完：它决定了「支不支持发音」，🔊 按钮和自动朗读都看它
+  await speechReady().catch(() => {});
   try {
     const idx = await loadIndex();
     deckIndex = idx.dicts || [];

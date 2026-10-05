@@ -1,7 +1,7 @@
 /* 词计划 · 设置页 -------------------------------------------------------- */
 
 import * as store from './store.js';
-import { speak, speakWordAndMeaning, voiceList, chineseVoiceList, speechSupported, isAndroidTts, onVoicesReady } from './speech.js';
+import { speak, speakWordAndMeaning, voiceList, chineseVoiceList, speechSupported, isAndroidTts, onVoicesReady, diagnose } from './speech.js';
 import { toast, download, confirmDialog, spokenMeaning } from './ui.js';
 import { loadDeck } from './dict.js';
 
@@ -97,6 +97,13 @@ function render() {
             <button class="btn" data-act="test-speak-meaning">试听「focus」</button>
           </div>
         </div>
+        <div class="field">
+          <div class="label">发音自检<small>没声音时点这个：它会真念一句，并把「走的哪条路、系统里有哪些嗓子、成没成」写在下边</small></div>
+          <div class="control">
+            <button class="btn" data-act="speak-diag">测试发音</button>
+          </div>
+        </div>
+        <pre class="diag" id="speakDiag" hidden></pre>
       </div>
 
       <div class="panel">
@@ -199,6 +206,24 @@ function bind() {
 
   const testMeaning = stageEl.querySelector('[data-act="test-speak-meaning"]');
   if (testMeaning) testMeaning.addEventListener('click', previewSpeech);
+
+  // 发音自检：真念一句，并把完整结论摊在下面
+  const diagBtn = stageEl.querySelector('[data-act="speak-diag"]');
+  const diagBox = stageEl.querySelector('#speakDiag');
+  if (diagBtn && diagBox) {
+    diagBtn.addEventListener('click', async () => {
+      diagBox.hidden = false;
+      diagBox.textContent = '正在自检…';
+      diagBtn.disabled = true;
+      try {
+        diagBox.textContent = await diagnose();
+      } catch (err) {
+        diagBox.textContent = '自检本身出错了：' + (err && err.message ? err.message : err);
+      } finally {
+        diagBtn.disabled = false;
+      }
+    });
+  }
 
   const ex = stageEl.querySelector('[data-act="export"]');
   if (ex) ex.addEventListener('click', () => {

@@ -2,7 +2,7 @@
 
 import * as store from './store.js';
 import { loadDeck } from './dict.js';
-import { speak, speakWordAndMeaning, stopSpeaking, speechSupported } from './speech.js';
+import { speak, speakWordAndMeaning, stopSpeaking, speechSupported, speechHint } from './speech.js';
 import { esc, meaningHTML, spokenMeaning, fmtTime, toast } from './ui.js';
 
 export const MODES = [
@@ -522,19 +522,15 @@ function makeChoices(w) {
 function doSpeak() {
   const w = cur();
   if (!w) return;
-  if (!speak(w.w, { accent: S().accent, rate: S().rate })) toast('当前浏览器不支持语音朗读');
+  if (!speak(w.w, { accent: S().accent, rate: S().rate })) toast(speechHint(), 4200);
 }
 
 /** 用指定口音念当前词（点「美」/「英」音标时用） */
 function doSpeakAccent(accent) {
   const w = cur();
   if (!w) return;
-  if (!speechSupported()) {
-    toast('当前环境不支持语音朗读');
-    return;
-  }
   const ok = speak(w.w, { accent: accent === 'uk' ? 'uk' : 'us', rate: S().rate });
-  if (!ok) toast('当前环境不支持语音朗读');
+  if (!ok) toast(speechHint(), 4200);
 }
 
 /**

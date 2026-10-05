@@ -18,12 +18,14 @@ const ROOT = path.dirname(__dirname);
 const PUBLIC = path.join(ROOT, 'public');
 const DIST = path.join(ROOT, 'dist');
 
-/* 依赖顺序：靠前的模块不能 import 靠后的 */
+/* 依赖顺序：靠前的模块不能 import 靠后的。
+   speech.js 现在要从 dict.js 取 altForms()（算发音文件的 slug），
+   所以 dict.js 必须排在 speech.js 前面，否则 __M['./dict.js'] 还是 undefined。 */
 const ORDER = [
   'js/store.js',
   'js/ui.js',
-  'js/speech.js',
   'js/dict.js',
+  'js/speech.js',
   'js/practice.js',
   'js/stats.js',
   'js/settings.js',

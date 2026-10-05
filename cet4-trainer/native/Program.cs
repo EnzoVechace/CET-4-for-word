@@ -14,8 +14,11 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Speech.Synthesis;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
@@ -23,6 +26,276 @@ using Microsoft.Web.WebView2.WinForms;
 
 namespace WordPlan
 {
+    /// <summary>
+    /// 念英文单词 / 中文释义，走 Windows 自带的 SAPI5（System.Speech）。
+    ///
+    /// 为什么不直接用网页的 speechSynthesis：WebView2 里那个 API 是坏的 ——
+    /// getVoices() 能列出一堆语音，但 speak() 一律回 error=synthesis-failed，
+    /// 连中文都念不出来（同一台机器上用 Edge 打开同一个页面却念得好好的）。
+    /// 所以这里把宿主进程的 SAPI5 通过 AddHostObjectToScript("WordPlanTts", …)
+    /// 递给网页，speech.js 用 chrome.webview.hostObjects.sync.WordPlanTts 同步调用。
+    ///
+    /// 方法签名故意用 PascalCase：宿主对象暴露给 JS 时保持原名。
+    /// </summary>
+    [ComVisible(true)]
+    [ClassInterface(ClassInterfaceType.AutoDual)]
+    public class WindowsTts
+    {
+        private readonly object gate = new object();
+        private readonly System.Collections.Concurrent.BlockingCollection<Action> jobs =
+            new System.Collections.Concurrent.BlockingCollection<Action>();
+        private System.Threading.Thread worker;
+        private SpeechSynthesizer synth;
+
+        /// <summary>
+        /// 不在这里建 SpeechSynthesizer：AddHostObjectToScript 的回调跑在 WebView2 的
+        /// 线程池线程（MTA）上，SAPI 在那儿会以「系统上未安装语音，或没有当前安全设置
+        /// 可用的语音」失败——明明系统里装了 Zira 和 Huihui。
+        /// 所以专门起一条 **STA** 线程，所有合成都在它上面做，再回到这里取结果。
+        /// </summary>
+        public WindowsTts()
+        {
+            worker = new System.Threading.Thread(Loop);
+            worker.IsBackground = true;
+            worker.Name = "wordplan-tts";
+            try
+            {
+                worker.SetApartmentState(System.Threading.ApartmentState.STA);
+            }
+            catch
+            {
+            }
+            worker.Start();
+        }
+
+        private void Loop()
+        {
+            try
+            {
+                synth = new SpeechSynthesizer();
+                synth.SetOutputToDefaultAudioDevice();
+                Program.Log("tts ready, voices=" + ListVoices());
+            }
+            catch (Exception ex)
+            {
+                Program.Log("tts init failed: " + ex.Message);
+                synth = null;
+            }
+
+            while (true)
+            {
+                Action job = null;
+                bool got = false;
+                try
+                {
+                    got = jobs.TryTake(out job, 40);
+                }
+                catch
+                {
+                    return;
+                }
+                if (got && job != null)
+                {
+                    try
+                    {
+                        job();
+                    }
+                    catch (Exception ex)
+                    {
+                        Program.Log("tts job failed: " + ex.Message);
+                    }
+                }
+                // SpeakAsync 的回调要靠消息泵派发，少了这句会一直「正在念」但没声音
+                try
+                {
+                    Application.DoEvents();
+                }
+                catch
+                {
+                }
+            }
+        }
+
+        /// <summary>把一段活派到 STA 线程上做，并等它返回</summary>
+        private T Run<T>(Func<T> fn, T fallback)
+        {
+            T result = fallback;
+            try
+            {
+                using (System.Threading.ManualResetEventSlim done =
+                    new System.Threading.ManualResetEventSlim(false))
+                {
+                    jobs.Add(delegate
+                    {
+                        try
+                        {
+                            result = fn();
+                        }
+                        catch (Exception ex)
+                        {
+                            Program.Log("tts: " + ex.Message);
+                        }
+                        finally
+                        {
+                            done.Set();
+                        }
+                    });
+                    if (!done.Wait(5000))
+                    {
+                        Program.Log("tts: worker timeout");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Program.Log("tts: dispatch failed: " + ex.Message);
+            }
+            return result;
+        }
+
+        private string ListVoices()
+        {
+            if (synth == null)
+            {
+                return "(no synth)";
+            }
+            System.Collections.ObjectModel.ReadOnlyCollection<InstalledVoice> all =
+                synth.GetInstalledVoices();
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("count=");
+            sb.Append(all.Count);
+            foreach (InstalledVoice iv in all)
+            {
+                VoiceInfo v = iv.VoiceInfo;
+                sb.Append(" | ");
+                sb.Append(v == null ? "?" : v.Name);
+                sb.Append(" / ");
+                sb.Append(v == null || v.Culture == null ? "?" : v.Culture.Name);
+                sb.Append(" enabled=");
+                sb.Append(iv.Enabled);
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>桥在不在。网页只用它写设置页文案，真正的成败看 Speak 的返回值。</summary>
+        public bool Available()
+        {
+            return Run<bool>(delegate { return synth != null; }, false);
+        }
+
+        /// <summary>这台机器上装了哪些语音（诊断用）</summary>
+        public string Voices()
+        {
+            return Run<string>(delegate { return ListVoices(); }, "(unavailable)");
+        }
+
+        /// <summary>
+        /// 念一句。kind 是 "us" / "uk" / "zh"；rate 是网页那边的 0.5–1.5 倍速。
+        /// 返回 false 表示**真的念不出来**（比如系统里没有英文语音），网页会去提示用户。
+        /// </summary>
+        public bool Speak(string text, string kind, double rate)
+        {
+            if (text == null)
+            {
+                return false;
+            }
+            string t = text.Trim();
+            if (t.Length == 0)
+            {
+                return false;
+            }
+            string tag = kind == null ? "us" : kind.ToLowerInvariant();
+            string culture;
+            if (tag.StartsWith("uk"))
+            {
+                culture = "en-GB";
+            }
+            else if (tag.StartsWith("zh"))
+            {
+                culture = "zh-CN";
+            }
+            else
+            {
+                culture = "en-US";
+            }
+            int r = (int)Math.Round(((rate <= 0 ? 0.9 : rate) - 1.0) * 10.0);
+            if (r < -10) r = -10;
+            if (r > 10) r = 10;
+
+            return Run<bool>(delegate
+            {
+                if (synth == null)
+                {
+                    return false;
+                }
+                VoiceInfo pick = PickVoice(synth, culture);
+                if (pick == null)
+                {
+                    Program.Log("tts: no voice for " + culture);
+                    return false;
+                }
+                synth.SelectVoice(pick.Name);
+                synth.Rate = r;
+                synth.SpeakAsyncCancelAll();
+                synth.SpeakAsync(t);
+                Program.Log("tts speak ok: " + pick.Name + " rate=" + r + " text=" + t.Substring(0, Math.Min(24, t.Length)));
+                return true;
+            }, false);
+        }
+
+        public void Stop()
+        {
+            Run<bool>(delegate
+            {
+                if (synth != null)
+                {
+                    synth.SpeakAsyncCancelAll();
+                }
+                return true;
+            }, false);
+        }
+
+        /// <summary>英文必须找到英文语音，别拿中文嗓子念英语；中文允许退而求其次</summary>
+        private static VoiceInfo PickVoice(SpeechSynthesizer s, string culture)
+        {
+            // 刻意不用 GetInstalledVoices(CultureInfo)：那个重载在没有匹配时抛
+            // 「系统上未安装语音…」，而且 InstalledVoice.Enabled 会莫名其妙变成 false。
+            // 直接枚举全部、自己按区域挑。
+            System.Collections.ObjectModel.ReadOnlyCollection<InstalledVoice> all = s.GetInstalledVoices();
+            string want = (culture ?? "en-US").ToLowerInvariant();
+            string lang = want.Length >= 2 ? want.Substring(0, 2) : "en";
+            VoiceInfo loose = null;
+            VoiceInfo any = null;
+            foreach (InstalledVoice iv in all)
+            {
+                VoiceInfo v = iv.VoiceInfo;
+                if (v == null)
+                {
+                    continue;
+                }
+                if (any == null)
+                {
+                    any = v;
+                }
+                string c = v.Culture == null ? "" : v.Culture.Name.ToLowerInvariant();
+                if (c == want)
+                {
+                    return v;
+                }
+                if (loose == null && c.StartsWith(lang))
+                {
+                    loose = v;
+                }
+            }
+            if (loose != null)
+            {
+                return loose;
+            }
+            bool english = lang == "en";
+            return english ? null : any;
+        }
+    }
+
     internal static class Program
     {
         private static readonly object LogLock = new object();
@@ -299,6 +572,7 @@ namespace WordPlan
     {
         private const string WebPrefix = "web/";
         private const string NativePrefix = "native/";
+        private const string ZipPrefix = "audiozip/";
         private static string cachedRoot;
 
         /// <summary>
@@ -373,6 +647,7 @@ namespace WordPlan
             }
 
             Directory.CreateDirectory(Root);
+            string audioZip = null;
             foreach (string name in self.GetManifestResourceNames())
             {
                 string target;
@@ -383,6 +658,12 @@ namespace WordPlan
                 else if (name.StartsWith(NativePrefix, StringComparison.Ordinal))
                 {
                     target = Path.Combine(NativeDir, name.Substring(NativePrefix.Length).Replace('/', Path.DirectorySeparatorChar));
+                }
+                else if (name.StartsWith(ZipPrefix, StringComparison.Ordinal))
+                {
+                    // 几千个发音小文件打成一个 zip（一个个当 /resource: 会撑爆命令行长度上限）
+                    target = Path.Combine(Root, "audio.zip");
+                    audioZip = target;
                 }
                 else
                 {
@@ -400,6 +681,33 @@ namespace WordPlan
                     src.CopyTo(dst);
                 }
             }
+
+            // 音频 zip 里就是 `audio/...` 那一棵树，直接解到 web/ 下面
+            if (audioZip != null && File.Exists(audioZip))
+            {
+                try
+                {
+                    string webAudio = Path.Combine(WebDir, "audio");
+                    if (Directory.Exists(webAudio))
+                    {
+                        Directory.Delete(webAudio, true);
+                    }
+                    System.IO.Compression.ZipFile.ExtractToDirectory(audioZip, WebDir);
+                    Program.Log("audio extracted -> " + webAudio);
+                }
+                catch (Exception ex)
+                {
+                    Program.Log("audio unzip failed: " + ex.Message);
+                }
+                try
+                {
+                    File.Delete(audioZip);
+                }
+                catch
+                {
+                }
+            }
+
             File.WriteAllText(stampFile, stamp);
         }
 
@@ -479,6 +787,20 @@ namespace WordPlan
                 s.AreDefaultContextMenusEnabled = true;
                 s.IsPasswordAutosaveEnabled = false;
                 s.IsGeneralAutofillEnabled = false;
+
+                // WebView2 里的 Web Speech 是坏的：枚举得到语音，但 speak() 一律
+                // error=synthesis-failed（同一台机器上 Edge 却能正常念）。
+                // 所以走宿主进程的 SAPI5，用 AddHostObjectToScript 把发音能力递给网页。
+                s.AreHostObjectsAllowed = true;
+                try
+                {
+                    web.CoreWebView2.AddHostObjectToScript("WordPlanTts", new WindowsTts());
+                    Program.Log("tts host object added");
+                }
+                catch (Exception tex)
+                {
+                    Program.Log("tts host object failed: " + tex.Message);
+                }
 
                 web.CoreWebView2.SetVirtualHostNameToFolderMapping(
                     "wordplan.local", Payload.WebDir, CoreWebView2HostResourceAccessKind.Allow);

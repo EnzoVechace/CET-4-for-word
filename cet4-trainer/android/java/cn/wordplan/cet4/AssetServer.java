@@ -192,6 +192,11 @@ public class AssetServer {
         if (p.endsWith(".svg")) return "image/svg+xml";
         if (p.endsWith(".txt")) return "text/plain; charset=utf-8";
         if (p.endsWith(".woff2")) return "font/woff2";
+        // 单词发音（tools/fetch_audio.mjs 抓的 Ogg Opus / MP3）
+        if (p.endsWith(".ogg") || p.endsWith(".opus")) return "audio/ogg";
+        if (p.endsWith(".mp3")) return "audio/mpeg";
+        if (p.endsWith(".m4a")) return "audio/mp4";
+        if (p.endsWith(".wav")) return "audio/wav";
         return "application/octet-stream";
     }
 }

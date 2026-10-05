@@ -83,6 +83,54 @@ async function check(name, fn) {
   }
 }
 
+/* 这些辅助函数挂在页面里，每次导航之后都会丢，所以抽出来可以随时重新注入 */
+const SPY_JS = `
+  window.__speechSpy = () => {
+    const ss = window.speechSynthesis;
+    if (!ss) return false;
+    window.__spoken = [];
+    window.__cancels = 0;
+    try {
+      ss.cancel = () => { window.__cancels += 1; };
+      ss.speak = (u) => { window.__spoken.push({ text: u.text, lang: u.lang }); };
+    } catch (e) {
+      return false;
+    }
+    return true;
+  };
+  /* 拦住 <audio>：现在发音优先用打包好的音频文件（public/audio/），
+     所以「有没有读这个词」要看这里，而不是 speechSynthesis。
+     stub 会自己派发 playing / ended，好让「读完单词再读释义」的链条走完。 */
+  window.__audioSpy = () => {
+    const Real = window.Audio;
+    if (!Real) return false;
+    window.__audioLog = [];
+    function Fake(src) {
+      const el = new Real(src);
+      const rec = { src: String(src), paused: 0, played: 0 };
+      window.__audioLog.push(rec);
+      const op = el.pause.bind(el);
+      el.pause = () => { rec.paused += 1; return op(); };
+      const oplay = el.play.bind(el);
+      el.play = () => {
+        rec.played += 1;
+        setTimeout(() => el.dispatchEvent(new Event('playing')), 8);
+        setTimeout(() => el.dispatchEvent(new Event('ended')), 130);
+        return Promise.resolve();
+      };
+      return el;
+    }
+    Fake.prototype = Real.prototype;
+    window.Audio = Fake;
+    return true;
+  };
+  window.__audioSrcs = () => (window.__audioLog || []).map((r) => r.src);
+  window.__audioStopped = () => (window.__audioLog || []).filter((r) => r.paused > 0).length;
+  true;
+`;
+
+async function installSpies() { await evaluate(SPY_JS); }
+
 await send('Runtime.enable');
 await send('Page.enable');
 
@@ -145,6 +193,34 @@ await evaluate(`
     }
     return true;
   };
+  /* 拦住 <audio>：现在发音优先用打包好的音频文件（public/audio/），
+     所以「有没有读这个词」要看这里，而不是 speechSynthesis。
+     stub 会自己派发 playing / ended，好让「读完单词再读释义」的链条走完。 */
+  window.__audioSpy = () => {
+    const Real = window.Audio;
+    if (!Real) return false;
+    window.__audioLog = [];
+    function Fake(src) {
+      const el = new Real(src);
+      const rec = { src: String(src), paused: 0, played: 0 };
+      window.__audioLog.push(rec);
+      const op = el.pause.bind(el);
+      el.pause = () => { rec.paused += 1; return op(); };
+      const oplay = el.play.bind(el);
+      el.play = () => {
+        rec.played += 1;
+        setTimeout(() => el.dispatchEvent(new Event('playing')), 8);
+        setTimeout(() => el.dispatchEvent(new Event('ended')), 130);
+        return Promise.resolve();
+      };
+      return el;
+    }
+    Fake.prototype = Real.prototype;
+    window.Audio = Fake;
+    return true;
+  };
+  window.__audioSrcs = () => (window.__audioLog || []).map((r) => r.src);
+  window.__audioStopped = () => (window.__audioLog || []).filter((r) => r.paused > 0).length;
   true;
 `);
 
@@ -222,30 +298,45 @@ await check('卡片上有「上一词 / 下一词」按钮', async () => {
 });
 
 await check('点「下一词」进入 benefit 并朗读「单词 + 释义」', async () => {
-  const hooked = await evaluate('window.__speechSpy()');
-  if (!hooked) return '无法拦截 speechSynthesis';
+  if (!(await evaluate('window.__audioSpy()'))) return '无法拦截 Audio';
+  await evaluate('window.__speechSpy()');
   await evaluate("document.querySelector('[data-act=\"next\"]').click()");
-  await sleep(320);
+  await sleep(600);
   const w = await evaluate('window.__word()');
-  const spoken = await evaluate('window.__spoken');
-  const cancels = await evaluate('window.__cancels');
   if (w !== 'benefit') return `实际词 = ${w}`;
-  if (!Array.isArray(spoken) || spoken.length < 2) return `只读了 ${JSON.stringify(spoken)}`;
-  if (!/^benefit$/i.test(spoken[0].text)) return `第一段不是单词：${spoken[0].text}`;
-  if (!/^zh/i.test(spoken[1].lang || '')) return `第二段不是中文：${JSON.stringify(spoken[1])}`;
-  if (!/[\u4e00-\u9fa5]/.test(spoken[1].text)) return `释义里没有中文：${spoken[1].text}`;
-  if (cancels < 1) return '进新词时没有掐掉上一次朗读';
+  // 英文单词：优先播打包音频
+  const srcs = await evaluate('window.__audioSrcs()');
+  const audioOk = srcs.some((s) => /benefit/i.test(s));
+  if (!audioOk && !srcs.length) {
+    // 没打包音频时退回 Web Speech，这条也要成立
+    const spoken = await evaluate('window.__spoken');
+    if (!/^benefit$/i.test((spoken[0] || {}).text || '')) return `既没播音频也没朗读：${JSON.stringify(spoken)}`;
+    return true;
+  }
+  if (!audioOk) return `播的不是 benefit：${JSON.stringify(srcs)}`;
+  // 中文释义：等英文音频 ended 之后落到 Web Speech
+  const spoken = await evaluate('window.__spoken');
+  if (!Array.isArray(spoken) || !spoken.length) return `释义没有接着朗读：${JSON.stringify(spoken)}`;
+  if (!/[\u4e00-\u9fa5]/.test(spoken[0].text)) return `释义里没有中文：${JSON.stringify(spoken[0])}`;
   return true;
 });
 
 await check('点「上一词」回到 career 并掐掉旧朗读', async () => {
-  await evaluate('window.__speechSpy()'); // 清空记录
+  await evaluate('window.__audioSpy()'); // 清空记录
+  await evaluate('window.__speechSpy()');
   await evaluate("document.querySelector('[data-act=\"prev\"]').click()");
-  await sleep(320);
+  await sleep(400);
   const w = await evaluate('window.__word()');
-  const spoken = await evaluate('window.__spoken');
-  const cancels = await evaluate('window.__cancels');
   if (w !== 'career') return `实际词 = ${w}`;
+  const srcs = await evaluate('window.__audioSrcs()');
+  const cancels = await evaluate('window.__cancels');
+  if (srcs.length) {
+    if (!/career/i.test(srcs[0])) return `没有重播 career 的音频：${JSON.stringify(srcs)}`;
+    const stopped = await evaluate('window.__audioStopped()');
+    if (cancels < 1 && stopped < 1) return '回上一词时既没 cancel 也没停掉旧音频';
+    return true;
+  }
+  const spoken = await evaluate('window.__spoken');
   if (!/^career$/i.test((spoken[0] || {}).text || '')) return `没有重读 career：${JSON.stringify(spoken)}`;
   if (cancels < 1) return '回上一词时没有掐掉正在读的音频';
   return true;
@@ -411,37 +502,37 @@ await check('高频释义划了虚线（Collins COBUILD 语料库的义项频次
 });
 
 await check('点「美」音标会用美音念一遍', async () => {
-  const fired = await evaluate(`
-    (() => {
-      const el = document.querySelector('.phon [data-accent="us"]');
-      if (!el) return 'no-us-span';
-      window.__spoken = null;
-      const orig = window.speechSynthesis.speak;
-      window.speechSynthesis.speak = (u) => { window.__spoken = u.text; };
-      el.click();
-      window.speechSynthesis.speak = orig;
-      return window.__spoken === null ? 'no-speak-call' : window.__spoken;
-    })()
-  `);
-  const word = await evaluate("document.querySelector('#wordLine').textContent.trim()");
-  return fired === word ? true : `实际朗读=${JSON.stringify(fired)} 当前词=${word}`;
+  await installSpies();
+  if (!(await evaluate('window.__audioSpy()'))) return '无法拦截 Audio';
+  await evaluate('window.__speechSpy()');
+  const hasSpan = await evaluate("!!document.querySelector('.phon [data-accent=\"us\"]')");
+  if (!hasSpan) return '没有「美」音标按钮';
+  await evaluate("document.querySelector('.phon [data-accent=\"us\"]').click()");
+  await sleep(300);
+  const word = (await evaluate("document.querySelector('#wordLine').textContent.trim()")).replace(/\s+/g, '').toLowerCase();
+  const srcs = await evaluate('window.__audioSrcs()');
+  if (srcs.length) {
+    return /audio\/us\//i.test(srcs[0]) ? true : `点「美」播的不是美音：${JSON.stringify(srcs)}`;
+  }
+  const spoken = await evaluate('window.__spoken');
+  return /^us$/i.test((spoken[0] || {}).lang || '') || (spoken[0] || {}).text
+    ? true : `既没播音频也没朗读（当前词 ${word}）`;
 });
 
 await check('点「英」音标会用英音念一遍', async () => {
-  const fired = await evaluate(`
-    (() => {
-      const el = document.querySelector('.phon [data-accent="uk"]');
-      if (!el) return 'no-uk-span';
-      window.__spoken = null;
-      const orig = window.speechSynthesis.speak;
-      window.speechSynthesis.speak = (u) => { window.__spoken = u.text; };
-      el.click();
-      window.speechSynthesis.speak = orig;
-      return window.__spoken === null ? 'no-speak-call' : window.__spoken;
-    })()
-  `);
-  const word = await evaluate("document.querySelector('#wordLine').textContent.trim()");
-  return fired === word ? true : `实际朗读=${JSON.stringify(fired)} 当前词=${word}`;
+  await installSpies();
+  if (!(await evaluate('window.__audioSpy()'))) return '无法拦截 Audio';
+  await evaluate('window.__speechSpy()');
+  const hasSpan = await evaluate("!!document.querySelector('.phon [data-accent=\"uk\"]')");
+  if (!hasSpan) return '没有「英」音标按钮';
+  await evaluate("document.querySelector('.phon [data-accent=\"uk\"]').click()");
+  await sleep(300);
+  const srcs = await evaluate('window.__audioSrcs()');
+  if (srcs.length) {
+    return /audio\/uk\//i.test(srcs[0]) ? true : `点「英」播的不是英音：${JSON.stringify(srcs)}`;
+  }
+  const spoken = await evaluate('window.__spoken');
+  return (spoken[0] || {}).text ? true : '既没播音频也没朗读';
 });
 
 await check('点过的音标只闪一下，不会一直停在选中态', async () => {

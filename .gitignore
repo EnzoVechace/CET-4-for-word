@@ -6,8 +6,8 @@
 android-sdk/
 
 # 无头 Edge 调试用的用户配置目录（几百 MB）
-.edgeprof/
-**/.edgeprof/
+.edgeprof*/
+**/.edgeprof*/
 
 # 星火官方资源包里的音频与压缩包：版权材料，且合计约 330 MB。
 # 词表用到的只是 sparke_pack/lrc_utf8/*.lrc（11 个小文本文件，已入库）。
@@ -23,6 +23,15 @@ cet4-trainer/build/MicrosoftEdgeWebview2Setup.exe
 cet4-trainer/build/apk/
 cet4-trainer/build/collins.json
 cet4-trainer/build/collins_sample.json
+# ffmpeg（工具自取，几十 MB）与打包音频用的中间 zip
+cet4-trainer/build/ffmpeg/
+cet4-trainer/build/audio.zip
+cet4-trainer/build/audio-fails.txt
+cet4-trainer/build/ttsprobe/
+
+# 单词发音音频：几百 MB / 几千个文件，由 tools/fetch_audio.mjs 重新抓取，
+# 只随 exe / apk 成品分发，不进 git 历史
+cet4-trainer/public/audio/
 
 # 安卓签名密钥：绝对不要公开，别人拿到就能签出「同一个 App」的升级包
 cet4-trainer/android/keystore/

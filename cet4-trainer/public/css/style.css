@@ -521,6 +521,14 @@ button { font: inherit; color: inherit; cursor: pointer; border: none; backgroun
 .field .label small { display: block; color: var(--text-faint); font-size: 11.5px; font-weight: 400; }
 .field .control { flex: 1; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
+/* 发音自检的输出：等宽、可选中、限高可滚 */
+.diag {
+  margin: 10px 0 0; padding: 11px 13px; max-height: 260px; overflow: auto;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+  font-family: var(--mono); font-size: 11.5px; line-height: 1.65; color: var(--text-muted);
+  white-space: pre-wrap; word-break: break-word; -webkit-user-select: text; user-select: text;
+}
+
 .switch { position: relative; width: 44px; height: 25px; flex: 0 0 auto; }
 .switch input { opacity: 0; width: 0; height: 0; position: absolute; }
 .switch .slider { position: absolute; inset: 0; background: var(--surface-3); border-radius: 99px; transition: 0.2s; border: 1px solid var(--border); }
