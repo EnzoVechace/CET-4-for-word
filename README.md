@@ -92,13 +92,18 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 
 ### 三种用法
 
-成品在 **[Releases](https://github.com/EnzoVechace/CET-4-for-word/releases)** 里下载（不放在 git 历史里，免得每次重新打包都往仓库塞几 MB 二进制）：
+成品在 **[Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest)** 里下载（不放在 git 历史里，免得每次重新打包都往仓库塞几 MB 二进制）：
 
-| 用法 | 下载 | 说明 |
+| 用法 | Release 里的文件名 | 说明 |
 |---|---|---|
-| 网页版 | `词计划.html` | **双击就能用**（单文件，词库内嵌）。手机上也能开 |
-| Windows | `词计划.exe` | 3.6 MB，内嵌 WebView2 引导安装器；目标机器没装运行时会弹窗问你要不要装 |
-| Android | `词计划_1.1.apk` | 370 KB，内置一个本地静态服务器（固定端口 `127.0.0.1:17653`） |
+| Windows | `WordPlan-1.1-win64.exe` | 3.6 MB，内嵌 WebView2 引导安装器；目标机器没装运行时会弹窗问你要不要装 |
+| Android | `WordPlan-1.1-android.apk` | 370 KB，内置一个本地静态服务器（固定端口 `127.0.0.1:17653`） |
+| 网页版 | `WordPlan-1.1-web.html` | **双击就能用**（单文件，词库内嵌）。手机上也能开 |
+| 说明 | `WordPlan-1.1-readme-zh.txt` | 上面几个的简版说明 |
+
+> Release 附件名只能是 ASCII —— GitHub 会把非 ASCII 字符直接从文件名里删掉
+> （`词计划.exe` 会变成 `default.exe`），所以上传用的是英文名。中文说明写在
+> release 正文里。
 
 想自己从源码构建，见下面「打包与测试」。
 
@@ -150,7 +155,17 @@ git tag -a v1.2 -m "词计划 1.2" && git push origin v1.2
 cd cet4-trainer
 $env:GH_TOKEN = "ghp_xxx"      # https://github.com/settings/tokens，勾 repo
 node tools/release.mjs v1.2    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
+
+# 只传其中几个
+$env:ASSETS = "WordPlan-1.2-win64.exe,WordPlan-1.2-readme-zh.txt"
+# 清掉改名/换版本后残留的旧 asset
+$env:PRUNE = "1"
 ```
+
+两个坑：
+
+1. **附件名只能是 ASCII**。GitHub 会把非 ASCII 字符直接从名字里删掉：`词计划.exe` → `default.exe`、`wordplan-说明.txt` → `wordplan-.txt`。所以 `release.mjs` 里用英文名（`WordPlan-<版本>-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`），中文说明写在 release 正文里。脚本发现名字被改会直接报错退出。
+2. **本机 hosts 把 github.com 全指到了 `127.0.0.1`**，普通 `fetch` 一律 `ECONNRESET`。`release.mjs` 因此自己向公共 DNS（默认 `114.114.114.114`，可用 `DNS_SERVERS` 改）问真实 IP，再用「连 IP + SNI/Host 仍写域名」的方式请求。
 
 ---
 
