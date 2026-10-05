@@ -3,7 +3,7 @@
  * 把 dist/ 里的成品挂到 GitHub Releases 上。
  *
  *   $env:GH_TOKEN="ghp_xxx"          # 需要 repo 权限的 Personal Access Token
- *   node tools/release.mjs v1.1      # 参数省略时用 v1.1
+ *   node tools/release.mjs            # 版本号默认取 VERSION（1.2）
  *
  * 会做这些事：
  *   1. 按 tag 找 release，没有就建一个（默认不是 draft）
@@ -28,12 +28,23 @@ import path from 'node:path';
 import dns from 'node:dns';
 import { Resolver } from 'node:dns/promises';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 
-// 这台机器上 HTTPS_PROXY / HTTP_PROXY 指着本地代理工具（127.0.0.1:7897），
-// 而那个代理已经挂了 —— 留着它会让 TLS 直接 ECONNRESET。
-// 本脚本走的是「直连真实 IP + SNI/Host 写域名」，本来也不需要代理。
-for (const k of ['HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY', 'all_proxy']) {
-  delete process.env[k];
+/**
+ * 这台机器上 HTTPS_PROXY / HTTP_PROXY 指着本地代理工具（127.0.0.1:7897），
+ * 而那个代理已经挂了 —— 留着它会让 TLS 直接 ECONNRESET。
+ *
+ * 光在脚本里 delete process.env 不管用（网络栈在这之前就已经把代理配置读走了），
+ * 所以这里直接**重开一个没有这些变量的子进程**再跑一遍自己。
+ */
+const PROXY_KEYS = ['HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY', 'all_proxy'];
+if (PROXY_KEYS.some((k) => process.env[k])) {
+  const env = { ...process.env };
+  for (const k of PROXY_KEYS) delete env[k];
+  console.log('清掉指向死代理的 *_PROXY 环境变量后重新执行…');
+  const r = spawnSync(process.execPath, [fileURLToPath(import.meta.url), ...process.argv.slice(2)],
+    { env, stdio: 'inherit' });
+  process.exit(r.status === null ? 1 : r.status);
 }
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -42,7 +53,8 @@ const DIST = path.join(ROOT, 'dist');
 
 const REPO = process.env.REPO || 'EnzoVechace/CET-4-for-word';
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
-const TAG = process.argv[2] || process.env.TAG || 'v1.1';
+const VERSION = (process.env.VERSION || '1.2').replace(/^v/, '');
+const TAG = process.argv[2] || process.env.TAG || `v${VERSION}`;
 const DNS_SERVERS = (process.env.DNS_SERVERS || '114.114.114.114,223.5.5.5')
   .split(',').map((s) => s.trim()).filter(Boolean);
 
@@ -54,13 +66,13 @@ const DNS_SERVERS = (process.env.DNS_SERVERS || '114.114.114.114,223.5.5.5')
  * `default.exe`），中文说明写在 release body 里。
  */
 const ALL_ASSETS = [
-  ['WordPlan-1.1-web.html', '词计划.html'],
-  ['WordPlan-1.1-win64.exe', '词计划.exe'],
-  ['WordPlan-1.1-android.apk', '词计划_1.1.apk'],
-  ['WordPlan-1.1-readme-zh.txt', '使用说明.txt'],
+  [`WordPlan-${VERSION}-web.html`, '词计划.html'],
+  [`WordPlan-${VERSION}-win64.exe`, '词计划.exe'],
+  [`WordPlan-${VERSION}-android.apk`, `词计划_${VERSION}.apk`],
+  [`WordPlan-${VERSION}-readme-zh.txt`, '使用说明.txt'],
 ];
 
-/* 只传其中几个：set ASSETS=WordPlan-1.1-win64.exe,WordPlan-1.1-readme-zh.txt */
+/* 只传其中几个：set ASSETS=WordPlan-1.2-win64.exe,WordPlan-1.2-readme-zh.txt */
 const picked = (process.env.ASSETS || '')
   .split(',')
   .map((s) => s.trim())
@@ -82,7 +94,7 @@ function log(msg) {
 if (!TOKEN) {
   die('没有找到 GH_TOKEN / GITHUB_TOKEN。\n' +
       '  去 https://github.com/settings/tokens 建一个勾了 repo 的 token，然后：\n' +
-      '    $env:GH_TOKEN="ghp_xxx"; node tools/release.mjs v1.1');
+      '    $env:GH_TOKEN="ghp_xxx"; node tools/release.mjs v' + VERSION);
 }
 
 /* ----------------------------------------------- DNS ------------------ */
@@ -176,7 +188,7 @@ function authHeaders(extra = {}) {
 
 function defaultBody() {
   return [
-    '## 词计划 · 四级词汇周计划',
+    `## 词计划 · 四级词汇周计划 ${TAG}`,
     '',
     '配合星火《四级词汇周计划》(ISBN 978-7-231-02372-5) 的词表与背单词应用。',
     '词表里的**单词和顺序与书上完全一致**（取自官方资源包的 `.lrc`）。',
@@ -187,10 +199,17 @@ function defaultBody() {
     '|---|---|',
     '| `词计划.html` | **网页版，双击就能用**。单文件，词库内嵌，手机也能开 |',
     '| `词计划.exe` | Windows 版。第一次运行若缺 WebView2 运行时会弹窗问你要不要装 |',
-    '| `词计划_1.1.apk` | 安卓版。装之前若装过旧版，直接覆盖安装即可（进度会保留） |',
+    `| \`词计划_${VERSION}.apk\` | 安卓版。装之前若装过旧版，直接覆盖安装即可（进度会保留） |`,
     '| `使用说明.txt` | 上面三个的简版说明 |',
     '',
-    '### 这一版有什么',
+    '### 这一版最大的变化：发音不再依赖系统语音引擎',
+    '',
+    'exe 和 apk **自带 7400 段发音**（3700 个词 × 美音/英音，Opus 编码，合计 16.97 MB），',
+    '所以手机 / 电脑上**一个语音引擎都不用装**，下载下来就能念。',
+    '播放优先级：打包音频 → 系统原生语音 → 浏览器语音合成。',
+    '（网页版 `词计划.html` 为了保持 700 多 KB 的体积没有内置音频，走浏览器自带的语音合成。）',
+    '',
+    '### 功能一览',
     '',
     '- 四种练习模式：跟打 / 默写 / 听音 / 选择',
     '- 范围筛选：全部 / 未学 / 未掌握 / 错词本 / 待复习；书序或打乱；每轮数量随便填',

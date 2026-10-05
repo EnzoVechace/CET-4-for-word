@@ -23,13 +23,16 @@ start http://127.0.0.1:5199
 
 ## 三种用法，挑一个就行
 
-**不想自己编译的话直接去 [Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest) 下载**（里面的附件名是英文：`WordPlan-1.1-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`，原因见根 README）。
+**不想自己编译的话直接去 [Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest) 下载**（里面的附件名是英文：`WordPlan-1.2-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`，原因见根 README）。
 
 | 想怎么用 | 用哪个文件 | 怎么装 |
 | --- | --- | --- |
-| **Windows 桌面程序** | `dist\词计划.exe`（3.6 MB，单文件） | 双击就能跑。全部网页资源都编在 exe 里，第一次运行解到 `%LOCALAPPDATA%\WordPlan`；那里写不进去就自动退回 exe 旁边的 `WordPlan-data`（绿色便携版） |
-| **安卓手机** | `dist\词计划_1.1.apk`（370 KB） | 传进手机点一下装。内置本地静态服务器（固定端口 `127.0.0.1:17653`），完全离线。装过旧版直接覆盖安装，进度会保留 |
-| **网页版 / 手机免安装** | `dist\词计划.html`（717 KB，单文件） | 双击就能用；拷到手机（微信/QQ/USB/云盘都行）用 Chrome / Edge / 夸克 打开也行，**完全离线**。想更像 App：浏览器菜单 →「添加到主屏幕」 |
+| **Windows 桌面程序** | `dist\词计划.exe`（19.8 MB，单文件） | 双击就能跑。全部网页资源和 16.97 MB 发音都编在 exe 里，第一次运行解到 `%LOCALAPPDATA%\WordPlan`；那里写不进去就自动退回 exe 旁边的 `WordPlan-data`（绿色便携版） |
+| **安卓手机** | `dist\词计划_1.2.apk`（19.8 MB） | 传进手机点一下装。内置本地静态服务器（固定端口 `127.0.0.1:17653`），完全离线。装过旧版直接覆盖安装，进度会保留 |
+| **网页版 / 手机免安装** | `dist\词计划.html`（748 KB，单文件） | 双击就能用；拷到手机（微信/QQ/USB/云盘都行）用 Chrome / Edge / 夸克 打开也行，**完全离线**。想更像 App：浏览器菜单 →「添加到主屏幕」 |
+
+> **exe / apk 自带发音，不用装任何语音引擎**（3700 个词 × 美音/英音 = 7400 段 Opus，16.97 MB）。
+> 网页版为了保持 748 KB 的体积没内置音频，靠浏览器自带的语音合成。
 
 > **Windows 版依赖 WebView2 运行时**：Win11 和大部分 Win10 自带。
 > 万一目标机器上没有，**exe 会自己弹窗问你要不要装**，你点「是」它就调用内嵌的
@@ -41,11 +44,12 @@ start http://127.0.0.1:5199
 ```powershell
 node tools/make_single.mjs       # → dist\词计划.html（单文件离线版）
 node tools/build_win.mjs         # → dist\词计划.exe（Windows 桌面版）
-node tools/build_apk.mjs         # → dist\词计划_1.1.apk（安卓版）
+node tools/build_apk.mjs         # → dist\词计划_1.2.apk（安卓版）
 python tools/make_icons.py       # 重新生成图标
 node tools/get_webview2.mjs      # 重新下载 WebView2 SDK（只在首次编译时需要）
 node tools/get_bootstrapper.mjs  # 重新下载 WebView2 引导安装器（只在首次编译时需要）
 node tools/android_sdk.mjs       # 首次编译安卓版前下载 Android SDK 部件
+node tools/fetch_audio.mjs       # 抓 7400 段发音（约 16 分钟，只在首次编译时需要）
 ```
 
 ---

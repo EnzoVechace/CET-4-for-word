@@ -96,10 +96,10 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 
 | 用法 | Release 里的文件名 | 说明 |
 |---|---|---|
-| Windows | `WordPlan-1.1-win64.exe` | 3.6 MB，内嵌 WebView2 引导安装器；目标机器没装运行时会弹窗问你要不要装 |
-| Android | `WordPlan-1.1-android.apk` | 370 KB，内置一个本地静态服务器（固定端口 `127.0.0.1:17653`） |
-| 网页版 | `WordPlan-1.1-web.html` | **双击就能用**（单文件，词库内嵌）。手机上也能开 |
-| 说明 | `WordPlan-1.1-readme-zh.txt` | 上面几个的简版说明 |
+| Windows | `WordPlan-1.2-win64.exe` | 19.8 MB，**自带 7400 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
+| Android | `WordPlan-1.2-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`） |
+| 网页版 | `WordPlan-1.2-web.html` | 748 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
+| 说明 | `WordPlan-1.2-readme-zh.txt` | 上面几个的简版说明 |
 
 > Release 附件名只能是 ASCII —— GitHub 会把非 ASCII 字符直接从文件名里删掉
 > （`词计划.exe` 会变成 `default.exe`），所以上传用的是英文名。中文说明写在
@@ -145,7 +145,7 @@ node tools/android_sdk.mjs         # 需要时：下载 Android SDK 命令行工
 node tools/build_dict.mjs          # 从 cet4-sparke/output 编译词库
 node tools/make_single.mjs         # → dist/词计划.html
 node tools/build_win.mjs           # → dist/词计划.exe
-node tools/build_apk.mjs           # → dist/词计划_1.1.apk
+node tools/build_apk.mjs           # → dist/词计划_1.2.apk
 node tools/e2e.mjs                 # 桌面端 41 项断言（CDP 驱动无头 Edge）
 node tools/e2e_mobile.mjs          # 触摸端 15 项断言
 ```

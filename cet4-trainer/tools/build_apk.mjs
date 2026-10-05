@@ -40,8 +40,8 @@ const DIST = path.join(ROOT, 'dist');
 const PY = process.env.PYTHON || 'C:\\Users\\31787\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe';
 const NODE = process.execPath;
 
-const VERSION_CODE = 2;
-const VERSION_NAME = '1.1';
+const VERSION_CODE = 3;
+const VERSION_NAME = '1.2';
 const APK_NAME = `词计划_${VERSION_NAME}.apk`;
 
 const KS_DIR = path.join(APP, 'keystore');
