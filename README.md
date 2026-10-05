@@ -140,6 +140,18 @@ node tools/e2e_mobile.mjs          # 触摸端 15 项断言
 
 `tools/e2e.mjs` 走 Chrome DevTools Protocol，需要先按 README 里的说明起一个带 `--remote-debugging-port` 的 Edge。
 
+### 发布新版本
+
+三端成品不进 git（`dist/` 已被 `.gitignore` 忽略），改挂到 Releases：
+
+```bash
+git tag -a v1.2 -m "词计划 1.2" && git push origin v1.2
+
+cd cet4-trainer
+$env:GH_TOKEN = "ghp_xxx"      # https://github.com/settings/tokens，勾 repo
+node tools/release.mjs v1.2    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
+```
+
 ---
 
 ## 三、版权说明
