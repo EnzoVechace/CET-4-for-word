@@ -29,6 +29,13 @@ import dns from 'node:dns';
 import { Resolver } from 'node:dns/promises';
 import { fileURLToPath } from 'node:url';
 
+// 这台机器上 HTTPS_PROXY / HTTP_PROXY 指着本地代理工具（127.0.0.1:7897），
+// 而那个代理已经挂了 —— 留着它会让 TLS 直接 ECONNRESET。
+// 本脚本走的是「直连真实 IP + SNI/Host 写域名」，本来也不需要代理。
+for (const k of ['HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY', 'all_proxy']) {
+  delete process.env[k];
+}
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const DIST = path.join(ROOT, 'dist');
