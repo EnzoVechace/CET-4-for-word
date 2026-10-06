@@ -157,7 +157,10 @@ export async function mount(stage) {
   paintMeta();
   attachKeys();
   createInput();
-  if (session.resumedFrom > 0) {
+  const picked = store.consumePickedStart();
+  if (picked && session.resumedFrom > 0) {
+    toast(`从第 ${session.resumedFrom + 1} 个词开始（按「上一词」能往回看）`, 2800);
+  } else if (session.resumedFrom > 0) {
     toast(`接着上次：从第 ${session.resumedFrom + 1} 个词继续（按「上一词」能往回看）`, 2800);
   }
   // 只有听音模式在进词时自动出声——那个模式的「题目」就是声音。

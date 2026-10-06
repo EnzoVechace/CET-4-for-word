@@ -117,7 +117,10 @@ export async function loadDeck(id) {
     if (!meta) throw new Error(`未知词库 ${id}`);
     if (meta.compose && meta.compose.length) {
       const parts = await Promise.all(meta.compose.map((cid) => loadDeck(cid)));
-      const words = parts.flatMap((part) => part.words);
+      // 每个分册的 i 都是「册内序号」（0..249），拼起来必须重排成整本的位置，
+      // 否则「学到哪儿了」的游标和「第 N / 总数 词」都会错 —— 全书词库会一直从第一个词重来。
+      // 不能就地改，week1 那份对象被缓存的单册词库共用着。
+      const words = parts.flatMap((part) => part.words).map((w, i) => (w.i === i ? w : Object.assign({}, w, { i })));
       return { id: meta.id, name: meta.name, sub: meta.sub, words };
     }
     const raw = await fetchJSON(`dict/${meta.file || `${id}.json`}`);

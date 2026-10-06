@@ -3,7 +3,7 @@
  * 把 dist/ 里的成品挂到 GitHub Releases 上。
  *
  *   $env:GH_TOKEN="ghp_xxx"          # 需要 repo 权限的 Personal Access Token
- *   node tools/release.mjs            # 版本号默认取 VERSION（1.3）
+ *   node tools/release.mjs            # 版本号默认取 VERSION（1.4）
  *
  * 会做这些事：
  *   1. 按 tag 找 release，没有就建一个（默认不是 draft）
@@ -53,7 +53,7 @@ const DIST = path.join(ROOT, 'dist');
 
 const REPO = process.env.REPO || 'EnzoVechace/CET-4-for-word';
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
-const VERSION = (process.env.VERSION || '1.3').replace(/^v/, '');
+const VERSION = (process.env.VERSION || '1.4').replace(/^v/, '');
 const TAG = process.argv[2] || process.env.TAG || `v${VERSION}`;
 const DNS_SERVERS = (process.env.DNS_SERVERS || '114.114.114.114,223.5.5.5')
   .split(',').map((s) => s.trim()).filter(Boolean);
@@ -72,7 +72,7 @@ const ALL_ASSETS = [
   [`WordPlan-${VERSION}-readme-zh.txt`, '使用说明.txt'],
 ];
 
-/* 只传其中几个：set ASSETS=WordPlan-1.3-win64.exe,WordPlan-1.3-readme-zh.txt */
+/* 只传其中几个：set ASSETS=WordPlan-1.4-win64.exe,WordPlan-1.4-readme-zh.txt */
 const picked = (process.env.ASSETS || '')
   .split(',')
   .map((s) => s.trim())
@@ -202,17 +202,25 @@ function defaultBody() {
     `| \`词计划_${VERSION}.apk\` | 安卓版。装之前若装过旧版，直接覆盖安装即可（进度会保留） |`,
     '| `使用说明.txt` | 上面三个的简版说明 |',
     '',
-    '### 这一版改了什么（1.3）',
+    '### 这一版改了什么（1.4）',
+    '',
+    '1. **可以自己挑从第几个词开始背**。侧栏「每轮数量」下面多了一栏「从第几个词开始」：',
+    '   填序号（12）或直接填单词（benefit）都行，回车生效；点「从头」就清掉。',
+    '   展开词表后**点任意一个单词**，也能直接从它开始背，起点那行会标一个「起点」。',
+    '   适合已经背到一半、不想从头再来的人。',
+    '2. **修掉一个「全书」词库的老 bug**。以前「全书」是 7 个周加认知拼起来的，',
+    '   每册各自从 1 数号，导致全书的进度永远对不上、背完一个词又跳回第一个。',
+    '   现在拼起来后序号是连续的，全书的进度和页码都正确了。',
+    '',
+    '### 上一版改了什么（1.3）',
     '',
     '1. **安卓进度不再丢**。除了网页存储，整份进度还会再往安卓系统存储里存一份；',
-    '   系统回收后台进程把网页存储清掉时，下次打开会从系统那份恢复（已在模拟器上验证）。',
-    '2. **不再「翻到下一页就念」**。自动朗读只在「听音」模式进词时出声，',
-    '   跟打 / 默写 / 选择都是提交答案后才念，免得还没看清单词就被剧透。',
-    '3. **选择题提交后会标出其它选项的简短释义**，一眼看懂错在哪。',
-    '4. **释义自动精简**。每个词性最多留 3 条义项、整行不超过 46 字，超了用「…」收尾；',
-    '   词性本身和划线的高频义项一定保留。可在「设置 → 练习 → 精简释义」关掉。',
+    '   系统回收后台进程把网页存储清掉时，下次打开会从系统那份恢复。',
+    '2. **不再「翻到下一页就念」**。自动朗读只在「听音」模式进词时出声。',
+    '3. **选择题提交后会标出其它选项的简短释义**。',
+    '4. **释义自动精简**（词性最多 3 条义项、整行不超过 46 字），可在设置里关掉。',
     '',
-    '（上一版 1.2 的主要变化是**发音不再依赖系统语音引擎**：exe / apk 自带',
+    '（1.2 的主要变化是**发音不再依赖系统语音引擎**：exe / apk 自带',
     '7394 段 Opus 发音，3700 个词的美音英音各一份，合计 16.97 MB，',
     '手机和电脑上**一个语音引擎都不用装**。播放优先级：打包音频 → 系统原生语音 → 浏览器语音合成。）',
     '',

@@ -948,6 +948,165 @@ await check('输入了一半再点「下一词」会先判分，而不是静默�
   return moved === 'career' ? true : `判完分再点一次应该到 career，实际 ${moved}`;
 });
 
+/* 「全书」是 7 个周 + 认知拼出来的虚拟词库。1.3 之前每个分册保留自己的册内序号，
+   于是游标永远匹配不上 → 全书背完一个词又回到第一个。守住「拼起来后序号必须连续」。 */
+await check('全书词库拼起来后序号是连续的（否则进度存不住）', async () => {
+  const raw = await evaluate(`
+    (async () => {
+      const d = await import('./js/dict.js');
+      const full = await d.loadDeck('full');
+      let bad = 0;
+      full.words.forEach((w, i) => { if (Number(w.i) !== i) bad += 1; });
+      const w1 = await d.loadDeck('week1');
+      let w1bad = 0;
+      w1.words.forEach((w, i) => { if (Number(w.i) !== i) w1bad += 1; });
+      const last = full.words[full.words.length - 1];
+      return JSON.stringify({ n: full.words.length, bad, w1n: w1.words.length, w1bad, last: last.w, lastI: last.i });
+    })()
+  `);
+  const o = JSON.parse(raw);
+  return o.n === 2177 && o.bad === 0 && o.w1n === 250 && o.w1bad === 0
+    ? true
+    : `全书 ${o.n} 词（序号乱 ${o.bad} 处），week1 ${o.w1n} 词（序号乱 ${o.w1bad} 处），末词 ${o.last}/${o.lastI}`;
+});
+
+/* 全书词库也能续传：存进去的游标必须真的被用上 */
+await check('全书词库背到第 900 个，重开还停在第 900 个', async () => {
+  await send('Page.navigate', { url: `${APP}__seed__` });
+  await sleep(700);
+  await evaluate(`
+    localStorage.setItem('wordplan.v1', JSON.stringify({
+      version: 1, deckId: 'full', mode: 'typing', scope: 'all', order: 'book', limit: 3,
+      cursors: { full: 899 },
+      settings: { autoNext: false, autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9, hfMark: false },
+    }));
+    true;
+  `);
+  await send('Page.navigate', { url: `${APP}#practice` });
+  await sleep(2400);
+  const meta = await evaluate("(document.querySelector('.pmeta') || {}).textContent || ''");
+  const flat = meta.replace(/\s+/g, ' ').trim();
+  const m = /第\s*(\d+)\s*\/\s*(\d+)\s*词/.exec(flat);
+  const input = await evaluate("(document.getElementById('startInput') || {}).value");
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const ok = m && Number(m[1]) === 900 && Number(m[2]) === 2177 && input === '900';
+  return ok ? true : `进度文案 ${JSON.stringify(flat)}，输入框 ${JSON.stringify(input)}，当前词 ${shown}`;
+});
+
+/* 用户在侧栏填一个序号 → 就从那个词开始（1 起数，人话） */
+await check('起始词填序号：从这个词开始，侧栏标出起点', async () => {
+  await send('Page.navigate', { url: `${APP}__seed__` });
+  await sleep(700);
+  await evaluate(`
+    localStorage.setItem('wordplan.v1', JSON.stringify({
+      version: 1, deckId: 'week1', mode: 'typing', scope: 'all', order: 'book', limit: 20,
+      settings: { autoNext: false, autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9 },
+    }));
+    true;
+  `);
+  await send('Page.navigate', { url: `${APP}#practice` });
+  await sleep(1900);
+  const before = await evaluate("(document.getElementById('startInput') || {}).value");
+  if (before !== '') return `一开始应该是「从头」，输入框却是 ${JSON.stringify(before)}`;
+  const want = await evaluate(`
+    (async () => (await (await fetch('dict/week1.json', { cache: 'no-store' })).json()).words[11][0])()
+  `);
+  await evaluate(`
+    (() => {
+      const inp = document.getElementById('startInput');
+      inp.value = '12';
+      inp.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    })()
+  `);
+  await sleep(1400);
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const cursor = await evaluate("(JSON.parse(localStorage.getItem('wordplan.v1') || '{}').cursors || {}).week1");
+  const input = await evaluate("(document.getElementById('startInput') || {}).value");
+  const meta = await evaluate("(document.querySelector('.pmeta') || {}).textContent || ''");
+  const flat = meta.replace(/\s+/g, ' ').trim();
+  const ok = shown === want && Number(cursor) === 11 && input === '12' && /第\s*12\s*\//.test(flat);
+  return ok ? true : `想要「${want}」，实际显示「${shown}」，游标 ${cursor}，输入框 ${JSON.stringify(input)}，文案 ${JSON.stringify(flat)}`;
+});
+
+/* 记不住序号也没关系：直接填单词 */
+await check('起始词直接填单词也能跳过去', async () => {
+  const want = await evaluate(`
+    (async () => (await (await fetch('dict/week1.json', { cache: 'no-store' })).json()).words.findIndex((r) => r[0] === 'benefit'))()
+  `);
+  await evaluate(`
+    (() => {
+      const inp = document.getElementById('startInput');
+      inp.value = 'benefit';
+      inp.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    })()
+  `);
+  await sleep(1400);
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const cursor = await evaluate("(JSON.parse(localStorage.getItem('wordplan.v1') || '{}').cursors || {}).week1");
+  return shown === 'benefit' && Number(cursor) === Number(want)
+    ? true
+    : `显示「${shown}」，游标 ${cursor}（benefit 下标 ${want}）`;
+});
+
+/* 填了一个不存在的词 → 提示 + 输入框还原，不能把游标弄坏 */
+await check('起始词填了词库里没有的词，只提示不改起点', async () => {
+  const cursorBefore = await evaluate("(JSON.parse(localStorage.getItem('wordplan.v1') || '{}').cursors || {}).week1");
+  await evaluate(`
+    (() => {
+      const inp = document.getElementById('startInput');
+      inp.value = 'zzzznotaword';
+      inp.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    })()
+  `);
+  await sleep(1400);
+  const cursorAfter = await evaluate("(JSON.parse(localStorage.getItem('wordplan.v1') || '{}').cursors || {}).week1");
+  const input = await evaluate("(document.getElementById('startInput') || {}).value");
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const ok = Number(cursorAfter) === Number(cursorBefore) && shown === 'benefit' && input === String(Number(cursorBefore) + 1);
+  return ok ? true : `游标 ${cursorBefore} → ${cursorAfter}，输入框 ${JSON.stringify(input)}，显示 ${shown}`;
+});
+
+await check('点「从头」把起点清掉', async () => {
+  await evaluate("document.querySelector('[data-start=\"0\"]').click()");
+  await sleep(1400);
+  const cursor = await evaluate("(JSON.parse(localStorage.getItem('wordplan.v1') || '{}').cursors || {}).week1");
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const input = await evaluate("(document.getElementById('startInput') || {}).value");
+  const active = await evaluate("document.querySelector('[data-start=\"0\"]').classList.contains('active')");
+  return !cursor && shown === 'focus' && input === '' && active
+    ? true
+    : `游标 ${cursor}，显示「${shown}」，输入框 ${JSON.stringify(input)}，active=${active}`;
+});
+
+/* 展开词表点任意一行 → 从那一行开始背（比记序号直观） */
+await check('展开词表点一个单词，直接从它开始背', async () => {
+  await evaluate("document.querySelector('[data-toggle-deck=\"week1\"]').click()");
+  await sleep(1200);
+  const n = await evaluate("document.querySelectorAll('.deck-words .dw-item').length");
+  if (n !== 250) return `week1 展开后 ${n} 行，应该是 250`;
+  const row = await evaluate(`
+    (() => {
+      const el = document.querySelectorAll('.deck-words .dw-item')[6];
+      return JSON.stringify({ w: el.querySelector('.dw-w').textContent, no: el.querySelector('.dw-i').textContent });
+    })()
+  `);
+  const { w: want, no } = JSON.parse(row);
+  await evaluate("document.querySelectorAll('.deck-words .dw-item')[6].click()");
+  await sleep(1500);
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const cursor = await evaluate("(JSON.parse(localStorage.getItem('wordplan.v1') || '{}').cursors || {}).week1");
+  const badged = await evaluate("(() => { const el = document.querySelector('.deck-words .dw-item.start'); return el ? el.querySelector('.dw-w').textContent : null; })()");
+  const input = await evaluate("(document.getElementById('startInput') || {}).value");
+  const meta = await evaluate("(document.querySelector('.pmeta') || {}).textContent || ''");
+  const flat = meta.replace(/\s+/g, ' ').trim();
+  const ok = shown === want && Number(cursor) === 6 && badged === want && input === no
+    && new RegExp('第\\s*' + no + '\\s*/').test(flat);
+  return ok ? true : `列表第 ${no} 行是「${want}」，实际显示「${shown}」，游标 ${cursor}，徽标 ${badged}，输入框 ${JSON.stringify(input)}，文案 ${JSON.stringify(flat)}`;
+});
+
 await check('无 JS 报错', async () => {
   return problems.length === 0 ? true : problems.join(' | ');
 });

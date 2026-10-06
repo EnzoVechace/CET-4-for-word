@@ -190,6 +190,7 @@ function renderToday() {
 function renderSidebar() {
   const st = store.state;
   const totalWords = deckWords.get(st.deckId);
+  const startAt = startPosOf(st.deckId);
 
   sidebar.innerHTML = `
     <div class="side-block">
@@ -232,6 +233,18 @@ function renderSidebar() {
         <button class="chip ${Number(st.limit) > 0 ? '' : 'active'}" data-limit="0">不限</button>
       </div>
       <div class="side-hint">填个数，回车生效；留空就是整个词库一次背完</div>
+    </div>
+
+    <div class="side-block">
+      <div class="side-title">从第几个词开始</div>
+      <div class="limit-row">
+        <input class="limit-input" id="startInput" type="text" inputmode="text"
+               value="${startAt > 0 ? startAt : ''}"
+               placeholder="从头" aria-label="从第几个词开始，也可以直接填一个单词">
+        <span class="limit-unit">词</span>
+        <button class="chip ${startAt > 0 ? '' : 'active'}" data-start="0">从头</button>
+      </div>
+      <div class="side-hint">${startHint(startAt)}</div>
     </div>
 
     <div class="side-block">
@@ -284,12 +297,16 @@ function briefOf(w) {
 function deckWordsHTML(id) {
   const full = deckFull.get(id);
   if (!full) return '<div class="deck-words"><div class="dw-empty">正在载入…</div></div>';
+  const cursor = store.cursorOf(id); // 0 起：下一个要背的词的数组下标
   const rows = full.map((w, i) => {
     const cls = store.isMastered(w.w) ? ' mastered' : '';
-    return `<div class="dw-item${cls}">
+    const isStart = cursor > 0 && cursor === i;
+    return `<div class="dw-item${cls}${isStart ? ' start' : ''}" data-word-deck="${esc(id)}" data-word-i="${i + 1}"
+      role="button" tabindex="0" title="从「${esc(w.w)}」开始背">
       <span class="dw-i">${i + 1}</span>
       <span class="dw-w">${esc(w.w)}</span>
       <span class="dw-t" title="${esc(plainTrans(w.trans))}">${esc(briefOf(w))}</span>
+      ${isStart ? '<span class="dw-badge">起点</span>' : ''}
     </div>`;
   }).join('');
   return `<div class="deck-words">${rows || '<div class="dw-empty">这个词库是空的</div>'}</div>`;
@@ -299,6 +316,66 @@ function scopeCount(scope, words) {
   if (!words) return '';
   const n = store.filterWords(words, scope).length;
   return `<span class="n">${n}</span>`;
+}
+
+/** 起始词只在「按书序 + 顺背型范围」下生效，不生效时得说清楚为什么 */
+function startHint(startAt) {
+  const st = store.state;
+  if (st.order !== 'book') return '现在是「打乱」，要选「书序」起始词才生效';
+  if (!(st.scope === 'all' || st.scope === 'todo' || st.scope === 'unmastered')) {
+    return '「错词本 / 待复习」每次都要整批过一遍，起始词只在「全部 / 未学 / 未掌握」下生效';
+  }
+  if (startAt > 0) return `从这个词库的第 ${startAt} 个词开始；展开词表点任一单词也能直接跳过去`;
+  return '留空或点「从头」就是从第 1 个词开始；展开词表点任一单词也能直接跳过去';
+}
+
+/** 侧栏那一栏显示的是「第几个词」（1 起数，人话）；0 = 从头。
+
+   注意内部游标是 0 起的「下一个要背的词的数组下标」：settle() 里写的是 w.i + 1，
+   所以 cursor = N 时接下来要背的是下标 N、也就是第 N+1 个词。对外一律换算掉。 */
+function startPosOf(deckId) {
+  const c = store.cursorOf(deckId);
+  return c > 0 ? c + 1 : 0;
+}
+
+/** 把「从第几个词开始」落到这个词库的游标上，然后重开一轮 */
+function setStart(deckId, pos, { silent = false } = {}) {
+  const p = Math.max(0, Math.floor(Number(pos) || 0));
+  if (p > 1) {
+    store.setCursor(deckId, p - 1); // 1 起的第 p 个词 = 下标 p-1
+    store.markPickedStart();
+  } else {
+    store.clearCursor(deckId);
+  }
+  store.flush();
+  store.set('deckId', deckId);
+  renderSidebar();
+  gotoPractice();
+  if (!silent) toast(p > 1 ? `从第 ${p} 个词开始` : '从第 1 个词开始', 2200);
+}
+
+/**
+ * 输入框里可以填序号，也可以直接填单词（「我已经背到 apple 了」这种情况更顺手）。
+ * @returns {Promise<boolean>} 是否成功
+ */
+async function applyStartInput(raw) {
+  const deckId = store.state.deckId;
+  const s = String(raw || '').trim();
+  if (!s) { setStart(deckId, 0, { silent: true }); return true; }
+  if (/^\d+$/.test(s)) { setStart(deckId, Number(s)); return true; }
+
+  const needle = s.toLowerCase();
+  let deck;
+  try {
+    deck = await loadDeck(deckId);
+  } catch (err) {
+    toast(`词库载入失败：${err.message}`, 3000);
+    return false;
+  }
+  const idx = deck.words.findIndex((w) => w.alts.includes(needle) || String(w.w).toLowerCase() === needle);
+  if (idx < 0) { toast(`这个词库里没有「${s}」`, 3000); return false; }
+  setStart(deckId, idx + 1);
+  return true;
 }
 
 function bindSidebar() {
@@ -378,6 +455,45 @@ function bindSidebar() {
     limitInput.addEventListener('blur', applyLimit);
     limitInput.addEventListener('change', applyLimit);
   }
+
+  // 从第几个词开始：填序号或直接填单词，回车 / 离开输入框即生效
+  sidebar.querySelectorAll('[data-start]').forEach((b) =>
+    b.addEventListener('click', () => setStart(store.state.deckId, Number(b.dataset.start), { silent: true })));
+
+  const startInput = sidebar.querySelector('#startInput');
+  if (startInput) {
+    // 刚渲染出来时的值。用户没改动它就不重新提交：
+    // 否则 blur 里无脑重渲染，会把还按着的按钮换掉；而元素被换掉又会再触发一次 blur，
+    // 两次提交互相打架（点「从头」清掉的起点会被上一次的值写回去）。
+    const rendered = String(startInput.value || '');
+    const applyStart = async () => {
+      if (!startInput.isConnected) return; // DOM 已经被换掉，这次 blur 是被动失去焦点
+      const raw = String(startInput.value || '').trim();
+      if (raw === rendered) return;
+      const ok = await applyStartInput(raw);
+      // 失败（比如词库里没这个词）就把输入框还原成当前真实的起点
+      if (!ok && startInput.isConnected) {
+        const at = startPosOf(store.state.deckId);
+        startInput.value = at > 0 ? String(at) : '';
+        startInput.focus();
+      }
+    };
+    startInput.addEventListener('keydown', (e) => {
+      e.stopPropagation();
+      if (e.key === 'Enter') { e.preventDefault(); startInput.blur(); }
+    });
+    startInput.addEventListener('blur', applyStart);
+    startInput.addEventListener('change', applyStart);
+  }
+
+  // 展开的词表里点任意一个单词 → 直接从它开始背
+  sidebar.querySelectorAll('.dw-item[data-word-i]').forEach((el) => {
+    const fire = () => setStart(el.dataset.wordDeck, Number(el.dataset.wordI));
+    el.addEventListener('click', fire);
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fire(); }
+    });
+  });
 }
 
 function gotoPractice() {

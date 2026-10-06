@@ -355,6 +355,12 @@ export function clearCursor(deckId) {
   save();
 }
 
+/* 「从第几个词开始」是用户自己挑的，还是自动接着上次的？
+   两者落盘的东西一样（就是 cursor），但挂载时那句提示得说对，所以单独记一个不落盘的标记。 */
+let pickedStart = false;
+export function markPickedStart() { pickedStart = true; }
+export function consumePickedStart() { const v = pickedStart; pickedStart = false; return v; }
+
 export function filterWords(words, scope, now = Date.now()) {
   switch (scope) {
     case 'todo': return words.filter((w) => isFresh(w));
