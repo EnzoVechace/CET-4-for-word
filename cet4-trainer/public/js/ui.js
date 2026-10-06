@@ -33,6 +33,75 @@ export function countSenses(line) {
   return body.split(/[；;。]/).filter((x) => x.trim()).length;
 }
 
+/** 精简释义的默认上限：每个词性最多留几个义项、整行最多多少字 */
+export const SENSE_CAP = 3;
+export const LINE_CAP = 46;
+
+/**
+ * 精简一个词性行：**词性标记一定保留**，只把这一行末尾的义项剪掉一部分。
+ *
+ * 词书释义经常一个词性甩出十几个义项（stock 的 n. 有 26 条、223 字），
+ * 一屏全被占满。这里按「义项」为单位从后往前剪，不会把 mid-word 截断；
+ * 只有第一个义项本身就超长时，才退到逗号/顿号处切一刀。
+ *
+ * @param {string} line       形如 `n. 计划，方案；节目`
+ * @param {number} maxSenses  每个词性最多留几个义项
+ * @param {number} maxChars   整行最多多少字
+ * @param {number} atLeast    前几个义项无论如何都要留（高频义项可能排在后面）
+ */
+export function trimLine(line, maxSenses = SENSE_CAP, maxChars = LINE_CAP, atLeast = 0) {
+  const text = String(line == null ? '' : line);
+  const m = POS_RE.exec(text);
+  const prefix = m ? m[0] : '';           // 含词性后面那个空格，照原样还回去
+  const body = (m ? text.slice(m[0].length) : text).trim();
+  const parts = body.split(/[；;]/).map((x) => x.trim()).filter(Boolean);
+  if (!parts.length) return text;
+  // 本来就短，一个字都别动
+  if (parts.length <= 1 && body.length <= maxChars) return text;
+
+  const kept = [];
+  let len = 0;
+  let cut = false;
+  for (const s of parts) {
+    if (kept.length >= maxSenses) { cut = true; break; }
+    if (kept.length >= atLeast && kept.length && len + 1 + s.length > maxChars) { cut = true; break; }
+    kept.push(s);
+    len += (kept.length > 1 ? 1 : 0) + s.length;
+  }
+  // 头一个义项自己就超长 → 退到最近的逗号/顿号处切
+  if (kept[0].length > maxChars) {
+    const head = kept[0].slice(0, maxChars);
+    const at = Math.max(head.lastIndexOf('，'), head.lastIndexOf('、'), head.lastIndexOf(','));
+    kept[0] = at > maxChars * 0.5 ? head.slice(0, at) : head;
+    cut = true;
+  }
+  return prefix + kept.join('；') + (cut ? '…' : '');
+}
+
+/** 整段释义按行精简 */
+export function trimLines(trans, maxSenses = SENSE_CAP, maxChars = LINE_CAP) {
+  if (!Array.isArray(trans)) return [];
+  return trans.map((line) => trimLine(line, maxSenses, maxChars));
+}
+
+/** 取一个词条的简短释义（选项提示、悬停 title 用）：每个词性留 1 条义项，整串再限个字 */
+export function shortMeaning(trans, maxSenses = 1, maxChars = 22) {
+  const parts = trimLines(trans, maxSenses, maxChars)
+    .map((line) => line.replace(POS_RE, '').replace(/…$/, ''))
+    .filter(Boolean);
+  // 一行不超，几行加起来还是会超，所以再按总字数收一次
+  let out = '';
+  for (const p of parts) {
+    if (!out) { out = p; continue; }
+    if (out.length + 1 + p.length > maxChars) break;
+    out += '；' + p;
+  }
+  if (out.length <= maxChars) return out;
+  const head = out.slice(0, maxChars);
+  const at = Math.max(head.lastIndexOf('；'), head.lastIndexOf('，'), head.lastIndexOf('、'), head.lastIndexOf(','));
+  return (at > maxChars * 0.5 ? head.slice(0, at) : head) + '…';
+}
+
 /**
  * 释义条目 → HTML（词性斜体高亮）。
  *
@@ -42,12 +111,19 @@ export function countSenses(line) {
  * 基础词汇附录没有这个数据，所以传空数组就不标。
  *
  * @param {string[]} trans   释义行
- * @param {boolean} trim     每个词性只留前两条
+ * @param {boolean} trim     精简释义：每个词性剪掉末尾多出来的义项（词性保留）
  * @param {[number,number][]} hf 要标高频的义项位置
  */
 export function meaningHTML(trans, trim = false, hf = null) {
   const marks = Array.isArray(hf) ? hf : [];
-  const list = trim ? trans.slice(0, 2) : trans;
+  // 精简时不能把「高频义项」剪掉——按 Collins 语料库排出来的高频义项常常不是第一条
+  const list = trim
+    ? trans.map((line, lineIdx) => {
+        const want = marks.filter((x) => x[0] === lineIdx).map((x) => x[1]);
+        const atLeast = want.length ? Math.max.apply(null, want) + 1 : 0;
+        return trimLine(line, Math.max(SENSE_CAP, atLeast), LINE_CAP, atLeast);
+      })
+    : trans;
   return list
     .map((line, lineIdx) => {
       const m = POS_RE.exec(line);
@@ -72,7 +148,7 @@ export function meaningHTML(trans, trim = false, hf = null) {
 }
 
 export function plainTrans(trans, trim = false) {
-  const list = trim ? trans.slice(0, 2) : trans;
+  const list = trim ? trimLines(trans) : trans;
   return list.join('；');
 }
 

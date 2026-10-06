@@ -3,7 +3,7 @@
 import * as store from './store.js';
 import { loadDeck } from './dict.js';
 import { speak, speakWordAndMeaning, stopSpeaking, speechSupported, speechHint } from './speech.js';
-import { esc, meaningHTML, spokenMeaning, fmtTime, toast } from './ui.js';
+import { esc, meaningHTML, shortMeaning, spokenMeaning, fmtTime, toast } from './ui.js';
 
 export const MODES = [
   { id: 'typing', name: '跟打', desc: '卡片上显示单词，照着敲一遍' },
@@ -160,8 +160,11 @@ export async function mount(stage) {
   if (session.resumedFrom > 0) {
     toast(`接着上次：从第 ${session.resumedFrom + 1} 个词继续（按「上一词」能往回看）`, 2800);
   }
-  // 进入第一个词时也读一遍（听音模式只读单词，释义作答后才给）
-  if (S().autoSpeak) setTimeout(() => speakCurrent(session.mode !== 'listening'), 200);
+  // 只有听音模式在进词时自动出声——那个模式的「题目」就是声音。
+  // 跟打/默写/选择一律等作答之后再读，免得刚翻到下一词就把答案念出来。
+  if (S().autoSpeak && session.mode === 'listening') {
+    setTimeout(() => speakCurrent(false), 200);
+  }
 }
 
 /* ------------------------------------------------------------------ 会话构建 */
@@ -195,6 +198,8 @@ function buildSession(deck) {
     deckId: deck.id,
     deckName: deck.name,
     deckTotal: deck.words.length,
+    // 选择模式作答后要给「其它选项」标释义，得能按单词反查词条
+    wordMap: new Map(deck.words.map((x) => [String(x.w), x])),
     resumedFrom: resume,
     mode: store.state.mode,
     scope: store.state.scope,
@@ -270,7 +275,7 @@ function paint() {
         </div>
         ${hideMeaning
           ? '<div class="meaning" style="color:var(--text-faint);font-size:17px">🔊 听发音，写出这个单词（空格重听）</div>'
-          : `<div class="meaning">${meaningHTML(w.trans, S().trimTrans, S().hfMark !== false ? w.hf : [])}</div>`}
+          : `<div class="meaning">${meaningHTML(w.trans, S().shortTrans !== false, S().hfMark !== false ? w.hf : [])}</div>`}
         ${hideMeaning ? '' : `<div class="phon">${w.us ? `<span class="us" data-accent="us" role="button" tabindex="0" title="点一下听美音">美 /${esc(w.us)}/</span>` : ''}${w.uk ? `<span class="uk" data-accent="uk" role="button" tabindex="0" title="点一下听英音">英 /${esc(w.uk)}/</span>` : ''}</div>`}
         ${s.mode === 'choice'
           ? choicesHTML()
@@ -305,14 +310,21 @@ function choicesHTML() {
   const w = cur();
   if (!w) return '';
   if (!s.choices) s.choices = makeChoices(w);
-  return `<div class="choices">${s.choices
+  const done = s.state === 'done';
+  return `<div class="choices${done ? ' revealed' : ''}">${s.choices
     .map((c, i) => {
       let cls = 'choice';
-      if (s.state === 'done') {
+      if (done) {
         if (c === w.w) cls += ' correct';
         else if (i === s.chosen) cls += ' wrong';
       }
-      return `<button class="${cls}" data-choice="${i}"><span class="key">${i + 1}</span>${esc(c)}</button>`;
+      // 作答后把**其它选项**的释义也列出来（每个词性只留一两条），
+      // 这样选错的时候顺带把同组近义词都认一遍
+      const rec = s.wordMap ? s.wordMap.get(String(c)) : null;
+      const hint = done && c !== w.w && rec
+        ? `<span class="choice-hint">${esc(shortMeaning(rec.trans, 2, 26))}</span>`
+        : '';
+      return `<button class="${cls}" data-choice="${i}"><span class="key">${i + 1}</span><span class="choice-w">${esc(c)}</span>${hint}</button>`;
     })
     .join('')}</div>`;
 }
@@ -701,7 +713,8 @@ function goTo(i) {
   s.hadErr = false;
   paint();
   paintMeta();
-  if (S().autoSpeak) speakCurrent(s.mode !== 'listening');
+  // 翻到新词时**不**自动发音（作答后才读）；听音模式例外，声音就是它的题目
+  if (S().autoSpeak && s.mode === 'listening') speakCurrent(false);
 }
 
 function next() {

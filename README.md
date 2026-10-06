@@ -96,10 +96,17 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 
 | 用法 | Release 里的文件名 | 说明 |
 |---|---|---|
-| Windows | `WordPlan-1.2-win64.exe` | 19.8 MB，**自带 7400 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
-| Android | `WordPlan-1.2-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`） |
-| 网页版 | `WordPlan-1.2-web.html` | 748 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
-| 说明 | `WordPlan-1.2-readme-zh.txt` | 上面几个的简版说明 |
+| Windows | `WordPlan-1.3-win64.exe` | 19.8 MB，**自带 7394 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
+| Android | `WordPlan-1.3-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`），进度双保险写入系统存储 |
+| 网页版 | `WordPlan-1.3-web.html` | 754 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
+| 说明 | `WordPlan-1.3-readme-zh.txt` | 上面几个的简版说明 |
+
+**1.3 这一版改了什么**
+
+- 安卓进度不再丢：除了网页存储，整份进度再往安卓系统里存一份，系统回收后台进程把网页存储清掉时下次打开会从系统那份恢复（已在模拟器上验证「清空网页存储后仍能恢复」）。
+- 不再「翻到下一页就念」：自动朗读只在「听音」模式进词时出声，跟打 / 默写 / 选择都是提交答案后才念，免得被剧透。
+- 选择题提交后会标出其它选项的简短释义。
+- 释义自动精简：每个词性最多留 3 条义项、整行不超过 46 字，词性本身和高频义项一定保留；可在「设置 → 练习 → 精简释义」关掉。
 
 > Release 附件名只能是 ASCII —— GitHub 会把非 ASCII 字符直接从文件名里删掉
 > （`词计划.exe` 会变成 `default.exe`），所以上传用的是英文名。中文说明写在
@@ -145,8 +152,8 @@ node tools/android_sdk.mjs         # 需要时：下载 Android SDK 命令行工
 node tools/build_dict.mjs          # 从 cet4-sparke/output 编译词库
 node tools/make_single.mjs         # → dist/词计划.html
 node tools/build_win.mjs           # → dist/词计划.exe
-node tools/build_apk.mjs           # → dist/词计划_1.2.apk
-node tools/e2e.mjs                 # 桌面端 41 项断言（CDP 驱动无头 Edge）
+node tools/build_apk.mjs           # → dist/词计划_1.3.apk
+node tools/e2e.mjs                 # 桌面端 46 项断言（CDP 驱动无头 Edge）
 node tools/e2e_mobile.mjs          # 触摸端 15 项断言
 ```
 
@@ -157,14 +164,14 @@ node tools/e2e_mobile.mjs          # 触摸端 15 项断言
 三端成品不进 git（`dist/` 已被 `.gitignore` 忽略），改挂到 Releases：
 
 ```bash
-git tag -a v1.2 -m "词计划 1.2" && git push origin v1.2
+git tag -a v1.3 -m "词计划 1.3" && git push origin v1.3
 
 cd cet4-trainer
 $env:GH_TOKEN = "ghp_xxx"      # https://github.com/settings/tokens，勾 repo
-node tools/release.mjs v1.2    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
+node tools/release.mjs v1.3    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
 
 # 只传其中几个
-$env:ASSETS = "WordPlan-1.2-win64.exe,WordPlan-1.2-readme-zh.txt"
+$env:ASSETS = "WordPlan-1.3-win64.exe,WordPlan-1.3-readme-zh.txt"
 # 清掉改名/换版本后残留的旧 asset
 $env:PRUNE = "1"
 ```

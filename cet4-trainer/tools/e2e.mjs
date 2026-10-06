@@ -297,48 +297,56 @@ await check('卡片上有「上一词 / 下一词」按钮', async () => {
   return ok ? true : JSON.stringify(labels);
 });
 
-await check('点「下一词」进入 benefit 并朗读「单词 + 释义」', async () => {
+await check('切到下一词进入 benefit，并且不会自动朗读', async () => {
   if (!(await evaluate('window.__audioSpy()'))) return '无法拦截 Audio';
   await evaluate('window.__speechSpy()');
   await evaluate("document.querySelector('[data-act=\"next\"]').click()");
   await sleep(600);
   const w = await evaluate('window.__word()');
   if (w !== 'benefit') return `实际词 = ${w}`;
-  // 英文单词：优先播打包音频
+  // 「只保留提交答案后发音」：翻词不该出声（听音模式除外，这条是跟打模式）
   const srcs = await evaluate('window.__audioSrcs()');
-  const audioOk = srcs.some((s) => /benefit/i.test(s));
-  if (!audioOk && !srcs.length) {
-    // 没打包音频时退回 Web Speech，这条也要成立
-    const spoken = await evaluate('window.__spoken');
-    if (!/^benefit$/i.test((spoken[0] || {}).text || '')) return `既没播音频也没朗读：${JSON.stringify(spoken)}`;
-    return true;
-  }
-  if (!audioOk) return `播的不是 benefit：${JSON.stringify(srcs)}`;
-  // 中文释义：等英文音频 ended 之后落到 Web Speech
+  if (srcs.length) return `翻词时不该自动播音频：${JSON.stringify(srcs)}`;
   const spoken = await evaluate('window.__spoken');
-  if (!Array.isArray(spoken) || !spoken.length) return `释义没有接着朗读：${JSON.stringify(spoken)}`;
-  if (!/[\u4e00-\u9fa5]/.test(spoken[0].text)) return `释义里没有中文：${JSON.stringify(spoken[0])}`;
+  if (spoken.length) return `翻词时不该自动朗读：${JSON.stringify(spoken)}`;
   return true;
 });
 
-await check('点「上一词」回到 career 并掐掉旧朗读', async () => {
+await check('提交答案后才朗读「单词 + 释义」', async () => {
+  await evaluate('window.__audioSpy()'); // 清空记录
+  await evaluate('window.__speechSpy()');
+  await evaluate("window.__press(['b','e','n','e','f','i','t','Enter'])");
+  await sleep(700);
+  const srcs = await evaluate('window.__audioSrcs()');
+  const audioOk = srcs.some((s) => /benefit/i.test(s));
+  if (audioOk) {
+    // 中文释义：等英文音频 ended 之后落到 Web Speech
+    const spoken = await evaluate('window.__spoken');
+    if (!Array.isArray(spoken) || !spoken.length) return `释义没有接着朗读：${JSON.stringify(spoken)}`;
+    if (!/[\u4e00-\u9fa5]/.test(spoken[0].text)) return `释义里没有中文：${JSON.stringify(spoken[0])}`;
+    return true;
+  }
+  if (srcs.length) return `播的不是 benefit：${JSON.stringify(srcs)}`;
+  // 没打包音频时退回 Web Speech，这条也要成立
+  const spoken = await evaluate('window.__spoken');
+  if (!/^benefit$/i.test((spoken[0] || {}).text || '')) return `既没播音频也没朗读：${JSON.stringify(spoken)}`;
+  return true;
+});
+
+await check('点「上一词」回到 career 并掐掉正在读的释义', async () => {
   await evaluate('window.__audioSpy()'); // 清空记录
   await evaluate('window.__speechSpy()');
   await evaluate("document.querySelector('[data-act=\"prev\"]').click()");
   await sleep(400);
   const w = await evaluate('window.__word()');
   if (w !== 'career') return `实际词 = ${w}`;
-  const srcs = await evaluate('window.__audioSrcs()');
   const cancels = await evaluate('window.__cancels');
-  if (srcs.length) {
-    if (!/career/i.test(srcs[0])) return `没有重播 career 的音频：${JSON.stringify(srcs)}`;
-    const stopped = await evaluate('window.__audioStopped()');
-    if (cancels < 1 && stopped < 1) return '回上一词时既没 cancel 也没停掉旧音频';
-    return true;
-  }
+  const stopped = await evaluate('window.__audioStopped()');
+  if (cancels < 1 && stopped < 1) return '回上一词时既没 cancel 也没停掉旧音频';
+  const srcs = await evaluate('window.__audioSrcs()');
+  if (srcs.some((s) => /career/i.test(s))) return `翻词时不该自动播音频：${JSON.stringify(srcs)}`;
   const spoken = await evaluate('window.__spoken');
-  if (!/^career$/i.test((spoken[0] || {}).text || '')) return `没有重读 career：${JSON.stringify(spoken)}`;
-  if (cancels < 1) return '回上一词时没有掐掉正在读的音频';
+  if (spoken.length) return `翻词时不该自动朗读：${JSON.stringify(spoken)}`;
   return true;
 });
 
@@ -386,6 +394,62 @@ await check('按 1 键可以作答', async () => {
   await sleep(150);
   const done = await evaluate("document.querySelector('.feedback').className.includes('ok') || document.querySelector('.feedback').className.includes('bad')");
   return done === true ? true : '未结算';
+});
+
+await check('选择模式作答后，其它选项会显示简短释义', async () => {
+  const hints = await evaluate(
+    "[...document.querySelectorAll('.choices .choice-hint')].map((e) => e.textContent.trim())"
+  );
+  if (!hints.length) return '作答后其它选项没有标释义';
+  const onCorrect = await evaluate("document.querySelectorAll('.choices .choice.correct .choice-hint').length");
+  if (onCorrect) return '正确项不该再标释义';
+  if (hints.some((h) => !h)) return `有空的释义：${JSON.stringify(hints)}`;
+  if (hints.some((h) => h.length > 30)) return `释义太长：${JSON.stringify(hints)}`;
+  const hasCn = hints.every((h) => /[\u4e00-\u9fa5]/.test(h));
+  return hasCn ? true : `释义里没有中文：${JSON.stringify(hints)}`;
+});
+
+await check('释义精简：词性留着，只把词性末尾多出来的义项剪掉', async () => {
+  // 直接问模块：一个超长词性行经过精简后应当变短、以 … 收尾，且词性前缀原样保留
+  const r = await evaluate(`(async () => {
+    const { trimLines, SENSE_CAP, LINE_CAP } = await import('./js/ui.js');
+    const src = 'n. 股票；股份；存货；储备；家畜；股本；原料';
+    const out = trimLines([src])[0];
+    return { src, out, SENSE_CAP, LINE_CAP };
+  })()`);
+  if (!r.out.startsWith('n. ')) return `词性丢了：${r.out}`;
+  if (r.out.length >= r.src.length) return `没有变短：${r.out}`;
+  if (!r.out.endsWith('…')) return `没有省略号：${r.out}`;
+  const senses = r.out.replace(/^n\.\s*/, '').replace(/…$/, '').split('；').length;
+  if (senses > r.SENSE_CAP) return `留了 ${senses} 条义项，超过上限 ${r.SENSE_CAP}`;
+  return true;
+});
+
+await check('精简不会剪掉高频义项（它常常不是第一条）', async () => {
+  const html = await evaluate(`(async () => {
+    const { meaningHTML } = await import('./js/ui.js');
+    const trans = ['n. 一；二；三；四；五'];
+    return meaningHTML(trans, true, [[0, 4]]);
+  })()`);
+  if (!/class="hf"/.test(html)) return `高频义项被剪掉了：${html}`;
+  if (!/class="hf">五</.test(html)) return `标错的义项：${html}`;
+  return true;
+});
+
+await check('释义精简可以关掉：关掉后义项一条不少，词性照旧斜体', async () => {
+  const r = await evaluate(`(async () => {
+    const { meaningHTML } = await import('./js/ui.js');
+    const trans = ['n. 股票；股份；存货；储备；家畜；股本；原料'];
+    const on = meaningHTML(trans, true);
+    const off = meaningHTML(trans, false);
+    return { on, off };
+  })()`);
+  const strip = (h) => h.replace(/<[^>]+>/g, '');
+  const senses = (h) => strip(h).replace(/^n\.\s*/, '').replace(/…$/, '').split('；').length;
+  if (senses(r.off) !== 7) return `关掉后义项变少了：${strip(r.off)}`;
+  if (senses(r.on) >= 7) return `打开精简后没有剪掉义项：${strip(r.on)}`;
+  if (!/class="pos"/.test(r.on) || !/class="pos"/.test(r.off)) return '词性没有单独成元素';
+  return true;
 });
 
 await check('统计页可渲染', async () => {

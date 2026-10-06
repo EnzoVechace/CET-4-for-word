@@ -82,6 +82,8 @@ public class MainActivity extends Activity {
         web.addJavascriptInterface(tts, "AndroidTTS");
         systemBridge = new SystemBridge(this);
         web.addJavascriptInterface(systemBridge, "AndroidSystem");
+        // 进度的原生兜底存储：网页端两边都写，取新一点的那份（见 store.js）
+        web.addJavascriptInterface(new StoreBridge(this), "AndroidStore");
         // 允许用 adb + chrome://inspect 连进来调试（本地应用，方便自己排错）
         WebView.setWebContentsDebuggingEnabled(true);
 

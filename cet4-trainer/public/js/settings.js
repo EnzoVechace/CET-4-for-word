@@ -121,9 +121,9 @@ function render() {
           </div>
         </div>
         <div class="field">
-          <div class="label">简明释义<small>每个词性只保留前两条义项，卡片更清爽</small></div>
+          <div class="label">精简释义<small>词性照留，只把每个词性末尾多出来的义项剪掉几个</small></div>
           <div class="control">
-            <label class="switch"><input type="checkbox" ${s.trimTrans ? 'checked' : ''} data-toggle="trimTrans" /><span class="slider"></span></label>
+            <label class="switch"><input type="checkbox" ${s.shortTrans !== false ? 'checked' : ''} data-toggle="shortTrans" /><span class="slider"></span></label>
           </div>
         </div>
       </div>

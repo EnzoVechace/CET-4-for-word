@@ -422,6 +422,13 @@ button { font: inherit; color: inherit; cursor: pointer; border: none; backgroun
 .choice .key { font-family: var(--mono); font-size: 11px; color: var(--text-faint); margin-right: 9px; }
 .choice.correct { border-color: var(--success); background: var(--success-soft); color: var(--success); font-weight: 600; }
 .choice.wrong { border-color: var(--danger); background: var(--danger-soft); color: var(--danger); }
+/* 作答后：其它选项下面挂一条短释义（颜色跟着自己的对错走，别被 correct/wrong 染成一片红绿） */
+.choice .choice-hint {
+  display: block; margin: 5px 0 0 22px;
+  font-size: 12px; line-height: 1.5; font-weight: 400;
+  color: var(--text-faint);
+}
+.choice.correct .choice-hint, .choice.wrong .choice-hint { color: inherit; opacity: 0.82; }
 
 .card-actions { display: flex; align-items: center; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
 

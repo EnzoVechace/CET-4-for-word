@@ -36,7 +36,7 @@ const DEFAULTS = {
     speakMeaning: 'brief',   // off | brief | full —— 朗读单词之后要不要连释义一起读
     autoNext: true,
     showKeyboard: true,
-    trimTrans: false,
+    shortTrans: true,        // 精简释义：每个词性剪掉末尾多出来的义项（词性保留）
     hfMark: true,            // 给高频释义划虚线（像书上那样）
   },
   progress: {},
@@ -57,14 +57,44 @@ function merge(base, patch) {
   return out;
 }
 
-function load() {
+/* ------------------------------------------------------- 原生兜底存储（安卓）
+ * 网页这边靠 localStorage，但它是 Chromium 的 LevelDB，什么时候落盘由浏览器
+ * 自己决定。安卓在后台把进程收掉（清后台、内存紧张）时不一定来得及刷盘，
+ * 用户就会遇到「背了半天又回到第一个词」。
+ *
+ * 安卓壳因此额外注入一个写 SharedPreferences 的桥（window.AndroidStore），
+ * 这里两边都写、启动时取「新一点」的那份。桥不在（网页 / Windows 壳）就
+ * 完全不影响，一切照旧走 localStorage。
+ * -------------------------------------------------------------------------- */
+const NATIVE = (typeof window !== 'undefined' && window.AndroidStore) || null;
+
+function nativeLoad() {
+  if (!NATIVE) return null;
+  try {
+    const raw = NATIVE.load();
+    return raw && raw.length > 2 ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+function nativeSave(text) {
+  if (!NATIVE) return;
+  try { NATIVE.save(text); } catch { /* 忽略 */ }
+}
+
+function readLocal() {
   try {
     const raw = localStorage.getItem(KEY);
-    if (!raw) return JSON.parse(JSON.stringify(DEFAULTS));
-    return merge(DEFAULTS, JSON.parse(raw));
-  } catch {
-    return JSON.parse(JSON.stringify(DEFAULTS));
-  }
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+function load() {
+  const local = readLocal();
+  const native = nativeLoad();
+  // 两边都有就比 savedAt（每次落盘都写一遍），取新的那份
+  let pick = local;
+  if (native && (!local || (native.savedAt || 0) > (local.savedAt || 0))) pick = native;
+  return merge(DEFAULTS, pick || {});
 }
 
 export const state = load();
@@ -83,16 +113,22 @@ export function notify() {
   }
 }
 
+/** 真正落盘：localStorage 与原生存储各写一份 */
+function write() {
+  state.savedAt = Date.now();
+  const text = JSON.stringify(state);
+  try { localStorage.setItem(KEY, text); } catch { /* 隐私模式 */ }
+  nativeSave(text);
+}
+
 export function save() {
   clearTimeout(timer);
-  timer = setTimeout(() => {
-    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* 隐私模式 */ }
-  }, 200);
+  timer = setTimeout(write, 200);
 }
 
 export function flush() {
   clearTimeout(timer);
-  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* ignore */ }
+  write();
 }
 
 /* ---------------------------------------------------------------- progress */
