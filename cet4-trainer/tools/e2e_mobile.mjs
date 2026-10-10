@@ -213,6 +213,36 @@ await check('侧栏提示语也换成了触摸版', async () =>
 await check('隐形输入框没有把页面撑出横向滚动条', async () =>
   (await evaluate(`document.documentElement.scrollWidth <= window.innerWidth + 1`)) === true);
 
+await check('触摸版卡片上的 ☆ 够大好点，也没被挤出卡片头', async () => {
+  const r = await evaluate(`(() => {
+    const b = document.querySelector('[data-act="star"]');
+    if (!b) return null;
+    const r = b.getBoundingClientRect();
+    const head = b.closest('.card-head').getBoundingClientRect();
+    return { w: Math.round(r.width), h: Math.round(r.height), right: Math.round(r.right), headRight: Math.round(head.right) };
+  })()`);
+  if (!r) throw new Error('卡片上没有收藏按钮');
+  if (r.h < 28 || r.w < 28) throw new Error(`只有 ${r.w}×${r.h}px，手指点不准`);
+  if (r.right > r.headRight + 1) throw new Error(`右边缘 ${r.right} 超出卡片头 ${r.headRight}`);
+  return true;
+});
+
+await check('触摸版点 ☆ 能收藏，再点一次能取消', async () => {
+  const word = await evaluate(`[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')`);
+  await evaluate(`document.querySelector('[data-act="star"]').click(); true`);
+  await sleep(700);
+  const on = await evaluate(`document.querySelector('[data-act="star"]').classList.contains('on')`);
+  const glyph = await evaluate(`document.querySelector('[data-act="star"]').textContent`);
+  const saved = await evaluate(`Object.keys((JSON.parse(localStorage.getItem('wordplan.v1') || '{}').starred) || {})`);
+  if (!on || glyph !== '★' || !saved.includes(word)) throw new Error(`点完 on=${on} 星=${glyph} 已存=${JSON.stringify(saved)}（词「${word}」）`);
+  await evaluate(`document.querySelector('[data-act="star"]').click(); true`);
+  await sleep(700);
+  const off = await evaluate(`document.querySelector('[data-act="star"]').classList.contains('on')`);
+  const after = await evaluate(`Object.keys((JSON.parse(localStorage.getItem('wordplan.v1') || '{}').starred) || {})`);
+  if (off || after.includes(word)) throw new Error(`取消后 on=${off} 已存=${JSON.stringify(after)}`);
+  return true;
+});
+
 await check('无 JS 报错', async () => {
   if (problems.length) throw new Error(problems.slice(0, 3).join(' | '));
   return true;

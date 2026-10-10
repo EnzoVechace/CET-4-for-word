@@ -301,12 +301,14 @@ function deckWordsHTML(id) {
   const rows = full.map((w, i) => {
     const cls = store.isMastered(w.w) ? ' mastered' : '';
     const isStart = cursor > 0 && cursor === i;
-    return `<div class="dw-item${cls}${isStart ? ' start' : ''}" data-word-deck="${esc(id)}" data-word-i="${i + 1}"
+    const star = store.isStarred(w.w);
+    return `<div class="dw-item${cls}${isStart ? ' start' : ''}${star ? ' starred' : ''}" data-word-deck="${esc(id)}" data-word-i="${i + 1}"
       role="button" tabindex="0" title="从「${esc(w.w)}」开始背">
       <span class="dw-i">${i + 1}</span>
       <span class="dw-w">${esc(w.w)}</span>
       <span class="dw-t" title="${esc(plainTrans(w.trans))}">${esc(briefOf(w))}</span>
       ${isStart ? '<span class="dw-badge">起点</span>' : ''}
+      ${star ? '<span class="dw-star" title="已收藏">★</span>' : ''}
     </div>`;
   }).join('');
   return `<div class="deck-words">${rows || '<div class="dw-empty">这个词库是空的</div>'}</div>`;
@@ -323,7 +325,7 @@ function startHint(startAt) {
   const st = store.state;
   if (st.order !== 'book') return '现在是「打乱」，要选「书序」起始词才生效';
   if (!(st.scope === 'all' || st.scope === 'todo' || st.scope === 'unmastered')) {
-    return '「错词本 / 待复习」每次都要整批过一遍，起始词只在「全部 / 未学 / 未掌握」下生效';
+    return '「错词本 / 待复习 / 收藏」每次都要整批过一遍，起始词只在「全部 / 未学 / 未掌握」下生效';
   }
   if (startAt > 0) return `从这个词库的第 ${startAt} 个词开始；展开词表点任一单词也能直接跳过去`;
   return '留空或点「从头」就是从第 1 个词开始；展开词表点任一单词也能直接跳过去';

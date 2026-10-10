@@ -156,6 +156,11 @@ button { font: inherit; color: inherit; cursor: pointer; border: none; backgroun
 .icon-btn:hover { background: var(--surface-3); color: var(--text); }
 .icon-btn:active { transform: scale(0.94); }
 
+/* 收藏那颗星：没收的时候是灰的空星，收了变实心 + 主题色 */
+.star-btn { font-size: 17px; }
+.star-btn.on { color: var(--accent); }
+.star-btn.on:hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+
 /* 移动端抽屉开关：默认隐藏，≤860px 时由媒体查询打开。
    必须写在 .icon-btn 之后 —— 同优先级时后者生效 */
 .topbar .menu-btn { display: none; font-size: 17px; line-height: 1; }
@@ -237,6 +242,9 @@ button { font: inherit; color: inherit; cursor: pointer; border: none; backgroun
 .dw-item.start .dw-i, .dw-item.start .dw-w { color: var(--accent); font-weight: 600; }
 .dw-badge { flex: none; align-self: center; padding: 1px 6px; border-radius: 99px; font-size: 10px; line-height: 1.5;
   color: var(--accent); background: var(--surface); border: 1px solid var(--accent-line); }
+/* 收藏过的词在词表里挂一颗小星星，方便一眼扫出自己挑过哪些 */
+.dw-star { flex: none; align-self: center; font-size: 11px; line-height: 1; color: var(--accent); opacity: 0.9; }
+.dw-item.starred .dw-w { color: var(--accent); }
 
 .chip-list { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 2px; }
 

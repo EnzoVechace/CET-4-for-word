@@ -2,7 +2,7 @@
 
 import * as store from './store.js';
 import { loadIndex, loadDeck } from './dict.js';
-import { esc, fmtMinutes } from './ui.js';
+import { esc, fmtMinutes, plainTrans, confirmDialog, toast } from './ui.js';
 
 let stageEl = null;
 
@@ -46,6 +46,7 @@ export async function mount(stage) {
   ];
 
   const wrongs = store.topWrongWords(40);
+  const starred = store.starredWords();
   const lookup = new Map();
   for (const w of overallWords) lookup.set(w.w, w);
   for (const x of loaded) for (const w of x.deck.words) if (!lookup.has(w.w)) lookup.set(w.w, w);
@@ -106,7 +107,46 @@ export async function mount(stage) {
             </table>`
           : '<div class="empty"><div class="big">🌱</div>还没有错词，继续加油</div>'}
       </div>
+
+      <div class="panel">
+        <h3>收藏的词 <span class="sub">${starred.length ? `共 ${starred.length} 个 · 最近收的排前面` : ''}</span></h3>
+        ${starred.length
+          ? `<table class="wrong-table">
+              <thead><tr><th>单词</th><th>释义</th><th style="text-align:right">熟练度</th><th></th></tr></thead>
+              <tbody>${starred
+                .map((word) => {
+                  const w = lookup.get(word);
+                  const p = store.prog(word);
+                  return `<tr>
+                    <td class="w">${esc(word)}</td>
+                    <td style="color:var(--text-muted)">${w ? esc(plainTrans(w.trans)).slice(0, 46) : '<span class="mini">（不在当前词库中）</span>'}</td>
+                    <td style="text-align:right;color:var(--text-faint)">${p ? p.lvl : '—'}</td>
+                    <td style="text-align:right"><button class="chip" data-unstar="${esc(word)}" title="把「${esc(word)}」移出收藏">☆ 取消</button></td>
+                  </tr>`;
+                })
+                .join('')}</tbody>
+            </table>
+            <div style="margin-top:12px"><button class="btn ghost" data-act="unstar-all">清空收藏</button></div>`
+          : '<div class="empty"><div class="big">☆</div>还没有收藏的词。练习时点卡片右上角的 ☆ 就能把词收进来</div>'}
+      </div>
     </div>`;
+
+  stageEl.querySelectorAll('[data-unstar]').forEach((b) => {
+    b.addEventListener('click', () => {
+      const word = b.dataset.unstar;
+      store.toggleStar(word);
+      toast(`已把「${word}」移出收藏`, 2200);
+      if (stageEl === stage) mount(stage);
+    });
+  });
+
+  const unstarAll = stageEl.querySelector('[data-act="unstar-all"]');
+  if (unstarAll) unstarAll.addEventListener('click', () => {
+    if (!confirmDialog(`确定清空这 ${starred.length} 个收藏吗？此操作不可撤销。`)) return;
+    store.clearStars();
+    toast('已清空收藏', 2200);
+    if (stageEl === stage) mount(stage);
+  });
 }
 
 function barHTML(name, s) {

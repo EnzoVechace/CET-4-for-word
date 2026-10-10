@@ -253,9 +253,9 @@ function bind() {
 
   const ra = stageEl.querySelector('[data-act="reset-all"]');
   if (ra) ra.addEventListener('click', () => {
-    if (!confirmDialog('确定清空全部学习进度吗？此操作不可撤销。建议先导出备份。')) return;
+    if (!confirmDialog('确定清空全部学习进度和收藏吗？此操作不可撤销。建议先导出备份。')) return;
     store.resetAll();
-    toast('已清空全部进度');
+    toast('已清空全部进度和收藏');
     render();
   });
 }

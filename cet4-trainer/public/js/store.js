@@ -42,6 +42,7 @@ const DEFAULTS = {
   progress: {},
   daily: {},
   cursors: {},            // { [deckId]: 下一个要背的词在词库里的序号 }
+  starred: {},            // { [单词]: 收藏时间戳 } —— 自己挑出来要反复背的词
   totals: { ms: 0 },
 };
 
@@ -301,6 +302,7 @@ export function resetAll() {
   state.progress = {};
   state.daily = {};
   state.cursors = {};
+  state.starred = {};
   state.totals = { ms: 0 };
   save();
   notify();
@@ -313,6 +315,7 @@ export function exportJSON() {
     progress: state.progress,
     daily: state.daily,
     cursors: state.cursors,
+    starred: state.starred,
     totals: state.totals,
     settings: state.settings,
   }, null, 2);
@@ -325,6 +328,7 @@ export function importJSON(text) {
     progress: data.progress,
     daily: data.daily || {},
     cursors: data.cursors || {},
+    starred: data.starred || {},
     totals: data.totals || { ms: 0 },
     settings: data.settings || {},
   });
@@ -361,12 +365,55 @@ let pickedStart = false;
 export function markPickedStart() { pickedStart = true; }
 export function consumePickedStart() { const v = pickedStart; pickedStart = false; return v; }
 
+/* --------------------------------------------------------------- 收藏
+ * 「这个词我得反复背」——自己挑出来的一小撮词。按**单词文本**记，所以同一个词
+ * 不管出现在哪个词库（全书 / Week 3 / 基础词汇）都认得出是收藏过的。
+ * -------------------------------------------------------------------------- */
+
+export function isStarred(word) {
+  return !!state.starred[word];
+}
+
+/** 收藏 / 取消收藏，返回操作后是否处于收藏状态 */
+export function toggleStar(word) {
+  const key = String(word || '');
+  if (!key) return false;
+  if (state.starred[key]) delete state.starred[key];
+  else state.starred[key] = Date.now();
+  save();
+  notify();
+  return !!state.starred[key];
+}
+
+export function starCount() {
+  return Object.keys(state.starred).length;
+}
+
+/** 收藏的单词，最近收藏的排前面 */
+export function starredWords() {
+  return Object.keys(state.starred).sort((a, b) => (state.starred[b] || 0) - (state.starred[a] || 0));
+}
+
+export function clearStars() {
+  state.starred = {};
+  save();
+  notify();
+}
+
+/* 筛选范围时，数组里装的可能是**词条对象**（练习页传 deck.words），
+   也可能是**单词字符串**（侧栏统计传 deck.words.map(w => w.w)），
+   所以先统一取出单词文本再去查进度，否则对象会被当成 "[object Object]" 查。 */
+function wordOf(x) {
+  return x && typeof x === 'object' ? String(x.w) : String(x);
+}
+
 export function filterWords(words, scope, now = Date.now()) {
   switch (scope) {
-    case 'todo': return words.filter((w) => isFresh(w));
-    case 'unmastered': return words.filter((w) => !isMastered(w));
-    case 'wrong': return words.filter((w) => isWrong(w));
-    case 'due': return words.filter((w) => isDue(w, now));
+    case 'todo': return words.filter((w) => isFresh(wordOf(w)));
+    case 'unmastered': return words.filter((w) => !isMastered(wordOf(w)));
+    case 'wrong': return words.filter((w) => isWrong(wordOf(w)));
+    case 'due': return words.filter((w) => isDue(wordOf(w), now));
+    case 'starred': return words.filter((w) => isStarred(wordOf(w)));
     default: return words.slice();
   }
 }

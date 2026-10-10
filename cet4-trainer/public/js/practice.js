@@ -18,6 +18,7 @@ export const SCOPES = [
   { id: 'unmastered', name: '未掌握' },
   { id: 'wrong', name: '错词本' },
   { id: 'due', name: '待复习' },
+  { id: 'starred', name: '收藏' },
 ];
 
 export const ORDERS = [
@@ -259,6 +260,7 @@ function paint() {
 
   const hideMeaning = s.mode === 'listening' && s.state === 'asking';
   const p = store.prog(w.w);
+  const starred = store.isStarred(w.w);
 
   stageEl.innerHTML = `
     <div class="view">
@@ -274,6 +276,9 @@ function paint() {
           <span class="badge gray">${esc(modeName(s.mode))}</span>
           ${p ? `<span class="badge ${store.isMastered(w.w) ? '' : 'warn'}">熟练度 ${p.lvl}</span>` : '<span class="badge gray">新词</span>'}
           <span class="spacer"></span>
+          <button class="icon-btn star-btn${starred ? ' on' : ''}" data-act="star"
+                  title="${starred ? '取消收藏' : '收藏这个词：以后可以在「范围 → 收藏」里只看它们'}"
+                  aria-pressed="${starred ? 'true' : 'false'}">${starred ? '★' : '☆'}</button>
           ${speechSupported() ? '<button class="icon-btn" data-act="speak" title="发音（空格）">🔊</button>' : ''}
         </div>
         ${hideMeaning
@@ -463,6 +468,7 @@ function bindActions() {
     btn.addEventListener('click', () => {
       const act = btn.dataset.act;
       if (act === 'speak') doSpeak();
+      else if (act === 'star') toggleStar();
       else if (act === 'hint') hint();
       else if (act === 'reveal') reveal();
       else if (act === 'skip') skip();
@@ -546,6 +552,25 @@ function doSpeakAccent(accent) {
   if (!w) return;
   const ok = speak(w.w, { accent: accent === 'uk' ? 'uk' : 'us', rate: S().rate });
   if (!ok) toast(speechHint(), 4200);
+}
+
+/**
+ * 收藏 / 取消收藏当前这个词。
+ * 只就地换那颗星，不整页重画（重画会把输入框里已经打的字弄没）。
+ * store.toggleStar 会 notify → app.js 那边顺手把侧栏「收藏 N」的计数刷新掉。
+ */
+function toggleStar() {
+  const w = cur();
+  if (!w) return;
+  const on = store.toggleStar(w.w);
+  const btn = stageEl && stageEl.querySelector('[data-act="star"]');
+  if (btn) {
+    btn.classList.toggle('on', on);
+    btn.textContent = on ? '★' : '☆';
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.title = on ? '取消收藏' : '收藏这个词：以后可以在「范围 → 收藏」里只看它们';
+  }
+  toast(on ? '已收藏 · 在侧栏「范围」里选「收藏」就只看这些词' : '已取消收藏', 2400);
 }
 
 /**

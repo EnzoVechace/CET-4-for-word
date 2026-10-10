@@ -23,16 +23,16 @@ start http://127.0.0.1:5199
 
 ## 三种用法，挑一个就行
 
-**不想自己编译的话直接去 [Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest) 下载**（里面的附件名是英文：`WordPlan-1.4-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`，原因见根 README）。
+**不想自己编译的话直接去 [Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest) 下载**（里面的附件名是英文：`WordPlan-1.5-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`，原因见根 README）。
 
 | 想怎么用 | 用哪个文件 | 怎么装 |
 | --- | --- | --- |
 | **Windows 桌面程序** | `dist\词计划.exe`（19.8 MB，单文件） | 双击就能跑。全部网页资源和 16.97 MB 发音都编在 exe 里，第一次运行解到 `%LOCALAPPDATA%\WordPlan`；那里写不进去就自动退回 exe 旁边的 `WordPlan-data`（绿色便携版） |
-| **安卓手机** | `dist\词计划_1.4.apk`（19.8 MB） | 传进手机点一下装。内置本地静态服务器（固定端口 `127.0.0.1:17653`），完全离线。装过旧版直接覆盖安装，进度会保留。1.3 起进度还会再往安卓系统存储里存一份，网页存储被系统清掉也能恢复 |
-| **网页版 / 手机免安装** | `dist\词计划.html`（744 KB，单文件） | 双击就能用；拷到手机（微信/QQ/USB/云盘都行）用 Chrome / Edge / 夸克 打开也行，**完全离线**。想更像 App：浏览器菜单 →「添加到主屏幕」 |
+| **安卓手机** | `dist\词计划_1.5.apk`（19.8 MB） | 传进手机点一下装。内置本地静态服务器（固定端口 `127.0.0.1:17653`），完全离线。装过旧版直接覆盖安装，进度会保留。1.3 起进度还会再往安卓系统存储里存一份，网页存储被系统清掉也能恢复 |
+| **网页版 / 手机免安装** | `dist\词计划.html`（749 KB，单文件） | 双击就能用；拷到手机（微信/QQ/USB/云盘都行）用 Chrome / Edge / 夸克 打开也行，**完全离线**。想更像 App：浏览器菜单 →「添加到主屏幕」 |
 
 > **exe / apk 自带发音，不用装任何语音引擎**（3700 个词 × 美音/英音 = 7394 段 Opus，16.97 MB）。
-> 网页版为了保持 744 KB 的体积没内置音频，靠浏览器自带的语音合成。
+> 网页版为了保持 749 KB 的体积没内置音频，靠浏览器自带的语音合成。
 
 > **Windows 版依赖 WebView2 运行时**：Win11 和大部分 Win10 自带。
 > 万一目标机器上没有，**exe 会自己弹窗问你要不要装**，你点「是」它就调用内嵌的
@@ -44,7 +44,7 @@ start http://127.0.0.1:5199
 ```powershell
 node tools/make_single.mjs       # → dist\词计划.html（单文件离线版）
 node tools/build_win.mjs         # → dist\词计划.exe（Windows 桌面版）
-node tools/build_apk.mjs         # → dist\词计划_1.4.apk（安卓版）
+node tools/build_apk.mjs         # → dist\词计划_1.5.apk（安卓版）
 python tools/make_icons.py       # 重新生成图标
 node tools/get_webview2.mjs      # 重新下载 WebView2 SDK（只在首次编译时需要）
 node tools/get_bootstrapper.mjs  # 重新下载 WebView2 引导安装器（只在首次编译时需要）
@@ -83,7 +83,7 @@ node tools/fetch_audio.mjs       # 抓 7394 段发音（约 16 分钟，只在�
 ### 其它
 
 - **间隔重复**：熟练度 0–7 级，间隔 `0/1/2/4/7/15/30/60` 天；答对升级，答错降 2 级并 10 分钟后重来；≥5 级算「已掌握」
-- **范围过滤**：全部 / 未学 / 未掌握 / 错词本 / 待复习（按遗忘曲线到期）
+- **范围过滤**：全部 / 未学 / 未掌握 / 错词本 / 待复习（按遗忘曲线到期）/ 收藏（自己挑出来要反复背的）
 - **每轮数量自己填**：侧栏「每轮数量」是一个输入框，想背多少个就填多少个，回车生效；
   留空（或点「不限」）就是整个词库一次背完。顺序照旧可选「书序 / 打乱」
 - **高频释义划虚线**：像书上那样，给高频的那条释义划一条虚线。
@@ -125,7 +125,13 @@ node tools/fetch_audio.mjs       # 抓 7394 段发音（约 16 分钟，只在�
   （`benefit`）都行，回车生效；点「从头」把起点清掉。**展开词表后点任意一个单词**，也能直接从它开始背，
   起点那一行会标一个「起点」小标 —— 适合已经背到一半、不想从头再来的人。
   起点存在 `cursors` 里（和续传用的是同一份），所以关掉再打开还会停在那儿。
-- **统计**：已掌握 / 学习中 / 总正确率 / 连续打卡、今日四格、17 周热力图、各词库进度条、错词榜
+- **收藏**（1.5 起）：练习时卡片右上角有一颗 ☆（在 🔊 旁边），点一下就把当前这个词收进收藏。
+  侧栏「范围」里因此多了一档 **「收藏」**，选中就只背这些词，而且**每轮整批过一遍**（收藏是手挑的一小撮，
+  不适合按「学到哪儿」续传，也就没给它做游标）。收藏是按**单词文本**记的，所以在 Week 3 里收的词，
+  切到「全书」一样认得出来；展开词表时收藏过的行会标一颗小 ★，统计页底部还有一张「收藏的词」清单，
+  可以在那里逐条取消，或者一次清空（会先弹确认）。
+  没给它做键盘快捷键 —— `Enter`/`Space`/`Tab`/`Esc`/方向键都被占满了，字母键要留给打字。
+- **统计**：已掌握 / 学习中 / 总正确率 / 连续打卡、今日四格、17 周热力图、各词库进度条、错词榜、收藏清单
 - **朗读**：**自动朗读只在「听音」模式进词时出声**（那个模式的题目就是声音）；
   跟打 / 默写 / 选择都是**提交答案后**才读，进新词时绝不抢先念出来 —— 免得还没看清单词就被剧透。
   读的时候先英文单词、再中文释义；每次作答后（对错都算）再读一遍。
@@ -180,7 +186,7 @@ cet4-trainer/
 │  ├─ make_single.mjs         打成一个单文件离线 HTML
 │  ├─ build_win.mjs           用系统 csc.exe 编译单文件 exe
 │  ├─ get_webview2.mjs        下载并解包 WebView2 SDK（编译 exe 需要）
-│  ├─ e2e.mjs                 端到端冒烟测试（CDP 驱动无头 Edge，53 项断言）
+│  ├─ e2e.mjs                 端到端冒烟测试（CDP 驱动无头 Edge，60 项断言）
 │  ├─ check_single.mjs        验证单文件 HTML 在 file:// 下能用（6 项断言）
 │  └─ shots.mjs               造进度 + 逐页截图
 └─ shots/                     截图（演示用）
@@ -210,8 +216,8 @@ node tools/build_dict.mjs
 & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" `
   --headless=new --disable-gpu --remote-debugging-port=9222 `
   --user-data-dir="$PWD\.edgeprof" http://127.0.0.1:5199/
-node tools/e2e.mjs            # 53/53 通过
-node tools/e2e_mobile.mjs     # 15/15 通过（触摸端）
+node tools/e2e.mjs            # 60/60 通过
+node tools/e2e_mobile.mjs     # 17/17 通过（触摸端）
 node tools/check_single.mjs   # 6/6 通过（单文件离线版的 file:// 验证）
 
 # 重新生成截图

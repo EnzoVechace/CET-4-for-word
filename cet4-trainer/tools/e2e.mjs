@@ -1107,6 +1107,175 @@ await check('展开词表点一个单词，直接从它开始背', async () => {
   return ok ? true : `列表第 ${no} 行是「${want}」，实际显示「${shown}」，游标 ${cursor}，徽标 ${badged}，输入框 ${JSON.stringify(input)}，文案 ${JSON.stringify(flat)}`;
 });
 
+/* ------------------------------------------------------------ 收藏 */
+
+/* 这一段要干净、可预期的起点：回到 week1 / 全部 / 书序 / 第 1 个词。
+   在 __seed__（同源、不加载 App）里写存储，免得被 App 的 pagehide flush 覆盖 */
+await send('Page.navigate', { url: `${APP}__seed__` });
+await sleep(900);
+await evaluate(`
+  localStorage.clear();
+  localStorage.setItem('wordplan.v1', JSON.stringify({
+    version: 1, deckId: 'week1', mode: 'typing', scope: 'all', order: 'book', limit: 50,
+    settings: { autoNext: false, autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9 },
+  }));
+  true;
+`);
+await send('Page.navigate', { url: `${APP}#practice` });
+await sleep(2200);
+await installSpies();
+
+await check('点卡片右上角的 ☆ 收藏当前词，侧栏「收藏」计数跟着涨', async () => {
+  const word = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const before = await evaluate("Number((document.querySelector('[data-scope=\"starred\"] .n') || {}).textContent || 0)");
+  await evaluate("document.querySelector('[data-act=\"star\"]').click()");
+  await sleep(900);
+  const on = await evaluate("document.querySelector('[data-act=\"star\"]').classList.contains('on')");
+  const glyph = await evaluate("document.querySelector('[data-act=\"star\"]').textContent");
+  const after = await evaluate("Number((document.querySelector('[data-scope=\"starred\"] .n') || {}).textContent || 0)");
+  const saved = await evaluate("Object.keys((JSON.parse(localStorage.getItem('wordplan.v1') || '{}').starred) || {})");
+  const ok = on && glyph === '★' && after === before + 1 && saved.includes(word);
+  return ok ? true : `词「${word}」on=${on} 星=${JSON.stringify(glyph)} 计数 ${before}→${after} 已存=${JSON.stringify(saved)}`;
+});
+
+await check('再点一次取消收藏，星回到空的，存储里也删掉', async () => {
+  const word = await evaluate("Object.keys((JSON.parse(localStorage.getItem('wordplan.v1') || '{}').starred) || {})[0]");
+  await evaluate("document.querySelector('[data-act=\"star\"]').click()");
+  await sleep(900);
+  const on = await evaluate("document.querySelector('[data-act=\"star\"]').classList.contains('on')");
+  const glyph = await evaluate("document.querySelector('[data-act=\"star\"]').textContent");
+  const saved = await evaluate("Object.keys((JSON.parse(localStorage.getItem('wordplan.v1') || '{}').starred) || {})");
+  const ok = !on && glyph === '☆' && !saved.includes(word);
+  return ok ? true : `原词「${word}」on=${on} 星=${JSON.stringify(glyph)} 已存=${JSON.stringify(saved)}`;
+});
+
+/* 回归：filterWords 以前是拿元素**直接**去查 state.progress[word] 的。
+   练习页传的是词条**对象**（deck.words），于是键变成 "[object Object]" —— 错词本 / 待复习
+   永远筛不出词、未学永远等于全部。侧栏统计传的是字符串，所以计数看着又是对的。
+   现在统一先取出单词文本再查，这里同时用对象和字符串跑一遍，两边必须一致。 */
+await check('用词条对象过滤，错词本 / 待复习 / 未学 与用字符串过滤结果一致', async () => {
+  const got = await evaluate(`
+    (async () => {
+      const st = await import('/js/store.js');
+      const dict = await import('/js/dict.js');
+      const deck = await dict.loadDeck('week1');
+      st.state.progress.focus = { n: 2, ok: 0, bad: 2, lvl: 1, last: Date.now() - 9e6, due: Date.now() - 1000 };
+      const obj = deck.words;
+      const str = deck.words.map((w) => w.w);
+      return JSON.stringify({
+        wrongObj: st.filterWords(obj, 'wrong').map((w) => w.w),
+        wrongStr: st.filterWords(str, 'wrong'),
+        dueObj: st.filterWords(obj, 'due').map((w) => w.w),
+        dueStr: st.filterWords(str, 'due'),
+        todoObj: st.filterWords(obj, 'todo').length,
+        todoStr: st.filterWords(str, 'todo').length,
+        unmasteredObj: st.filterWords(obj, 'unmastered').length,
+        unmasteredStr: st.filterWords(str, 'unmastered').length,
+      });
+    })()
+  `);
+  const r = JSON.parse(got);
+  const ok = r.wrongObj.join() === r.wrongStr.join() && r.wrongObj.join() === 'focus'
+    && r.dueObj.join() === r.dueStr.join() && r.dueObj.join() === 'focus'
+    && r.todoObj === r.todoStr && r.todoObj === 249
+    && r.unmasteredObj === r.unmasteredStr && r.unmasteredObj === 250;
+  return ok ? true : got;
+});
+
+await check('收藏按单词文本记：同一个词换个词库也认得出是收藏过的', async () => {
+  const got = await evaluate(`
+    (async () => {
+      const st = await import('/js/store.js');
+      const dict = await import('/js/dict.js');
+      st.clearStars();
+      st.toggleStar('focus');
+      const w1 = await dict.loadDeck('week1');
+      const full = await dict.loadDeck('full');
+      const inWeek = st.filterWords(w1.words, 'starred').map((x) => x.w);
+      const inFull = st.filterWords(full.words, 'starred').map((x) => x.w);
+      const inBothStrs = st.filterWords(w1.words.map((x) => x.w), 'starred');
+      return JSON.stringify({ inWeek, inFull, inBothStrs });
+    })()
+  `);
+  const r = JSON.parse(got);
+  const ok = r.inWeek.join() === 'focus' && r.inFull.join() === 'focus' && r.inBothStrs.join() === 'focus';
+  return ok ? true : got;
+});
+
+await check('范围选「收藏」后，这一轮只剩收藏过的词，侧栏词表也标了 ★', async () => {
+  await evaluate(`
+    (async () => {
+      const st = await import('/js/store.js');
+      st.clearStars();
+      ['focus', 'career', 'benefit'].forEach((w) => st.toggleStar(w));
+      return true;
+    })()
+  `);
+  await sleep(400);
+  await evaluate("document.querySelector('[data-scope=\"starred\"]').click()");
+  await sleep(1600);
+  const shown = await evaluate("[...document.querySelectorAll('#wordLine .wl')].map((c) => c.textContent).join('')");
+  const queue = await evaluate(`
+    (async () => {
+      const st = await import('/js/store.js');
+      const dict = await import('/js/dict.js');
+      const deck = await dict.loadDeck('week1');
+      return JSON.stringify(st.filterWords(deck.words, 'starred').map((w) => w.w));
+    })()
+  `);
+  const chipActive = await evaluate("document.querySelector('[data-scope=\"starred\"]').classList.contains('active')");
+  const chipN = await evaluate("Number((document.querySelector('[data-scope=\"starred\"] .n') || {}).textContent || 0)");
+  const starred = JSON.parse(queue);
+  const ok = chipActive && chipN === starred.length && starred.length === 3 && starred.includes(shown);
+  return ok ? true : `active=${chipActive} 计数=${chipN} 队列=${queue} 当前显示「${shown}」`;
+});
+
+await check('侧栏展开词表，收藏过的行带 ★，没收藏的不带', async () => {
+  await evaluate("document.querySelector('[data-toggle-deck=\"week1\"]').click()");
+  await sleep(1300);
+  const got = await evaluate(`
+    (() => {
+      const items = [...document.querySelectorAll('.deck-words .dw-item')];
+      const withStar = items.filter((el) => el.querySelector('.dw-star')).map((el) => el.querySelector('.dw-w').textContent);
+      const cls = items.filter((el) => el.classList.contains('starred')).map((el) => el.querySelector('.dw-w').textContent);
+      return JSON.stringify({ total: items.length, withStar, cls });
+    })()
+  `);
+  const r = JSON.parse(got);
+  const want = ['focus', 'career', 'benefit'].slice().sort().join();
+  const ok = r.total === 250 && r.withStar.slice().sort().join() === want && r.cls.slice().sort().join() === want;
+  return ok ? true : got;
+});
+
+await check('统计页能看收藏清单，也能在那儿取消收藏', async () => {
+  await evaluate("location.hash = '#stats'");
+  await sleep(2200);
+  const before = await evaluate(`
+    (() => {
+      const panels = [...document.querySelectorAll('.panel')];
+      const p = panels.find((x) => /收藏的词/.test((x.querySelector('h3') || {}).textContent || ''));
+      if (!p) return JSON.stringify({ found: false });
+      const rows = [...p.querySelectorAll('tbody tr')].map((tr) => tr.querySelector('td.w').textContent);
+      return JSON.stringify({ found: true, rows });
+    })()
+  `);
+  const b = JSON.parse(before);
+  if (!b.found) return '统计页里没找到「收藏的词」面板';
+  if (b.rows.slice().sort().join() !== 'benefit,career,focus') return `清单是 ${JSON.stringify(b.rows)}`;
+
+  await evaluate("document.querySelector('[data-unstar]').click()");
+  await sleep(2000);
+  const after = await evaluate("Object.keys((JSON.parse(localStorage.getItem('wordplan.v1') || '{}').starred) || {})");
+  const rowsAfter = await evaluate(`
+    (() => {
+      const p = [...document.querySelectorAll('.panel')].find((x) => /收藏的词/.test((x.querySelector('h3') || {}).textContent || ''));
+      return p ? p.querySelectorAll('tbody tr').length : -1;
+    })()
+  `);
+  const ok = after.length === 2 && rowsAfter === 2;
+  return ok ? true : `取消后存储里剩 ${JSON.stringify(after)}，面板还剩 ${rowsAfter} 行`;
+});
+
 await check('无 JS 报错', async () => {
   return problems.length === 0 ? true : problems.join(' | ');
 });

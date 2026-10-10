@@ -40,8 +40,8 @@ const DIST = path.join(ROOT, 'dist');
 const PY = process.env.PYTHON || 'C:\\Users\\31787\\.dsh\\dsh-runtimes\\dsh-primary-runtime\\dependencies\\python\\python.exe';
 const NODE = process.execPath;
 
-const VERSION_CODE = 5;
-const VERSION_NAME = '1.4';
+const VERSION_CODE = 6;
+const VERSION_NAME = '1.5';
 const APK_NAME = `词计划_${VERSION_NAME}.apk`;
 
 const KS_DIR = path.join(APP, 'keystore');
@@ -219,7 +219,13 @@ run(PY, [zipHelper, BASE_APK, DEX, UNSIGNED]);
 
 step(7, 'zipalign -p 4');
 const ALIGNED = path.join(BUILD, 'aligned.apk');
-run(which('zipalign.exe'), ['-f', '-p', '4', UNSIGNED, ALIGNED]);
+/* 这里用 capture 而不是 run：zipalign 会按条目把 minizip 那句
+   「zip W … WARNING: header mismatch」刷一万行到 stderr。那是它的老毛病
+   （比对新旧 zip 的 extra field），对齐结果不受影响 —— 紧接着还会 -c 校验一次。
+   不接住的话构建日志会被这堆噪声淹掉。 */
+const alignRun = capture(which('zipalign.exe'), ['-f', '-p', '4', UNSIGNED, ALIGNED]);
+if (!alignRun.ok) throw new Error('zipalign 对齐失败：' + alignRun.out.slice(0, 400));
+log('    已写出 aligned.apk（zipalign 的 header mismatch 噪声已吞掉，对齐结果见下一行）');
 const chk = capture(which('zipalign.exe'), ['-c', '-p', '-v', '4', ALIGNED]);
 log(`    对齐校验：${chk.ok ? '通过' : '失败'}`);
 

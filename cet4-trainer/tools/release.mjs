@@ -3,7 +3,7 @@
  * 把 dist/ 里的成品挂到 GitHub Releases 上。
  *
  *   $env:GH_TOKEN="ghp_xxx"          # 需要 repo 权限的 Personal Access Token
- *   node tools/release.mjs            # 版本号默认取 VERSION（1.4）
+ *   node tools/release.mjs            # 版本号默认取 VERSION（1.5）
  *
  * 会做这些事：
  *   1. 按 tag 找 release，没有就建一个（默认不是 draft）
@@ -53,7 +53,7 @@ const DIST = path.join(ROOT, 'dist');
 
 const REPO = process.env.REPO || 'EnzoVechace/CET-4-for-word';
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
-const VERSION = (process.env.VERSION || '1.4').replace(/^v/, '');
+const VERSION = (process.env.VERSION || '1.5').replace(/^v/, '');
 const TAG = process.argv[2] || process.env.TAG || `v${VERSION}`;
 const DNS_SERVERS = (process.env.DNS_SERVERS || '114.114.114.114,223.5.5.5')
   .split(',').map((s) => s.trim()).filter(Boolean);
@@ -72,7 +72,7 @@ const ALL_ASSETS = [
   [`WordPlan-${VERSION}-readme-zh.txt`, '使用说明.txt'],
 ];
 
-/* 只传其中几个：set ASSETS=WordPlan-1.4-win64.exe,WordPlan-1.4-readme-zh.txt */
+/* 只传其中几个：set ASSETS=WordPlan-1.5-win64.exe,WordPlan-1.5-readme-zh.txt */
 const picked = (process.env.ASSETS || '')
   .split(',')
   .map((s) => s.trim())
@@ -202,7 +202,17 @@ function defaultBody() {
     `| \`词计划_${VERSION}.apk\` | 安卓版。装之前若装过旧版，直接覆盖安装即可（进度会保留） |`,
     '| `使用说明.txt` | 上面三个的简版说明 |',
     '',
-    '### 这一版改了什么（1.4）',
+    '### 这一版改了什么（1.5）',
+    '',
+    '1. **可以把词收藏起来反复背**。练习时卡片右上角多了一颗 ☆，点一下就收进收藏；',
+    '   侧栏「范围」里多了一档「收藏」，选中就只背这些词。',
+    '   收藏是按**单词本身**记的，所以在「Week 3」里收藏的词，切到「全书」一样认得出来；',
+    '   展开词表时收藏过的词带一颗小 ★，统计页底部还有一张「收藏的词」清单，可以在那儿逐条取消或一次清空。',
+    '2. **修掉「错词本 / 待复习」筛不出词的老 bug**。练习页拿词条对象去查单词进度，',
+    '   键变成了 `[object Object]`，于是「错词本」和「待复习」永远是空的、',
+    '   「未学」永远等于全部（侧栏计数看着却是对的，所以一直没露馅）。现在两种传法都正确。',
+    '',
+    '### 上一版改了什么（1.4）',
     '',
     '1. **可以自己挑从第几个词开始背**。侧栏「每轮数量」下面多了一栏「从第几个词开始」：',
     '   填序号（12）或直接填单词（benefit）都行，回车生效；点「从头」就清掉。',
@@ -227,8 +237,10 @@ function defaultBody() {
     '### 功能一览',
     '',
     '- 四种练习模式：跟打 / 默写 / 听音 / 选择',
-    '- 范围筛选：全部 / 未学 / 未掌握 / 错词本 / 待复习；书序或打乱；每轮数量随便填',
+    '- 范围筛选：全部 / 未学 / 未掌握 / 错词本 / 待复习 / 收藏；书序或打乱；每轮数量随便填',
     '- 熟练度 0–7 的间隔重复，进度按词保存；安卓端双份存储',
+    '- **收藏**：卡片右上角点 ☆ 收进来，侧栏选「收藏」只背这些词，统计页能看清单',
+    '- 想从中间开始背也行：侧栏「从第几个词开始」填序号或单词，或展开词表点任一个词',
     '- 点词库右边的「展开」能看里面每个词和一小截释义',
     '- 续传时上次背过的词还在会话里，「上一词」能翻回去',
     '- **答错一定停下来**（「答对后自动下一词」只对答对的词生效）',

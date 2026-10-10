@@ -76,7 +76,8 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 ![练习页](cet4-trainer/shots/practice.png)
 
 - **四种模式**：跟打（逐键判定，敲对变绿放大带光晕）· 默写（字母遮罩）· 听音（只放音）· 选择（四选一）
-- **范围筛选**：全部 / 未学 / 未掌握 / 错词本 / 待复习；顺序支持书序与打乱；每轮数量随便填，留空就是整本一次背完
+- **范围筛选**：全部 / 未学 / 未掌握 / 错词本 / 待复习 / 收藏；顺序支持书序与打乱；每轮数量随便填，留空就是整本一次背完
+- **收藏**：练习时点卡片右上角的 ☆ 收进来，侧栏选「收藏」就只背这些词；收藏按单词文本记，跨词库通用；统计页有「收藏的词」清单可以取消或清空
 - **间隔重复**：熟练度 0–7 级，间隔 `[0,1,2,4,7,15,30,60]` 天；答对升一级，答错降两级并 10 分钟后重来；≥5 级算掌握
 - **进度续传**：按词为单位记进度，所以「全书」和「按周」两个词库共享同一份进度；续传时上次背过的词仍在会话里，「上一词」能翻回去
 - **自己挑起点**：侧栏可以填「从第几个词开始」（序号或单词都行），也可以在展开的词表里点任意一个词直接跳过去，起点那行标「起点」
@@ -84,7 +85,7 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 - **可选写法都算对**：书上写 `program(me)`、`realize,-ise`，打 `program` / `programme` / `realise` 都判对
 - **高频释义虚线**：按 Collins 语料库的义项频次给最常用的那条释义划虚线（可在设置里关）
 - **点音标就发音**：点「美」发美音、点「英」发英音（走浏览器自带的语音合成）
-- **统计**：已掌握 / 学习中 / 总正确率 / 连续打卡、今日四格、17 周热力图、各词库进度、错词榜
+- **统计**：已掌握 / 学习中 / 总正确率 / 连续打卡、今日四格、17 周热力图、各词库进度、错词榜、收藏清单
 - **点词库能展开**看里面的单词和释义头一小截（已掌握的标绿），限高 `min(46vh, 400px)` 内部滚动
 
 | 统计 | 设置 | 手机端 |
@@ -97,10 +98,15 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 
 | 用法 | Release 里的文件名 | 说明 |
 |---|---|---|
-| Windows | `WordPlan-1.4-win64.exe` | 19.8 MB，**自带 7394 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
-| Android | `WordPlan-1.4-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`），进度双保险写入系统存储 |
-| 网页版 | `WordPlan-1.4-web.html` | 744 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
-| 说明 | `WordPlan-1.4-readme-zh.txt` | 上面几个的简版说明 |
+| Windows | `WordPlan-1.5-win64.exe` | 19.8 MB，**自带 7394 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
+| Android | `WordPlan-1.5-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`），进度双保险写入系统存储 |
+| 网页版 | `WordPlan-1.5-web.html` | 749 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
+| 说明 | `WordPlan-1.5-readme-zh.txt` | 上面几个的简版说明 |
+
+**1.5 这一版改了什么**
+
+- **可以把词收藏起来反复背**：练习时卡片右上角多了一颗 ☆，点一下收进收藏；侧栏「范围」里多了一档「收藏」，选中就只背这些词。收藏按**单词本身**记，在「Week 3」里收的，切到「全书」一样认得出来；展开词表时收藏过的词带一颗小 ★；统计页底部多了一张「收藏的词」清单，能在那里逐条取消或一次清空。
+- **修掉「错词本 / 待复习」筛不出词的老 bug**：练习页拿词条**对象**去查单词进度，键变成了 `[object Object]`，于是「错词本」和「待复习」永远是空的、「未学」永远等于全部（侧栏计数看着却是对的，所以一直没露馅）。现在对象和字符串两种传法都正确，并加了回归用例。
 
 **1.4 这一版改了什么**
 
@@ -158,9 +164,9 @@ node tools/android_sdk.mjs         # 需要时：下载 Android SDK 命令行工
 node tools/build_dict.mjs          # 从 cet4-sparke/output 编译词库
 node tools/make_single.mjs         # → dist/词计划.html
 node tools/build_win.mjs           # → dist/词计划.exe
-node tools/build_apk.mjs           # → dist/词计划_1.4.apk
-node tools/e2e.mjs                 # 桌面端 53 项断言（CDP 驱动无头 Edge）
-node tools/e2e_mobile.mjs          # 触摸端 15 项断言
+node tools/build_apk.mjs           # → dist/词计划_1.5.apk
+node tools/e2e.mjs                 # 桌面端 60 项断言（CDP 驱动无头 Edge）
+node tools/e2e_mobile.mjs          # 触摸端 17 项断言
 ```
 
 `tools/e2e.mjs` 走 Chrome DevTools Protocol，需要先按 README 里的说明起一个带 `--remote-debugging-port` 的 Edge。
@@ -170,14 +176,14 @@ node tools/e2e_mobile.mjs          # 触摸端 15 项断言
 三端成品不进 git（`dist/` 已被 `.gitignore` 忽略），改挂到 Releases：
 
 ```bash
-git tag -a v1.4 -m "词计划 1.4" && git push origin v1.4
+git tag -a v1.5 -m "词计划 1.5" && git push origin v1.5
 
 cd cet4-trainer
 $env:GH_TOKEN = "ghp_xxx"      # https://github.com/settings/tokens，勾 repo
-node tools/release.mjs v1.4    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
+node tools/release.mjs v1.5    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
 
 # 只传其中几个
-$env:ASSETS = "WordPlan-1.4-win64.exe,WordPlan-1.4-readme-zh.txt"
+$env:ASSETS = "WordPlan-1.5-win64.exe,WordPlan-1.5-readme-zh.txt"
 # 清掉改名/换版本后残留的旧 asset
 $env:PRUNE = "1"
 ```
