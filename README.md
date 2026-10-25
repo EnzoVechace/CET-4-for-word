@@ -81,7 +81,7 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 - **间隔重复**：熟练度 0–7 级，间隔 `[0,1,2,4,7,15,30,60]` 天；答对升一级，答错降两级并 10 分钟后重来；≥5 级算掌握
 - **进度续传**：按词为单位记进度，所以「全书」和「按周」两个词库共享同一份进度；续传时上次背过的词仍在会话里，「上一词」能翻回去
 - **自己挑起点**：侧栏可以填「从第几个词开始」（序号或单词都行），也可以在展开的词表里点任意一个词直接跳过去，起点那行标「起点」
-- **答错一定停下来**：设置里的「答对后自动下一词」只对答对的词生效
+- **答完就停住**：1.6 起默认**回答后不自动跳到下一个词** —— 答完停在原地看答案，按 `Enter` 或点「继续 →」再往下。设置里「回答后自动下一词」可以重新打开，打开后也只对答对的词生效，答错一定停下
 - **可选写法都算对**：书上写 `program(me)`、`realize,-ise`，打 `program` / `programme` / `realise` 都判对
 - **高频释义虚线**：按 Collins 语料库的义项频次给最常用的那条释义划虚线（可在设置里关）
 - **点音标就发音**：点「美」发美音、点「英」发英音（走浏览器自带的语音合成）
@@ -98,10 +98,14 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 
 | 用法 | Release 里的文件名 | 说明 |
 |---|---|---|
-| Windows | `WordPlan-1.5-win64.exe` | 19.8 MB，**自带 7394 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
-| Android | `WordPlan-1.5-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`），进度双保险写入系统存储 |
-| 网页版 | `WordPlan-1.5-web.html` | 749 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
-| 说明 | `WordPlan-1.5-readme-zh.txt` | 上面几个的简版说明 |
+| Windows | `WordPlan-1.6-win64.exe` | 19.8 MB，**自带 7394 段发音**，不用装语音引擎；内嵌 WebView2 引导安装器 |
+| Android | `WordPlan-1.6-android.apk` | 19.8 MB，自带发音；内置一个本地静态服务器（固定端口 `127.0.0.1:17653`），进度双保险写入系统存储 |
+| 网页版 | `WordPlan-1.6-web.html` | 751 KB，**双击就能用**（单文件，词库内嵌）。不含音频，走浏览器语音合成 |
+| 说明 | `WordPlan-1.6-readme-zh.txt` | 上面几个的简版说明 |
+
+**1.6 这一版改了什么**
+
+- **回答后不再自动跳到下一个词**。以前答对就自己往下跳，答案还没看清就翻页了；现在答完停在原地，按 `Enter` 或点「继续 →」再往下。老存档会自动迁移过来，不用手动改设置；真想让它自己跳，可以去「设置 → 练习 → 回答后自动下一词」重新打开（打开后也只对答对的词生效，答错一定停下）。
 
 **1.5 这一版改了什么**
 
@@ -164,8 +168,8 @@ node tools/android_sdk.mjs         # 需要时：下载 Android SDK 命令行工
 node tools/build_dict.mjs          # 从 cet4-sparke/output 编译词库
 node tools/make_single.mjs         # → dist/词计划.html
 node tools/build_win.mjs           # → dist/词计划.exe
-node tools/build_apk.mjs           # → dist/词计划_1.5.apk
-node tools/e2e.mjs                 # 桌面端 60 项断言（CDP 驱动无头 Edge）
+node tools/build_apk.mjs           # → dist/词计划_1.6.apk
+node tools/e2e.mjs                 # 桌面端 62 项断言（CDP 驱动无头 Edge）
 node tools/e2e_mobile.mjs          # 触摸端 17 项断言
 ```
 
@@ -176,14 +180,14 @@ node tools/e2e_mobile.mjs          # 触摸端 17 项断言
 三端成品不进 git（`dist/` 已被 `.gitignore` 忽略），改挂到 Releases：
 
 ```bash
-git tag -a v1.5 -m "词计划 1.5" && git push origin v1.5
+git tag -a v1.6 -m "词计划 1.6" && git push origin v1.6
 
 cd cet4-trainer
 $env:GH_TOKEN = "ghp_xxx"      # https://github.com/settings/tokens，勾 repo
-node tools/release.mjs v1.5    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
+node tools/release.mjs v1.6    # 建 release + 传 dist/ 里的成品；可反复跑，同名 asset 会先删再传
 
 # 只传其中几个
-$env:ASSETS = "WordPlan-1.5-win64.exe,WordPlan-1.5-readme-zh.txt"
+$env:ASSETS = "WordPlan-1.6-win64.exe,WordPlan-1.6-readme-zh.txt"
 # 清掉改名/换版本后残留的旧 asset
 $env:PRUNE = "1"
 ```

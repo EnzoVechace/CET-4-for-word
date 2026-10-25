@@ -109,7 +109,7 @@ function render() {
       <div class="panel">
         <h3>练习</h3>
         <div class="field">
-          <div class="label">答对后自动下一词<small>只对答对的词生效；答错的词一定停下来等你看完正确答案</small></div>
+          <div class="label">回答后自动下一词<small>默认关：答完停在原地，按 Enter 或点「继续」再往下。打开后也只对答对的词生效，答错一定停下</small></div>
           <div class="control">
             <label class="switch"><input type="checkbox" ${s.autoNext ? 'checked' : ''} data-toggle="autoNext" /><span class="slider"></span></label>
           </div>

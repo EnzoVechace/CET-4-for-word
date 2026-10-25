@@ -20,8 +20,15 @@ export function dayOffsetKey(offset) {
   return todayKey(d);
 }
 
+/* 配置迁移版本号。
+   2 = 「回答后默认不再自动跳到下一个词」：以前 autoNext 默认是 true，
+       答对就自己跳走，看答案的时间都没有；现在默认停住等你自己按 Enter。
+       老存档里 autoNext 是 true（当年那个默认值），所以要按这个版本号迁一次。 */
+const CFG_VERSION = 2;
+
 const DEFAULTS = {
   version: 1,
+  cfg: CFG_VERSION,
   deckId: 'week1',
   mode: 'typing',
   scope: 'all',
@@ -34,7 +41,7 @@ const DEFAULTS = {
     rate: 0.9,
     autoSpeak: true,
     speakMeaning: 'brief',   // off | brief | full —— 朗读单词之后要不要连释义一起读
-    autoNext: true,
+    autoNext: false,         // 回答后自不自动跳到下一个词。默认关：答完停在原地
     showKeyboard: true,
     shortTrans: true,        // 精简释义：每个词性剪掉末尾多出来的义项（词性保留）
     hfMark: true,            // 给高频释义划虚线（像书上那样）
@@ -89,13 +96,27 @@ function readLocal() {
   } catch { return null; }
 }
 
+/* 迁移后要不要立刻落一次盘（load() 里还不能叫 flush —— 那时 state 还没赋值） */
+let migrated = false;
+
 function load() {
   const local = readLocal();
   const native = nativeLoad();
   // 两边都有就比 savedAt（每次落盘都写一遍），取新的那份
   let pick = local;
   if (native && (!local || (native.savedAt || 0) > (local.savedAt || 0))) pick = native;
-  return merge(DEFAULTS, pick || {});
+  const next = merge(DEFAULTS, pick || {});
+
+  // 迁移到 cfg=2：把老存档里「答对就自动跳」的 autoNext 关掉一次。
+  // 注意要读 pick.cfg —— merge 出来的 next.cfg 已经被 DEFAULTS 填成新版本号了。
+  if (!(Number(pick && pick.cfg) >= CFG_VERSION)) {
+    if (pick && pick.settings && pick.settings.autoNext) {
+      next.settings.autoNext = false;
+      migrated = true;
+    }
+    next.cfg = CFG_VERSION;
+  }
+  return next;
 }
 
 export const state = load();
@@ -130,6 +151,13 @@ export function save() {
 export function flush() {
   clearTimeout(timer);
   write();
+}
+
+/* 迁移过的存档要马上写回去（写之前不能叫 flush —— 那时 timer/state 还没初始化好）。
+   放这儿是因为 timer、write()、state 到这行都已经就绪了。 */
+if (migrated) {
+  migrated = false;
+  flush();
 }
 
 /* ---------------------------------------------------------------- progress */

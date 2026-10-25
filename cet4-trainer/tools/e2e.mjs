@@ -797,6 +797,9 @@ await check('答错不会自动进入下一词（autoNext 开着也一样）', a
     localStorage.clear();
     localStorage.setItem('wordplan.v1', JSON.stringify({
       version: 1, deckId: 'week1', mode: 'typing', scope: 'all', order: 'book', limit: 0,
+      // cfg: 2 表示「配置已经是新版」，不然 1.6 的迁移会把 autoNext 关掉，
+      // 这条用例想验的「autoNext 开着也照样停下」就落空了
+      cfg: 2,
       settings: { autoNext: true, autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9, trimTrans: false, hfMark: true },
     }));
     true;
@@ -829,6 +832,72 @@ await check('答错不会自动进入下一词（autoNext 开着也一样）', a
   await sleep(2600);
   const moved = await evaluate('window.__word()');
   return moved === 'career' ? true : `答对后应该自动到 career，实际 ${moved}`;
+});
+
+/* 1.6 起默认「答完停在原地」，不再自己跳到下一个词 */
+await check('默认不自动跳：答对了也停在原地，反馈提示按 Enter 继续', async () => {
+  await send('Page.navigate', { url: `${APP}__seed__` });
+  await sleep(700);
+  await evaluate(`
+    localStorage.clear();
+    localStorage.setItem('wordplan.v1', JSON.stringify({
+      version: 1, cfg: 2, deckId: 'week1', mode: 'typing', scope: 'all', order: 'book', limit: 0,
+      // 故意不写 autoNext —— 要验的就是「新装默认值」
+      settings: { autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9, hfMark: true },
+    }));
+    true;
+  `);
+  await send('Page.navigate', { url: `${APP}#practice` });
+  await sleep(1800);
+  await evaluate(`
+    window.__press = (keys) => {
+      for (const k of keys) window.dispatchEvent(new KeyboardEvent('keydown', { key: k, bubbles: true, cancelable: true }));
+    };
+    window.__word = () => {
+      const t = document.querySelector('#wordLine');
+      return t ? [...t.querySelectorAll('.wl')].map((c) => c.textContent).join('') : null;
+    };
+    true;
+  `);
+  const autoNext = await evaluate("(async () => (await import('/js/store.js')).state.settings.autoNext)()");
+  if (autoNext !== false) return `默认 autoNext 应该是 false，实际 ${autoNext}`;
+  if ((await evaluate('window.__word()')) !== 'focus') return '起始词不是 focus';
+  await evaluate("window.__press(['f','o','c','u','s','Enter'])");
+  await sleep(2600); // 远超以前自动跳的 360~620ms
+  const still = await evaluate('window.__word()');
+  if (still !== 'focus') return `答对后自己跳到了 ${still}`;
+  const fb = await evaluate("(document.getElementById('fb') || {}).textContent || ''");
+  if (!/Enter/.test(fb)) return `反馈里应该提示按 Enter 继续，实际 ${JSON.stringify(fb.trim().slice(0, 40))}`;
+  await evaluate("window.__press(['Enter'])");
+  await sleep(900);
+  const moved = await evaluate('window.__word()');
+  return moved === 'career' ? true : `按 Enter 后应该到 career，实际 ${moved}`;
+});
+
+/* 老存档里 autoNext 是当年默认的 true，要靠 cfg 版本号迁一次，否则老用户还是会自己跳 */
+await check('老存档（没有 cfg、autoNext=true）会迁移成不自动跳，并写回 cfg=2', async () => {
+  await send('Page.navigate', { url: `${APP}__seed__` });
+  await sleep(700);
+  await evaluate(`
+    localStorage.clear();
+    localStorage.setItem('wordplan.v1', JSON.stringify({
+      version: 1, deckId: 'week1', mode: 'typing', scope: 'all', order: 'book', limit: 50,
+      // 1.5 及以前的老存档：没有 cfg，autoNext 是当年默认的 true
+      settings: { autoNext: true, autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9 },
+    }));
+    true;
+  `);
+  await send('Page.navigate', { url: `${APP}#practice` });
+  await sleep(1800);
+  const got = await evaluate(`(async () => {
+    const st = await import('/js/store.js');
+    const saved = JSON.parse(localStorage.getItem('wordplan.v1') || '{}');
+    return JSON.stringify({ autoNext: st.state.settings.autoNext, cfg: st.state.cfg, savedCfg: saved.cfg });
+  })()`);
+  const r = JSON.parse(got);
+  return r.autoNext === false && r.cfg === 2 && r.savedCfg === 2
+    ? true
+    : `迁移后 autoNext=${r.autoNext} cfg=${r.cfg} 落盘的 cfg=${r.savedCfg}`;
 });
 
 /* 手机上「提交」判完会原地变成「继续 →」：手指连点两下不能一连跳两个词 */

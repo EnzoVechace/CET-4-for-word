@@ -23,16 +23,16 @@ start http://127.0.0.1:5199
 
 ## 三种用法，挑一个就行
 
-**不想自己编译的话直接去 [Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest) 下载**（里面的附件名是英文：`WordPlan-1.5-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`，原因见根 README）。
+**不想自己编译的话直接去 [Releases](https://github.com/EnzoVechace/CET-4-for-word/releases/latest) 下载**（里面的附件名是英文：`WordPlan-1.6-win64.exe` / `-android.apk` / `-web.html` / `-readme-zh.txt`，原因见根 README）。
 
 | 想怎么用 | 用哪个文件 | 怎么装 |
 | --- | --- | --- |
 | **Windows 桌面程序** | `dist\词计划.exe`（19.8 MB，单文件） | 双击就能跑。全部网页资源和 16.97 MB 发音都编在 exe 里，第一次运行解到 `%LOCALAPPDATA%\WordPlan`；那里写不进去就自动退回 exe 旁边的 `WordPlan-data`（绿色便携版） |
-| **安卓手机** | `dist\词计划_1.5.apk`（19.8 MB） | 传进手机点一下装。内置本地静态服务器（固定端口 `127.0.0.1:17653`），完全离线。装过旧版直接覆盖安装，进度会保留。1.3 起进度还会再往安卓系统存储里存一份，网页存储被系统清掉也能恢复 |
-| **网页版 / 手机免安装** | `dist\词计划.html`（749 KB，单文件） | 双击就能用；拷到手机（微信/QQ/USB/云盘都行）用 Chrome / Edge / 夸克 打开也行，**完全离线**。想更像 App：浏览器菜单 →「添加到主屏幕」 |
+| **安卓手机** | `dist\词计划_1.6.apk`（19.8 MB） | 传进手机点一下装。内置本地静态服务器（固定端口 `127.0.0.1:17653`），完全离线。装过旧版直接覆盖安装，进度会保留。1.3 起进度还会再往安卓系统存储里存一份，网页存储被系统清掉也能恢复 |
+| **网页版 / 手机免安装** | `dist\词计划.html`（751 KB，单文件） | 双击就能用；拷到手机（微信/QQ/USB/云盘都行）用 Chrome / Edge / 夸克 打开也行，**完全离线**。想更像 App：浏览器菜单 →「添加到主屏幕」 |
 
 > **exe / apk 自带发音，不用装任何语音引擎**（3700 个词 × 美音/英音 = 7394 段 Opus，16.97 MB）。
-> 网页版为了保持 749 KB 的体积没内置音频，靠浏览器自带的语音合成。
+> 网页版为了保持 751 KB 的体积没内置音频，靠浏览器自带的语音合成。
 
 > **Windows 版依赖 WebView2 运行时**：Win11 和大部分 Win10 自带。
 > 万一目标机器上没有，**exe 会自己弹窗问你要不要装**，你点「是」它就调用内嵌的
@@ -44,7 +44,7 @@ start http://127.0.0.1:5199
 ```powershell
 node tools/make_single.mjs       # → dist\词计划.html（单文件离线版）
 node tools/build_win.mjs         # → dist\词计划.exe（Windows 桌面版）
-node tools/build_apk.mjs         # → dist\词计划_1.5.apk（安卓版）
+node tools/build_apk.mjs         # → dist\词计划_1.6.apk（安卓版）
 python tools/make_icons.py       # 重新生成图标
 node tools/get_webview2.mjs      # 重新下载 WebView2 SDK（只在首次编译时需要）
 node tools/get_bootstrapper.mjs  # 重新下载 WebView2 引导安装器（只在首次编译时需要）
@@ -140,9 +140,12 @@ node tools/fetch_audio.mjs       # 抓 7394 段发音（约 16 分钟，只在�
   输入行是空的时，`下一词` 只翻页、不动进度（方便先翻一遍看看）；**输入行里已经敲了东西时，
   它会先按正常流程判分**（没敲完就是答错、写进错词本），判完再点一次才真的翻到下一词 ——
   不会让半截输入白白溜过去
-- **答错的词一定停下来**：设置里的「答对后自动下一词」只对**答对**的词生效；答错时画面会停在原地，
-  等你把正确答案看完、按 `Enter` 或点「继续 →」才走。手机上「提交」判完会在原地变成「继续 →」，
-  为了不被手快的连点带过去，判分后 360ms 内的这一下会被忽略
+- **回答后停住不自动跳**（1.6 起）：**默认答完就停在原地**，答案可以慢慢看，按 `Enter` 或点「继续 →」才走。
+  「设置 → 练习 → 回答后自动下一词」可以重新打开，但即使打开也**只对答对的词生效** ——
+  答错的词一定停下。手机上「提交」判完会在原地变成「继续 →」，
+  为了不被手快的连点带过去，判分后 360ms 内的这一下会被忽略。
+  老存档里 `autoNext` 是当年默认的 `true`，靠 `cfg` 版本号（现在是 2）在 `store.js` 的 `load()` 里迁一次，
+  迁移结果会立刻落盘，所以老用户升级后也不用自己去关。
 - **外观**：浅色 / 深色主题，窗口变窄时侧栏收成抽屉（左上角 ☰）
 - **数据**：进度全部存在浏览器 localStorage（键 `wordplan.v1`），可导出 / 导入 JSON 备份
 - **快捷键**：`Enter` 提交或下一词 · `←` `→` 上一词 / 下一词 · `Backspace` 退格重敲 · `Space` 发音 · `Tab` 提示下一个字母（计入错误）· `Esc` 看答案
@@ -186,7 +189,7 @@ cet4-trainer/
 │  ├─ make_single.mjs         打成一个单文件离线 HTML
 │  ├─ build_win.mjs           用系统 csc.exe 编译单文件 exe
 │  ├─ get_webview2.mjs        下载并解包 WebView2 SDK（编译 exe 需要）
-│  ├─ e2e.mjs                 端到端冒烟测试（CDP 驱动无头 Edge，60 项断言）
+│  ├─ e2e.mjs                 端到端冒烟测试（CDP 驱动无头 Edge，62 项断言）
 │  ├─ check_single.mjs        验证单文件 HTML 在 file:// 下能用（6 项断言）
 │  └─ shots.mjs               造进度 + 逐页截图
 └─ shots/                     截图（演示用）
@@ -216,7 +219,7 @@ node tools/build_dict.mjs
 & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" `
   --headless=new --disable-gpu --remote-debugging-port=9222 `
   --user-data-dir="$PWD\.edgeprof" http://127.0.0.1:5199/
-node tools/e2e.mjs            # 60/60 通过
+node tools/e2e.mjs            # 62/62 通过
 node tools/e2e_mobile.mjs     # 17/17 通过（触摸端）
 node tools/check_single.mjs   # 6/6 通过（单文件离线版的 file:// 验证）
 

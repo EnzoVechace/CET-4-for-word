@@ -3,7 +3,7 @@
  * 把 dist/ 里的成品挂到 GitHub Releases 上。
  *
  *   $env:GH_TOKEN="ghp_xxx"          # 需要 repo 权限的 Personal Access Token
- *   node tools/release.mjs            # 版本号默认取 VERSION（1.5）
+ *   node tools/release.mjs            # 版本号默认取 VERSION（1.6）
  *
  * 会做这些事：
  *   1. 按 tag 找 release，没有就建一个（默认不是 draft）
@@ -53,7 +53,7 @@ const DIST = path.join(ROOT, 'dist');
 
 const REPO = process.env.REPO || 'EnzoVechace/CET-4-for-word';
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
-const VERSION = (process.env.VERSION || '1.5').replace(/^v/, '');
+const VERSION = (process.env.VERSION || '1.6').replace(/^v/, '');
 const TAG = process.argv[2] || process.env.TAG || `v${VERSION}`;
 const DNS_SERVERS = (process.env.DNS_SERVERS || '114.114.114.114,223.5.5.5')
   .split(',').map((s) => s.trim()).filter(Boolean);
@@ -72,7 +72,7 @@ const ALL_ASSETS = [
   [`WordPlan-${VERSION}-readme-zh.txt`, '使用说明.txt'],
 ];
 
-/* 只传其中几个：set ASSETS=WordPlan-1.5-win64.exe,WordPlan-1.5-readme-zh.txt */
+/* 只传其中几个：set ASSETS=WordPlan-1.6-win64.exe,WordPlan-1.6-readme-zh.txt */
 const picked = (process.env.ASSETS || '')
   .split(',')
   .map((s) => s.trim())
@@ -202,7 +202,14 @@ function defaultBody() {
     `| \`词计划_${VERSION}.apk\` | 安卓版。装之前若装过旧版，直接覆盖安装即可（进度会保留） |`,
     '| `使用说明.txt` | 上面三个的简版说明 |',
     '',
-    '### 这一版改了什么（1.5）',
+    '### 这一版改了什么（1.6）',
+    '',
+    '1. **回答问题后不再自动跳到下一个词**。以前答对就自己往下跳，看答案的时间都没有；',
+    '   现在答完停在原地，按 `Enter`（或点「继续 →」）再往下走。老存档也会自动迁过来，',
+    '   不用手动改设置。真想让它自己跳，可以去「设置 → 练习 → 回答后自动下一词」重新打开',
+    '   （打开后也只对答对的词生效，答错的词一定停下）。',
+    '',
+    '### 上一版改了什么（1.5）',
     '',
     '1. **可以把词收藏起来反复背**。练习时卡片右上角多了一颗 ☆，点一下就收进收藏；',
     '   侧栏「范围」里多了一档「收藏」，选中就只背这些词。',
