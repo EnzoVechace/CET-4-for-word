@@ -463,9 +463,27 @@ function submitCoolingDown() {
   return !!session && session.state === 'done' && Date.now() - (session.settledAt || 0) < SUBMIT_COOLDOWN;
 }
 
+/* 同一个节点、同一类事件只挂一次监听。
+   为什么需要：settle() 在选择模式下会再跑一遍 bindActions()，而卡片上的
+   「上一词 / 下一词 / 跳过 / 看答案…」还是**原来那批节点** ——
+   重复 addEventListener 会让「下一词」点一次触发两次 next()，
+   直接从第 12 词跳到第 14 词（选择模式每答一题就多叠一个监听）。
+   paint() 每次都重建 innerHTML，新节点自然没被记过，照常挂得上。 */
+const boundEvents = new WeakMap();
+function onOnce(el, type, fn, opts) {
+  let types = boundEvents.get(el);
+  if (!types) {
+    types = new Set();
+    boundEvents.set(el, types);
+  }
+  if (types.has(type)) return;
+  types.add(type);
+  el.addEventListener(type, fn, opts);
+}
+
 function bindActions() {
   stageEl.querySelectorAll('[data-act]').forEach((btn) => {
-    btn.addEventListener('click', () => {
+    onOnce(btn, 'click', () => {
       const act = btn.dataset.act;
       if (act === 'speak') doSpeak();
       else if (act === 'star') toggleStar();
@@ -482,12 +500,12 @@ function bindActions() {
     });
   });
   stageEl.querySelectorAll('[data-choice]').forEach((btn) => {
-    btn.addEventListener('click', () => choose(Number(btn.dataset.choice)));
+    onOnce(btn, 'click', () => choose(Number(btn.dataset.choice)));
   });
   // 点音标就按那个口音念一遍：点「美」发美音，点「英」发英音
   stageEl.querySelectorAll('.phon [data-accent]').forEach((el) => {
     // 记下点之前输入框是不是有焦点：有的话点完还回去，免得软键盘被收掉
-    el.addEventListener('pointerdown', () => { el._hadInput = document.activeElement === inputEl; });
+    onOnce(el, 'pointerdown', () => { el._hadInput = document.activeElement === inputEl; });
     const flash = () => {
       el.classList.add('accent-flash');
       clearTimeout(el._flashTimer);
@@ -498,11 +516,11 @@ function bindActions() {
         else el.blur();
       }, 260);
     };
-    el.addEventListener('click', () => {
+    onOnce(el, 'click', () => {
       doSpeakAccent(el.dataset.accent);
       flash();
     });
-    el.addEventListener('keydown', (e) => {
+    onOnce(el, 'keydown', (e) => {
       if (e.key !== 'Enter' && e.key !== ' ') return;
       e.preventDefault();
       e.stopPropagation();

@@ -146,6 +146,10 @@ node tools/fetch_audio.mjs       # 抓 7394 段发音（约 16 分钟，只在�
   为了不被手快的连点带过去，判分后 360ms 内的这一下会被忽略。
   老存档里 `autoNext` 是当年默认的 `true`，靠 `cfg` 版本号（现在是 2）在 `store.js` 的 `load()` 里迁一次，
   迁移结果会立刻落盘，所以老用户升级后也不用自己去关。
+- **事件监听按「节点 + 事件类型」去重**（`practice.js` 的 `onOnce`）：选择模式下 `settle()` 会再跑一次
+  `bindActions()`，而卡片上的「上一词 / 下一词 / 跳过…」还是同一批节点。以前每答一题就多叠一个
+  `click` 监听，答过之后点一次「下一词」会触发两次翻页（第 12 词直接跳到第 14 词），
+  同一个毛病还会让选择模式下点 ☆「收藏了又立刻取消」。
 - **外观**：浅色 / 深色主题，窗口变窄时侧栏收成抽屉（左上角 ☰）
 - **数据**：进度全部存在浏览器 localStorage（键 `wordplan.v1`），可导出 / 导入 JSON 备份
 - **快捷键**：`Enter` 提交或下一词 · `←` `→` 上一词 / 下一词 · `Backspace` 退格重敲 · `Space` 发音 · `Tab` 提示下一个字母（计入错误）· `Esc` 看答案
@@ -189,7 +193,7 @@ cet4-trainer/
 │  ├─ make_single.mjs         打成一个单文件离线 HTML
 │  ├─ build_win.mjs           用系统 csc.exe 编译单文件 exe
 │  ├─ get_webview2.mjs        下载并解包 WebView2 SDK（编译 exe 需要）
-│  ├─ e2e.mjs                 端到端冒烟测试（CDP 驱动无头 Edge，62 项断言）
+│  ├─ e2e.mjs                 端到端冒烟测试（CDP 驱动无头 Edge，64 项断言）
 │  ├─ check_single.mjs        验证单文件 HTML 在 file:// 下能用（6 项断言）
 │  └─ shots.mjs               造进度 + 逐页截图
 └─ shots/                     截图（演示用）
@@ -219,7 +223,7 @@ node tools/build_dict.mjs
 & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" `
   --headless=new --disable-gpu --remote-debugging-port=9222 `
   --user-data-dir="$PWD\.edgeprof" http://127.0.0.1:5199/
-node tools/e2e.mjs            # 62/62 通过
+node tools/e2e.mjs            # 64/64 通过
 node tools/e2e_mobile.mjs     # 17/17 通过（触摸端）
 node tools/check_single.mjs   # 6/6 通过（单文件离线版的 file:// 验证）
 

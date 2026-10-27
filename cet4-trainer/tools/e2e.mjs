@@ -1345,6 +1345,55 @@ await check('统计页能看收藏清单，也能在那儿取消收藏', async (
   return ok ? true : `取消后存储里剩 ${JSON.stringify(after)}，面板还剩 ${rowsAfter} 行`;
 });
 
+/* 回归：选择模式下 settle() 会再跑一次 bindActions()，卡片上的「下一词」还是同一批节点，
+   重复挂监听 → 点一次触发两次 next()，从第 12 词直接跳到第 14 词。
+   现在 bindActions 用 onOnce 按「节点 + 事件类型」去重。 */
+await send('Page.navigate', { url: `${APP}__seed__` });
+await sleep(900);
+await evaluate(`
+  localStorage.clear();
+  localStorage.setItem('wordplan.v1', JSON.stringify({
+    version: 1, cfg: 2, deckId: 'week3', mode: 'choice', scope: 'all', order: 'book', limit: 0,
+    cursors: { week3: 11 }, // 从第 12 个词开始
+    settings: { autoNext: false, autoSpeak: false, theme: 'light', accent: 'us', rate: 0.9, hfMark: true },
+  }));
+  true;
+`);
+await send('Page.navigate', { url: `${APP}#practice` });
+await sleep(2000);
+
+const posOf = async () => {
+  const t = await evaluate("((document.querySelector('.pmeta') || {}).textContent || '').replace(/\\s+/g, ' ').trim()");
+  const m = /第 (\d+) \//.exec(t);
+  return m ? Number(m[1]) : NaN;
+};
+
+await check('选择模式答完点「下一词」只走一格，不会一跳两格', async () => {
+  const start = await posOf();
+  if (start !== 12) return `起始应该是第 12 词，实际第 ${start} 词`;
+  await evaluate("document.querySelector('.choices [data-choice=\"0\"]').click()");
+  await sleep(700);
+  const afterAnswer = await posOf();
+  if (afterAnswer !== 12) return `答完不该自己跳，现在到了第 ${afterAnswer} 词`;
+  await evaluate("document.querySelector('[data-act=\"next\"]').click()");
+  await sleep(900);
+  const after = await posOf();
+  return after === 13 ? true : `点一次「下一词」应该到第 13 词，实际第 ${after} 词`;
+});
+
+await check('选择模式答完点 ☆ 真的收进收藏（不会自己又取消）', async () => {
+  await evaluate("document.querySelector('.choices [data-choice=\"0\"]').click()");
+  await sleep(700);
+  const before = await evaluate("(async () => (await import('/js/store.js')).starCount())()");
+  await evaluate("document.querySelector('[data-act=\"star\"]').click()");
+  await sleep(600);
+  const after = await evaluate("(async () => (await import('/js/store.js')).starCount())()");
+  const on = await evaluate("document.querySelector('[data-act=\"star\"]').classList.contains('on')");
+  return after === before + 1 && on
+    ? true
+    : `点一次 ☆ 后收藏数 ${before} → ${after}，星是${on ? '实心' : '空心'}`;
+});
+
 await check('无 JS 报错', async () => {
   return problems.length === 0 ? true : problems.join(' | ');
 });

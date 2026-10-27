@@ -106,6 +106,7 @@ node tools/verify.mjs          # 23 项校验：词序/拼写/文件格式/各�
 **1.6 这一版改了什么**
 
 - **回答后不再自动跳到下一个词**。以前答对就自己往下跳，答案还没看清就翻页了；现在答完停在原地，按 `Enter` 或点「继续 →」再往下。老存档会自动迁移过来，不用手动改设置；真想让它自己跳，可以去「设置 → 练习 → 回答后自动下一词」重新打开（打开后也只对答对的词生效，答错一定停下）。
+- **修掉「选择模式点一次『下一词』跳两格」**。选择模式每答一题都会重新给卡片按钮挂一次点击监听，答过之后点一次「下一词」会触发两次翻页（第 12 词直接跳到第 14 词）；同一个毛病也让人在选择模式下点 ☆ 收藏「点了没反应」（收藏上又立刻取消）。现在监听按「节点 + 事件类型」去重。
 
 **1.5 这一版改了什么**
 
@@ -169,7 +170,7 @@ node tools/build_dict.mjs          # 从 cet4-sparke/output 编译词库
 node tools/make_single.mjs         # → dist/词计划.html
 node tools/build_win.mjs           # → dist/词计划.exe
 node tools/build_apk.mjs           # → dist/词计划_1.6.apk
-node tools/e2e.mjs                 # 桌面端 62 项断言（CDP 驱动无头 Edge）
+node tools/e2e.mjs                 # 桌面端 64 项断言（CDP 驱动无头 Edge）
 node tools/e2e_mobile.mjs          # 触摸端 17 项断言
 ```
 
